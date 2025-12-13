@@ -1,0 +1,11 @@
+D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\14 - C# - WinForms\Projects\Pizza-Shop\bin\Debug\Pizza.exe.config
+D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\14 - C# - WinForms\Projects\Pizza-Shop\bin\Debug\Pizza.exe
+D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\14 - C# - WinForms\Projects\Pizza-Shop\bin\Debug\Pizza.pdb
+D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\14 - C# - WinForms\Projects\Pizza-Shop\obj\Debug\Pizzeria.csproj.AssemblyReference.cache
+D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\14 - C# - WinForms\Projects\Pizza-Shop\obj\Debug\Pizza.exe.config
+D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\14 - C# - WinForms\Projects\Pizza-Shop\obj\Debug\Pizza.Form1.resources
+D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\14 - C# - WinForms\Projects\Pizza-Shop\obj\Debug\Pizza.Properties.Resources.resources
+D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\14 - C# - WinForms\Projects\Pizza-Shop\obj\Debug\Pizzeria.csproj.GenerateResource.cache
+D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\14 - C# - WinForms\Projects\Pizza-Shop\obj\Debug\Pizzeria.csproj.CoreCompileInputs.cache
+D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\14 - C# - WinForms\Projects\Pizza-Shop\obj\Debug\Pizza.exe
+D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\14 - C# - WinForms\Projects\Pizza-Shop\obj\Debug\Pizza.pdb
