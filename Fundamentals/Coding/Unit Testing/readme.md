@@ -2,7 +2,7 @@
 
 This directory contains my test projects, exercises, and notes for the **Unit Testing** phase of the Backend Engineering Roadmap.
 
-In this phase, I moved from "testing manually by running the app" to **Automated Testing**. I learned how to write code that verifies my code, ensuring that new changes don't break existing functionality (Regression Testing). I mastered the **MSTest Framework**, the **AAA Pattern**, and how to achieve high **Code Coverage**.
+In this phase, I started to learn about "testing manually by running the app" to **Automated Testing**. I learned how to write code that verifies my code, ensuring that new changes don't break existing functionality (Regression Testing). I learned also about the **MSTest Framework**, the **AAA Pattern**, and how to achieve high **Code Coverage**.
 
 ## 📂 Topics Covered
 
