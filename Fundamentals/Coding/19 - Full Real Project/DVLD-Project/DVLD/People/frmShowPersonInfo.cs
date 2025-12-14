@@ -17,7 +17,7 @@ namespace DVLD.People
         {
             InitializeComponent();
             ctrlPersonCard1.LoadPersonInfo(PersonID);
-            this.Size = new Size(700, 500);
+            this.Size = new Size(900, 500);
             this.MinimumSize = new Size(600, 400);
             this.FormBorderStyle = FormBorderStyle.Sizable;
         }
@@ -26,7 +26,7 @@ namespace DVLD.People
         {
             InitializeComponent();
             ctrlPersonCard1.LoadPersonInfo(NationalNo);
-            this.Size = new Size(700, 500);
+            this.Size = new Size(900, 500);
             this.MinimumSize = new Size(600, 400);
             this.FormBorderStyle = FormBorderStyle.Sizable;
         }

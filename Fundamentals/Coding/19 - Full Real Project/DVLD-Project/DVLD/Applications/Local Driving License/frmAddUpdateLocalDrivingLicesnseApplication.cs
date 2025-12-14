@@ -30,7 +30,7 @@ namespace DVLD.Applications
         {
             InitializeComponent();
             _Mode = enMode.AddNew;
-            this.Size = new Size(900, 650);
+            this.Size = new Size(900, 680);
             this.MinimumSize = new Size(700, 500);
             this.FormBorderStyle = FormBorderStyle.Sizable;
         }
@@ -40,7 +40,7 @@ namespace DVLD.Applications
             InitializeComponent();
             _Mode = enMode.Update;
             _LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID;
-            this.Size = new Size(900, 650);
+            this.Size = new Size(900, 680);
             this.MinimumSize = new Size(700, 500);
             this.FormBorderStyle = FormBorderStyle.Sizable;
         }

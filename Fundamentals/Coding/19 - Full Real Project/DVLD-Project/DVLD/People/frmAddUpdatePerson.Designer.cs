@@ -200,7 +200,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 20);
             this.label5.TabIndex = 106;
-            this.label5.Text = "Gendor:";
+            this.label5.Text = "gender:";
             // 
             // cbCountry
             // 

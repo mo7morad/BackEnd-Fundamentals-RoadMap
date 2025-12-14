@@ -10,7 +10,7 @@ namespace DVLD_DataAccess
        
         public static bool GetPersonInfoByID(int PersonID, ref string FirstName, ref string SecondName,
           ref string ThirdName, ref string LastName, ref string NationalNo, ref DateTime DateOfBirth,
-           ref short Gendor,ref string Address,  ref string Phone, ref string Email,
+           ref short gender,ref string Address,  ref string Phone, ref string Email,
            ref int NationalityCountryID, ref string ImagePath)
         {
             bool isFound = false;
@@ -49,7 +49,7 @@ namespace DVLD_DataAccess
                     LastName = (string)reader["LastName"];
                     NationalNo = (string)reader["NationalNo"];
                     DateOfBirth = (DateTime)reader["DateOfBirth"];
-                    Gendor = (byte) reader["Gendor"];
+                    gender = (byte) reader["gender"];
                     Address = (string)reader["Address"];
                     Phone = (string)reader["Phone"];
 
@@ -102,7 +102,7 @@ namespace DVLD_DataAccess
 
         public static bool GetPersonInfoByNationalNo(string NationalNo, ref int PersonID, ref string FirstName, ref string SecondName,
         ref string ThirdName, ref string LastName,   ref DateTime DateOfBirth,
-         ref short Gendor,ref string Address, ref string Phone, ref string Email,
+         ref short gender,ref string Address, ref string Phone, ref string Email,
          ref int NationalityCountryID, ref string ImagePath)
         {
             bool isFound = false;
@@ -141,7 +141,7 @@ namespace DVLD_DataAccess
 
                     LastName = (string)reader["LastName"];
                     DateOfBirth = (DateTime)reader["DateOfBirth"];
-                    Gendor = (byte)reader["Gendor"];
+                    gender = (byte)reader["gender"];
                     Address = (string)reader["Address"];
                     Phone = (string)reader["Phone"];
 
@@ -195,7 +195,7 @@ namespace DVLD_DataAccess
 
         public static int AddNewPerson( string FirstName,  string SecondName,
            string ThirdName,  string LastName,  string NationalNo,  DateTime DateOfBirth,
-           short Gendor, string Address,  string Phone,  string Email,
+           short gender, string Address,  string Phone,  string Email,
             int NationalityCountryID,  string ImagePath)
         {
             //this function will return the new person id if succeeded and -1 if not.
@@ -204,9 +204,9 @@ namespace DVLD_DataAccess
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
             string query = @"INSERT INTO People (FirstName, SecondName, ThirdName,LastName,NationalNo,
-                                                   DateOfBirth,Gendor,Address,Phone, Email, NationalityCountryID,ImagePath)
+                                                   DateOfBirth,gender,Address,Phone, Email, NationalityCountryID,ImagePath)
                              VALUES (@FirstName, @SecondName,@ThirdName, @LastName, @NationalNo,
-                                     @DateOfBirth,@Gendor,@Address,@Phone, @Email,@NationalityCountryID,@ImagePath);
+                                     @DateOfBirth,@gender,@Address,@Phone, @Email,@NationalityCountryID,@ImagePath);
                              SELECT SCOPE_IDENTITY();";
 
             SqlCommand command = new SqlCommand(query, connection);
@@ -222,7 +222,7 @@ namespace DVLD_DataAccess
             command.Parameters.AddWithValue("@LastName", LastName);
             command.Parameters.AddWithValue("@NationalNo", NationalNo);
             command.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
-            command.Parameters.AddWithValue("@Gendor", Gendor);
+            command.Parameters.AddWithValue("@gender", gender);
             command.Parameters.AddWithValue("@Address", Address);
             command.Parameters.AddWithValue("@Phone", Phone);
             
@@ -268,7 +268,7 @@ namespace DVLD_DataAccess
 
         public static bool UpdatePerson(int PersonID,  string FirstName, string SecondName,
            string ThirdName, string LastName, string NationalNo, DateTime DateOfBirth,
-           short Gendor, string Address, string Phone, string Email,
+           short gender, string Address, string Phone, string Email,
             int NationalityCountryID, string ImagePath)
         {
 
@@ -282,7 +282,7 @@ namespace DVLD_DataAccess
                                 LastName = @LastName, 
                                 NationalNo = @NationalNo,
                                 DateOfBirth = @DateOfBirth,
-                                Gendor=@Gendor,
+                                gender=@gender,
                                 Address = @Address,  
                                 Phone = @Phone,
                                 Email = @Email, 
@@ -305,7 +305,7 @@ namespace DVLD_DataAccess
             command.Parameters.AddWithValue("@LastName", LastName);
             command.Parameters.AddWithValue("@NationalNo", NationalNo);
             command.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
-            command.Parameters.AddWithValue("@Gendor", Gendor);
+            command.Parameters.AddWithValue("@gender", gender);
             command.Parameters.AddWithValue("@Address", Address);
             command.Parameters.AddWithValue("@Phone", Phone);
 
@@ -352,13 +352,13 @@ namespace DVLD_DataAccess
             string query = 
               @"SELECT People.PersonID, People.NationalNo,
               People.FirstName, People.SecondName, People.ThirdName, People.LastName,
-			  People.DateOfBirth, People.Gendor,  
+			  People.DateOfBirth, People.gender,  
 				  CASE
-                  WHEN People.Gendor = 0 THEN 'Male'
+                  WHEN People.gender = 0 THEN 'Male'
 
                   ELSE 'Female'
 
-                  END as GendorCaption ,
+                  END as genderCaption ,
 			  People.Address, People.Phone, People.Email, 
               People.NationalityCountryID, Countries.CountryName, People.ImagePath
               FROM            People INNER JOIN

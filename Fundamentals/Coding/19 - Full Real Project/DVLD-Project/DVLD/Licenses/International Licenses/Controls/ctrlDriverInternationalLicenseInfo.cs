@@ -30,7 +30,7 @@ namespace DVLD.Licenses.International_Licenses.Controls
 
         private void _LoadPersonImage()
         {
-            if (_InternationalLicense.DriverInfo.PersonInfo.Gendor == 0)
+            if (_InternationalLicense.DriverInfo.PersonInfo.gender == 0)
                 pbPersonImage.Image = Resources.Male_512;
             else
                 pbPersonImage.Image = Resources.Female_512;
@@ -63,7 +63,7 @@ namespace DVLD.Licenses.International_Licenses.Controls
             lblLocalLicenseID.Text = _InternationalLicense.IssuedUsingLocalLicenseID.ToString();
             lblFullName.Text = _InternationalLicense.DriverInfo.PersonInfo.FullName;
             lblNationalNo.Text = _InternationalLicense.DriverInfo.PersonInfo.NationalNo;
-            lblGendor.Text = _InternationalLicense.DriverInfo.PersonInfo.Gendor == 0 ? "Male" : "Female";
+            lblgender.Text = _InternationalLicense.DriverInfo.PersonInfo.gender == 0 ? "Male" : "Female";
             lblDateOfBirth.Text = clsFormat.DateToShort(_InternationalLicense.DriverInfo.PersonInfo.DateOfBirth);
 
             lblDriverID.Text = _InternationalLicense.DriverID.ToString();

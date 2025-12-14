@@ -23,7 +23,7 @@ namespace DVLD_Buisness
         }
         public string NationalNo { set; get; }
         public DateTime DateOfBirth { set; get; }
-        public short Gendor { set; get; }
+        public short gender { set; get; }
         public string Address { set; get; }
         public string Phone { set; get; }
         public string Email { set; get; }
@@ -58,7 +58,7 @@ namespace DVLD_Buisness
         }
 
         private clsPerson(int PersonID, string FirstName,string SecondName, string ThirdName,
-            string LastName,string NationalNo, DateTime DateOfBirth,short Gendor,
+            string LastName,string NationalNo, DateTime DateOfBirth,short gender,
              string Address, string Phone, string Email,
             int NationalityCountryID, string ImagePath)
 
@@ -70,7 +70,7 @@ namespace DVLD_Buisness
             this.LastName = LastName;
             this.NationalNo = NationalNo;   
             this.DateOfBirth = DateOfBirth;
-            this.Gendor= Gendor;
+            this.gender= gender;
             this.Address = Address;
             this.Phone = Phone;
             this.Email = Email;
@@ -87,7 +87,7 @@ namespace DVLD_Buisness
             this.PersonID = clsPersonData.AddNewPerson(
                 this.FirstName,this.SecondName ,this.ThirdName,
                 this.LastName,this.NationalNo,
-                this.DateOfBirth, this.Gendor, this.Address, this.Phone, this.Email,
+                this.DateOfBirth, this.gender, this.Address, this.Phone, this.Email,
                 this.NationalityCountryID, this.ImagePath);
 
             return (this.PersonID != -1);
@@ -99,7 +99,7 @@ namespace DVLD_Buisness
 
             return clsPersonData.UpdatePerson(
                 this.PersonID, this.FirstName,this.SecondName,this.ThirdName,
-                this.LastName, this.NationalNo, this.DateOfBirth, this.Gendor,
+                this.LastName, this.NationalNo, this.DateOfBirth, this.gender,
                 this.Address, this.Phone, this.Email, 
                   this.NationalityCountryID, this.ImagePath);
         }
@@ -110,20 +110,20 @@ namespace DVLD_Buisness
             string FirstName = "", SecondName = "", ThirdName = "", LastName = "",NationalNo="", Email = "", Phone = "", Address = "", ImagePath = "";
             DateTime DateOfBirth = DateTime.Now;
             int NationalityCountryID = -1;
-            short Gendor = 0;
+            short gender = 0;
 
             bool IsFound = clsPersonData.GetPersonInfoByID 
                                 (
                                     PersonID, ref FirstName, ref SecondName,
                                     ref ThirdName, ref LastName, ref NationalNo, ref DateOfBirth,
-                                    ref Gendor, ref Address, ref Phone, ref Email,
+                                    ref gender, ref Address, ref Phone, ref Email,
                                     ref NationalityCountryID, ref ImagePath
                                 );
 
             if (IsFound)
                 //we return new object of that person with the right data
                 return new clsPerson(PersonID, FirstName,SecondName ,ThirdName, LastName,
-                          NationalNo, DateOfBirth,Gendor, Address, Phone, Email,NationalityCountryID, ImagePath);
+                          NationalNo, DateOfBirth,gender, Address, Phone, Email,NationalityCountryID, ImagePath);
             else
                 return null;
         }
@@ -133,20 +133,20 @@ namespace DVLD_Buisness
             string FirstName = "", SecondName = "", ThirdName = "", LastName = "",  Email = "", Phone = "", Address = "", ImagePath = "";
             DateTime DateOfBirth = DateTime.Now;
             int PersonID=-1,NationalityCountryID = -1;
-            short Gendor = 0;
+            short gender = 0;
 
             bool IsFound = clsPersonData.GetPersonInfoByNationalNo
                                 (
                                     NationalNo, ref PersonID, ref FirstName, ref SecondName,
                                     ref ThirdName, ref LastName, ref DateOfBirth,
-                                    ref Gendor,ref Address, ref Phone, ref Email,
+                                    ref gender,ref Address, ref Phone, ref Email,
                                     ref NationalityCountryID, ref ImagePath
                                 );
 
             if (IsFound)
 
                 return new clsPerson(PersonID, FirstName, SecondName, ThirdName, LastName,
-                          NationalNo, DateOfBirth,Gendor, Address, Phone, Email, NationalityCountryID, ImagePath);
+                          NationalNo, DateOfBirth,gender, Address, Phone, Email, NationalityCountryID, ImagePath);
             else
                 return null;
         }
