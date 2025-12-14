@@ -1,0 +1,14 @@
+D:\Dropbox\Personal\Advices\2021\22 DataStructures Level 2\23 Heap DS\03 Priority Queue\Priority Queue\bin\Debug\net8.0\Priority Queue.exe
+D:\Dropbox\Personal\Advices\2021\22 DataStructures Level 2\23 Heap DS\03 Priority Queue\Priority Queue\bin\Debug\net8.0\Priority Queue.deps.json
+D:\Dropbox\Personal\Advices\2021\22 DataStructures Level 2\23 Heap DS\03 Priority Queue\Priority Queue\bin\Debug\net8.0\Priority Queue.runtimeconfig.json
+D:\Dropbox\Personal\Advices\2021\22 DataStructures Level 2\23 Heap DS\03 Priority Queue\Priority Queue\bin\Debug\net8.0\Priority Queue.dll
+D:\Dropbox\Personal\Advices\2021\22 DataStructures Level 2\23 Heap DS\03 Priority Queue\Priority Queue\bin\Debug\net8.0\Priority Queue.pdb
+D:\Dropbox\Personal\Advices\2021\22 DataStructures Level 2\23 Heap DS\03 Priority Queue\Priority Queue\obj\Debug\net8.0\Priority Queue.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dropbox\Personal\Advices\2021\22 DataStructures Level 2\23 Heap DS\03 Priority Queue\Priority Queue\obj\Debug\net8.0\Priority Queue.AssemblyInfoInputs.cache
+D:\Dropbox\Personal\Advices\2021\22 DataStructures Level 2\23 Heap DS\03 Priority Queue\Priority Queue\obj\Debug\net8.0\Priority Queue.AssemblyInfo.cs
+D:\Dropbox\Personal\Advices\2021\22 DataStructures Level 2\23 Heap DS\03 Priority Queue\Priority Queue\obj\Debug\net8.0\Priority Queue.csproj.CoreCompileInputs.cache
+D:\Dropbox\Personal\Advices\2021\22 DataStructures Level 2\23 Heap DS\03 Priority Queue\Priority Queue\obj\Debug\net8.0\Priority Queue.dll
+D:\Dropbox\Personal\Advices\2021\22 DataStructures Level 2\23 Heap DS\03 Priority Queue\Priority Queue\obj\Debug\net8.0\refint\Priority Queue.dll
+D:\Dropbox\Personal\Advices\2021\22 DataStructures Level 2\23 Heap DS\03 Priority Queue\Priority Queue\obj\Debug\net8.0\Priority Queue.pdb
+D:\Dropbox\Personal\Advices\2021\22 DataStructures Level 2\23 Heap DS\03 Priority Queue\Priority Queue\obj\Debug\net8.0\Priority Queue.genruntimeconfig.cache
+D:\Dropbox\Personal\Advices\2021\22 DataStructures Level 2\23 Heap DS\03 Priority Queue\Priority Queue\obj\Debug\net8.0\ref\Priority Queue.dll
