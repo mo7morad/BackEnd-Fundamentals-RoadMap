@@ -267,5 +267,27 @@ namespace DVLD.Login
 
             this.Location = originalLocation;
         }
+
+        /// <summary>
+        /// Resets the login form for a fresh login after sign out.
+        /// </summary>
+        public void ResetLoginForm()
+        {
+            // Clear the password field for security
+            txtPassword.Text = "";
+            
+            // Reset opacity for fade-in effect
+            this.Opacity = 0;
+            
+            // Start fade-in animation
+            fadeTimer.Tag = null;
+            fadeTimer.Start();
+            
+            // Focus on username or password field
+            if (string.IsNullOrEmpty(txtUserName.Text))
+                txtUserName.Focus();
+            else
+                txtPassword.Focus();
+        }
     }
 }

@@ -58,13 +58,14 @@
     <Compile Include="Applications\Release Detained License\frmReleaseDetainedLicenseApplication.Designer.cs">
       <DependentUpon>frmReleaseDetainedLicenseApplication.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login\Animations\FormAnimation.cs">
+    <Compile Include="D:/Programming/Fundamentals_RoadMap/Fundamentals/Coding/19 - Full Real Project/DVLD-Project/DVLD/Login/Animations/\FormAnimation.cs">
+      <Link>UI\FormAnimation.cs</Link>
     </Compile>
-    <Compile Include="Login\CustomControls\ModernTextBox.cs">
-      <SubType>Component</SubType>
+    <Compile Include="D:/Programming/Fundamentals_RoadMap/Fundamentals/Coding/19 - Full Real Project/DVLD-Project/DVLD/Login/CustomControls/\ModernTextBox.cs">
+      <Link>UI\ModernTextBox.cs</Link>
     </Compile>
-    <Compile Include="Login\CustomControls\RoundButton.cs">
-      <SubType>Component</SubType>
+    <Compile Include="D:/Programming/Fundamentals_RoadMap/Fundamentals/Coding/19 - Full Real Project/DVLD-Project/DVLD/Login/CustomControls/\RoundButton.cs">
+      <Link>UI\RoundButton.cs</Link>
     </Compile>
     <Compile Include="Licenses\Detain License\frmDetainLicenseApplication.cs">
       <SubType>Form</SubType>

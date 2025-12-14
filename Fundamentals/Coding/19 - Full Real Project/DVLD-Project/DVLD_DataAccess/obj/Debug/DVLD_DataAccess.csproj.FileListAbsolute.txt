@@ -16,3 +16,9 @@ D:\Programming\Fundamentals_RoadMap\Fundamentals\Coding\19 - Full Real Project\D
 D:\Programming\Fundamentals_RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD_DataAccess\obj\Debug\DVLD_DataAccess.csproj.CoreCompileInputs.cache
 D:\Programming\Fundamentals_RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD_DataAccess\obj\Debug\DVLD_DataAccess.dll
 D:\Programming\Fundamentals_RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD_DataAccess\obj\Debug\DVLD_DataAccess.pdb
+D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD_DataAccess\bin\Debug\DVLD_DataAccess.dll
+D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD_DataAccess\bin\Debug\DVLD_DataAccess.pdb
+D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD_DataAccess\obj\Debug\DVLD_DataAccess.csproj.AssemblyReference.cache
+D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD_DataAccess\obj\Debug\DVLD_DataAccess.csproj.CoreCompileInputs.cache
+D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD_DataAccess\obj\Debug\DVLD_DataAccess.dll
+D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD_DataAccess\obj\Debug\DVLD_DataAccess.pdb

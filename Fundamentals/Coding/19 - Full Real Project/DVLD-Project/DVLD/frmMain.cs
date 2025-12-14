@@ -22,6 +22,7 @@ namespace DVLD
     public partial class frmMain : Form
     {
         frmLogin _frmLogin;
+        private bool _isSigningOut = false;
 
         public frmMain( frmLogin frm )
         {
@@ -65,7 +66,9 @@ namespace DVLD
 
         private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            _isSigningOut = true;
             clsGlobal.CurrentUser = null;
+            _frmLogin.ResetLoginForm();
             _frmLogin.Show();
             this.Close();
         }
@@ -178,8 +181,11 @@ namespace DVLD
 
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Close();
-            _frmLogin.Close();
+            // Only close the login form if we're not signing out
+            if (!_isSigningOut)
+            {
+                _frmLogin.Close();
+            }
         }
     }
 }
