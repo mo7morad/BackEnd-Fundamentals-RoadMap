@@ -3,41 +3,40 @@
   "WorkspaceRootPath": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C1BE28AD-D036-4C77-964C-9EE4ACC6727A}|..\\DVLD_DataAccess\\DVLD_DataAccess.csproj|d:\\programming\\backend-fundamentals-roadmap\\fundamentals\\coding\\19 - full real project\\dvld-project\\dvld_dataaccess\\clspersondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|d:\\programming\\backend-fundamentals-roadmap\\fundamentals\\coding\\19 - full real project\\dvld-project\\dvld\\applications\\international license\\frmnewinternationallicenseapplication.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|solutionrelative:applications\\international license\\frmnewinternationallicenseapplication.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|d:\\programming\\backend-fundamentals-roadmap\\fundamentals\\coding\\19 - full real project\\dvld-project\\dvld\\applications\\local driving license\\frmaddupdatelocaldrivinglicesnseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|solutionrelative:applications\\local driving license\\frmaddupdatelocaldrivinglicesnseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|d:\\programming\\backend-fundamentals-roadmap\\fundamentals\\coding\\19 - full real project\\dvld-project\\dvld\\applications\\international license\\frmnewinternationallicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|solutionrelative:applications\\international license\\frmnewinternationallicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|d:\\programming\\backend-fundamentals-roadmap\\fundamentals\\coding\\19 - full real project\\dvld-project\\dvld\\applications\\local driving license\\frmaddupdatelocaldrivinglicesnseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|solutionrelative:applications\\local driving license\\frmaddupdatelocaldrivinglicesnseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|d:\\programming\\backend-fundamentals-roadmap\\fundamentals\\coding\\19 - full real project\\dvld-project\\dvld\\applications\\renew local license\\frmrenewlocaldrivinglicenseapplication.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|solutionrelative:applications\\renew local license\\frmrenewlocaldrivinglicenseapplication.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|d:\\programming\\backend-fundamentals-roadmap\\fundamentals\\coding\\19 - full real project\\dvld-project\\dvld\\people\\frmshowpersoninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|solutionrelative:people\\frmshowpersoninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|d:\\programming\\backend-fundamentals-roadmap\\fundamentals\\coding\\19 - full real project\\dvld-project\\dvld\\applications\\replacelostordamagedlicense\\frmreplacelostordamagedlicenseapplication.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|solutionrelative:applications\\replacelostordamagedlicense\\frmreplacelostordamagedlicenseapplication.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|d:\\programming\\backend-fundamentals-roadmap\\fundamentals\\coding\\19 - full real project\\dvld-project\\dvld\\people\\frmshowpersoninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|solutionrelative:people\\frmshowpersoninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|d:\\programming\\backend-fundamentals-roadmap\\fundamentals\\coding\\19 - full real project\\dvld-project\\dvld\\applications\\replacelostordamagedlicense\\frmreplacelostordamagedlicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|solutionrelative:applications\\replacelostordamagedlicense\\frmreplacelostordamagedlicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|solutionrelative:login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|d:\\programming\\backend-fundamentals-roadmap\\fundamentals\\coding\\19 - full real project\\dvld-project\\dvld\\applications\\release detained license\\frmreleasedetainedlicenseapplication.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|solutionrelative:applications\\release detained license\\frmreleasedetainedlicenseapplication.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46A8427B-DCFC-4DAF-A14C-E3F4789A993D}|..\\DVLD_Buisness\\DVLD_Buisness.csproj|d:\\programming\\backend-fundamentals-roadmap\\fundamentals\\coding\\19 - full real project\\dvld-project\\dvld_buisness\\clsuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|d:\\programming\\backend-fundamentals-roadmap\\fundamentals\\coding\\19 - full real project\\dvld-project\\dvld\\licenses\\detain license\\frmdetainlicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|solutionrelative:licenses\\detain license\\frmdetainlicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1BE28AD-D036-4C77-964C-9EE4ACC6727A}|..\\DVLD_DataAccess\\DVLD_DataAccess.csproj|d:\\programming\\backend-fundamentals-roadmap\\fundamentals\\coding\\19 - full real project\\dvld-project\\dvld_dataaccess\\clsuserdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|d:\\programming\\backend-fundamentals-roadmap\\fundamentals\\coding\\19 - full real project\\dvld-project\\dvld\\licenses\\detain license\\frmdetainlicenseapplication.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|solutionrelative:licenses\\detain license\\frmdetainlicenseapplication.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|d:\\programming\\backend-fundamentals-roadmap\\fundamentals\\coding\\19 - full real project\\dvld-project\\dvld\\people\\frmlistpeople.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|solutionrelative:people\\frmlistpeople.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|d:\\programming\\backend-fundamentals-roadmap\\fundamentals\\coding\\19 - full real project\\dvld-project\\dvld\\people\\frmlistpeople.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|solutionrelative:people\\frmlistpeople.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|d:\\programming\\backend-fundamentals-roadmap\\fundamentals\\coding\\19 - full real project\\dvld-project\\dvld\\applications\\release detained license\\frmlistdetainedlicenses.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A65E342-BF9D-4ABF-856F-3F4F7F7D3CE5}|DVLD.csproj|solutionrelative:applications\\release detained license\\frmlistdetainedlicenses.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,132 +46,123 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmAddUpdateLocalDrivingLicesnseApplication.cs",
-              "DocumentMoniker": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\Applications\\Local Driving License\\frmAddUpdateLocalDrivingLicesnseApplication.cs",
-              "RelativeDocumentMoniker": "Applications\\Local Driving License\\frmAddUpdateLocalDrivingLicesnseApplication.cs",
-              "ToolTip": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\Applications\\Local Driving License\\frmAddUpdateLocalDrivingLicesnseApplication.cs",
-              "RelativeToolTip": "Applications\\Local Driving License\\frmAddUpdateLocalDrivingLicesnseApplication.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAcwCoAAAAoAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "frmReplaceLostOrDamagedLicenseApplication.cs",
+              "DocumentMoniker": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\Applications\\ReplaceLostOrDamagedLicense\\frmReplaceLostOrDamagedLicenseApplication.cs",
+              "RelativeDocumentMoniker": "Applications\\ReplaceLostOrDamagedLicense\\frmReplaceLostOrDamagedLicenseApplication.cs",
+              "ToolTip": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\Applications\\ReplaceLostOrDamagedLicense\\frmReplaceLostOrDamagedLicenseApplication.cs",
+              "RelativeToolTip": "Applications\\ReplaceLostOrDamagedLicense\\frmReplaceLostOrDamagedLicenseApplication.cs",
+              "ViewState": "AgIAAJUAAAAAAAAAAIBgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T12:06:49.657Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "clsPersonData.cs",
-              "DocumentMoniker": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD_DataAccess\\clsPersonData.cs",
-              "RelativeDocumentMoniker": "..\\DVLD_DataAccess\\clsPersonData.cs",
-              "ToolTip": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD_DataAccess\\clsPersonData.cs",
-              "RelativeToolTip": "..\\DVLD_DataAccess\\clsPersonData.cs",
-              "ViewState": "AgIAANYAAAAAAAAAAAAUwOAAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T12:02:59.162Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "frmListPeople.cs",
-              "DocumentMoniker": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\People\\frmListPeople.cs",
-              "RelativeDocumentMoniker": "People\\frmListPeople.cs",
-              "ToolTip": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\People\\frmListPeople.cs",
-              "RelativeToolTip": "People\\frmListPeople.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T12:01:12.82Z",
+              "WhenOpened": "2025-12-14T13:12:46.208Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "frmShowPersonInfo.cs",
-              "DocumentMoniker": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\People\\frmShowPersonInfo.cs",
-              "RelativeDocumentMoniker": "People\\frmShowPersonInfo.cs",
-              "ToolTip": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\People\\frmShowPersonInfo.cs",
-              "RelativeToolTip": "People\\frmShowPersonInfo.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBwAAAArAAAAAAAAAA==",
+              "Title": "frmReplaceLostOrDamagedLicenseApplication.Designer.cs",
+              "DocumentMoniker": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\Applications\\ReplaceLostOrDamagedLicense\\frmReplaceLostOrDamagedLicenseApplication.Designer.cs",
+              "RelativeDocumentMoniker": "Applications\\ReplaceLostOrDamagedLicense\\frmReplaceLostOrDamagedLicenseApplication.Designer.cs",
+              "ToolTip": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\Applications\\ReplaceLostOrDamagedLicense\\frmReplaceLostOrDamagedLicenseApplication.Designer.cs",
+              "RelativeToolTip": "Applications\\ReplaceLostOrDamagedLicense\\frmReplaceLostOrDamagedLicenseApplication.Designer.cs",
+              "ViewState": "AgIAAMwBAAAAAAAAAIBZwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T11:58:49.12Z",
+              "WhenOpened": "2025-12-14T13:11:45.971Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmShowPersonInfo.cs [Design]",
-              "DocumentMoniker": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\People\\frmShowPersonInfo.cs",
-              "RelativeDocumentMoniker": "People\\frmShowPersonInfo.cs",
-              "ToolTip": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\People\\frmShowPersonInfo.cs [Design]",
-              "RelativeToolTip": "People\\frmShowPersonInfo.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T11:58:26.906Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "frmAddUpdateLocalDrivingLicesnseApplication.cs [Design]",
-              "DocumentMoniker": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\Applications\\Local Driving License\\frmAddUpdateLocalDrivingLicesnseApplication.cs",
-              "RelativeDocumentMoniker": "Applications\\Local Driving License\\frmAddUpdateLocalDrivingLicesnseApplication.cs",
-              "ToolTip": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\Applications\\Local Driving License\\frmAddUpdateLocalDrivingLicesnseApplication.cs [Design]",
-              "RelativeToolTip": "Applications\\Local Driving License\\frmAddUpdateLocalDrivingLicesnseApplication.cs [Design]",
+              "Title": "frmRenewLocalDrivingLicenseApplication.Designer.cs",
+              "DocumentMoniker": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\Applications\\Renew Local License\\frmRenewLocalDrivingLicenseApplication.Designer.cs",
+              "RelativeDocumentMoniker": "Applications\\Renew Local License\\frmRenewLocalDrivingLicenseApplication.Designer.cs",
+              "ToolTip": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\Applications\\Renew Local License\\frmRenewLocalDrivingLicenseApplication.Designer.cs",
+              "RelativeToolTip": "Applications\\Renew Local License\\frmRenewLocalDrivingLicenseApplication.Designer.cs",
+              "ViewState": "AgIAAHwCAAAAAAAAAIBZwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T11:42:45.104Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-12-14T13:10:51.799Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "frmListPeople.Designer.cs",
-              "DocumentMoniker": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\People\\frmListPeople.Designer.cs",
-              "RelativeDocumentMoniker": "People\\frmListPeople.Designer.cs",
-              "ToolTip": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\People\\frmListPeople.Designer.cs",
-              "RelativeToolTip": "People\\frmListPeople.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIIBAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "frmNewInternationalLicenseApplication.Designer.cs",
+              "DocumentMoniker": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\Applications\\International License\\frmNewInternationalLicenseApplication.Designer.cs",
+              "RelativeDocumentMoniker": "Applications\\International License\\frmNewInternationalLicenseApplication.Designer.cs",
+              "ToolTip": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\Applications\\International License\\frmNewInternationalLicenseApplication.Designer.cs",
+              "RelativeToolTip": "Applications\\International License\\frmNewInternationalLicenseApplication.Designer.cs",
+              "ViewState": "AgIAAPQBAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T12:03:55.368Z",
+              "WhenOpened": "2025-12-14T13:10:00.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "frmListDetainedLicenses.Designer.cs",
+              "DocumentMoniker": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\Applications\\Release Detained License\\frmListDetainedLicenses.Designer.cs",
+              "RelativeDocumentMoniker": "Applications\\Release Detained License\\frmListDetainedLicenses.Designer.cs",
+              "ToolTip": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\Applications\\Release Detained License\\frmListDetainedLicenses.Designer.cs",
+              "RelativeToolTip": "Applications\\Release Detained License\\frmListDetainedLicenses.Designer.cs",
+              "ViewState": "AgIAAD4BAAAAAAAAAIBZwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T13:15:48.047Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "clsUserData.cs",
-              "DocumentMoniker": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD_DataAccess\\clsUserData.cs",
-              "RelativeDocumentMoniker": "..\\DVLD_DataAccess\\clsUserData.cs",
-              "ToolTip": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD_DataAccess\\clsUserData.cs",
-              "RelativeToolTip": "..\\DVLD_DataAccess\\clsUserData.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAgwHIBAAAAAAAAAAAAAA==",
+              "Title": "frmDetainLicenseApplication.Designer.cs",
+              "DocumentMoniker": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\Licenses\\Detain License\\frmDetainLicenseApplication.Designer.cs",
+              "RelativeDocumentMoniker": "Licenses\\Detain License\\frmDetainLicenseApplication.Designer.cs",
+              "ToolTip": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\Licenses\\Detain License\\frmDetainLicenseApplication.Designer.cs",
+              "RelativeToolTip": "Licenses\\Detain License\\frmDetainLicenseApplication.Designer.cs",
+              "ViewState": "AgIAAH4BAAAAAAAAAEBVwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T09:38:37.777Z"
+              "WhenOpened": "2025-12-14T13:14:33.72Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "clsUser.cs",
-              "DocumentMoniker": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD_Buisness\\clsUser.cs",
-              "RelativeDocumentMoniker": "..\\DVLD_Buisness\\clsUser.cs",
-              "ToolTip": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD_Buisness\\clsUser.cs",
-              "RelativeToolTip": "..\\DVLD_Buisness\\clsUser.cs",
-              "ViewState": "AgIAAO8AAAAAAAAAAAAqwN0AAAAMAAAAAAAAAA==",
+              "Title": "frmDetainLicenseApplication.cs",
+              "DocumentMoniker": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\Licenses\\Detain License\\frmDetainLicenseApplication.cs",
+              "RelativeDocumentMoniker": "Licenses\\Detain License\\frmDetainLicenseApplication.cs",
+              "ToolTip": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\Licenses\\Detain License\\frmDetainLicenseApplication.cs",
+              "RelativeToolTip": "Licenses\\Detain License\\frmDetainLicenseApplication.cs",
+              "ViewState": "AgIAAIcAAAAAAAAAAEBVwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T08:47:58.665Z"
+              "WhenOpened": "2025-12-14T13:14:03.042Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "frmLogin.cs",
-              "DocumentMoniker": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\Login\\frmLogin.cs",
-              "RelativeDocumentMoniker": "Login\\frmLogin.cs",
-              "ToolTip": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\Login\\frmLogin.cs",
-              "RelativeToolTip": "Login\\frmLogin.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAcwGoAAAAIAAAAAAAAAA==",
+              "Title": "frmReleaseDetainedLicenseApplication.Designer.cs",
+              "DocumentMoniker": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\Applications\\Release Detained License\\frmReleaseDetainedLicenseApplication.Designer.cs",
+              "RelativeDocumentMoniker": "Applications\\Release Detained License\\frmReleaseDetainedLicenseApplication.Designer.cs",
+              "ToolTip": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\Applications\\Release Detained License\\frmReleaseDetainedLicenseApplication.Designer.cs",
+              "RelativeToolTip": "Applications\\Release Detained License\\frmReleaseDetainedLicenseApplication.Designer.cs",
+              "ViewState": "AgIAAP8BAAAAAAAAAIBZwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T08:19:26.603Z"
+              "WhenOpened": "2025-12-14T13:13:12.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmNewInternationalLicenseApplication.cs [Design]",
+              "DocumentMoniker": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\Applications\\International License\\frmNewInternationalLicenseApplication.cs",
+              "RelativeDocumentMoniker": "Applications\\International License\\frmNewInternationalLicenseApplication.cs",
+              "ToolTip": "D:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\19 - Full Real Project\\DVLD-Project\\DVLD\\Applications\\International License\\frmNewInternationalLicenseApplication.cs [Design]",
+              "RelativeToolTip": "Applications\\International License\\frmNewInternationalLicenseApplication.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T12:57:45.294Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

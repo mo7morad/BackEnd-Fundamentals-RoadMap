@@ -556,10 +556,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(894, 724);
+            this.ClientSize = new System.Drawing.Size(750, 550);
             this.Controls.Add(this.llShowLicenseInfo);
             this.Controls.Add(this.llShowLicenseHistory);
             this.Controls.Add(this.btnRenewLicense);
@@ -568,7 +569,9 @@
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.ctrlDriverLicenseInfoWithFilter1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(700, 500);
             this.Name = "frmRenewLocalDrivingLicenseApplication";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

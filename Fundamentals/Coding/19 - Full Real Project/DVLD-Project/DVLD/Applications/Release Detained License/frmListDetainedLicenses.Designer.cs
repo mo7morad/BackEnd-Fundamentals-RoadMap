@@ -270,8 +270,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1387, 729);
+            this.ClientSize = new System.Drawing.Size(900, 600);
             this.Controls.Add(this.btnReleaseDetainedLicense);
             this.Controls.Add(this.cbIsReleased);
             this.Controls.Add(this.btnDetainLicense);
@@ -285,8 +286,9 @@
             this.Controls.Add(this.dgvDetainedLicenses);
             this.Controls.Add(this.lblTitle);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "frmListDetainedLicenses";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "List Detained Licenses";
