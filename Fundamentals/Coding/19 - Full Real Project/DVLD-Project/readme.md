@@ -225,7 +225,7 @@ public static string ConnectionString =
 - Build solution
 - Run with **F5**
 - Default login:
-  - **Admin / 1234**
+  - **Morad / mangga**
 
 ---
 
