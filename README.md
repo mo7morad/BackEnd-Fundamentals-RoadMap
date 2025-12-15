@@ -30,10 +30,10 @@ Here’s a quick overview of the key projects included in this repository:
 4. [**Banking System V3**](Fundamentals/Coding/Problem-Solving-level-04-in-C++/Project/ATM-System/ATM-System-Upgrade)  
    💳 *In this version I added secure user authentication, managing clients, CRUD for the users, and more efficient transaction processing.*
 
-5. [**ContactsSystem**](Fundamentals/Coding/11%20-%20OOP-C++/Projects/ContactsSystem-Project)  
+5. [**ContactsSystem**](Fundamentals/Coding/10,11 - OOP-C++/Projects/ContactsSystem-Project)  
    📇 *A versatile contacts management application that allows users to add, remove, search, and display contacts, with all data persistently stored in a text file.*
 
-6. [**Driving-Simulation**](Fundamentals/Coding/11%20-%20OOP-C++/Projects/DrivingSimulation-Project)  
+6. [**Driving-Simulation**](Fundamentals/Coding/10,11 - OOP-C++/Projects/DrivingSimulation-Project)  
    🚗 *A dynamic driving simulation that handles user inputs for movement, acceleration, braking, and collision detection, offering real-time feedback and control.*
 
 7. [**OOP Banking System V4**](Fundamentals/Coding/11%20-%20OOP-C++/Projects/OOP-BankingSystem-Project)  
