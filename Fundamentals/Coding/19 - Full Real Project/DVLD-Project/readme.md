@@ -5,6 +5,7 @@
 ![Language](https://img.shields.io/badge/language-C%23-purple)
 ![Database](https://img.shields.io/badge/database-SQL%20Server-red)
 ![Architecture](https://img.shields.io/badge/architecture-3--Tier-orange)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 **A massive, enterprise-grade desktop management system for managing drivers, licenses, tests, and vehicle registrations.**
 
@@ -152,3 +153,25 @@ public static string ConnectionString =
 - Manual business-rule testing
 - Foreign key & workflow validation
 
+---
+
+## 🗺 Roadmap
+
+- [ ] Export to PDF / Excel
+- [ ] Biometric simulation
+- [ ] Web dashboard
+- [ ] Dark mode UI
+
+---
+
+## 📄 License
+
+MIT License – Educational & portfolio use.
+
+---
+
+## 📞 Contact
+
+**Mohammed Morad**  
+GitHub: **mo7morad**  
+LinkedIn: *Add link*
