@@ -1,4 +1,4 @@
-# Course 10 Project: Driving Simulation (OOP)
+# Course 11 Project: Driving Simulation (OOP)
 
 This directory contains the **Driving Simulation**, the second Capstone Project for **Course 10 (OOP Level 1)**.
 
