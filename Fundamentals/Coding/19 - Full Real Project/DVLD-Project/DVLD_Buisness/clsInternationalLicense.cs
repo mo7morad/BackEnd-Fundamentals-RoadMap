@@ -1,178 +1,127 @@
 ﻿using System;
 using System.Data;
-using System.Diagnostics.Eventing.Reader;
-using System.Xml.Linq;
+using System.Threading.Tasks;
 using DVLD_DataAccess;
 
 namespace DVLD_Buisness
 {
-    public class clsInternationalLicense:clsApplication
+    public class clsInternationalLicense : clsApplication
     {
-
-        public enum enMode { AddNew = 0, Update = 1 };
-        public enMode Mode = enMode.AddNew;
+        public new enum enMode { AddNew = 0, Update = 1 };
+        public new enMode Mode = enMode.AddNew;
 
         public clsDriver DriverInfo;
-        public int InternationalLicenseID { set; get; }  
+        public int InternationalLicenseID { set; get; }
         public int DriverID { set; get; }
-        public int IssuedUsingLocalLicenseID { set; get; }   
+        public int IssuedUsingLocalLicenseID { set; get; }
         public DateTime IssueDate { set; get; }
-        public DateTime ExpirationDate { set; get; }    
+        public DateTime ExpirationDate { set; get; }
         public bool IsActive { set; get; }
-       
 
         public clsInternationalLicense()
-
         {
-            //here we set the applicaiton type to New International License.
-            this.ApplicationTypeID = (int) clsApplication.enApplicationType.NewInternationalLicense;
-            
+            this.ApplicationTypeID = (int)clsApplication.enApplicationType.NewInternationalLicense;
             this.InternationalLicenseID = -1;
             this.DriverID = -1;
             this.IssuedUsingLocalLicenseID = -1;
             this.IssueDate = DateTime.Now;
             this.ExpirationDate = DateTime.Now;
-           
             this.IsActive = true;
-            
-
             Mode = enMode.AddNew;
-
         }
 
         public clsInternationalLicense(int ApplicationID, int ApplicantPersonID,
-            DateTime ApplicationDate, 
-             enApplicationStatus ApplicationStatus, DateTime LastStatusDate,
-             float PaidFees, int CreatedByUserID, 
-             int InternationalLicenseID,  int DriverID, int IssuedUsingLocalLicenseID,
-            DateTime IssueDate, DateTime ExpirationDate,bool IsActive)
-
+            DateTime ApplicationDate, enApplicationStatus ApplicationStatus, DateTime LastStatusDate,
+            float PaidFees, int CreatedByUserID,
+            int InternationalLicenseID, int DriverID, int IssuedUsingLocalLicenseID,
+            DateTime IssueDate, DateTime ExpirationDate, bool IsActive)
+            : base(ApplicationID, ApplicantPersonID, ApplicationDate,
+                  (int)clsApplication.enApplicationType.NewInternationalLicense,
+                  ApplicationStatus, LastStatusDate, PaidFees, CreatedByUserID)
         {
-            //this is for the base clase
-            base.ApplicationID = ApplicationID;
-            base.ApplicantPersonID = ApplicantPersonID;
-            base.ApplicationDate = ApplicationDate;
-            base.ApplicationTypeID = (int)clsApplication.enApplicationType.NewInternationalLicense;
-            base.ApplicationStatus = ApplicationStatus;
-            base.LastStatusDate = LastStatusDate;
-            base.PaidFees = PaidFees;
-            base.CreatedByUserID = CreatedByUserID;
-
             this.InternationalLicenseID = InternationalLicenseID;
-            this.ApplicationID=ApplicationID;
             this.DriverID = DriverID;
             this.IssuedUsingLocalLicenseID = IssuedUsingLocalLicenseID;
             this.IssueDate = IssueDate;
             this.ExpirationDate = ExpirationDate;
             this.IsActive = IsActive;
-            this.CreatedByUserID = CreatedByUserID;
-
-            this.DriverInfo = clsDriver.FindByDriverID(this.DriverID);
-
             Mode = enMode.Update;
         }
 
-        private bool _AddNewInternationalLicense()
+        private async Task<bool> _AddNewInternationalLicenseAsync()
         {
-            //call DataAccess Layer 
-
-            this.InternationalLicenseID = 
-                clsInternationalLicenseData.AddNewInternationalLicense(this.ApplicationID, this.DriverID, this.IssuedUsingLocalLicenseID,
-               this.IssueDate, this.ExpirationDate, 
-               this.IsActive, this.CreatedByUserID);
-
-
+            this.InternationalLicenseID = await clsInternationalLicenseData.AddNewInternationalLicenseAsync(
+                this.ApplicationID, this.DriverID, this.IssuedUsingLocalLicenseID,
+                this.IssueDate, this.ExpirationDate, this.IsActive, this.CreatedByUserID).ConfigureAwait(false);
             return (this.InternationalLicenseID != -1);
         }
 
-        private bool _UpdateInternationalLicense()
+        private async Task<bool> _UpdateInternationalLicenseAsync()
         {
-            //call DataAccess Layer 
-
-            return clsInternationalLicenseData.UpdateInternationalLicense(
-                this.InternationalLicenseID,this.ApplicationID, this.DriverID, this.IssuedUsingLocalLicenseID,
-               this.IssueDate, this.ExpirationDate, 
-               this.IsActive, this.CreatedByUserID);
+            return await clsInternationalLicenseData.UpdateInternationalLicenseAsync(
+                this.InternationalLicenseID, this.ApplicationID, this.DriverID, this.IssuedUsingLocalLicenseID,
+                this.IssueDate, this.ExpirationDate, this.IsActive, this.CreatedByUserID).ConfigureAwait(false);
         }
 
-        public static clsInternationalLicense Find(int InternationalLicenseID)
+        public static new async Task<clsInternationalLicense> FindAsync(int InternationalLicenseID)
         {
-            int ApplicationID = -1;
-            int DriverID = -1; int IssuedUsingLocalLicenseID = -1;
-            DateTime IssueDate = DateTime.Now; DateTime ExpirationDate = DateTime.Now;
-             bool IsActive = true; int CreatedByUserID = 1;
+            InternationalLicenseDTO dto = await clsInternationalLicenseData.GetInternationalLicenseInfoByIDAsync(InternationalLicenseID).ConfigureAwait(false);
+            if (dto == null) return null;
 
-            if (clsInternationalLicenseData.GetInternationalLicenseInfoByID(InternationalLicenseID,ref ApplicationID, ref DriverID, 
-                ref IssuedUsingLocalLicenseID,
-            ref IssueDate, ref ExpirationDate, ref IsActive, ref CreatedByUserID))
-            {
-                //now we find the base application
-                clsApplication Application = clsApplication.FindBaseApplication(ApplicationID);
+            clsApplication Application = await clsApplication.FindBaseApplicationAsync(dto.ApplicationID).ConfigureAwait(false);
+            if (Application == null) return null;
 
-
-                return new clsInternationalLicense(Application.ApplicationID,
-                    Application.ApplicantPersonID,
-                                     Application.ApplicationDate, 
-                                    (enApplicationStatus)Application.ApplicationStatus, Application.LastStatusDate,
-                                     Application.PaidFees, Application.CreatedByUserID,
-                                     InternationalLicenseID, DriverID, IssuedUsingLocalLicenseID,
-                                         IssueDate, ExpirationDate, IsActive);
-
-            }
-             
-            else
-                return null;
-
+            var license = new clsInternationalLicense(Application.ApplicationID, Application.ApplicantPersonID,
+                Application.ApplicationDate, Application.ApplicationStatus, Application.LastStatusDate,
+                Application.PaidFees, Application.CreatedByUserID,
+                dto.InternationalLicenseID, dto.DriverID, dto.IssuedUsingLocalLicenseID,
+                dto.IssueDate, dto.ExpirationDate, dto.IsActive);
+            license.DriverInfo = await clsDriver.FindByDriverIDAsync(dto.DriverID).ConfigureAwait(false);
+            return license;
         }
 
-        public static DataTable GetAllInternationalLicenses()
+        public static async Task<DataTable> GetAllInternationalLicensesAsync()
         {
-            return clsInternationalLicenseData.GetAllInternationalLicenses();
-
+            return await clsInternationalLicenseData.GetAllInternationalLicensesAsync().ConfigureAwait(false);
         }
 
-        public bool Save()
+        public static async Task<DataTable> GetDriverInternationalLicensesAsync(int DriverID)
         {
+            return await clsInternationalLicenseData.GetDriverInternationalLicensesAsync(DriverID).ConfigureAwait(false);
+        }
 
-            //Because of inheritance first we call the save method in the base class,
-            //it will take care of adding all information to the application table.
+        public new async Task<bool> SaveAsync()
+        {
             base.Mode = (clsApplication.enMode)Mode;
-            if (!base.Save())
+            if (!await base.SaveAsync().ConfigureAwait(false))
                 return false;
 
             switch (Mode)
             {
                 case enMode.AddNew:
-                    if (_AddNewInternationalLicense())
+                    if (await _AddNewInternationalLicenseAsync().ConfigureAwait(false))
                     {
-
                         Mode = enMode.Update;
                         return true;
                     }
-                    else
-                    {
-                        return false;
-                    }
+                    return false;
 
                 case enMode.Update:
-
-                    return _UpdateInternationalLicense();
-
+                    return await _UpdateInternationalLicenseAsync().ConfigureAwait(false);
             }
-
             return false;
         }
 
-        public static int GetActiveInternationalLicenseIDByDriverID(int DriverID)
+        public static async Task<int> GetActiveInternationalLicenseIDByDriverIDAsync(int DriverID)
         {
-
-            return clsInternationalLicenseData.GetActiveInternationalLicenseIDByDriverID(DriverID);
-
+            return await clsInternationalLicenseData.GetActiveInternationalLicenseIDByDriverIDAsync(DriverID).ConfigureAwait(false);
         }
 
-        public static DataTable GetDriverInternationalLicenses(int DriverID)
-        {
-            return clsInternationalLicenseData.GetDriverInternationalLicenses(DriverID);
-        }
+        // Sync wrappers for backward compatibility
+        public static new clsInternationalLicense Find(int InternationalLicenseID) => FindAsync(InternationalLicenseID).GetAwaiter().GetResult();
+        public static DataTable GetAllInternationalLicenses() => GetAllInternationalLicensesAsync().GetAwaiter().GetResult();
+        public static DataTable GetDriverInternationalLicenses(int DriverID) => GetDriverInternationalLicensesAsync(DriverID).GetAwaiter().GetResult();
+        public new bool Save() => SaveAsync().GetAwaiter().GetResult();
+        public static int GetActiveInternationalLicenseIDByDriverID(int DriverID) => GetActiveInternationalLicenseIDByDriverIDAsync(DriverID).GetAwaiter().GetResult();
     }
 }

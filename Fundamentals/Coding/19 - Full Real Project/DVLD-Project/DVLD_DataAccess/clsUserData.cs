@@ -5,6 +5,24 @@ using System.Threading.Tasks;
 
 namespace DVLD_DataAccess
 {
+    public class UserDTO
+    {
+        public int UserID { get; set; }
+        public int PersonID { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public bool IsActive { get; set; }
+
+        public UserDTO(int userID, int personID, string userName, string password, bool isActive)
+        {
+            UserID = userID;
+            PersonID = personID;
+            UserName = userName;
+            Password = password;
+            IsActive = isActive;
+        }
+    }
+
     public class clsUserData
     {
         public static async Task<UserDTO> GetUserInfoByUserIDAsync(int userId)
@@ -95,10 +113,7 @@ namespace DVLD_DataAccess
                             }
                         }
                     }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex);
-                    }
+                    catch (Exception) { }
                 }
             }
             return null;
@@ -276,95 +291,5 @@ namespace DVLD_DataAccess
                 }
             }
         }
-
-        #region Synchronous Methods (for backward compatibility)
-
-        public static bool GetUserInfoByUserID(int UserID, ref int PersonID, ref string UserName,
-            ref string Password, ref bool IsActive)
-        {
-            UserDTO user = GetUserInfoByUserIDAsync(UserID).GetAwaiter().GetResult();
-            if (user != null)
-            {
-                PersonID = user.PersonID;
-                UserName = user.UserName;
-                Password = user.Password;
-                IsActive = user.IsActive;
-                return true;
-            }
-            return false;
-        }
-
-        public static bool GetUserInfoByPersonID(int PersonID, ref int UserID, ref string UserName,
-            ref string Password, ref bool IsActive)
-        {
-            UserDTO user = GetUserInfoByPersonIDAsync(PersonID).GetAwaiter().GetResult();
-            if (user != null)
-            {
-                UserID = user.UserID;
-                UserName = user.UserName;
-                Password = user.Password;
-                IsActive = user.IsActive;
-                return true;
-            }
-            return false;
-        }
-
-        public static bool GetUserInfoByUsernameAndPassword(string UserName, string Password,
-            ref int UserID, ref int PersonID, ref bool IsActive)
-        {
-            UserDTO user = GetUserInfoByUsernameAndPasswordAsync(UserName, Password).GetAwaiter().GetResult();
-            if (user != null)
-            {
-                UserID = user.UserID;
-                PersonID = user.PersonID;
-                IsActive = user.IsActive;
-                return true;
-            }
-            return false;
-        }
-
-        public static int AddNewUser(int PersonID, string UserName, string Password, bool IsActive)
-        {
-            var userDTO = new UserDTO(-1, PersonID, UserName, Password, IsActive);
-            return AddNewUserAsync(userDTO).GetAwaiter().GetResult();
-        }
-
-        public static bool UpdateUser(int UserID, int PersonID, string UserName, string Password, bool IsActive)
-        {
-            var userDTO = new UserDTO(UserID, PersonID, UserName, Password, IsActive);
-            return UpdateUserAsync(userDTO).GetAwaiter().GetResult();
-        }
-
-        public static DataTable GetAllUsers()
-        {
-            return GetAllUsersAsync().GetAwaiter().GetResult();
-        }
-
-        public static bool DeleteUser(int UserID)
-        {
-            return DeleteUserAsync(UserID).GetAwaiter().GetResult();
-        }
-
-        public static bool IsUserExist(int UserID)
-        {
-            return IsUserExistAsync(UserID).GetAwaiter().GetResult();
-        }
-
-        public static bool IsUserExist(string UserName)
-        {
-            return IsUserExistByUsernameAsync(UserName).GetAwaiter().GetResult();
-        }
-
-        public static bool IsUserExistForPersonID(int PersonID)
-        {
-            return IsUserExistForPersonIDAsync(PersonID).GetAwaiter().GetResult();
-        }
-
-        public static bool ChangePassword(int UserID, string NewPassword)
-        {
-            return ChangePasswordAsync(UserID, NewPassword).GetAwaiter().GetResult();
-        }
-
-        #endregion
     }
 }

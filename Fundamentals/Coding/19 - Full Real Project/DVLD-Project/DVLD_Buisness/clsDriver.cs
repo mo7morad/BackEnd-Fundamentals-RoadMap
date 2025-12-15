@@ -1,129 +1,107 @@
 ﻿using System;
 using System.Data;
-using System.Diagnostics.Eventing.Reader;
+using System.Threading.Tasks;
 using DVLD_DataAccess;
 
 namespace DVLD_Buisness
 {
     public class clsDriver
     {
-
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
 
         public clsPerson PersonInfo;
-
         public int DriverID { set; get; }
         public int PersonID { set; get; }
         public int CreatedByUserID { set; get; }
-        public DateTime CreatedDate {  get; }
+        public DateTime CreatedDate { get; }
 
         public clsDriver()
-
         {
             this.DriverID = -1;
             this.PersonID = -1;
             this.CreatedByUserID = -1;
-            this.CreatedDate=DateTime.Now;
+            this.CreatedDate = DateTime.Now;
             Mode = enMode.AddNew;
-
         }
 
-        public clsDriver(int DriverID, int PersonID,int CreatedByUserID, DateTime CreatedDate)
-
+        public clsDriver(int DriverID, int PersonID, int CreatedByUserID, DateTime CreatedDate)
         {
             this.DriverID = DriverID;
             this.PersonID = PersonID;
             this.CreatedByUserID = CreatedByUserID;
             this.CreatedDate = CreatedDate;
-            this.PersonInfo = clsPerson.Find(PersonID);
-
             Mode = enMode.Update;
         }
 
-        private bool _AddNewDriver()
+        private async Task<bool> _AddNewDriverAsync()
         {
-            //call DataAccess Layer 
-
-            this.DriverID = clsDriverData.AddNewDriver( PersonID,  CreatedByUserID);
-              
-
+            this.DriverID = await clsDriverData.AddNewDriverAsync(PersonID, CreatedByUserID).ConfigureAwait(false);
             return (this.DriverID != -1);
         }
 
-        private bool _UpdateDriver()
+        private async Task<bool> _UpdateDriverAsync()
         {
-            //call DataAccess Layer 
-
-            return clsDriverData.UpdateDriver(this.DriverID,this.PersonID,this.CreatedByUserID);
+            return await clsDriverData.UpdateDriverAsync(this.DriverID, this.PersonID, this.CreatedByUserID).ConfigureAwait(false);
         }
 
-        public static clsDriver FindByDriverID(int DriverID)
+        public static async Task<clsDriver> FindByDriverIDAsync(int DriverID)
         {
-            
-            int PersonID = -1; int CreatedByUserID = -1;DateTime CreatedDate= DateTime.Now; 
-
-            if (clsDriverData.GetDriverInfoByDriverID(DriverID, ref PersonID,ref CreatedByUserID,ref CreatedDate))
-
-                return new clsDriver(DriverID,  PersonID,  CreatedByUserID,  CreatedDate);
-            else
-                return null;
-
+            DriverDTO dto = await clsDriverData.GetDriverInfoByDriverIDAsync(DriverID).ConfigureAwait(false);
+            if (dto == null) return null;
+            var driver = new clsDriver(dto.DriverID, dto.PersonID, dto.CreatedByUserID, dto.CreatedDate);
+            driver.PersonInfo = await clsPerson.FindAsync(dto.PersonID).ConfigureAwait(false);
+            return driver;
         }
 
-        public static clsDriver FindByPersonID(int PersonID)
+        public static async Task<clsDriver> FindByPersonIDAsync(int PersonID)
         {
-
-            int DriverID = -1; int CreatedByUserID = -1; DateTime CreatedDate = DateTime.Now;
-
-            if (clsDriverData.GetDriverInfoByPersonID( PersonID, ref DriverID,  ref CreatedByUserID, ref CreatedDate))
-
-                return new clsDriver(DriverID, PersonID, CreatedByUserID, CreatedDate);
-            else
-                return null;
-
+            DriverDTO dto = await clsDriverData.GetDriverInfoByPersonIDAsync(PersonID).ConfigureAwait(false);
+            if (dto == null) return null;
+            var driver = new clsDriver(dto.DriverID, dto.PersonID, dto.CreatedByUserID, dto.CreatedDate);
+            driver.PersonInfo = await clsPerson.FindAsync(dto.PersonID).ConfigureAwait(false);
+            return driver;
         }
 
-        public static DataTable GetAllDrivers()
+        public static async Task<DataTable> GetAllDriversAsync()
         {
-            return clsDriverData.GetAllDrivers();
-
+            return await clsDriverData.GetAllDriversAsync().ConfigureAwait(false);
         }
 
-        public bool Save()
+        public async Task<bool> SaveAsync()
         {
             switch (Mode)
             {
                 case enMode.AddNew:
-                    if (_AddNewDriver())
+                    if (await _AddNewDriverAsync().ConfigureAwait(false))
                     {
-
                         Mode = enMode.Update;
                         return true;
                     }
-                    else
-                    {
-                        return false;
-                    }
+                    return false;
 
                 case enMode.Update:
-
-                    return _UpdateDriver();
-
+                    return await _UpdateDriverAsync().ConfigureAwait(false);
             }
-
             return false;
         }
 
-        public static DataTable GetLicenses(int DriverID)
+        public static async Task<DataTable> GetLicensesAsync(int DriverID)
         {
-            return clsLicense.GetDriverLicenses(DriverID);
+            return await clsLicense.GetDriverLicensesAsync(DriverID).ConfigureAwait(false);
         }
 
-        public static DataTable GetInternationalLicenses(int DriverID)
+        public static async Task<DataTable> GetInternationalLicensesAsync(int DriverID)
         {
-            return clsInternationalLicense.GetDriverInternationalLicenses(DriverID);
+            return await clsInternationalLicense.GetDriverInternationalLicensesAsync(DriverID).ConfigureAwait(false);
         }
 
+        // Sync wrappers for backward compatibility
+        public static clsDriver FindByDriverID(int DriverID) => FindByDriverIDAsync(DriverID).GetAwaiter().GetResult();
+        public static clsDriver FindByPersonID(int PersonID) => FindByPersonIDAsync(PersonID).GetAwaiter().GetResult();
+        public static DataTable GetAllDrivers() => GetAllDriversAsync().GetAwaiter().GetResult();
+        public bool Save() => SaveAsync().GetAwaiter().GetResult();
+        public static DataTable GetLicenses(int DriverID) => GetLicensesAsync(DriverID).GetAwaiter().GetResult();
+        public static DataTable GetInternationalLicenses(int DriverID) => GetInternationalLicensesAsync(DriverID).GetAwaiter().GetResult();
     }
 }

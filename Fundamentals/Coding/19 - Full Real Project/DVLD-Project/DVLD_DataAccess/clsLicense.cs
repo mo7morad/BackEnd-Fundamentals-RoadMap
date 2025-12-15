@@ -1,264 +1,177 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using static DVLD_DataAccess.clsCountryData;
-using System.Net;
-using System.Security.Policy;
-using System.ComponentModel;
 
 namespace DVLD_DataAccess
 {
+    public class LicenseDTO
+    {
+        public int LicenseID { get; set; }
+        public int ApplicationID { get; set; }
+        public int DriverID { get; set; }
+        public int LicenseClass { get; set; }
+        public DateTime IssueDate { get; set; }
+        public DateTime ExpirationDate { get; set; }
+        public string Notes { get; set; }
+        public float PaidFees { get; set; }
+        public bool IsActive { get; set; }
+        public byte IssueReason { get; set; }
+        public int CreatedByUserID { get; set; }
+
+        public LicenseDTO(int licenseID, int applicationID, int driverID, int licenseClass,
+            DateTime issueDate, DateTime expirationDate, string notes, float paidFees,
+            bool isActive, byte issueReason, int createdByUserID)
+        {
+            LicenseID = licenseID;
+            ApplicationID = applicationID;
+            DriverID = driverID;
+            LicenseClass = licenseClass;
+            IssueDate = issueDate;
+            ExpirationDate = expirationDate;
+            Notes = notes;
+            PaidFees = paidFees;
+            IsActive = isActive;
+            IssueReason = issueReason;
+            CreatedByUserID = createdByUserID;
+        }
+    }
+
     public class clsLicenseData
     {
-
-        public static bool GetLicenseInfoByID(int LicenseID,ref int ApplicationID, ref int DriverID, ref int LicenseClass,
-            ref DateTime IssueDate, ref DateTime ExpirationDate,ref string Notes,
-            ref float PaidFees,ref bool IsActive, ref byte IssueReason, ref int CreatedByUserID)
-            {
-                bool isFound = false;
-
-                SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-                string query = "SELECT * FROM Licenses WHERE LicenseID = @LicenseID";
-
-                SqlCommand command = new SqlCommand(query, connection);
-
-                command.Parameters.AddWithValue("@LicenseID", LicenseID);
-
-                try
-                {
-                    connection.Open();
-                    SqlDataReader reader = command.ExecuteReader();
-
-                    if (reader.Read())
-                    {
-
-                        // The record was found
-                        isFound = true;
-                        ApplicationID= (int)reader["ApplicationID"];
-                        DriverID  = (int)reader["DriverID"];
-                        LicenseClass = (int)reader["LicenseClass"];
-                        IssueDate=(DateTime)reader["IssueDate"];
-                        ExpirationDate = (DateTime)reader["ExpirationDate"];
-
-                        if (reader["Notes"]==DBNull.Value)
-                            Notes = "";
-                        else
-                            Notes = (string)reader["Notes"];
-
-                        PaidFees = Convert.ToSingle(reader["PaidFees"]);
-                        IsActive = (bool)reader["IsActive"];
-                        IssueReason = (byte)reader["IssueReason"];
-                        CreatedByUserID = (int)reader["DriverID"];
-
-
-                }
-                    else
-                    {
-                        // The record was not found
-                        isFound = false;
-                    }
-
-                    reader.Close();
-
-
-                }
-                catch (Exception ex)
-                {
-                    //Console.WriteLine("Error: " + ex.Message);
-                    isFound = false;
-                }
-                finally
-                {
-                    connection.Close();
-                }
-
-                return isFound;
-            }
-
-        public static DataTable GetAllLicenses()
-            {
-
-                DataTable dt = new DataTable();
-                SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-                string query = "SELECT * FROM Licenses";
-
-                SqlCommand command = new SqlCommand(query, connection);
-
-                try
-                {
-                    connection.Open();
-
-                    SqlDataReader reader = command.ExecuteReader();
-
-                    if (reader.HasRows)
-
-                    {
-                        dt.Load(reader);
-                    }
-
-                    reader.Close();
-
-
-                }
-
-                catch (Exception ex)
-                {
-                    // Console.WriteLine("Error: " + ex.Message);
-                }
-                finally
-                {
-                    connection.Close();
-                }
-
-                return dt;
-
-            }
-
-        public static DataTable GetDriverLicenses(int DriverID)
+        public static async Task<LicenseDTO> GetLicenseInfoByIDAsync(int licenseID)
         {
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = "SELECT * FROM Licenses WHERE LicenseID = @LicenseID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@LicenseID", licenseID);
+                    try
+                    {
+                        await connection.OpenAsync().ConfigureAwait(false);
+                        using (SqlDataReader reader = await command.ExecuteReaderAsync().ConfigureAwait(false))
+                        {
+                            if (await reader.ReadAsync().ConfigureAwait(false))
+                            {
+                                return new LicenseDTO(
+                                    licenseID,
+                                    (int)reader["ApplicationID"],
+                                    (int)reader["DriverID"],
+                                    (int)reader["LicenseClass"],
+                                    (DateTime)reader["IssueDate"],
+                                    (DateTime)reader["ExpirationDate"],
+                                    reader["Notes"] == DBNull.Value ? "" : (string)reader["Notes"],
+                                    Convert.ToSingle(reader["PaidFees"]),
+                                    (bool)reader["IsActive"],
+                                    (byte)reader["IssueReason"],
+                                    (int)reader["CreatedByUserID"]
+                                );
+                            }
+                        }
+                    }
+                    catch (Exception) { }
+                }
+            }
+            return null;
+        }
 
+        public static async Task<DataTable> GetAllLicensesAsync()
+        {
             DataTable dt = new DataTable();
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = "SELECT * FROM Licenses";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    try
+                    {
+                        await connection.OpenAsync().ConfigureAwait(false);
+                        using (SqlDataReader reader = await command.ExecuteReaderAsync().ConfigureAwait(false))
+                        {
+                            if (reader.HasRows) dt.Load(reader);
+                        }
+                    }
+                    catch (Exception) { }
+                }
+            }
+            return dt;
+        }
 
-            string query = @"SELECT     
-                           Licenses.LicenseID,
-                           ApplicationID,
+        public static async Task<DataTable> GetDriverLicensesAsync(int driverID)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"SELECT Licenses.LicenseID, ApplicationID,
 		                   LicenseClasses.ClassName, Licenses.IssueDate, 
 		                   Licenses.ExpirationDate, Licenses.IsActive
                            FROM Licenses INNER JOIN
                                 LicenseClasses ON Licenses.LicenseClass = LicenseClasses.LicenseClassID
                             where DriverID=@DriverID
                             Order By IsActive Desc, ExpirationDate Desc";
-
-            SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@DriverID", DriverID);
-
-            try
-            {
-                connection.Open();
-
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.HasRows)
-
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    dt.Load(reader);
+                    command.Parameters.AddWithValue("@DriverID", driverID);
+                    try
+                    {
+                        await connection.OpenAsync().ConfigureAwait(false);
+                        using (SqlDataReader reader = await command.ExecuteReaderAsync().ConfigureAwait(false))
+                        {
+                            if (reader.HasRows) dt.Load(reader);
+                        }
+                    }
+                    catch (Exception) { }
                 }
-
-                reader.Close();
-
-
             }
-
-            catch (Exception ex)
-            {
-                // Console.WriteLine("Error: " + ex.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-
             return dt;
-
         }
 
-        public static int AddNewLicense(  int ApplicationID, int DriverID,  int LicenseClass,
-             DateTime IssueDate,  DateTime ExpirationDate,  string Notes,
-             float PaidFees,  bool IsActive,byte IssueReason,  int CreatedByUserID)
+        public static async Task<int> AddNewLicenseAsync(int applicationID, int driverID, int licenseClass,
+            DateTime issueDate, DateTime expirationDate, string notes, float paidFees, bool isActive, byte issueReason, int createdByUserID)
         {
-            int LicenseID = -1;
-
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-            string query = @"
-                              INSERT INTO Licenses
-                               (ApplicationID,
-                                DriverID,
-                                LicenseClass,
-                                IssueDate,
-                                ExpirationDate,
-                                Notes,
-                                PaidFees,
-                                IsActive,IssueReason,
-                                CreatedByUserID)
-                         VALUES
-                               (
-                               @ApplicationID,
-                               @DriverID,
-                               @LicenseClass,
-                               @IssueDate,
-                               @ExpirationDate,
-                               @Notes,
-                               @PaidFees,
-                               @IsActive,@IssueReason, 
-                               @CreatedByUserID);
-                            SELECT SCOPE_IDENTITY();";
-
-            SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
-            command.Parameters.AddWithValue("@DriverID", DriverID);
-            command.Parameters.AddWithValue("@LicenseClass", LicenseClass);
-            command.Parameters.AddWithValue("@IssueDate", IssueDate);
-
-            command.Parameters.AddWithValue("@ExpirationDate", ExpirationDate);
-
-            if (Notes == "")
-                command.Parameters.AddWithValue("@Notes", DBNull.Value);
-            else
-                command.Parameters.AddWithValue("@Notes", Notes);
-
-            command.Parameters.AddWithValue("@PaidFees", PaidFees);
-            command.Parameters.AddWithValue("@IsActive", IsActive);
-            command.Parameters.AddWithValue("@IssueReason", IssueReason);
-     
-            command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
-           
-
-
-            try
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
-                connection.Open();
-
-                object result = command.ExecuteScalar();
-
-                if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                string query = @"INSERT INTO Licenses
+                               (ApplicationID, DriverID, LicenseClass, IssueDate, ExpirationDate,
+                                Notes, PaidFees, IsActive, IssueReason, CreatedByUserID)
+                         VALUES
+                               (@ApplicationID, @DriverID, @LicenseClass, @IssueDate, @ExpirationDate,
+                               @Notes, @PaidFees, @IsActive, @IssueReason, @CreatedByUserID);
+                            SELECT SCOPE_IDENTITY();";
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    LicenseID = insertedID;
+                    command.Parameters.AddWithValue("@ApplicationID", applicationID);
+                    command.Parameters.AddWithValue("@DriverID", driverID);
+                    command.Parameters.AddWithValue("@LicenseClass", licenseClass);
+                    command.Parameters.AddWithValue("@IssueDate", issueDate);
+                    command.Parameters.AddWithValue("@ExpirationDate", expirationDate);
+                    command.Parameters.AddWithValue("@Notes", string.IsNullOrEmpty(notes) ? (object)DBNull.Value : notes);
+                    command.Parameters.AddWithValue("@PaidFees", paidFees);
+                    command.Parameters.AddWithValue("@IsActive", isActive);
+                    command.Parameters.AddWithValue("@IssueReason", issueReason);
+                    command.Parameters.AddWithValue("@CreatedByUserID", createdByUserID);
+                    try
+                    {
+                        await connection.OpenAsync().ConfigureAwait(false);
+                        object result = await command.ExecuteScalarAsync().ConfigureAwait(false);
+                        if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                        {
+                            return insertedID;
+                        }
+                    }
+                    catch (Exception) { }
                 }
             }
-
-            catch (Exception ex)
-            {
-                //Console.WriteLine("Error: " + ex.Message);
-
-            }
-
-            finally
-            {
-                connection.Close();
-            }
-
-
-            return LicenseID;
-
+            return -1;
         }
 
-        public static bool UpdateLicense(int LicenseID ,int ApplicationID, int DriverID, int LicenseClass,
-             DateTime IssueDate, DateTime ExpirationDate, string Notes,
-             float PaidFees, bool IsActive,byte IssueReason, int CreatedByUserID)
+        public static async Task<bool> UpdateLicenseAsync(int licenseID, int applicationID, int driverID, int licenseClass,
+            DateTime issueDate, DateTime expirationDate, string notes, float paidFees, bool isActive, byte issueReason, int createdByUserID)
         {
-
-            int rowsAffected = 0;
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-            string query = @"UPDATE Licenses
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"UPDATE Licenses
                            SET ApplicationID=@ApplicationID, DriverID = @DriverID,
                               LicenseClass = @LicenseClass,
                               IssueDate = @IssueDate,
@@ -268,129 +181,75 @@ namespace DVLD_DataAccess
                               IsActive = @IsActive,IssueReason=@IssueReason,
                               CreatedByUserID = @CreatedByUserID
                          WHERE LicenseID=@LicenseID";
-
-            SqlCommand command = new SqlCommand(query, connection);
-
-            command.Parameters.AddWithValue("@LicenseID", LicenseID);
-            command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
-            command.Parameters.AddWithValue("@DriverID", DriverID);
-            command.Parameters.AddWithValue("@LicenseClass", LicenseClass);
-            command.Parameters.AddWithValue("@IssueDate", IssueDate);
-            command.Parameters.AddWithValue("@ExpirationDate", ExpirationDate);
-            
-            if (Notes=="")
-                command.Parameters.AddWithValue("@Notes", DBNull.Value );
-            else
-                command.Parameters.AddWithValue("@Notes", Notes);
-
-            command.Parameters.AddWithValue("@PaidFees", PaidFees);
-            command.Parameters.AddWithValue("@IsActive", IsActive);
-            command.Parameters.AddWithValue("@IssueReason", IssueReason);
-            command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
-
-            try
-            {
-                connection.Open();
-                rowsAffected = command.ExecuteNonQuery();
-
-            }
-            catch (Exception ex)
-            {
-                //Console.WriteLine("Error: " + ex.Message);
-                return false;
-            }
-
-            finally
-            {
-                connection.Close();
-            }
-
-            return (rowsAffected > 0);
-        }
-
-        public static int GetActiveLicenseIDByPersonID(int PersonID,int LicenseClassID)
-        {
-            int LicenseID = -1;
-
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-            string query = @"SELECT        Licenses.LicenseID
-                            FROM Licenses INNER JOIN
-                                                     Drivers ON Licenses.DriverID = Drivers.DriverID
-                            WHERE  
-                             
-                             Licenses.LicenseClass = @LicenseClass 
-                              AND Drivers.PersonID = @PersonID
-                              And IsActive=1;";
-
-            SqlCommand command = new SqlCommand(query, connection);
-
-            command.Parameters.AddWithValue("@PersonID", PersonID);
-            command.Parameters.AddWithValue("@LicenseClass", LicenseClassID);
-
-            try
-            {
-                connection.Open();
-
-                object result = command.ExecuteScalar();
-
-                if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    LicenseID = insertedID;
+                    command.Parameters.AddWithValue("@LicenseID", licenseID);
+                    command.Parameters.AddWithValue("@ApplicationID", applicationID);
+                    command.Parameters.AddWithValue("@DriverID", driverID);
+                    command.Parameters.AddWithValue("@LicenseClass", licenseClass);
+                    command.Parameters.AddWithValue("@IssueDate", issueDate);
+                    command.Parameters.AddWithValue("@ExpirationDate", expirationDate);
+                    command.Parameters.AddWithValue("@Notes", string.IsNullOrEmpty(notes) ? (object)DBNull.Value : notes);
+                    command.Parameters.AddWithValue("@PaidFees", paidFees);
+                    command.Parameters.AddWithValue("@IsActive", isActive);
+                    command.Parameters.AddWithValue("@IssueReason", issueReason);
+                    command.Parameters.AddWithValue("@CreatedByUserID", createdByUserID);
+                    try
+                    {
+                        await connection.OpenAsync().ConfigureAwait(false);
+                        int rowsAffected = await command.ExecuteNonQueryAsync().ConfigureAwait(false);
+                        return rowsAffected > 0;
+                    }
+                    catch (Exception) { return false; }
                 }
             }
-
-            catch (Exception ex)
-            {
-                //Console.WriteLine("Error: " + ex.Message);
-
-            }
-
-            finally
-            {
-                connection.Close();
-            }
-
-
-            return LicenseID;
         }
 
-        public static bool DeactivateLicense(int LicenseID)
+        public static async Task<int> GetActiveLicenseIDByPersonIDAsync(int personID, int licenseClassID)
         {
-
-            int rowsAffected = 0;
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-            string query = @"UPDATE Licenses
-                           SET 
-                              IsActive = 0
-                             
-                         WHERE LicenseID=@LicenseID";
-
-            SqlCommand command = new SqlCommand(query, connection);
-
-            command.Parameters.AddWithValue("@LicenseID", LicenseID);
-         
-
-            try
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
-                connection.Open();
-                rowsAffected = command.ExecuteNonQuery();
-
+                string query = @"SELECT Licenses.LicenseID
+                            FROM Licenses INNER JOIN Drivers ON Licenses.DriverID = Drivers.DriverID
+                            WHERE Licenses.LicenseClass = @LicenseClass 
+                              AND Drivers.PersonID = @PersonID
+                              And IsActive=1;";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@PersonID", personID);
+                    command.Parameters.AddWithValue("@LicenseClass", licenseClassID);
+                    try
+                    {
+                        await connection.OpenAsync().ConfigureAwait(false);
+                        object result = await command.ExecuteScalarAsync().ConfigureAwait(false);
+                        if (result != null && int.TryParse(result.ToString(), out int licenseID))
+                        {
+                            return licenseID;
+                        }
+                    }
+                    catch (Exception) { }
+                }
             }
-            catch (Exception ex)
-            {
-                //Console.WriteLine("Error: " + ex.Message);
-                return false;
-            }
-
-            finally
-            {
-                connection.Close();
-            }
-
-            return (rowsAffected > 0);
+            return -1;
         }
 
+        public static async Task<bool> DeactivateLicenseAsync(int licenseID)
+        {
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"UPDATE Licenses SET IsActive = 0 WHERE LicenseID=@LicenseID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@LicenseID", licenseID);
+                    try
+                    {
+                        await connection.OpenAsync().ConfigureAwait(false);
+                        int rowsAffected = await command.ExecuteNonQueryAsync().ConfigureAwait(false);
+                        return rowsAffected > 0;
+                    }
+                    catch (Exception) { return false; }
+                }
+            }
+        }
     }
 }

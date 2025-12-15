@@ -1,15 +1,12 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Data;
-using System.Diagnostics.Eventing.Reader;
-using System.Xml.Linq;
+using System.Threading.Tasks;
 using DVLD_DataAccess;
 
 namespace DVLD_Buisness
 {
     public class clsTestAppointment
     {
-
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
 
@@ -23,29 +20,20 @@ namespace DVLD_Buisness
         public int RetakeTestApplicationID { set; get; }
         public clsApplication RetakeTestAppInfo { set; get; }
 
-        public int  TestID   
-        {
-            get { return _GetTestID(); }   
-          
-        }
-
         public clsTestAppointment()
-
         {
             this.TestAppointmentID = -1;
             this.TestTypeID = clsTestType.enTestType.VisionTest;
             this.AppointmentDate = DateTime.Now;
             this.PaidFees = 0;
             this.CreatedByUserID = -1;
-            this.RetakeTestApplicationID = -1;  
+            this.RetakeTestApplicationID = -1;
             Mode = enMode.AddNew;
-
         }
 
         public clsTestAppointment(int TestAppointmentID, clsTestType.enTestType TestTypeID,
-           int LocalDrivingLicenseApplicationID, DateTime AppointmentDate, float PaidFees, 
-           int CreatedByUserID ,bool IsLocked, int RetakeTestApplicationID)
-
+           int LocalDrivingLicenseApplicationID, DateTime AppointmentDate, float PaidFees,
+           int CreatedByUserID, bool IsLocked, int RetakeTestApplicationID)
         {
             this.TestAppointmentID = TestAppointmentID;
             this.TestTypeID = TestTypeID;
@@ -54,108 +42,93 @@ namespace DVLD_Buisness
             this.PaidFees = PaidFees;
             this.CreatedByUserID = CreatedByUserID;
             this.IsLocked = IsLocked;
-            this.RetakeTestApplicationID= RetakeTestApplicationID;
-            this.RetakeTestAppInfo = clsApplication.FindBaseApplication(RetakeTestApplicationID);
+            this.RetakeTestApplicationID = RetakeTestApplicationID;
             Mode = enMode.Update;
         }
 
-        private bool _AddNewTestAppointment()
+        private async Task<bool> _AddNewTestAppointmentAsync()
         {
-            //call DataAccess Layer 
-
-            this.TestAppointmentID = clsTestAppointmentData.AddNewTestAppointment((int) this.TestTypeID,this.LocalDrivingLicenseApplicationID,
-                this.AppointmentDate,this.PaidFees,this.CreatedByUserID,this.RetakeTestApplicationID);
-
+            this.TestAppointmentID = await clsTestAppointmentData.AddNewTestAppointmentAsync(
+                (int)this.TestTypeID, this.LocalDrivingLicenseApplicationID,
+                this.AppointmentDate, this.PaidFees, this.CreatedByUserID, this.RetakeTestApplicationID).ConfigureAwait(false);
             return (this.TestAppointmentID != -1);
         }
 
-        private bool _UpdateTestAppointment()
+        private async Task<bool> _UpdateTestAppointmentAsync()
         {
-            //call DataAccess Layer 
-
-            return clsTestAppointmentData.UpdateTestAppointment(this.TestAppointmentID, (int) this.TestTypeID, this.LocalDrivingLicenseApplicationID,
-                this.AppointmentDate, this.PaidFees, this.CreatedByUserID,this.IsLocked,this.RetakeTestApplicationID);
+            return await clsTestAppointmentData.UpdateTestAppointmentAsync(
+                this.TestAppointmentID, (int)this.TestTypeID, this.LocalDrivingLicenseApplicationID,
+                this.AppointmentDate, this.PaidFees, this.CreatedByUserID, this.IsLocked, this.RetakeTestApplicationID).ConfigureAwait(false);
         }
 
-        public static clsTestAppointment Find(int TestAppointmentID)
+        public static async Task<clsTestAppointment> FindAsync(int TestAppointmentID)
         {
-            int TestTypeID = 1;  int LocalDrivingLicenseApplicationID = -1;
-            DateTime AppointmentDate = DateTime.Now;  float PaidFees = 0;  
-            int CreatedByUserID = -1; bool IsLocked=false;int RetakeTestApplicationID = -1;
-
-            if (clsTestAppointmentData.GetTestAppointmentInfoByID(TestAppointmentID, ref  TestTypeID, ref  LocalDrivingLicenseApplicationID,
-            ref   AppointmentDate, ref  PaidFees, ref  CreatedByUserID, ref IsLocked, ref RetakeTestApplicationID))
-
-                return new clsTestAppointment(TestAppointmentID,  (clsTestType.enTestType) TestTypeID,  LocalDrivingLicenseApplicationID,
-             AppointmentDate,  PaidFees,  CreatedByUserID, IsLocked, RetakeTestApplicationID);
-            else
-                return null;
-
+            TestAppointmentDTO dto = await clsTestAppointmentData.GetTestAppointmentInfoByIDAsync(TestAppointmentID).ConfigureAwait(false);
+            if (dto == null) return null;
+            var appt = new clsTestAppointment(TestAppointmentID, (clsTestType.enTestType)dto.TestTypeID,
+                dto.LocalDrivingLicenseApplicationID, dto.AppointmentDate, dto.PaidFees,
+                dto.CreatedByUserID, dto.IsLocked, dto.RetakeTestApplicationID);
+            if (dto.RetakeTestApplicationID != -1)
+                appt.RetakeTestAppInfo = await clsApplication.FindBaseApplicationAsync(dto.RetakeTestApplicationID).ConfigureAwait(false);
+            return appt;
         }
 
-        public static clsTestAppointment GetLastTestAppointment(int LocalDrivingLicenseApplicationID, clsTestType.enTestType TestTypeID )
+        public static async Task<clsTestAppointment> GetLastTestAppointmentAsync(int LocalDrivingLicenseApplicationID, clsTestType.enTestType TestTypeID)
         {
-             int TestAppointmentID=-1;
-            DateTime AppointmentDate = DateTime.Now; float PaidFees = 0;
-            int CreatedByUserID = -1;bool IsLocked=false;int RetakeTestApplicationID=-1;
-
-            if (clsTestAppointmentData.GetLastTestAppointment( LocalDrivingLicenseApplicationID, (int) TestTypeID,
-                ref TestAppointmentID,ref AppointmentDate, ref PaidFees, ref CreatedByUserID,ref IsLocked,ref RetakeTestApplicationID))
-
-                return new clsTestAppointment(TestAppointmentID, TestTypeID, LocalDrivingLicenseApplicationID,
-             AppointmentDate, PaidFees, CreatedByUserID, IsLocked, RetakeTestApplicationID);
-            else
-                return null;
-
+            TestAppointmentDTO dto = await clsTestAppointmentData.GetLastTestAppointmentAsync(LocalDrivingLicenseApplicationID, (int)TestTypeID).ConfigureAwait(false);
+            if (dto == null) return null;
+            var appt = new clsTestAppointment(dto.TestAppointmentID, TestTypeID,
+                LocalDrivingLicenseApplicationID, dto.AppointmentDate, dto.PaidFees,
+                dto.CreatedByUserID, dto.IsLocked, dto.RetakeTestApplicationID);
+            if (dto.RetakeTestApplicationID != -1)
+                appt.RetakeTestAppInfo = await clsApplication.FindBaseApplicationAsync(dto.RetakeTestApplicationID).ConfigureAwait(false);
+            return appt;
         }
 
-        public static DataTable GetAllTestAppointments()
+        public static async Task<DataTable> GetAllTestAppointmentsAsync()
         {
-            return clsTestAppointmentData.GetAllTestAppointments();
-
+            return await clsTestAppointmentData.GetAllTestAppointmentsAsync().ConfigureAwait(false);
         }
 
-        public  DataTable GetApplicationTestAppointmentsPerTestType(clsTestType.enTestType TestTypeID)
+        public async Task<DataTable> GetApplicationTestAppointmentsPerTestTypeAsync(clsTestType.enTestType TestTypeID)
         {
-            return clsTestAppointmentData.GetApplicationTestAppointmentsPerTestType(this.LocalDrivingLicenseApplicationID,(int) TestTypeID);
-
+            return await clsTestAppointmentData.GetApplicationTestAppointmentsPerTestTypeAsync(this.LocalDrivingLicenseApplicationID, (int)TestTypeID).ConfigureAwait(false);
         }
 
-        public static DataTable GetApplicationTestAppointmentsPerTestType(int LocalDrivingLicenseApplicationID,clsTestType.enTestType TestTypeID)
+        public static async Task<DataTable> GetApplicationTestAppointmentsPerTestTypeAsync(int LocalDrivingLicenseApplicationID, clsTestType.enTestType TestTypeID)
         {
-            return clsTestAppointmentData.GetApplicationTestAppointmentsPerTestType(LocalDrivingLicenseApplicationID, (int) TestTypeID);
-
+            return await clsTestAppointmentData.GetApplicationTestAppointmentsPerTestTypeAsync(LocalDrivingLicenseApplicationID, (int)TestTypeID).ConfigureAwait(false);
         }
 
-        public bool Save()
+        public async Task<bool> SaveAsync()
         {
             switch (Mode)
             {
                 case enMode.AddNew:
-                    if (_AddNewTestAppointment())
+                    if (await _AddNewTestAppointmentAsync().ConfigureAwait(false))
                     {
-
                         Mode = enMode.Update;
                         return true;
                     }
-                    else
-                    {
-                        return false;
-                    }
+                    return false;
 
                 case enMode.Update:
-
-                    return _UpdateTestAppointment();
-
+                    return await _UpdateTestAppointmentAsync().ConfigureAwait(false);
             }
-
             return false;
         }
 
-        private int  _GetTestID()
+        public async Task<int> GetTestIDAsync()
         {
-            return clsTestAppointmentData.GetTestID(TestAppointmentID);
+            return await clsTestAppointmentData.GetTestIDAsync(TestAppointmentID).ConfigureAwait(false);
         }
 
+        // Sync wrappers for backward compatibility
+        public static clsTestAppointment Find(int TestAppointmentID) => FindAsync(TestAppointmentID).GetAwaiter().GetResult();
+        public static clsTestAppointment GetLastTestAppointment(int LocalDrivingLicenseApplicationID, clsTestType.enTestType TestTypeID) => GetLastTestAppointmentAsync(LocalDrivingLicenseApplicationID, TestTypeID).GetAwaiter().GetResult();
+        public static DataTable GetAllTestAppointments() => GetAllTestAppointmentsAsync().GetAwaiter().GetResult();
+        public static DataTable GetApplicationTestAppointmentsPerTestType(int LocalDrivingLicenseApplicationID, clsTestType.enTestType TestTypeID) => GetApplicationTestAppointmentsPerTestTypeAsync(LocalDrivingLicenseApplicationID, TestTypeID).GetAwaiter().GetResult();
+        public bool Save() => SaveAsync().GetAwaiter().GetResult();
+        public int TestID => GetTestIDAsync().GetAwaiter().GetResult();
     }
 }

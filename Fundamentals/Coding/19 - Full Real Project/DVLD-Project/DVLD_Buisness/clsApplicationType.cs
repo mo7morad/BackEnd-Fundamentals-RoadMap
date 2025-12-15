@@ -1,99 +1,90 @@
 ﻿using System;
 using System.Data;
-using System.Diagnostics.Eventing.Reader;
+using System.Threading.Tasks;
 using DVLD_DataAccess;
 
 namespace DVLD_Buisness
 {
     public class clsApplicationType
     {
-
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
-
 
         public int ID { set; get; }
         public string Title { set; get; }
         public float Fees { set; get; }
 
         public clsApplicationType()
-
         {
             this.ID = -1;
             this.Title = "";
             this.Fees = 0;
             Mode = enMode.AddNew;
-
         }
 
-        public clsApplicationType(int ID, string ApplicationTypeTitel,float ApplicationTypeFees)
-
+        public clsApplicationType(int ID, string ApplicationTypeTitle, float ApplicationTypeFees)
         {
-            this.ID =  ID;
-            this.Title = ApplicationTypeTitel;
+            this.ID = ID;
+            this.Title = ApplicationTypeTitle;
             this.Fees = ApplicationTypeFees;
             Mode = enMode.Update;
         }
 
-        private bool _AddNewApplicationType()
+        private async Task<bool> _AddNewApplicationTypeAsync()
         {
-            //call DataAccess Layer 
-
-            this.ID = clsApplicationTypeData.AddNewApplicationType( this.Title, this.Fees);
-              
-
+            this.ID = await clsApplicationTypeData.AddNewApplicationTypeAsync(this.Title, this.Fees).ConfigureAwait(false);
             return (this.ID != -1);
         }
 
-        private bool _UpdateApplicationType()
+        private async Task<bool> _UpdateApplicationTypeAsync()
         {
-            //call DataAccess Layer 
-
-            return clsApplicationTypeData.UpdateApplicationType(this.ID,this.Title,this.Fees);
+            return await clsApplicationTypeData.UpdateApplicationTypeAsync(this.ID, this.Title, this.Fees).ConfigureAwait(false);
         }
 
-        public static clsApplicationType Find(int ID)
+        public static async Task<clsApplicationType> FindAsync(int ID)
         {
-            string Title = "";float Fees=0;
-
-            if (clsApplicationTypeData.GetApplicationTypeInfoByID((int) ID, ref Title, ref Fees))
-
-                return new clsApplicationType(ID, Title,Fees);
-            else
-                return null;
-
+            ApplicationTypeDTO dto = await clsApplicationTypeData.GetApplicationTypeInfoByIDAsync(ID).ConfigureAwait(false);
+            if (dto == null) return null;
+            return new clsApplicationType(dto.ApplicationTypeID, dto.ApplicationTypeTitle, dto.ApplicationFees);
         }
 
-        public static DataTable GetAllApplicationTypes()
+        public static async Task<DataTable> GetAllApplicationTypesAsync()
         {
-            return clsApplicationTypeData.GetAllApplicationTypes();
-
+            return await clsApplicationTypeData.GetAllApplicationTypesAsync().ConfigureAwait(false);
         }
 
-        public bool Save()
+        public async Task<bool> SaveAsync()
         {
             switch (Mode)
             {
                 case enMode.AddNew:
-                    if (_AddNewApplicationType())
+                    if (await _AddNewApplicationTypeAsync().ConfigureAwait(false))
                     {
-
                         Mode = enMode.Update;
                         return true;
                     }
-                    else
-                    {
-                        return false;
-                    }
+                    return false;
 
                 case enMode.Update:
-
-                    return _UpdateApplicationType();
-
+                    return await _UpdateApplicationTypeAsync().ConfigureAwait(false);
             }
-
             return false;
         }
 
+        // Sync wrappers for backward compatibility
+        public static clsApplicationType Find(int ID)
+        {
+            return FindAsync(ID).GetAwaiter().GetResult();
+        }
+
+        public static DataTable GetAllApplicationTypes()
+        {
+            return GetAllApplicationTypesAsync().GetAwaiter().GetResult();
+        }
+
+        public bool Save()
+        {
+            return SaveAsync().GetAwaiter().GetResult();
+        }
     }
 }

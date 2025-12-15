@@ -1,101 +1,84 @@
 ﻿using System;
 using System.Data;
-using System.Diagnostics.Eventing.Reader;
+using System.Threading.Tasks;
 using DVLD_DataAccess;
 
 namespace DVLD_Buisness
 {
     public class clsTestType
     {
-
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
-        public  enum enTestType { VisionTest = 1, WrittenTest = 2,StreetTest=3 };
+        public enum enTestType { VisionTest = 1, WrittenTest = 2, StreetTest = 3 };
 
-        public clsTestType.enTestType ID { set; get; }
+        public enTestType ID { set; get; }
         public string Title { set; get; }
-        public string Description { set; get; } 
+        public string Description { set; get; }
         public float Fees { set; get; }
-        public clsTestType()
 
+        public clsTestType()
         {
-            this.ID = clsTestType.enTestType.VisionTest;
+            this.ID = enTestType.VisionTest;
             this.Title = "";
             this.Description = "";
             this.Fees = 0;
             Mode = enMode.AddNew;
-
         }
 
-        public clsTestType(clsTestType.enTestType ID, string TestTypeTitel,string Description,float TestTypeFees)
-
+        public clsTestType(enTestType ID, string TestTypeTitle, string Description, float TestTypeFees)
         {
             this.ID = ID;
-            this.Title = TestTypeTitel;
+            this.Title = TestTypeTitle;
             this.Description = Description;
-
             this.Fees = TestTypeFees;
             Mode = enMode.Update;
         }
 
-        private bool _AddNewTestType()
+        private async Task<bool> _AddNewTestTypeAsync()
         {
-            //call DataAccess Layer 
-
-            this.ID =(clsTestType.enTestType) clsTestTypeData.AddNewTestType(this.Title,this.Description, this.Fees);
-              
-            return (this.Title !="");
+            int id = await clsTestTypeData.AddNewTestTypeAsync(this.Title, this.Description, this.Fees).ConfigureAwait(false);
+            this.ID = (enTestType)id;
+            return (this.Title != "");
         }
 
-        private bool _UpdateTestType()
+        private async Task<bool> _UpdateTestTypeAsync()
         {
-            //call DataAccess Layer 
-
-            return clsTestTypeData.UpdateTestType((int) this.ID,this.Title,this.Description,this.Fees);
+            return await clsTestTypeData.UpdateTestTypeAsync((int)this.ID, this.Title, this.Description, this.Fees).ConfigureAwait(false);
         }
 
-        public static clsTestType Find(clsTestType.enTestType TestTypeID)
+        public static async Task<clsTestType> FindAsync(enTestType TestTypeID)
         {
-            string Title = "", Description=""; float Fees=0;
-
-            if (clsTestTypeData.GetTestTypeInfoByID((int) TestTypeID, ref Title,ref Description, ref Fees))
-
-                return new clsTestType(TestTypeID, Title, Description,Fees);
-            else
-                return null;
-
+            TestTypeDTO dto = await clsTestTypeData.GetTestTypeInfoByIDAsync((int)TestTypeID).ConfigureAwait(false);
+            if (dto == null) return null;
+            return new clsTestType(TestTypeID, dto.TestTypeTitle, dto.TestTypeDescription, dto.TestTypeFees);
         }
 
-        public static DataTable GetAllTestTypes()
+        public static async Task<DataTable> GetAllTestTypesAsync()
         {
-            return clsTestTypeData.GetAllTestTypes();
-
+            return await clsTestTypeData.GetAllTestTypesAsync().ConfigureAwait(false);
         }
 
-        public bool Save()
+        public async Task<bool> SaveAsync()
         {
             switch (Mode)
             {
                 case enMode.AddNew:
-                    if (_AddNewTestType())
+                    if (await _AddNewTestTypeAsync().ConfigureAwait(false))
                     {
-
                         Mode = enMode.Update;
                         return true;
                     }
-                    else
-                    {
-                        return false;
-                    }
+                    return false;
 
                 case enMode.Update:
-
-                    return _UpdateTestType();
-
+                    return await _UpdateTestTypeAsync().ConfigureAwait(false);
             }
-
             return false;
         }
 
+        // Sync wrappers for backward compatibility
+        public static clsTestType Find(enTestType TestTypeID) => FindAsync(TestTypeID).GetAwaiter().GetResult();
+        public static DataTable GetAllTestTypes() => GetAllTestTypesAsync().GetAwaiter().GetResult();
+        public bool Save() => SaveAsync().GetAwaiter().GetResult();
     }
 }

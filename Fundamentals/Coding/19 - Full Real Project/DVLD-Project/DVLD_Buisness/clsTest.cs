@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Data;
-using System.Diagnostics.Eventing.Reader;
+using System.Threading.Tasks;
 using DVLD_DataAccess;
 
 namespace DVLD_Buisness
 {
     public class clsTest
     {
-
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
 
@@ -16,132 +15,98 @@ namespace DVLD_Buisness
         public clsTestAppointment TestAppointmentInfo { set; get; }
         public bool TestResult { set; get; }
         public string Notes { set; get; }
-        public int CreatedByUserID { set; get; } 
-       
-        public clsTest()
+        public int CreatedByUserID { set; get; }
 
+        public clsTest()
         {
             this.TestID = -1;
             this.TestAppointmentID = -1;
             this.TestResult = false;
-            this.Notes ="";
+            this.Notes = "";
             this.CreatedByUserID = -1;
-
             Mode = enMode.AddNew;
-
         }
 
-        public clsTest(int TestID,int TestAppointmentID,
-            bool TestResult, string Notes, int CreatedByUserID)
-
+        public clsTest(int TestID, int TestAppointmentID, bool TestResult, string Notes, int CreatedByUserID)
         {
             this.TestID = TestID;
             this.TestAppointmentID = TestAppointmentID;
-            this.TestAppointmentInfo = clsTestAppointment.Find(TestAppointmentID);
             this.TestResult = TestResult;
             this.Notes = Notes;
             this.CreatedByUserID = CreatedByUserID;
-
             Mode = enMode.Update;
         }
 
-        private bool _AddNewTest()
+        private async Task<bool> _AddNewTestAsync()
         {
-            //call DataAccess Layer 
-
-            this.TestID = clsTestData.AddNewTest(this.TestAppointmentID,
-                this.TestResult,this.Notes,this.CreatedByUserID);
-              
-
+            this.TestID = await clsTestData.AddNewTestAsync(this.TestAppointmentID,
+                this.TestResult, this.Notes, this.CreatedByUserID).ConfigureAwait(false);
             return (this.TestID != -1);
         }
 
-        private bool _UpdateTest()
+        private async Task<bool> _UpdateTestAsync()
         {
-            //call DataAccess Layer 
-
-            return clsTestData.UpdateTest(this.TestID, this.TestAppointmentID,
-                this.TestResult, this.Notes, this.CreatedByUserID);
+            return await clsTestData.UpdateTestAsync(this.TestID, this.TestAppointmentID,
+                this.TestResult, this.Notes, this.CreatedByUserID).ConfigureAwait(false);
         }
 
-        public static clsTest Find(int TestID)
+        public static async Task<clsTest> FindAsync(int TestID)
         {
-            int TestAppointmentID = -1;
-            bool TestResult = false; string Notes = "";int CreatedByUserID = -1;
-
-            if (clsTestData.GetTestInfoByID( TestID,
-            ref  TestAppointmentID, ref  TestResult,
-            ref  Notes, ref  CreatedByUserID))
-
-                return new clsTest(TestID,
-                        TestAppointmentID,  TestResult,
-                        Notes,  CreatedByUserID);
-            else
-                return null;
-
+            TestDTO dto = await clsTestData.GetTestInfoByIDAsync(TestID).ConfigureAwait(false);
+            if (dto == null) return null;
+            var test = new clsTest(dto.TestID, dto.TestAppointmentID, dto.TestResult, dto.Notes, dto.CreatedByUserID);
+            test.TestAppointmentInfo = await clsTestAppointment.FindAsync(dto.TestAppointmentID).ConfigureAwait(false);
+            return test;
         }
 
-        public static clsTest FindLastTestPerPersonAndLicenseClass
-            (int PersonID, int LicenseClassID, clsTestType.enTestType TestTypeID)
+        public static async Task<clsTest> FindLastTestPerPersonAndLicenseClassAsync(int PersonID, int LicenseClassID, clsTestType.enTestType TestTypeID)
         {
-            int TestID = -1;
-            int TestAppointmentID = -1;
-            bool TestResult = false; string Notes = ""; int CreatedByUserID = -1;
-
-            if (clsTestData.GetLastTestByPersonAndTestTypeAndLicenseClass
-                (PersonID,LicenseClassID,(int) TestTypeID, ref TestID,
-            ref TestAppointmentID, ref TestResult,
-            ref Notes, ref CreatedByUserID))
-
-                return new clsTest(TestID,
-                        TestAppointmentID, TestResult,
-                        Notes, CreatedByUserID);
-            else
-                return null;
-
+            TestDTO dto = await clsTestData.GetLastTestByPersonAndTestTypeAndLicenseClassAsync(PersonID, LicenseClassID, (int)TestTypeID).ConfigureAwait(false);
+            if (dto == null) return null;
+            var test = new clsTest(dto.TestID, dto.TestAppointmentID, dto.TestResult, dto.Notes, dto.CreatedByUserID);
+            test.TestAppointmentInfo = await clsTestAppointment.FindAsync(dto.TestAppointmentID).ConfigureAwait(false);
+            return test;
         }
 
-        public static DataTable GetAllTests()
+        public static async Task<DataTable> GetAllTestsAsync()
         {
-            return clsTestData.GetAllTests();
-
+            return await clsTestData.GetAllTestsAsync().ConfigureAwait(false);
         }
 
-        public bool Save()
+        public async Task<bool> SaveAsync()
         {
             switch (Mode)
             {
                 case enMode.AddNew:
-                    if (_AddNewTest())
+                    if (await _AddNewTestAsync().ConfigureAwait(false))
                     {
-
                         Mode = enMode.Update;
                         return true;
                     }
-                    else
-                    {
-                        return false;
-                    }
+                    return false;
 
                 case enMode.Update:
-
-                    return _UpdateTest();
-
+                    return await _UpdateTestAsync().ConfigureAwait(false);
             }
-
             return false;
         }
 
-        public static byte GetPassedTestCount(int LocalDrivingLicenseApplicationID)
+        public static async Task<byte> GetPassedTestCountAsync(int LocalDrivingLicenseApplicationID)
         {
-            return clsTestData.GetPassedTestCount(LocalDrivingLicenseApplicationID);
+            return await clsTestData.GetPassedTestCountAsync(LocalDrivingLicenseApplicationID).ConfigureAwait(false);
         }
 
-        public static bool  PassedAllTests(int LocalDrivingLicenseApplicationID)
+        public static async Task<bool> PassedAllTestsAsync(int LocalDrivingLicenseApplicationID)
         {
-            //if total passed test less than 3 it will return false otherwise will return true
-            return GetPassedTestCount(LocalDrivingLicenseApplicationID) == 3;
+            return await GetPassedTestCountAsync(LocalDrivingLicenseApplicationID).ConfigureAwait(false) == 3;
         }
 
+        // Sync wrappers for backward compatibility
+        public static clsTest Find(int TestID) => FindAsync(TestID).GetAwaiter().GetResult();
+        public static clsTest FindLastTestPerPersonAndLicenseClass(int PersonID, int LicenseClassID, clsTestType.enTestType TestTypeID) => FindLastTestPerPersonAndLicenseClassAsync(PersonID, LicenseClassID, TestTypeID).GetAwaiter().GetResult();
+        public static DataTable GetAllTests() => GetAllTestsAsync().GetAwaiter().GetResult();
+        public bool Save() => SaveAsync().GetAwaiter().GetResult();
+        public static byte GetPassedTestCount(int LocalDrivingLicenseApplicationID) => GetPassedTestCountAsync(LocalDrivingLicenseApplicationID).GetAwaiter().GetResult();
+        public static bool PassedAllTests(int LocalDrivingLicenseApplicationID) => PassedAllTestsAsync(LocalDrivingLicenseApplicationID).GetAwaiter().GetResult();
     }
 }

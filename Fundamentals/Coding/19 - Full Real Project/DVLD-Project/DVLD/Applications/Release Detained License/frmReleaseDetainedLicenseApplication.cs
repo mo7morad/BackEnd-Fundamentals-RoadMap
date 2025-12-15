@@ -56,9 +56,9 @@ namespace DVLD.Applications.Rlease_Detained_License
             }
 
             //ToDo: make sure the license is not detained already.
-            if (!ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.IsDetained)
+            if (!ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.IsDetained())
             {
-                MessageBox.Show("Selected License i is not detained, choose another one.", "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Selected License is not detained, choose another one.", "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -102,16 +102,13 @@ namespace DVLD.Applications.Rlease_Detained_License
                 return;
             }
 
-            int ApplicationID=-1 ;
-           
+            int ApplicationID = ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.ReleaseDetainedLicense(clsGlobal.CurrentUser.UserID);
 
-            bool IsReleased = ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.ReleaseDetainedLicense(clsGlobal.CurrentUser.UserID,ref ApplicationID); ;
-            
             lblApplicationID.Text = ApplicationID.ToString();
-            
-            if (! IsReleased )
+
+            if (ApplicationID == -1)
             {
-                MessageBox.Show("Faild to to release the Detain License", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Failed to release the Detained License", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

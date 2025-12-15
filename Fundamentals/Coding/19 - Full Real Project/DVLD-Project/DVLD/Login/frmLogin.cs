@@ -103,9 +103,9 @@ namespace DVLD.Login
             fadeTimer.Start();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private async void btnLogin_Click(object sender, EventArgs e)
         {
-            clsUser user = clsUser.FindByUsernameAndPassword(txtUserName.Text.Trim(), txtPassword.Text.Trim());
+            clsUser user = await clsUser.FindByUsernameAndPasswordAsync(txtUserName.Text.Trim(), txtPassword.Text.Trim());
 
             if (user != null)
             {

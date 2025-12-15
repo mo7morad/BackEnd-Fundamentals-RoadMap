@@ -18,7 +18,6 @@ D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\19 - Full Real P
 D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD\obj\Debug\DVLD.Licenses.Controls.ctrlDriverLicenseInfoWithFilter.resources
 D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD\obj\Debug\DVLD.Licenses.International_License.frmShowPersonLicenseHistory.resources
 D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD\obj\Debug\DVLD.Licenses.Local_Licenses.Controls.ctrlDriverLicenses.resources
-D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD\obj\Debug\DVLD.Controls.ctrlPersonCard.resources
 D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD\obj\Debug\DVLD.Controls.ctrlPersonCardWithFilter.resources
 D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD\obj\Debug\DVLD.Controls.ctrlUserCard.resources
 D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD\obj\Debug\DVLD.DriverLicense.ctrlDriverLicenseInfo.resources

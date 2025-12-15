@@ -1,23 +1,19 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Data;
-using System.Diagnostics.Eventing.Reader;
+using System.Threading.Tasks;
 using DVLD_DataAccess;
 
 namespace DVLD_Buisness
 {
     public class clsDetainedLicense
     {
-
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
-
 
         public int DetainID { set; get; }
         public int LicenseID { set; get; }
         public DateTime DetainDate { set; get; }
-
-        public float  FineFees { set; get; }
+        public float FineFees { set; get; }
         public int CreatedByUserID { set; get; }
         public clsUser CreatedByUserInfo { set; get; }
         public bool IsReleased { set; get; }
@@ -25,9 +21,8 @@ namespace DVLD_Buisness
         public int ReleasedByUserID { set; get; }
         public clsUser ReleasedByUserInfo { set; get; }
         public int ReleaseApplicationID { set; get; }
-       
-        public clsDetainedLicense()
 
+        public clsDetainedLicense()
         {
             this.DetainID = -1;
             this.LicenseID = -1;
@@ -38,138 +33,104 @@ namespace DVLD_Buisness
             this.ReleaseDate = DateTime.MaxValue;
             this.ReleasedByUserID = 0;
             this.ReleaseApplicationID = -1;
-
-
-
             Mode = enMode.AddNew;
-
         }
 
-        public clsDetainedLicense(int DetainID,
-            int LicenseID,  DateTime DetainDate,
-            float FineFees,  int CreatedByUserID,
-            bool IsReleased,  DateTime ReleaseDate,
-            int ReleasedByUserID,  int ReleaseApplicationID)
-
+        public clsDetainedLicense(int DetainID, int LicenseID, DateTime DetainDate,
+            float FineFees, int CreatedByUserID, bool IsReleased, DateTime ReleaseDate,
+            int ReleasedByUserID, int ReleaseApplicationID)
         {
             this.DetainID = DetainID;
             this.LicenseID = LicenseID;
             this.DetainDate = DetainDate;
             this.FineFees = FineFees;
             this.CreatedByUserID = CreatedByUserID;
-            this.CreatedByUserInfo = clsUser.FindByUserID(this.CreatedByUserID);
             this.IsReleased = IsReleased;
             this.ReleaseDate = ReleaseDate;
             this.ReleasedByUserID = ReleasedByUserID;
             this.ReleaseApplicationID = ReleaseApplicationID;
-            this.ReleasedByUserInfo= clsUser.FindByPersonID(this.ReleasedByUserID);
             Mode = enMode.Update;
         }
 
-        private bool _AddNewDetainedLicense()
+        private async Task<bool> _AddNewDetainedLicenseAsync()
         {
-            //call DataAccess Layer 
-
-            this.DetainID = clsDetainedLicenseData.AddNewDetainedLicense( 
-                this.LicenseID,this.DetainDate,this.FineFees,this.CreatedByUserID);
-            
+            this.DetainID = await clsDetainedLicenseData.AddNewDetainedLicenseAsync(
+                this.LicenseID, this.DetainDate, this.FineFees, this.CreatedByUserID).ConfigureAwait(false);
             return (this.DetainID != -1);
         }
 
-        private bool _UpdateDetainedLicense()
+        private async Task<bool> _UpdateDetainedLicenseAsync()
         {
-            //call DataAccess Layer 
-
-            return clsDetainedLicenseData.UpdateDetainedLicense(
-                this.DetainID,this.LicenseID,this.DetainDate,this.FineFees,this.CreatedByUserID);
+            return await clsDetainedLicenseData.UpdateDetainedLicenseAsync(
+                this.DetainID, this.LicenseID, this.DetainDate, this.FineFees, this.CreatedByUserID).ConfigureAwait(false);
         }
 
-        public static clsDetainedLicense Find(int DetainID)
+        public static async Task<clsDetainedLicense> FindAsync(int DetainID)
         {
-            int LicenseID = -1; DateTime DetainDate = DateTime.Now;
-            float FineFees= 0; int CreatedByUserID = -1;
-            bool IsReleased = false; DateTime ReleaseDate = DateTime.MaxValue;
-            int ReleasedByUserID = -1; int ReleaseApplicationID = -1;
-
-            if (clsDetainedLicenseData.GetDetainedLicenseInfoByID(DetainID,
-            ref LicenseID, ref DetainDate,
-            ref FineFees, ref CreatedByUserID,
-            ref IsReleased, ref ReleaseDate,
-            ref ReleasedByUserID, ref ReleaseApplicationID))
-
-                return new clsDetainedLicense(DetainID,
-                     LicenseID,  DetainDate,
-                     FineFees,  CreatedByUserID,
-                     IsReleased,  ReleaseDate,
-                     ReleasedByUserID,  ReleaseApplicationID);
-            else
-                return null;
-
+            DetainedLicenseDTO dto = await clsDetainedLicenseData.GetDetainedLicenseInfoByIDAsync(DetainID).ConfigureAwait(false);
+            if (dto == null) return null;
+            var detained = new clsDetainedLicense(dto.DetainID, dto.LicenseID, dto.DetainDate,
+                dto.FineFees, dto.CreatedByUserID, dto.IsReleased, dto.ReleaseDate,
+                dto.ReleasedByUserID, dto.ReleaseApplicationID);
+            detained.CreatedByUserInfo = await clsUser.FindByUserIDAsync(dto.CreatedByUserID).ConfigureAwait(false);
+            if (dto.ReleasedByUserID != -1)
+                detained.ReleasedByUserInfo = await clsUser.FindByUserIDAsync(dto.ReleasedByUserID).ConfigureAwait(false);
+            return detained;
         }
 
-        public static DataTable GetAllDetainedLicenses()
+        public static async Task<clsDetainedLicense> FindByLicenseIDAsync(int LicenseID)
         {
-            return clsDetainedLicenseData.GetAllDetainedLicenses();
-
+            DetainedLicenseDTO dto = await clsDetainedLicenseData.GetDetainedLicenseInfoByLicenseIDAsync(LicenseID).ConfigureAwait(false);
+            if (dto == null) return null;
+            var detained = new clsDetainedLicense(dto.DetainID, dto.LicenseID, dto.DetainDate,
+                dto.FineFees, dto.CreatedByUserID, dto.IsReleased, dto.ReleaseDate,
+                dto.ReleasedByUserID, dto.ReleaseApplicationID);
+            detained.CreatedByUserInfo = await clsUser.FindByUserIDAsync(dto.CreatedByUserID).ConfigureAwait(false);
+            if (dto.ReleasedByUserID != -1)
+                detained.ReleasedByUserInfo = await clsUser.FindByUserIDAsync(dto.ReleasedByUserID).ConfigureAwait(false);
+            return detained;
         }
 
-        public static clsDetainedLicense FindByLicenseID(int LicenseID)
+        public static async Task<DataTable> GetAllDetainedLicensesAsync()
         {
-            int DetainID = -1; DateTime DetainDate = DateTime.Now;
-            float FineFees = 0; int CreatedByUserID = -1;
-            bool IsReleased = false; DateTime ReleaseDate = DateTime.MaxValue;
-            int ReleasedByUserID = -1; int ReleaseApplicationID = -1;
-
-            if (clsDetainedLicenseData.GetDetainedLicenseInfoByLicenseID(LicenseID,
-            ref DetainID, ref DetainDate,
-            ref FineFees, ref CreatedByUserID,
-            ref IsReleased, ref ReleaseDate,
-            ref ReleasedByUserID, ref ReleaseApplicationID))
-
-                return new clsDetainedLicense(DetainID,
-                     LicenseID, DetainDate,
-                     FineFees, CreatedByUserID,
-                     IsReleased, ReleaseDate,
-                     ReleasedByUserID, ReleaseApplicationID);
-            else
-                return null;
-
+            return await clsDetainedLicenseData.GetAllDetainedLicensesAsync().ConfigureAwait(false);
         }
 
-        public bool Save()
+        public async Task<bool> SaveAsync()
         {
             switch (Mode)
             {
                 case enMode.AddNew:
-                    if (_AddNewDetainedLicense())
+                    if (await _AddNewDetainedLicenseAsync().ConfigureAwait(false))
                     {
-
                         Mode = enMode.Update;
                         return true;
                     }
-                    else
-                    {
-                        return false;
-                    }
+                    return false;
 
                 case enMode.Update:
-
-                    return _UpdateDetainedLicense();
-
+                    return await _UpdateDetainedLicenseAsync().ConfigureAwait(false);
             }
-
             return false;
         }
 
-        public static bool IsLicenseDetained(int LicenseID)
+        public static async Task<bool> IsLicenseDetainedAsync(int LicenseID)
         {
-            return clsDetainedLicenseData.IsLicenseDetained(LicenseID);
+            return await clsDetainedLicenseData.IsLicenseDetainedAsync(LicenseID).ConfigureAwait(false);
         }
 
-        public bool ReleaseDetainedLicense(int ReleasedByUserID, int ReleaseApplicationID)
+        public async Task<bool> ReleaseDetainedLicenseAsync(int ReleasedByUserID, int ReleaseApplicationID)
         {
-            return clsDetainedLicenseData.ReleaseDetainedLicense(this.DetainID,
-                   ReleasedByUserID, ReleaseApplicationID);
+            return await clsDetainedLicenseData.ReleaseDetainedLicenseAsync(
+                this.DetainID, ReleasedByUserID, ReleaseApplicationID).ConfigureAwait(false);
         }
+
+        // Sync wrappers for backward compatibility
+        public static clsDetainedLicense Find(int DetainID) => FindAsync(DetainID).GetAwaiter().GetResult();
+        public static clsDetainedLicense FindByLicenseID(int LicenseID) => FindByLicenseIDAsync(LicenseID).GetAwaiter().GetResult();
+        public static DataTable GetAllDetainedLicenses() => GetAllDetainedLicensesAsync().GetAwaiter().GetResult();
+        public bool Save() => SaveAsync().GetAwaiter().GetResult();
+        public static bool IsLicenseDetained(int LicenseID) => IsLicenseDetainedAsync(LicenseID).GetAwaiter().GetResult();
+        public bool ReleaseDetainedLicense(int ReleasedByUserID, int ReleaseApplicationID) => ReleaseDetainedLicenseAsync(ReleasedByUserID, ReleaseApplicationID).GetAwaiter().GetResult();
     }
 }

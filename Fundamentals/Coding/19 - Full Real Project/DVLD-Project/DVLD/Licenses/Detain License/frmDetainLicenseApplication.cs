@@ -80,9 +80,9 @@ namespace DVLD.Applications.Detain_License
             }
 
             //ToDo: make sure the license is not detained already.
-          if(  ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.IsDetained)
+          if(  ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.IsDetained())
             {
-                MessageBox.Show("Selected License i already detained, choose another one.", "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Selected License is already detained, choose another one.", "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

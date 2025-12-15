@@ -1,154 +1,94 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace DVLD_DataAccess
 {
+    public class CountryDTO
+    {
+        public int ID { get; set; }
+        public string CountryName { get; set; }
+
+        public CountryDTO(int id, string countryName)
+        {
+            ID = id;
+            CountryName = countryName;
+        }
+    }
+
     public class clsCountryData
     {
-        public enum engender { Male = 0, Female = 1 };
-
-        public static bool GetCountryInfoByID(int ID, ref string CountryName)
+        public static async Task<CountryDTO> GetCountryInfoByIDAsync(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
-                bool isFound = false;
-
-                SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
                 string query = "SELECT * FROM Countries WHERE CountryID = @CountryID";
-
-                SqlCommand command = new SqlCommand(query, connection);
-
-                command.Parameters.AddWithValue("@CountryID", ID);
-
-                try
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    connection.Open();
-                    SqlDataReader reader = command.ExecuteReader();
-
-                    if (reader.Read())
+                    command.Parameters.AddWithValue("@CountryID", id);
+                    try
                     {
-
-                        // The record was found
-                        isFound = true;
-
-                        CountryName = (string)reader["CountryName"];
-
+                        await connection.OpenAsync().ConfigureAwait(false);
+                        using (SqlDataReader reader = await command.ExecuteReaderAsync().ConfigureAwait(false))
+                        {
+                            if (await reader.ReadAsync().ConfigureAwait(false))
+                            {
+                                return new CountryDTO(id, (string)reader["CountryName"]);
+                            }
+                        }
                     }
-                    else
-                    {
-                        // The record was not found
-                        isFound = false;
-                    }
-
-                    reader.Close();
-
-
+                    catch (Exception) { }
                 }
-                catch (Exception ex)
-                {
-                    //Console.WriteLine("Error: " + ex.Message);
-                    isFound = false;
-                }
-                finally
-                {
-                    connection.Close();
-                }
-
-                return isFound;
             }
-
-        public static bool GetCountryInfoByName(string CountryName, ref int ID)
-        {
-            bool isFound = false;
-
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-            string query = "SELECT * FROM Countries WHERE CountryName = @CountryName";
-
-            SqlCommand command = new SqlCommand(query, connection);
-
-            command.Parameters.AddWithValue("@CountryName", CountryName);
-
-            try
-            {
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.Read())
-                {
-
-                    // The record was found
-                    isFound = true;
-
-                    ID = (int)reader["CountryID"];
-
-                }
-                else
-                {
-                    // The record was not found
-                    isFound = false;
-                }
-
-                reader.Close();
-
-
-            }
-            catch (Exception ex)
-            {
-                //Console.WriteLine("Error: " + ex.Message);
-                isFound = false;
-            }
-            finally
-            {
-                connection.Close();
-            }
-
-            return isFound;
+            return null;
         }
 
-        public static DataTable GetAllCountries()
+        public static async Task<CountryDTO> GetCountryInfoByNameAsync(string countryName)
         {
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = "SELECT * FROM Countries WHERE CountryName = @CountryName";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@CountryName", countryName);
+                    try
+                    {
+                        await connection.OpenAsync().ConfigureAwait(false);
+                        using (SqlDataReader reader = await command.ExecuteReaderAsync().ConfigureAwait(false))
+                        {
+                            if (await reader.ReadAsync().ConfigureAwait(false))
+                            {
+                                return new CountryDTO((int)reader["CountryID"], countryName);
+                            }
+                        }
+                    }
+                    catch (Exception) { }
+                }
+            }
+            return null;
+        }
 
+        public static async Task<DataTable> GetAllCountriesAsync()
+        {
             DataTable dt = new DataTable();
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-            string query = "SELECT * FROM Countries order by CountryName";
-
-            SqlCommand command = new SqlCommand(query, connection);
-
-            try
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
-                connection.Open();
-
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.HasRows)
-
+                string query = "SELECT * FROM Countries order by CountryName";
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    dt.Load(reader);
+                    try
+                    {
+                        await connection.OpenAsync().ConfigureAwait(false);
+                        using (SqlDataReader reader = await command.ExecuteReaderAsync().ConfigureAwait(false))
+                        {
+                            if (reader.HasRows) dt.Load(reader);
+                        }
+                    }
+                    catch (Exception) { }
                 }
-
-                reader.Close();
-
-
             }
-
-            catch (Exception ex)
-            {
-                // Console.WriteLine("Error: " + ex.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-
             return dt;
-
         }
-
     }
 }

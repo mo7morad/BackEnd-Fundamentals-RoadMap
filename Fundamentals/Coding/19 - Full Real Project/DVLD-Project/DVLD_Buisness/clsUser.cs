@@ -31,81 +31,73 @@ namespace DVLD_Buisness
         {
             this.UserID = UserID;
             this.PersonID = PersonID;
-            this.PersonInfo = clsPerson.Find(PersonID);
             this.UserName = Username;
             this.Password = Password;
             this.IsActive = IsActive;
-
             Mode = enMode.Update;
         }
 
-        /// <summary>
-        /// Converts the current user to a UserDTO.
-        /// </summary>
         private UserDTO ToDTO()
         {
             return new UserDTO(UserID, PersonID, UserName, Password, IsActive);
         }
 
-        /// <summary>
-        /// Creates a clsUser from a UserDTO.
-        /// </summary>
         private static clsUser FromDTO(UserDTO dto)
         {
             if (dto == null) return null;
             return new clsUser(dto.UserID, dto.PersonID, dto.UserName, dto.Password, dto.IsActive);
         }
 
-        #region Async Methods
+        private async Task _LoadPersonInfoAsync()
+        {
+            this.PersonInfo = await clsPerson.FindAsync(PersonID).ConfigureAwait(false);
+        }
 
         private async Task<bool> _AddNewUserAsync()
         {
             var dto = ToDTO();
-            this.UserID = await clsUserData.AddNewUserAsync(dto);
+            this.UserID = await clsUserData.AddNewUserAsync(dto).ConfigureAwait(false);
             return (this.UserID != -1);
         }
 
         private async Task<bool> _UpdateUserAsync()
         {
-            return await clsUserData.UpdateUserAsync(ToDTO());
+            return await clsUserData.UpdateUserAsync(ToDTO()).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Finds a user by UserID asynchronously.
-        /// </summary>
         public static async Task<clsUser> FindByUserIDAsync(int UserID)
         {
-            UserDTO dto = await clsUserData.GetUserInfoByUserIDAsync(UserID);
-            return FromDTO(dto);
+            UserDTO dto = await clsUserData.GetUserInfoByUserIDAsync(UserID).ConfigureAwait(false);
+            if (dto == null) return null;
+            var user = FromDTO(dto);
+            await user._LoadPersonInfoAsync().ConfigureAwait(false);
+            return user;
         }
 
-        /// <summary>
-        /// Finds a user by PersonID asynchronously.
-        /// </summary>
         public static async Task<clsUser> FindByPersonIDAsync(int PersonID)
         {
-            UserDTO dto = await clsUserData.GetUserInfoByPersonIDAsync(PersonID);
-            return FromDTO(dto);
+            UserDTO dto = await clsUserData.GetUserInfoByPersonIDAsync(PersonID).ConfigureAwait(false);
+            if (dto == null) return null;
+            var user = FromDTO(dto);
+            await user._LoadPersonInfoAsync().ConfigureAwait(false);
+            return user;
         }
 
-        /// <summary>
-        /// Finds a user by username and password asynchronously.
-        /// </summary>
         public static async Task<clsUser> FindByUsernameAndPasswordAsync(string UserName, string Password)
         {
-            UserDTO dto = await clsUserData.GetUserInfoByUsernameAndPasswordAsync(UserName, Password);
-            return FromDTO(dto);
+            UserDTO dto = await clsUserData.GetUserInfoByUsernameAndPasswordAsync(UserName, Password).ConfigureAwait(false);
+            if (dto == null) return null;
+            var user = FromDTO(dto);
+            await user._LoadPersonInfoAsync().ConfigureAwait(false);
+            return user;
         }
 
-        /// <summary>
-        /// Saves the user asynchronously (Add or Update).
-        /// </summary>
         public async Task<bool> SaveAsync()
         {
             switch (Mode)
             {
                 case enMode.AddNew:
-                    if (await _AddNewUserAsync())
+                    if (await _AddNewUserAsync().ConfigureAwait(false))
                     {
                         Mode = enMode.Update;
                         return true;
@@ -113,164 +105,51 @@ namespace DVLD_Buisness
                     return false;
 
                 case enMode.Update:
-                    return await _UpdateUserAsync();
+                    return await _UpdateUserAsync().ConfigureAwait(false);
             }
             return false;
         }
 
-        /// <summary>
-        /// Gets all users asynchronously.
-        /// </summary>
         public static async Task<DataTable> GetAllUsersAsync()
         {
-            return await clsUserData.GetAllUsersAsync();
+            return await clsUserData.GetAllUsersAsync().ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Deletes a user asynchronously.
-        /// </summary>
         public static async Task<bool> DeleteUserAsync(int UserID)
         {
-            return await clsUserData.DeleteUserAsync(UserID);
+            return await clsUserData.DeleteUserAsync(UserID).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Checks if a user exists by UserID asynchronously.
-        /// </summary>
         public static async Task<bool> IsUserExistAsync(int UserID)
         {
-            return await clsUserData.IsUserExistAsync(UserID);
+            return await clsUserData.IsUserExistAsync(UserID).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Checks if a user exists by username asynchronously.
-        /// </summary>
         public static async Task<bool> IsUserExistAsync(string UserName)
         {
-            return await clsUserData.IsUserExistByUsernameAsync(UserName);
+            return await clsUserData.IsUserExistByUsernameAsync(UserName).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Checks if a user exists for a PersonID asynchronously.
-        /// </summary>
         public static async Task<bool> IsUserExistForPersonIDAsync(int PersonID)
         {
-            return await clsUserData.IsUserExistForPersonIDAsync(PersonID);
+            return await clsUserData.IsUserExistForPersonIDAsync(PersonID).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Changes the password asynchronously.
-        /// </summary>
         public static async Task<bool> ChangePasswordAsync(int UserID, string NewPassword)
         {
-            return await clsUserData.ChangePasswordAsync(UserID, NewPassword);
+            return await clsUserData.ChangePasswordAsync(UserID, NewPassword).ConfigureAwait(false);
         }
 
-        #endregion
-
-        #region Synchronous Methods (for backward compatibility)
-
-        private bool _AddNewUser()
-        {
-            this.UserID = clsUserData.AddNewUser(this.PersonID, this.UserName,
-                this.Password, this.IsActive);
-            return (this.UserID != -1);
-        }
-
-        private bool _UpdateUser()
-        {
-            return clsUserData.UpdateUser(this.UserID, this.PersonID, this.UserName,
-                this.Password, this.IsActive);
-        }
-
-        public static clsUser FindByUserID(int UserID)
-        {
-            int PersonID = -1;
-            string UserName = "", Password = "";
-            bool IsActive = false;
-
-            bool IsFound = clsUserData.GetUserInfoByUserID
-                                (UserID, ref PersonID, ref UserName, ref Password, ref IsActive);
-
-            if (IsFound)
-                return new clsUser(UserID, PersonID, UserName, Password, IsActive);
-            else
-                return null;
-        }
-
-        public static clsUser FindByPersonID(int PersonID)
-        {
-            int UserID = -1;
-            string UserName = "", Password = "";
-            bool IsActive = false;
-
-            bool IsFound = clsUserData.GetUserInfoByPersonID
-                                (PersonID, ref UserID, ref UserName, ref Password, ref IsActive);
-
-            if (IsFound)
-                return new clsUser(UserID, PersonID, UserName, Password, IsActive);
-            else
-                return null;
-        }
-
-        public static clsUser FindByUsernameAndPassword(string UserName, string Password)
-        {
-            int UserID = -1;
-            int PersonID = -1;
-            bool IsActive = false;
-
-            bool IsFound = clsUserData.GetUserInfoByUsernameAndPassword
-                                (UserName, Password, ref UserID, ref PersonID, ref IsActive);
-
-            if (IsFound)
-                return new clsUser(UserID, PersonID, UserName, Password, IsActive);
-            else
-                return null;
-        }
-
-        public bool Save()
-        {
-            switch (Mode)
-            {
-                case enMode.AddNew:
-                    if (_AddNewUser())
-                    {
-                        Mode = enMode.Update;
-                        return true;
-                    }
-                    return false;
-
-                case enMode.Update:
-                    return _UpdateUser();
-            }
-            return false;
-        }
-
-        public static DataTable GetAllUsers()
-        {
-            return clsUserData.GetAllUsers();
-        }
-
-        public static bool DeleteUser(int UserID)
-        {
-            return clsUserData.DeleteUser(UserID);
-        }
-
-        public static bool isUserExist(int UserID)
-        {
-            return clsUserData.IsUserExist(UserID);
-        }
-
-        public static bool isUserExist(string UserName)
-        {
-            return clsUserData.IsUserExist(UserName);
-        }
-
-        public static bool isUserExistForPersonID(int PersonID)
-        {
-            return clsUserData.IsUserExistForPersonID(PersonID);
-        }
-
-        #endregion
+        // Sync wrappers for backward compatibility
+        public static clsUser FindByUserID(int UserID) => FindByUserIDAsync(UserID).GetAwaiter().GetResult();
+        public static clsUser FindByPersonID(int PersonID) => FindByPersonIDAsync(PersonID).GetAwaiter().GetResult();
+        public static clsUser FindByUsernameAndPassword(string UserName, string Password) => FindByUsernameAndPasswordAsync(UserName, Password).GetAwaiter().GetResult();
+        public bool Save() => SaveAsync().GetAwaiter().GetResult();
+        public static DataTable GetAllUsers() => GetAllUsersAsync().GetAwaiter().GetResult();
+        public static bool DeleteUser(int UserID) => DeleteUserAsync(UserID).GetAwaiter().GetResult();
+        public static bool isUserExist(int UserID) => IsUserExistAsync(UserID).GetAwaiter().GetResult();
+        public static bool isUserExist(string UserName) => IsUserExistAsync(UserName).GetAwaiter().GetResult();
+        public static bool isUserExistForPersonID(int PersonID) => IsUserExistForPersonIDAsync(PersonID).GetAwaiter().GetResult();
+        public static bool ChangePassword(int UserID, string NewPassword) => ChangePasswordAsync(UserID, NewPassword).GetAwaiter().GetResult();
     }
 }

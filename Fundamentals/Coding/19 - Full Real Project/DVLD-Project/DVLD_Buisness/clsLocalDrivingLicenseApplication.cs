@@ -1,357 +1,314 @@
 ﻿using System;
 using System.Data;
+using System.Threading.Tasks;
 using DVLD_DataAccess;
-
 
 namespace DVLD_Buisness
 {
-    public   class clsLocalDrivingLicenseApplication : clsApplication
-
+    public class clsLocalDrivingLicenseApplication : clsApplication
     {
-        public enum enMode { AddNew = 0, Update = 1 };
-        public enMode Mode = enMode.AddNew;
+        public new enum enMode { AddNew = 0, Update = 1 };
+        public new enMode Mode = enMode.AddNew;
 
         public int LocalDrivingLicenseApplicationID { set; get; }
         public int LicenseClassID { set; get; }
         public clsLicenseClass LicenseClassInfo;
-        public string PersonFullName   
-        {
-            get
-            {
-                return clsPerson.Find(ApplicantPersonID).FullName;
-            }
-        }
 
         public clsLocalDrivingLicenseApplication()
-
         {
             this.LocalDrivingLicenseApplicationID = -1;
             this.LicenseClassID = -1;
-            
-           
             Mode = enMode.AddNew;
-
         }
 
-        private clsLocalDrivingLicenseApplication(int LocalDrivingLicenseApplicationID, int ApplicationID, int ApplicantPersonID, 
+        private clsLocalDrivingLicenseApplication(int LocalDrivingLicenseApplicationID, int ApplicationID, int ApplicantPersonID,
             DateTime ApplicationDate, int ApplicationTypeID,
-             enApplicationStatus ApplicationStatus, DateTime LastStatusDate,
-             float PaidFees, int CreatedByUserID, int LicenseClassID)
-
+            enApplicationStatus ApplicationStatus, DateTime LastStatusDate,
+            float PaidFees, int CreatedByUserID, int LicenseClassID)
+            : base(ApplicationID, ApplicantPersonID, ApplicationDate, ApplicationTypeID,
+                  ApplicationStatus, LastStatusDate, PaidFees, CreatedByUserID)
         {
-            this.LocalDrivingLicenseApplicationID= LocalDrivingLicenseApplicationID; ;
-            this.ApplicationID = ApplicationID;
-            this.ApplicantPersonID = ApplicantPersonID;
-            this.ApplicationDate = ApplicationDate;
-            this.ApplicationTypeID = (int) ApplicationTypeID;
-            this.ApplicationStatus = ApplicationStatus;
-            this.LastStatusDate = LastStatusDate;
-            this.PaidFees = PaidFees;
-            this.CreatedByUserID = CreatedByUserID;
+            this.LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID;
             this.LicenseClassID = LicenseClassID;
-            this.LicenseClassInfo = clsLicenseClass.Find(LicenseClassID);
             Mode = enMode.Update;
         }
 
-        private bool _AddNewLocalDrivingLicenseApplication()
+        private async Task<bool> _AddNewLocalDrivingLicenseApplicationAsync()
         {
-            //call DataAccess Layer 
-            
-            this.LocalDrivingLicenseApplicationID = clsLocalDrivingLicenseApplicationData.AddNewLocalDrivingLicenseApplication
-                (
-                this.ApplicationID, this.LicenseClassID);
-
+            this.LocalDrivingLicenseApplicationID = await clsLocalDrivingLicenseApplicationData.AddNewLocalDrivingLicenseApplicationAsync(
+                this.ApplicationID, this.LicenseClassID).ConfigureAwait(false);
             return (this.LocalDrivingLicenseApplicationID != -1);
         }
 
-        private bool _UpdateLocalDrivingLicenseApplication()
+        private async Task<bool> _UpdateLocalDrivingLicenseApplicationAsync()
         {
-            //call DataAccess Layer 
-
-            return clsLocalDrivingLicenseApplicationData.UpdateLocalDrivingLicenseApplication
-                (
-                this.LocalDrivingLicenseApplicationID ,this.ApplicationID, this.LicenseClassID);
-           
+            return await clsLocalDrivingLicenseApplicationData.UpdateLocalDrivingLicenseApplicationAsync(
+                this.LocalDrivingLicenseApplicationID, this.ApplicationID, this.LicenseClassID).ConfigureAwait(false);
         }
 
-        public static clsLocalDrivingLicenseApplication  FindByLocalDrivingAppLicenseID(int LocalDrivingLicenseApplicationID)
+        public static async Task<clsLocalDrivingLicenseApplication> FindByLocalDrivingAppLicenseIDAsync(int LocalDrivingLicenseApplicationID)
         {
-            // 
-            int ApplicationID=-1, LicenseClassID=-1;
+            LocalDrivingLicenseApplicationDTO dto = await clsLocalDrivingLicenseApplicationData.GetLocalDrivingLicenseApplicationInfoByIDAsync(LocalDrivingLicenseApplicationID).ConfigureAwait(false);
+            if (dto == null) return null;
 
-            bool IsFound = clsLocalDrivingLicenseApplicationData.GetLocalDrivingLicenseApplicationInfoByID
-                (LocalDrivingLicenseApplicationID, ref ApplicationID, ref LicenseClassID);
+            clsApplication Application = await clsApplication.FindBaseApplicationAsync(dto.ApplicationID).ConfigureAwait(false);
+            if (Application == null) return null;
 
+            var app = new clsLocalDrivingLicenseApplication(
+                dto.LocalDrivingLicenseApplicationID, Application.ApplicationID, Application.ApplicantPersonID,
+                Application.ApplicationDate, Application.ApplicationTypeID,
+                Application.ApplicationStatus, Application.LastStatusDate,
+                Application.PaidFees, Application.CreatedByUserID, dto.LicenseClassID);
+            app.LicenseClassInfo = await clsLicenseClass.FindAsync(dto.LicenseClassID).ConfigureAwait(false);
+            return app;
+        }
 
-            if (IsFound)
-            { 
-               //now we find the base application
-                clsApplication Application = clsApplication.FindBaseApplication(ApplicationID);
+        public static async Task<clsLocalDrivingLicenseApplication> FindByApplicationIDAsync(int ApplicationID)
+        {
+            LocalDrivingLicenseApplicationDTO dto = await clsLocalDrivingLicenseApplicationData.GetLocalDrivingLicenseApplicationInfoByApplicationIDAsync(ApplicationID).ConfigureAwait(false);
+            if (dto == null) return null;
 
-                //we return new object of that person with the right data
-                return new clsLocalDrivingLicenseApplication(
-                    LocalDrivingLicenseApplicationID, Application.ApplicationID, 
-                    Application.ApplicantPersonID,
-                                     Application.ApplicationDate, Application.ApplicationTypeID,
-                                    (enApplicationStatus)Application.ApplicationStatus, Application.LastStatusDate,
-                                     Application.PaidFees, Application.CreatedByUserID,LicenseClassID);
+            clsApplication Application = await clsApplication.FindBaseApplicationAsync(dto.ApplicationID).ConfigureAwait(false);
+            if (Application == null) return null;
+
+            var app = new clsLocalDrivingLicenseApplication(
+                dto.LocalDrivingLicenseApplicationID, Application.ApplicationID, Application.ApplicantPersonID,
+                Application.ApplicationDate, Application.ApplicationTypeID,
+                Application.ApplicationStatus, Application.LastStatusDate,
+                Application.PaidFees, Application.CreatedByUserID, dto.LicenseClassID);
+            app.LicenseClassInfo = await clsLicenseClass.FindAsync(dto.LicenseClassID).ConfigureAwait(false);
+            return app;
+        }
+
+        public async Task<string> GetPersonFullNameAsync()
+        {
+            var person = await clsPerson.FindAsync(ApplicantPersonID).ConfigureAwait(false);
+            return person?.FullName ?? "";
+        }
+
+        public new async Task<bool> SaveAsync()
+        {
+            base.Mode = (clsApplication.enMode)Mode;
+            if (!await base.SaveAsync().ConfigureAwait(false))
+                return false;
+
+            switch (Mode)
+            {
+                case enMode.AddNew:
+                    if (await _AddNewLocalDrivingLicenseApplicationAsync().ConfigureAwait(false))
+                    {
+                        Mode = enMode.Update;
+                        return true;
+                    }
+                    return false;
+
+                case enMode.Update:
+                    return await _UpdateLocalDrivingLicenseApplicationAsync().ConfigureAwait(false);
+            }
+            return false;
+        }
+
+        public static async Task<DataTable> GetAllLocalDrivingLicenseApplicationsAsync()
+        {
+            return await clsLocalDrivingLicenseApplicationData.GetAllLocalDrivingLicenseApplicationsAsync().ConfigureAwait(false);
+        }
+
+        public new async Task<bool> DeleteAsync()
+        {
+            bool IsLocalDrivingApplicationDeleted = await clsLocalDrivingLicenseApplicationData.DeleteLocalDrivingLicenseApplicationAsync(this.LocalDrivingLicenseApplicationID).ConfigureAwait(false);
+            if (!IsLocalDrivingApplicationDeleted) return false;
+            return await base.DeleteAsync().ConfigureAwait(false);
+        }
+
+        public async Task<bool> DoesPassTestTypeAsync(clsTestType.enTestType TestTypeID)
+        {
+            return await clsLocalDrivingLicenseApplicationData.DoesPassTestTypeAsync(this.LocalDrivingLicenseApplicationID, (int)TestTypeID).ConfigureAwait(false);
+        }
+
+        public async Task<bool> DoesPassPreviousTestAsync(clsTestType.enTestType CurrentTestType)
+        {
+            switch (CurrentTestType)
+            {
+                case clsTestType.enTestType.VisionTest: return true;
+                case clsTestType.enTestType.WrittenTest: return await DoesPassTestTypeAsync(clsTestType.enTestType.VisionTest).ConfigureAwait(false);
+                case clsTestType.enTestType.StreetTest: return await DoesPassTestTypeAsync(clsTestType.enTestType.WrittenTest).ConfigureAwait(false);
+                default: return false;
+            }
+        }
+
+        public async Task<bool> DoesAttendTestTypeAsync(clsTestType.enTestType TestTypeID)
+        {
+            return await clsLocalDrivingLicenseApplicationData.DoesAttendTestTypeAsync(this.LocalDrivingLicenseApplicationID, (int)TestTypeID).ConfigureAwait(false);
+        }
+
+        public async Task<byte> TotalTrialsPerTestAsync(clsTestType.enTestType TestTypeID)
+        {
+            return await clsLocalDrivingLicenseApplicationData.TotalTrialsPerTestAsync(this.LocalDrivingLicenseApplicationID, (int)TestTypeID).ConfigureAwait(false);
+        }
+
+        public static async Task<bool> IsThereAnActiveScheduledTestAsync(int LocalDrivingLicenseApplicationID, clsTestType.enTestType TestTypeID)
+        {
+            return await clsLocalDrivingLicenseApplicationData.IsThereAnActiveScheduledTestAsync(LocalDrivingLicenseApplicationID, (int)TestTypeID).ConfigureAwait(false);
+        }
+
+        public async Task<clsTest> GetLastTestPerTestTypeAsync(clsTestType.enTestType TestTypeID)
+        {
+            return await clsTest.FindLastTestPerPersonAndLicenseClassAsync(this.ApplicantPersonID, this.LicenseClassID, TestTypeID).ConfigureAwait(false);
+        }
+
+        public async Task<byte> GetPassedTestCountAsync()
+        {
+            return await clsTest.GetPassedTestCountAsync(this.LocalDrivingLicenseApplicationID).ConfigureAwait(false);
+        }
+
+        public async Task<bool> PassedAllTestsAsync()
+        {
+            return await clsTest.PassedAllTestsAsync(this.LocalDrivingLicenseApplicationID).ConfigureAwait(false);
+        }
+
+        public async Task<int> IssueLicenseForTheFirstTimeAsync(string Notes, int CreatedByUserID)
+        {
+            int DriverID = -1;
+            clsDriver Driver = await clsDriver.FindByPersonIDAsync(this.ApplicantPersonID).ConfigureAwait(false);
+
+            if (Driver == null)
+            {
+                Driver = new clsDriver();
+                Driver.PersonID = this.ApplicantPersonID;
+                Driver.CreatedByUserID = CreatedByUserID;
+                if (await Driver.SaveAsync().ConfigureAwait(false))
+                    DriverID = Driver.DriverID;
+                else
+                    return -1;
             }
             else
-                return null;
-          
+            {
+                DriverID = Driver.DriverID;
+            }
 
+            clsLicense License = new clsLicense();
+            License.ApplicationID = this.ApplicationID;
+            License.DriverID = DriverID;
+            License.LicenseClass = this.LicenseClassID;
+            License.IssueDate = DateTime.Now;
+            License.ExpirationDate = DateTime.Now.AddYears(this.LicenseClassInfo.DefaultValidityLength);
+            License.Notes = Notes;
+            License.PaidFees = this.LicenseClassInfo.ClassFees;
+            License.IsActive = true;
+            License.IssueReason = clsLicense.enIssueReason.FirstTime;
+            License.CreatedByUserID = CreatedByUserID;
+
+            if (await License.SaveAsync().ConfigureAwait(false))
+            {
+                await this.SetCompleteAsync().ConfigureAwait(false);
+                return License.LicenseID;
+            }
+            return -1;
+        }
+
+        public async Task<bool> IsLicenseIssuedAsync()
+        {
+            return (await GetActiveLicenseIDAsync().ConfigureAwait(false)) != -1;
+        }
+
+        public async Task<int> GetActiveLicenseIDAsync()
+        {
+            return await clsLicense.GetActiveLicenseIDByPersonIDAsync(this.ApplicantPersonID, this.LicenseClassID).ConfigureAwait(false);
+        }
+
+        // Sync wrappers for backward compatibility
+        public static clsLocalDrivingLicenseApplication FindByLocalDrivingAppLicenseID(int LocalDrivingLicenseApplicationID)
+        {
+            return FindByLocalDrivingAppLicenseIDAsync(LocalDrivingLicenseApplicationID).GetAwaiter().GetResult();
         }
 
         public static clsLocalDrivingLicenseApplication FindByApplicationID(int ApplicationID)
         {
-            // 
-            int LocalDrivingLicenseApplicationID = -1, LicenseClassID = -1;
-
-            bool IsFound = clsLocalDrivingLicenseApplicationData.GetLocalDrivingLicenseApplicationInfoByApplicationID 
-                (ApplicationID, ref LocalDrivingLicenseApplicationID, ref LicenseClassID);
-
-
-            if (IsFound)
-            {
-                //now we find the base application
-                clsApplication Application = clsApplication.FindBaseApplication(ApplicationID);
-
-                //we return new object of that person with the right data
-                return new clsLocalDrivingLicenseApplication(
-                    LocalDrivingLicenseApplicationID, Application.ApplicationID,
-                    Application.ApplicantPersonID,
-                                     Application.ApplicationDate, Application.ApplicationTypeID,
-                                    (enApplicationStatus)Application.ApplicationStatus, Application.LastStatusDate,
-                                     Application.PaidFees, Application.CreatedByUserID, LicenseClassID);
-            }
-            else
-                return null;
-
-
+            return FindByApplicationIDAsync(ApplicationID).GetAwaiter().GetResult();
         }
 
-        public bool  Save()
+        public string PersonFullName => GetPersonFullNameAsync().GetAwaiter().GetResult();
+
+        public new bool Save()
         {
-          
-           //Because of inheritance first we call the save method in the base class,
-           //it will take care of adding all information to the application table.
-            base.Mode = (clsApplication.enMode) Mode;
-          if (!base.Save()) 
-                return false ;
-
-
-          //After we save the main application now we save the sub application.
-            switch (Mode)
-            {
-                case enMode.AddNew:
-                    if (_AddNewLocalDrivingLicenseApplication())
-                    {
-
-                        Mode = enMode.Update;
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-
-                case enMode.Update:
-
-                    return _UpdateLocalDrivingLicenseApplication();
-
-            }
-
-            return false;
+            return SaveAsync().GetAwaiter().GetResult();
         }
 
         public static DataTable GetAllLocalDrivingLicenseApplications()
         {
-            return clsLocalDrivingLicenseApplicationData.GetAllLocalDrivingLicenseApplications();
+            return GetAllLocalDrivingLicenseApplicationsAsync().GetAwaiter().GetResult();
         }
 
-        public  bool Delete()
+        public new bool Delete()
         {
-            bool IsLocalDrivingApplicationDeleted = false;
-            bool IsBaseApplicationDeleted = false;
-            //First we delete the Local Driving License Application
-            IsLocalDrivingApplicationDeleted = clsLocalDrivingLicenseApplicationData.DeleteLocalDrivingLicenseApplication(this.LocalDrivingLicenseApplicationID);
-           
-            if (!IsLocalDrivingApplicationDeleted)
-                return false;
-            //Then we delete the base Application
-            IsBaseApplicationDeleted = base.Delete();
-            return IsBaseApplicationDeleted;
-
+            return DeleteAsync().GetAwaiter().GetResult();
         }
 
-        public bool DoesPassTestType(clsTestType.enTestType  TestTypeID)
-
+        public bool DoesPassTestType(clsTestType.enTestType TestTypeID)
         {
-            return clsLocalDrivingLicenseApplicationData.DoesPassTestType( this.LocalDrivingLicenseApplicationID,(int) TestTypeID);
+            return DoesPassTestTypeAsync(TestTypeID).GetAwaiter().GetResult();
         }
 
         public bool DoesPassPreviousTest(clsTestType.enTestType CurrentTestType)
         {
-
-            switch (CurrentTestType)
-            {
-                case clsTestType.enTestType.VisionTest:
-                    //in this case no required prvious test to pass.
-                    return true;
-
-                case clsTestType.enTestType.WrittenTest:
-                    //Written Test, you cannot sechdule it before person passes the vision test.
-                    //we check if pass visiontest 1.
-
-                    return this.DoesPassTestType(clsTestType.enTestType.VisionTest);
-                   
-
-                case clsTestType.enTestType.StreetTest:
-
-                    //Street Test, you cannot sechdule it before person passes the written test.
-                    //we check if pass Written 2.
-                    return this.DoesPassTestType(clsTestType.enTestType.WrittenTest);
-
-                default: 
-                    return false;
-            }
+            return DoesPassPreviousTestAsync(CurrentTestType).GetAwaiter().GetResult();
         }
 
-        public static bool DoesPassTestType(int LocalDrivingLicenseApplicationID, clsTestType.enTestType TestTypeID)
-
+        public bool DoesAttendTestType(clsTestType.enTestType TestTypeID)
         {
-            return clsLocalDrivingLicenseApplicationData.DoesPassTestType(LocalDrivingLicenseApplicationID,(int) TestTypeID);
+            return DoesAttendTestTypeAsync(TestTypeID).GetAwaiter().GetResult();
         }
 
-        public  bool DoesAttendTestType( clsTestType.enTestType TestTypeID)
-
+        public byte TotalTrialsPerTest(clsTestType.enTestType TestTypeID)
         {
-            return clsLocalDrivingLicenseApplicationData.DoesAttendTestType(this.LocalDrivingLicenseApplicationID, (int)TestTypeID);
-        }
-
-        public  byte TotalTrialsPerTest( clsTestType.enTestType TestTypeID)
-        {
-            return clsLocalDrivingLicenseApplicationData.TotalTrialsPerTest(this.LocalDrivingLicenseApplicationID, (int)TestTypeID);
-        }
-
-        public static byte TotalTrialsPerTest(int LocalDrivingLicenseApplicationID, clsTestType.enTestType TestTypeID)
-
-        {
-            return clsLocalDrivingLicenseApplicationData.TotalTrialsPerTest(LocalDrivingLicenseApplicationID, (int)TestTypeID);
-        }
-
-        public static bool AttendedTest(int LocalDrivingLicenseApplicationID, clsTestType.enTestType TestTypeID)
-
-        {
-            return clsLocalDrivingLicenseApplicationData.TotalTrialsPerTest(LocalDrivingLicenseApplicationID, (int)TestTypeID) >0;
-        }
-
-        public  bool AttendedTest( clsTestType.enTestType TestTypeID)
-
-        {
-            return clsLocalDrivingLicenseApplicationData.TotalTrialsPerTest(this.LocalDrivingLicenseApplicationID, (int)TestTypeID) > 0;
+            return TotalTrialsPerTestAsync(TestTypeID).GetAwaiter().GetResult();
         }
 
         public static bool IsThereAnActiveScheduledTest(int LocalDrivingLicenseApplicationID, clsTestType.enTestType TestTypeID)
-
         {
-            
-            return clsLocalDrivingLicenseApplicationData.IsThereAnActiveScheduledTest(LocalDrivingLicenseApplicationID, (int)TestTypeID);
-        }
-
-        public  bool IsThereAnActiveScheduledTest( clsTestType.enTestType TestTypeID)
-
-        {
-
-            return clsLocalDrivingLicenseApplicationData.IsThereAnActiveScheduledTest(this.LocalDrivingLicenseApplicationID, (int)TestTypeID);
+            return IsThereAnActiveScheduledTestAsync(LocalDrivingLicenseApplicationID, TestTypeID).GetAwaiter().GetResult();
         }
 
         public clsTest GetLastTestPerTestType(clsTestType.enTestType TestTypeID)
         {
-            return clsTest.FindLastTestPerPersonAndLicenseClass(this.ApplicantPersonID, this.LicenseClassID, TestTypeID);
+            return GetLastTestPerTestTypeAsync(TestTypeID).GetAwaiter().GetResult();
         }
 
         public byte GetPassedTestCount()
         {
-            return clsTest.GetPassedTestCount(this.LocalDrivingLicenseApplicationID);
+            return GetPassedTestCountAsync().GetAwaiter().GetResult();
         }
 
-        public static byte GetPassedTestCount(int LocalDrivingLicenseApplicationID)
+        public bool PassedAllTests()
         {
-            return clsTest.GetPassedTestCount(LocalDrivingLicenseApplicationID);
+            return PassedAllTestsAsync().GetAwaiter().GetResult();
         }
 
-        public  bool PassedAllTests()
-        {
-             return clsTest.PassedAllTests(this.LocalDrivingLicenseApplicationID);
-        }
-
-        public static bool PassedAllTests(int LocalDrivingLicenseApplicationID)
-        {
-            //if total passed test less than 3 it will return false otherwise will return true
-            return clsTest.PassedAllTests (LocalDrivingLicenseApplicationID) ;
-        }
-        
         public int IssueLicenseForTheFirtTime(string Notes, int CreatedByUserID)
         {
-            int DriverID = -1;
-
-            clsDriver Driver =clsDriver.FindByPersonID(this.ApplicantPersonID);
-
-            if (Driver == null)
-            {
-                //we check if the driver already there for this person.
-                Driver = new clsDriver();
-               
-                Driver.PersonID= this.ApplicantPersonID;
-                Driver.CreatedByUserID= CreatedByUserID;
-                if (Driver.Save())
-                {
-                    DriverID= Driver.DriverID;
-                }
-                else
-                {
-                    return -1;
-                }
-            }
-            else
-            {
-                DriverID= Driver.DriverID;
-            }
-            //now we diver is there, so we add new licesnse
-            
-            clsLicense License= new clsLicense();
-            License.ApplicationID = this.ApplicationID;
-            License.DriverID= DriverID;
-            License.LicenseClass = this.LicenseClassID;
-            License.IssueDate=DateTime.Now;
-            License.ExpirationDate = DateTime.Now.AddYears(this.LicenseClassInfo.DefaultValidityLength);
-            License.Notes = Notes;
-            License.PaidFees = this.LicenseClassInfo.ClassFees;
-            License.IsActive= true;
-            License.IssueReason = clsLicense.enIssueReason.FirstTime;
-            License.CreatedByUserID= CreatedByUserID;
-
-            if (License.Save())
-            {
-                //now we should set the application status to complete.
-                this.SetComplete();
-
-                return License.LicenseID;
-            }
-               
-            else
-                return -1;
+            return IssueLicenseForTheFirstTimeAsync(Notes, CreatedByUserID).GetAwaiter().GetResult();
         }
 
         public bool IsLicenseIssued()
         {
-            return (GetActiveLicenseID() !=-1);
+            return IsLicenseIssuedAsync().GetAwaiter().GetResult();
         }
 
         public int GetActiveLicenseID()
-        {//this will get the license id that belongs to this application
-            return  clsLicense.GetActiveLicenseIDByPersonID(this.ApplicantPersonID, this.LicenseClassID);
+        {
+            return GetActiveLicenseIDAsync().GetAwaiter().GetResult();
+        }
+
+        // Instance version of IsThereAnActiveScheduledTest for backward compatibility
+        public bool IsThereAnActiveScheduledTest(clsTestType.enTestType TestTypeID)
+        {
+            return IsThereAnActiveScheduledTest(this.LocalDrivingLicenseApplicationID, TestTypeID);
+        }
+
+        // Static version of DoesPassTestType for backward compatibility
+        public static bool DoesPassTestType(int LocalDrivingLicenseApplicationID, clsTestType.enTestType TestTypeID)
+        {
+            return clsLocalDrivingLicenseApplicationData.DoesPassTestTypeAsync(LocalDrivingLicenseApplicationID, (int)TestTypeID).GetAwaiter().GetResult();
         }
     }
 }
