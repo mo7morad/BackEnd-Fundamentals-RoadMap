@@ -13,16 +13,16 @@ The entry point of the application featuring a clean, menu-driven interface.
 
 ![Main Menu](../../../../../Repo%20Images/ContactsSystem1.png)
 
-### Contacts List View
-A formatted table view displaying all records stored in the database.
-
-![Contacts List](../../../../../Repo%20Images/ContactsSystem3.png)
 
 ### Add New Contact
 A data entry screen with step-by-step prompts and immediate feedback.
 
 ![Add New Contact](../../../../../Repo%20Images/ContactsSystem2.png)
 
+### Contacts List View
+A formatted table view displaying all records stored in the database.
+
+![Contacts List](../../../../../Repo%20Images/ContactsSystem3.png)
 ---
 
 ## 📂 System Architecture
