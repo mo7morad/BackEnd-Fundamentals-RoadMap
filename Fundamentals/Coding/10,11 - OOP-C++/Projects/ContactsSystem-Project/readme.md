@@ -1,4 +1,4 @@
-# Course 10 Project: Contact Management System (OOP)
+# Course 11 Project: Contact Management System (OOP)
 
 This directory contains the **Contact Management System**, the first Capstone Project for **Course 10 (OOP Level 1)** of the Backend Engineering Roadmap.
 
