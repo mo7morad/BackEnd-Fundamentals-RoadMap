@@ -26,7 +26,7 @@ A custom Array ADT (Abstract Data Type) that overcomes the fixed-size limitation
 * **Data Manipulation:** Supports `Append`, `Insert` (shifting elements right), and `Delete` (shifting elements left).
 * **Merging:** Logic to combine two separate arrays into a single larger one.
 
-### 4. 🗺️ [Map / Dictionary (`Map Example.cpp`)](./Map%20Example.cpp)
+### 4. 🗺️ [HashMap / Dictionary (`Map Example.cpp`)](./Map%20Example.cpp)
 Introduction to Key-Value pair storage using the standard `std::map`.
 * **Usage:** Storing Student Names (Key) and Grades (Value) for fast lookup.
 * **Search:** Efficiently checking for keys using `.find()` to avoid errors when accessing non-existent data.
