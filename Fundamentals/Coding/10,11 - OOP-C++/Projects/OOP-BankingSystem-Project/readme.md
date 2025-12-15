@@ -1,4 +1,4 @@
-# Course 10 Project: Enterprise Banking System (OOP)
+# Course 11 Project: Enterprise Banking System (OOP)
 
 This directory contains the **Enterprise Banking System**, the final and most advanced Capstone Project for **Course 10 (OOP Level 1)** of the Backend Engineering Roadmap.
 
