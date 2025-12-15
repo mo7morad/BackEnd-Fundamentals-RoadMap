@@ -4,6 +4,27 @@ This directory contains the **Contact Management System**, the first Capstone Pr
 
 This project marks a shift from writing "scripts" to building **Architected Software**. It utilizes a layered structure to separate the **User Interface (Screens)** from the **Business Logic (Core)** and **Helper Utilities (Lib)**.
 
+## 📸 Application Demo
+
+Here is a preview of the application in action:
+
+### Main Dashboard
+The entry point of the application featuring a clean, menu-driven interface.
+
+![Main Menu](../../../../../Repo%20Images/ContactsSystem1.png)
+
+### Contacts List View
+A formatted table view displaying all records stored in the database.
+
+![Contacts List](../../../../../Repo%20Images/ContactsSystem3.png)
+
+### Add New Contact
+A data entry screen with step-by-step prompts and immediate feedback.
+
+![Add New Contact](../../../../../Repo%20Images/ContactsSystem2.png)
+
+---
+
 ## 📂 System Architecture
 
 The project is organized into a modular folder structure to enforce separation of concerns:
