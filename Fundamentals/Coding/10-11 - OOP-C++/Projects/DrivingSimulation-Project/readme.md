@@ -4,6 +4,29 @@ This directory contains the **Driving Simulation**, the second Capstone Project 
 
 While the previous project focused on Data Management, this project focuses on **State Management** and **Simulation Logic**. It simulates a driving experience where the user can customize their vehicle configuration (Car Type, Wheel Type) and run a physics-based simulation on different tracks.
 
+## 📸 Application Demo
+
+Here is the flow of setting up and running a simulation:
+
+### 1. Main Dashboard
+The control center where users can access configuration settings or start the race.
+![Main Menu](../../../../../DrivingSimulation1.png)
+
+### 2. Vehicle Configuration
+The system allows independent modification of the Car Body and Wheel Type, demonstrating persistent state management.
+![Change Car](../../../../../DrivingSimulation2.png)
+![Change Wheels](../../../../../DrivingSimulation3.png)
+
+### 3. Track Selection
+Users define the environment and the distance (in Kilometers) for the simulation.
+![Choose Track](../../../../../DrivingSimulation4.png)
+
+### 4. The Simulation Engine
+The final output where the system combines the configured Car, Wheels, and Track variables to calculate travel time based on user speed.
+![Start Racing](../../../../../DrivingSimulation5.png)
+
+---
+
 ## 📂 System Architecture
 
 The project maintains the strict **Layered Architecture** established in the previous project:
@@ -30,7 +53,8 @@ Models the physical entities in the simulation.
 The core feature is the **StartRacingScreen**, which performs the following:
 1.  **Validation:** Checks if a Track and Length have been selected.
 2.  **Input:** Asks the user for a driving speed (km/h).
-3.  **Calculation:** Computes total travel time: $$Time = \frac{\text{Track Length}}{\text{Speed}}$$
+3.  **Calculation:** Computes total travel time:
+    $$Time = \frac{\text{Track Length}}{\text{Speed}}$$
 4.  **Loop:** Simulates the drive hour-by-hour, reporting the distance covered until the destination is reached.
 
 ## 🛠️ Tech Stack
