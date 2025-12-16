@@ -13,13 +13,20 @@ This project demonstrates the practical application of the **Queue** Data Struct
 * **Visual Queue:** Renders the queue in the console, showing the flow from **Right-to-Left** or **Left-to-Right**.
 * **Service Simulation:** Allows "Serving" the next client, which removes them from the front of the queue and updates the waiting list for everyone else.
 
+## 📸 Demo Screenshots
+
+| Queue Overview | Individual Ticket Info | Serving Next Client |
+| :---: | :---: | :---: |
+| <img src="../../../../../Repo%20Images/QueueLineTicket1.png" alt="Queue Summary" width="300"/> | <img src="../../../../../Repo%20Images/QueueLineTicket2.png" alt="Ticket Details" width="300"/> | <img src="../../../../../Repo%20Images/QueueLineTicket3.png" alt="Serving Client" width="300"/> |
+| *Real-time dashboard of the waiting line* | *Ticket generated with estimated wait time* | *Processing the next client (FIFO)* |
+
 ## 🛠️ Technical Highlights
 
 * **Data Structure:** Built on top of a generic `queue` (or my custom `Queue` class) to strictly enforce FIFO (First-In, First-Out) logic.
 * **Business Logic:**
     * **Prefix Handling:** Separates the ticket prefix ("A") from the number ("01") to manage counters.
     * **Time Calculation:**
-        $$Time = (\text{TicketNumber} - 1) \times \text{ServingTime}$$
+      $$Time = (\text{TicketNumber} - 1) \times \text{ServingTime}$$
 * **Struct Design:** Uses a `_Ticket` struct to encapsulate all metadata for a single request:
     * `IssuingTime` (String)
     * `WaitingList` (Int)
@@ -40,15 +47,3 @@ This project demonstrates the practical application of the **Queue** Data Struct
     ```bash
     ./QueueSim
     ```
-
-## 📸 Sample Output
-```text
-Pay Bills Queue Info:
-  Prefix          : A0
-  Total Tickets   : 5
-  Served Clients  : 0
-  Waiting Clients : 5
-  Next Ticket     : A01
-
-Tickets Line:
-A01 <-- A02 <-- A03 <-- A04 <-- A05 <-- END
