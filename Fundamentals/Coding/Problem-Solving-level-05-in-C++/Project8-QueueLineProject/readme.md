@@ -17,7 +17,7 @@ This project demonstrates the practical application of the **Queue** Data Struct
 
 | Queue Overview | Individual Ticket Info | Serving Next Client |
 | :---: | :---: | :---: |
-| <img src="../../../../../Repo%20Images/QueueLineTicket1.png" alt="Queue Summary" width="300"/> | <img src="../../../../../Repo%20Images/QueueLineTicket2.png" alt="Ticket Details" width="300"/> | <img src="../../../../../Repo%20Images/QueueLineTicket3.png" alt="Serving Client" width="300"/> |
+| <img src="../../../../Repo%20Images/QueueLineTicket1.png" alt="Queue Summary" width="300"/> | <img src="../../../../Repo%20Images/QueueLineTicket2.png" alt="Ticket Details" width="300"/> | <img src="../../../../Repo%20Images/QueueLineTicket3.png" alt="Serving Client" width="300"/> |
 | *Real-time dashboard of the waiting line* | *Ticket generated with estimated wait time* | *Processing the next client (FIFO)* |
 
 ## 🛠️ Technical Highlights
