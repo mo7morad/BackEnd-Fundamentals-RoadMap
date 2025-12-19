@@ -1,6 +1,6 @@
 # Coding Section
 
-This folder contains all the Back-End code, problem-solving tasks, console projects, and desktop applications that I developed as part of the Fundamentals Roadmap.
+This folder contains all the Back-End code, problem-solving tasks, console projects, and desktop applications that I developed as part of this BackEnd Fundamentals Roadmap.
 
 ---
 
