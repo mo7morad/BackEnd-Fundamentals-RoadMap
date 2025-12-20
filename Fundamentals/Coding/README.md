@@ -199,6 +199,6 @@ A complete Web API demonstrating modern backend development with ASP.NET Core.
 
 **Built with dedication as part of the Backend Engineering Roadmap.**
 
-*Each line of code represents a step forward in mastering software engineering.*
+Made with ❤️ by **Morad**
 
 </div>
