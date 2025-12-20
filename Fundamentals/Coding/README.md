@@ -1,7 +1,7 @@
 # 🚀 Backend Engineering Fundamentals — Coding Repository
 
 [![Languages](https://img.shields.io/badge/Languages-C++%20|%20C%23-blue)](#-tech-stack)
-[![Courses](https://img.shields.io/badge/Courses-20+-green)](#-learning-path)
+[![Courses](https://img.shields.io/badge/Courses-26-green)](#-learning-path)
 [![Architecture](https://img.shields.io/badge/Architecture-3--Tier%20|%20OOP%20|%20SOLID-orange)](#-architectural-patterns)
 
 > **A comprehensive hands-on coding journey from basic algorithms to enterprise-grade applications.**
@@ -192,53 +192,6 @@ A complete Web API demonstrating modern backend development with ASP.NET Core.
 
 📂 **Location:** [25 - APIs](./25%20-%20APIs/)
 
----
-
-## 📖 How to Use This Repository
-
-### 1. Sequential Learning
-Follow the numbered courses in order for a structured learning experience:
-```
-Basics-C++ → Problem-Solving Levels → OOP → Data Structures → C# → Database → Enterprise
-```
-
-### 2. Reference by Topic
-Use the [Quick Navigation](#-quick-navigation) tables to jump directly to specific technologies or concepts.
-
-### 3. Project Exploration
-Each major project directory contains its own detailed `README.md` with:
-- Architecture diagrams
-- Feature lists
-- Build/Run instructions
-- Screenshots/Demos
-
-### 4. Running Code
-
-**C++ Projects:**
-```bash
-g++ main.cpp -o app && ./app
-```
-
-**C# Console Projects:**
-```bash
-dotnet run
-```
-
-**C# WinForms Projects:**
-1. Open `.sln` in Visual Studio
-2. Press `F5` to build and run
-
-**SQL Projects:**
-1. Restore `.bak` file in SQL Server Management Studio
-2. Execute scripts as needed
-
----
-
-## 📄 Additional Resources
-
-| Resource | Description |
-|:---------|:------------|
-| [Full_Roadmap_Summary.md](./Full_Roadmap_Summary.md) | Consolidated documentation from all subdirectories |
 
 ---
 
