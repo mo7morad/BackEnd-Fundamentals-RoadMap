@@ -17,7 +17,6 @@ This repository serves as the central hub for all code implementations, projects
 - [Quick Navigation](#-quick-navigation)
 - [Tech Stack](#-tech-stack)
 - [Capstone Projects](#-capstone-projects)
-- [How to Use This Repository](#-how-to-use-this-repository)
 
 ---
 
