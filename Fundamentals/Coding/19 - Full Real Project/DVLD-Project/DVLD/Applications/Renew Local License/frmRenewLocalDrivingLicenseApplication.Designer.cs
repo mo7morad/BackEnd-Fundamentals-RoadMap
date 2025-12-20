@@ -569,13 +569,13 @@
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.ctrlDriverLicenseInfoWithFilter1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(700, 500);
             this.Name = "frmRenewLocalDrivingLicenseApplication";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Renew Local Driving License";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Activated += new System.EventHandler(this.frmRenewLocalDrivingLicenseApplication_Activated);
             this.Load += new System.EventHandler(this.frmRenewLocalDrivingLicenseApplication_Load);
             this.gpApplicationInfo.ResumeLayout(false);

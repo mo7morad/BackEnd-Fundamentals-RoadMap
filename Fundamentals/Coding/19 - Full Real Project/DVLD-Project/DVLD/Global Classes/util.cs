@@ -61,7 +61,7 @@ namespace DVLD.Classes
             // project images foldr after renaming it
             // with GUID with the same extention, then it will update the sourceFileName with the new name.
 
-            string DestinationFolder = @"C:\DVLD-People-Images\";
+            string DestinationFolder = @"C:\DVLD\peoplepictures\";
             if (!CreateFolderIfDoesNotExist(DestinationFolder))
             {
                 return false;

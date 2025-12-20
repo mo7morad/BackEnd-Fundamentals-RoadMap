@@ -410,12 +410,12 @@
             this.Controls.Add(this.gpApplicationInfo);
             this.Controls.Add(this.btnClose);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(700, 500);
             this.Name = "frmReplaceLostOrDamagedLicenseApplication";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "License Replacement";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Activated += new System.EventHandler(this.frmReplaceLostOrDamagedLicenseApplication_Activated);
             this.Load += new System.EventHandler(this.frmReplaceLostOrDamagedLicenseApplication_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

@@ -34,3 +34,12 @@ D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\19 - Full Real P
 D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD_Buisness\obj\Debug\DVLD_Bui.E5CEC4E3.Up2Date
 D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD_Buisness\obj\Debug\DVLD_Buisness.dll
 D:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD_Buisness\obj\Debug\DVLD_Buisness.pdb
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD_Buisness\bin\Debug\DVLD_Buisness.dll
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD_Buisness\bin\Debug\DVLD_Buisness.pdb
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD_Buisness\bin\Debug\DVLD_DataAccess.dll
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD_Buisness\bin\Debug\DVLD_DataAccess.pdb
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD_Buisness\obj\Debug\DVLD_Buisness.csproj.AssemblyReference.cache
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD_Buisness\obj\Debug\DVLD_Buisness.csproj.CoreCompileInputs.cache
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD_Buisness\obj\Debug\DVLD_Bui.E5CEC4E3.Up2Date
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD_Buisness\obj\Debug\DVLD_Buisness.dll
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\19 - Full Real Project\DVLD-Project\DVLD_Buisness\obj\Debug\DVLD_Buisness.pdb

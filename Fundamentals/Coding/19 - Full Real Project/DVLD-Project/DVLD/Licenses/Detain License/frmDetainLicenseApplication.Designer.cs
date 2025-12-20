@@ -337,12 +337,12 @@
             this.Controls.Add(this.llShowLicenseHistory);
             this.Controls.Add(this.gpDetain);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(700, 500);
             this.Name = "frmDetainLicenseApplication";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detain License";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Activated += new System.EventHandler(this.frmDetainLicenseApplication_Activated);
             this.Load += new System.EventHandler(this.frmDetainLicenseApplication_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
