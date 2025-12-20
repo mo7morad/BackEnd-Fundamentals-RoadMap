@@ -46,7 +46,8 @@ namespace DVLD.Applications.ReplaceLostOrDamagedLicense
             lblTitle.Text = "Replacement for Damaged License";
             this.Text = lblTitle.Text;
             var appType = await clsApplicationType.FindAsync(_GetApplicationTypeID());
-            lblApplicationFees.Text = appType?.Fees.ToString() ?? "0";
+            var fees = appType?.Fees ?? 0f;
+            lblApplicationFees.Text = clsFormat.FormatMoney(fees);
         }
 
         private async void rbLostLicense_CheckedChanged(object sender, EventArgs e)
@@ -54,7 +55,8 @@ namespace DVLD.Applications.ReplaceLostOrDamagedLicense
             lblTitle.Text = "Replacement for Lost License";
             this.Text = lblTitle.Text;
             var appType = await clsApplicationType.FindAsync(_GetApplicationTypeID());
-            lblApplicationFees.Text = appType?.Fees.ToString() ?? "0";
+            var fees = appType?.Fees ?? 0f;
+            lblApplicationFees.Text = clsFormat.FormatMoney(fees);
         }
 
         private void frmReplaceLostOrDamagedLicenseApplication_Activated(object sender, EventArgs e)

@@ -55,6 +55,7 @@ namespace DVLD.Applications.Rlease_Detained_License
 
                 dgvDetainedLicenses.Columns[4].HeaderText = "Fine Fees";
                 dgvDetainedLicenses.Columns[4].Width = 110;
+                dgvDetainedLicenses.Columns[4].DefaultCellStyle.Format = "0.00$";
 
                 dgvDetainedLicenses.Columns[5].HeaderText = "Release Date";
                 dgvDetainedLicenses.Columns[5].Width = 160;

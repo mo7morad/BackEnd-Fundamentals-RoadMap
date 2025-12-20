@@ -25,6 +25,7 @@ namespace DVLD.Applications
         private int _LocalDrivingLicenseApplicationID = -1;
         private int _SelectedPersonID = -1;
         clsLocalDrivingLicenseApplication _LocalDrivingLicenseApplication;
+        private float _applicationFees = 0f;
 
         public frmAddUpdateLocalDrivingLicesnseApplication()
         {
@@ -72,7 +73,8 @@ namespace DVLD.Applications
                 tpApplicationInfo.Enabled = false;
               
                 cbLicenseClass.SelectedIndex = 2;
-                lblFees.Text = clsApplicationType.Find((int)clsApplication.enApplicationType.NewDrivingLicense).Fees.ToString();  
+                _applicationFees = clsApplicationType.Find((int)clsApplication.enApplicationType.NewDrivingLicense).Fees;
+                lblFees.Text = clsFormat.FormatMoney(_applicationFees);
                 lblApplicationDate.Text= DateTime.Now.ToShortDateString();
                 lblCreatedByUser.Text = clsGlobal.CurrentUser.UserName;
             }
@@ -107,7 +109,8 @@ namespace DVLD.Applications
             lblLocalDrivingLicebseApplicationID.Text = _LocalDrivingLicenseApplication.LocalDrivingLicenseApplicationID.ToString();
             lblApplicationDate.Text = clsFormat.DateToShort( _LocalDrivingLicenseApplication.ApplicationDate);
             cbLicenseClass.SelectedIndex = cbLicenseClass.FindString(clsLicenseClass.Find(_LocalDrivingLicenseApplication.LicenseClassID).ClassName);
-            lblFees.Text= _LocalDrivingLicenseApplication.PaidFees.ToString();
+            _applicationFees = _LocalDrivingLicenseApplication.PaidFees;
+            lblFees.Text= clsFormat.FormatMoney(_applicationFees);
             lblCreatedByUser.Text = clsUser.FindByUserID(_LocalDrivingLicenseApplication.CreatedByUserID).UserName;
 
         }
@@ -202,7 +205,7 @@ namespace DVLD.Applications
             _LocalDrivingLicenseApplication.ApplicationTypeID = 1;
             _LocalDrivingLicenseApplication.ApplicationStatus = clsApplication.enApplicationStatus.New;
             _LocalDrivingLicenseApplication.LastStatusDate = DateTime.Now;
-            _LocalDrivingLicenseApplication.PaidFees = Convert.ToSingle(lblFees.Text);
+            _LocalDrivingLicenseApplication.PaidFees = _applicationFees;
             _LocalDrivingLicenseApplication.CreatedByUserID = clsGlobal.CurrentUser.UserID;
             _LocalDrivingLicenseApplication.LicenseClassID= LicenseClassID;
 

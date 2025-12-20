@@ -76,7 +76,7 @@ namespace DVLD.Applications.International_License
             lblApplicationDate.Text = clsFormat.DateToShort(DateTime.Now);
             lblIssueDate.Text = lblApplicationDate.Text;
             lblExpirationDate.Text = clsFormat.DateToShort(DateTime.Now.AddYears(1));//add one year.
-            lblFees.Text = clsApplicationType.Find((int)clsApplication.enApplicationType.NewInternationalLicense).Fees.ToString();
+            lblFees.Text = clsFormat.FormatMoney(clsApplicationType.Find((int)clsApplication.enApplicationType.NewInternationalLicense).Fees);
             lblCreatedByUser.Text = clsGlobal.CurrentUser.UserName;
 
 

@@ -85,6 +85,7 @@ namespace DVLD.Tests
 
                 dgvLicenseTestAppointments.Columns[2].HeaderText = "Paid Fees";
                 dgvLicenseTestAppointments.Columns[2].Width = 150;
+                dgvLicenseTestAppointments.Columns[2].DefaultCellStyle.Format = "0.00$";
 
                 dgvLicenseTestAppointments.Columns[3].HeaderText = "Is Locked";
                 dgvLicenseTestAppointments.Columns[3].Width = 100;

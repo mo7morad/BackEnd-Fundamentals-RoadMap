@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD.Properties;
-using DVLD_Buisness;
 using DVLD.Classes;
+using DVLD_Buisness;
 
 namespace DVLD.Tests
 {
@@ -119,7 +119,7 @@ namespace DVLD.Tests
 
 
             lblDate.Text = clsFormat.DateToShort(_TestAppointment.AppointmentDate);
-            lblFees.Text = _TestAppointment.PaidFees.ToString();
+            lblFees.Text = clsFormat.FormatMoney(_TestAppointment.PaidFees);
             lblTestID.Text = (_TestAppointment.TestID==-1)? "Not Taken Yet":_TestAppointment.TestID.ToString();
 
 

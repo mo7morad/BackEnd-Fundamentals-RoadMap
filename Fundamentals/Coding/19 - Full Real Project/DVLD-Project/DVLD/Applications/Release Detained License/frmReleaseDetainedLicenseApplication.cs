@@ -21,6 +21,9 @@ namespace DVLD.Applications.Rlease_Detained_License
 
        
         private int _SelectedLicenseID = -1;
+        private float _applicationFees = 0f;
+        private float _fineFees = 0f;
+        private float _totalFees = 0f;
 
         public frmReleaseDetainedLicenseApplication()
         {
@@ -62,7 +65,8 @@ namespace DVLD.Applications.Rlease_Detained_License
                 return;
             }
 
-            lblApplicationFees.Text = clsApplicationType.Find((int)clsApplication.enApplicationType.ReleaseDetainedDrivingLicsense).Fees.ToString();
+            _applicationFees = clsApplicationType.Find((int)clsApplication.enApplicationType.ReleaseDetainedDrivingLicsense).Fees;
+            lblApplicationFees.Text = clsFormat.FormatMoney(_applicationFees);
             lblCreatedByUser.Text = clsGlobal.CurrentUser.UserName;
 
             lblDetainID.Text = ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.DetainedInfo.DetainID.ToString();
@@ -70,8 +74,10 @@ namespace DVLD.Applications.Rlease_Detained_License
            
             lblCreatedByUser.Text = ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.DetainedInfo.CreatedByUserInfo.UserName;
             lblDetainDate.Text = clsFormat.DateToShort(ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.DetainedInfo.DetainDate);
-            lblFineFees.Text = ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.DetainedInfo.FineFees.ToString();
-            lblTotalFees.Text = (Convert.ToSingle( lblApplicationFees.Text) + Convert.ToSingle(lblFineFees.Text)).ToString();
+            _fineFees = ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.DetainedInfo.FineFees;
+            lblFineFees.Text = clsFormat.FormatMoney(_fineFees);
+            _totalFees = _applicationFees + _fineFees;
+            lblTotalFees.Text = clsFormat.FormatMoney(_totalFees);
 
             btnRelease.Enabled = true;
         }

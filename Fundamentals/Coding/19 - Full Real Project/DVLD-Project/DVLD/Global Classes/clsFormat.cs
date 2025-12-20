@@ -15,5 +15,10 @@ namespace DVLD.Classes
             return Dt1.ToString("dd/MMM/yyyy");
         } 
 
+        public static string FormatMoney(float amount)
+        {
+            return amount.ToString("0.00") + "$";
+        }
+
     }
 }

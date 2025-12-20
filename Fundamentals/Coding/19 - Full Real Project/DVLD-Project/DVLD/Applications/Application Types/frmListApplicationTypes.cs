@@ -39,6 +39,7 @@ namespace DVLD.Applications
        
             dgvApplicationTypes.Columns[2].HeaderText = "Fees";
             dgvApplicationTypes.Columns[2].Width = 100;
+            dgvApplicationTypes.Columns[2].DefaultCellStyle.Format = "0.00$";
 
            
         }

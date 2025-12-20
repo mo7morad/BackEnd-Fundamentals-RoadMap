@@ -18,6 +18,9 @@ namespace DVLD.Licenses
     public partial class frmRenewLocalDrivingLicenseApplication: Form
     {
         private int _NewLicenseID = -1;
+        private float _applicationFees = 0f;
+        private float _licenseFees = 0f;
+        private float _totalFees = 0f;
         public frmRenewLocalDrivingLicenseApplication()
         {
             InitializeComponent();
@@ -32,7 +35,8 @@ namespace DVLD.Licenses
             lblIssueDate.Text = lblApplicationDate.Text;
 
             lblExpirationDate.Text = "???";
-            lblApplicationFees.Text = clsApplicationType.Find((int)clsApplication.enApplicationType.RenewDrivingLicense).Fees.ToString();
+            _applicationFees = clsApplicationType.Find((int)clsApplication.enApplicationType.RenewDrivingLicense).Fees;
+            lblApplicationFees.Text = clsFormat.FormatMoney(_applicationFees);
             lblCreatedByUser.Text = clsGlobal.CurrentUser.UserName;
 
         }
@@ -53,8 +57,10 @@ namespace DVLD.Licenses
 
             int DefaultValidityLength = ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.LicenseClassIfo.DefaultValidityLength;
             lblExpirationDate.Text = clsFormat.DateToShort(DateTime.Now.AddYears(DefaultValidityLength));
-            lblLicenseFees.Text = ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.LicenseClassIfo.ClassFees.ToString();
-            lblTotalFees.Text = (Convert.ToSingle(lblApplicationFees.Text) + Convert.ToSingle(lblLicenseFees.Text)).ToString();
+            _licenseFees = ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.LicenseClassIfo.ClassFees;
+            lblLicenseFees.Text = clsFormat.FormatMoney(_licenseFees);
+            _totalFees = _applicationFees + _licenseFees;
+            lblTotalFees.Text = clsFormat.FormatMoney(_totalFees);
             txtNotes.Text = ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.Notes;
 
 

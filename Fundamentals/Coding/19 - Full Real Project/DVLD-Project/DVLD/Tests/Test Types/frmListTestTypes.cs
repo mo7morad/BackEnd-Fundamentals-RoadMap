@@ -48,6 +48,7 @@ namespace DVLD.Tests
 
             dgvTestTypes.Columns[3].HeaderText = "Fees";
             dgvTestTypes.Columns[3].Width = 100;
+            dgvTestTypes.Columns[3].DefaultCellStyle.Format = "0.00$";
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
