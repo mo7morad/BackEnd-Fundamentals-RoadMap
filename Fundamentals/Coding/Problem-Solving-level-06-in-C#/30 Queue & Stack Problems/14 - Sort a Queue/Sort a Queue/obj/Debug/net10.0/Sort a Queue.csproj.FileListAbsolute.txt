@@ -1,0 +1,15 @@
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\14 - Sort a Queue\Sort a Queue\obj\Debug\net10.0\Sort a Queue.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\14 - Sort a Queue\Sort a Queue\obj\Debug\net10.0\Sort a Queue.AssemblyInfoInputs.cache
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\14 - Sort a Queue\Sort a Queue\obj\Debug\net10.0\Sort a Queue.AssemblyInfo.cs
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\14 - Sort a Queue\Sort a Queue\obj\Debug\net10.0\Sort a Queue.csproj.CoreCompileInputs.cache
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\14 - Sort a Queue\Sort a Queue\obj\Debug\net10.0\Sort a Queue.sourcelink.json
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\14 - Sort a Queue\Sort a Queue\bin\Debug\net10.0\Sort a Queue.exe
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\14 - Sort a Queue\Sort a Queue\bin\Debug\net10.0\Sort a Queue.deps.json
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\14 - Sort a Queue\Sort a Queue\bin\Debug\net10.0\Sort a Queue.runtimeconfig.json
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\14 - Sort a Queue\Sort a Queue\bin\Debug\net10.0\Sort a Queue.dll
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\14 - Sort a Queue\Sort a Queue\bin\Debug\net10.0\Sort a Queue.pdb
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\14 - Sort a Queue\Sort a Queue\obj\Debug\net10.0\Sort a Queue.dll
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\14 - Sort a Queue\Sort a Queue\obj\Debug\net10.0\refint\Sort a Queue.dll
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\14 - Sort a Queue\Sort a Queue\obj\Debug\net10.0\Sort a Queue.pdb
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\14 - Sort a Queue\Sort a Queue\obj\Debug\net10.0\Sort a Queue.genruntimeconfig.cache
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\14 - Sort a Queue\Sort a Queue\obj\Debug\net10.0\ref\Sort a Queue.dll

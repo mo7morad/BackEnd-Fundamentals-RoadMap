@@ -1,0 +1,15 @@
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Palindrome Queue\Palindrome Queue\bin\Debug\net10.0\Palindrome Queue.exe
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Palindrome Queue\Palindrome Queue\bin\Debug\net10.0\Palindrome Queue.deps.json
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Palindrome Queue\Palindrome Queue\bin\Debug\net10.0\Palindrome Queue.runtimeconfig.json
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Palindrome Queue\Palindrome Queue\bin\Debug\net10.0\Palindrome Queue.dll
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Palindrome Queue\Palindrome Queue\bin\Debug\net10.0\Palindrome Queue.pdb
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Palindrome Queue\Palindrome Queue\obj\Debug\net10.0\Palindrome Queue.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Palindrome Queue\Palindrome Queue\obj\Debug\net10.0\Palindrome Queue.AssemblyInfoInputs.cache
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Palindrome Queue\Palindrome Queue\obj\Debug\net10.0\Palindrome Queue.AssemblyInfo.cs
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Palindrome Queue\Palindrome Queue\obj\Debug\net10.0\Palindrome Queue.csproj.CoreCompileInputs.cache
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Palindrome Queue\Palindrome Queue\obj\Debug\net10.0\Palindrome Queue.sourcelink.json
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Palindrome Queue\Palindrome Queue\obj\Debug\net10.0\Palindrome Queue.dll
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Palindrome Queue\Palindrome Queue\obj\Debug\net10.0\refint\Palindrome Queue.dll
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Palindrome Queue\Palindrome Queue\obj\Debug\net10.0\Palindrome Queue.pdb
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Palindrome Queue\Palindrome Queue\obj\Debug\net10.0\Palindrome Queue.genruntimeconfig.cache
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Palindrome Queue\Palindrome Queue\obj\Debug\net10.0\ref\Palindrome Queue.dll

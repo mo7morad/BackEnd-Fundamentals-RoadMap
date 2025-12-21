@@ -1,0 +1,15 @@
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a Queue\Reverse a Queue\bin\Debug\net10.0\Reverse a Queue.exe
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a Queue\Reverse a Queue\bin\Debug\net10.0\Reverse a Queue.deps.json
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a Queue\Reverse a Queue\bin\Debug\net10.0\Reverse a Queue.runtimeconfig.json
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a Queue\Reverse a Queue\bin\Debug\net10.0\Reverse a Queue.dll
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a Queue\Reverse a Queue\bin\Debug\net10.0\Reverse a Queue.pdb
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a Queue\Reverse a Queue\obj\Debug\net10.0\Reverse a Queue.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a Queue\Reverse a Queue\obj\Debug\net10.0\Reverse a Queue.AssemblyInfoInputs.cache
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a Queue\Reverse a Queue\obj\Debug\net10.0\Reverse a Queue.AssemblyInfo.cs
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a Queue\Reverse a Queue\obj\Debug\net10.0\Reverse a Queue.csproj.CoreCompileInputs.cache
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a Queue\Reverse a Queue\obj\Debug\net10.0\Reverse a Queue.sourcelink.json
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a Queue\Reverse a Queue\obj\Debug\net10.0\Reverse a Queue.dll
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a Queue\Reverse a Queue\obj\Debug\net10.0\refint\Reverse a Queue.dll
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a Queue\Reverse a Queue\obj\Debug\net10.0\Reverse a Queue.pdb
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a Queue\Reverse a Queue\obj\Debug\net10.0\Reverse a Queue.genruntimeconfig.cache
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a Queue\Reverse a Queue\obj\Debug\net10.0\ref\Reverse a Queue.dll

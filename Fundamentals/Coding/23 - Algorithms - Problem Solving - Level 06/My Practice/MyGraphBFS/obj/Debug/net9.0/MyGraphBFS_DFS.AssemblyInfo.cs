@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyGraphBFS_DFS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+675d3212a1404cef05b43c180e7e9fae7bf180c6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f4e7cefc074c0b6f4bb2897eb05b4c3a3a773d41")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyGraphBFS_DFS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyGraphBFS_DFS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
