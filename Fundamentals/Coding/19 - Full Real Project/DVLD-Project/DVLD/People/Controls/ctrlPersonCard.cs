@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using System.IO;
 using DVLD.People;
+using DVLD.Classes;
 
 namespace DVLD.Controls
 {
@@ -34,6 +36,48 @@ namespace DVLD.Controls
         public ctrlPersonCard()
         {
             InitializeComponent();
+            ApplyModernStyle();
+        }
+
+        private void ApplyModernStyle()
+        {
+            // Apply modern styling to the control
+            this.BackColor = clsUITheme.BackgroundWhite;
+            
+            // Style the groupbox
+            groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            groupBox1.ForeColor = clsUITheme.PrimaryColor;
+            groupBox1.BackColor = clsUITheme.BackgroundWhite;
+            
+            // Style all labels
+            foreach (Control ctrl in groupBox1.Controls)
+            {
+                if (ctrl is Label lbl)
+                {
+                    lbl.Font = new Font("Segoe UI", 11F);
+                    
+                    // Bold labels (field names)
+                    if (lbl.Name.StartsWith("label") || lbl.Name == "label22")
+                    {
+                        lbl.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+                        lbl.ForeColor = clsUITheme.TextPrimary;
+                    }
+                    
+                    // Full name label - special styling
+                    if (lbl == lblFullName)
+                    {
+                        lbl.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+                        lbl.ForeColor = clsUITheme.PrimaryColor;
+                    }
+                }
+            }
+            
+            // Style the link label
+            clsUITheme.ApplyLinkLabelStyle(llEditPersonInfo);
+            
+            // Style the person image with rounded corners
+            pbPersonImage.BorderStyle = BorderStyle.None;
+            clsUITheme.ApplyRoundedPictureBoxStyle(pbPersonImage, 15);
         }
 
         public void LoadPersonInfo(int PersonID)
@@ -46,7 +90,7 @@ namespace DVLD.Controls
                 return;
             }
            
-                _FillPersonInfo();
+            _FillPersonInfo();
         }
 
         public void LoadPersonInfo(string NationalNo)
@@ -59,7 +103,7 @@ namespace DVLD.Controls
                 return;
             }
             
-             _FillPersonInfo();
+            _FillPersonInfo();
         }
 
         private void _LoadPersonImage()
@@ -75,7 +119,6 @@ namespace DVLD.Controls
                     pbPersonImage.ImageLocation= ImagePath;
                 else
                     MessageBox.Show("Could not find this image: = " + ImagePath, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
         }
 
         private void _FillPersonInfo()
@@ -92,10 +135,6 @@ namespace DVLD.Controls
             lblCountry.Text= clsCountry.Find( _Person.NationalityCountryID).CountryName ;
             lblAddress.Text= _Person.Address;
             _LoadPersonImage();
-
-           
-
-
         }
 
         public void ResetPersonInfo()
@@ -112,7 +151,6 @@ namespace DVLD.Controls
             lblCountry.Text = "[????]";
             lblAddress.Text = "[????]";
             pbPersonImage.Image = Resources.Male_512;
-        
         }
 
         private void llEditPersonInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -123,7 +161,5 @@ namespace DVLD.Controls
             //refresh
             LoadPersonInfo(_PersonID);
         }
-
-        
     }
 }

@@ -1,4 +1,5 @@
 ﻿using DVLD.Applications.Detain_License;
+using DVLD.Classes;
 using DVLD.DriverLicense;
 using DVLD.Licenses.International_License;
 using DVLD.People;
@@ -23,6 +24,61 @@ namespace DVLD.Applications.Rlease_Detained_License
         public frmListDetainedLicenses()
         {
             InitializeComponent();
+            ApplyModernStyle();
+        }
+
+        private void ApplyModernStyle()
+        {
+            // Form styling
+            this.Size = new Size(1300, 700);
+            this.MinimumSize = new Size(1100, 600);
+            this.BackColor = clsUITheme.BackgroundLight;
+            this.Font = clsUITheme.FontNormal;
+            this.StartPosition = FormStartPosition.CenterScreen;
+
+            // Title styling
+            if (this.Controls.Find("lblTitle", true).Length > 0)
+                clsUITheme.ApplyTitleLabelStyle((Label)this.Controls.Find("lblTitle", true)[0]);
+
+            // Filter label styling
+            if (this.Controls.Find("label1", true).Length > 0)
+            {
+                var lbl = (Label)this.Controls.Find("label1", true)[0];
+                lbl.Font = clsUITheme.FontHeader;
+                lbl.ForeColor = clsUITheme.TextPrimary;
+            }
+
+            // Button styling
+            clsUITheme.ApplyPrimaryButtonStyle(btnClose);
+            clsUITheme.ApplyPrimaryButtonStyle(btnDetainLicense);
+            clsUITheme.ApplySuccessButtonStyle(btnReleaseDetainedLicense);
+
+            // ComboBox styling - use standard style
+            cbFilterBy.FlatStyle = FlatStyle.Standard;
+            cbFilterBy.BackColor = Color.White;
+            cbFilterBy.ForeColor = clsUITheme.TextPrimary;
+            cbFilterBy.Font = clsUITheme.FontNormal;
+
+            cbIsReleased.FlatStyle = FlatStyle.Standard;
+            cbIsReleased.BackColor = Color.White;
+            cbIsReleased.ForeColor = clsUITheme.TextPrimary;
+            cbIsReleased.Font = clsUITheme.FontNormal;
+
+            // Textbox styling
+            txtFilterValue.Font = clsUITheme.FontNormal;
+            txtFilterValue.BackColor = Color.White;
+            txtFilterValue.ForeColor = clsUITheme.TextPrimary;
+            txtFilterValue.BorderStyle = BorderStyle.FixedSingle;
+
+            // Records count labels
+            if (this.Controls.Find("label2", true).Length > 0)
+            {
+                var lbl = (Label)this.Controls.Find("label2", true)[0];
+                lbl.Font = clsUITheme.FontHeader;
+                lbl.ForeColor = clsUITheme.TextPrimary;
+            }
+            lblTotalRecords.Font = clsUITheme.FontHeader;
+            lblTotalRecords.ForeColor = clsUITheme.PrimaryColor;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -39,38 +95,39 @@ namespace DVLD.Applications.Rlease_Detained_License
             dgvDetainedLicenses.DataSource = _dtDetainedLicenses;
             lblTotalRecords.Text = dgvDetainedLicenses.Rows.Count.ToString();
 
-            if (dgvDetainedLicenses.Rows.Count > 0)
+            // Apply modern DataGridView styling
+            clsUITheme.ApplyDataGridViewStyle(dgvDetainedLicenses);
+
+            if (dgvDetainedLicenses.Columns.Count > 0)
             {
                 dgvDetainedLicenses.Columns[0].HeaderText = "D.ID";
-                dgvDetainedLicenses.Columns[0].Width = 90;
+                dgvDetainedLicenses.Columns[0].Width = 70;
 
                 dgvDetainedLicenses.Columns[1].HeaderText = "L.ID";
-                dgvDetainedLicenses.Columns[1].Width = 90;
+                dgvDetainedLicenses.Columns[1].Width = 70;
 
                 dgvDetainedLicenses.Columns[2].HeaderText = "D.Date";
-                dgvDetainedLicenses.Columns[2].Width = 160;
+                dgvDetainedLicenses.Columns[2].Width = 140;
 
                 dgvDetainedLicenses.Columns[3].HeaderText = "Is Released";
-                dgvDetainedLicenses.Columns[3].Width = 110;
+                dgvDetainedLicenses.Columns[3].Width = 90;
 
                 dgvDetainedLicenses.Columns[4].HeaderText = "Fine Fees";
-                dgvDetainedLicenses.Columns[4].Width = 110;
+                dgvDetainedLicenses.Columns[4].Width = 90;
                 dgvDetainedLicenses.Columns[4].DefaultCellStyle.Format = "0.00$";
 
                 dgvDetainedLicenses.Columns[5].HeaderText = "Release Date";
-                dgvDetainedLicenses.Columns[5].Width = 160;
+                dgvDetainedLicenses.Columns[5].Width = 140;
 
                 dgvDetainedLicenses.Columns[6].HeaderText = "N.No.";
-                dgvDetainedLicenses.Columns[6].Width = 90;
+                dgvDetainedLicenses.Columns[6].Width = 80;
 
                 dgvDetainedLicenses.Columns[7].HeaderText = "Full Name";
-                dgvDetainedLicenses.Columns[7].Width = 330;
+                dgvDetainedLicenses.Columns[7].Width = 250;
 
-                dgvDetainedLicenses.Columns[8].HeaderText = "Rlease App.ID";
-                dgvDetainedLicenses.Columns[8].Width = 150;
-
+                dgvDetainedLicenses.Columns[8].HeaderText = "Release App.ID";
+                dgvDetainedLicenses.Columns[8].Width = 120;
             }
-
         }
 
         private void txtFilterValue_TextChanged(object sender, EventArgs e)
@@ -260,4 +317,3 @@ namespace DVLD.Applications.Rlease_Detained_License
 }
 
        
-    

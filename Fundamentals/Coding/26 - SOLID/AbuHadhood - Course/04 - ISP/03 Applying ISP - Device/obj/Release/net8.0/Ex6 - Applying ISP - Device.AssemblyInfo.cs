@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ex6 - Applying ISP - Device")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b90b5cd7d7cec204fb045913abdd9c5d4618843")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+59824a2726d443557327a5bc5415d76e8c0f7fcd")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ex6 - Applying ISP - Device")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ex6 - Applying ISP - Device")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

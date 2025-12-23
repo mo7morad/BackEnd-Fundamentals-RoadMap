@@ -1,0 +1,15 @@
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Rotate a Queue\Rotate a Queue\bin\Debug\net10.0\Rotate a Queue.exe
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Rotate a Queue\Rotate a Queue\bin\Debug\net10.0\Rotate a Queue.deps.json
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Rotate a Queue\Rotate a Queue\bin\Debug\net10.0\Rotate a Queue.runtimeconfig.json
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Rotate a Queue\Rotate a Queue\bin\Debug\net10.0\Rotate a Queue.dll
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Rotate a Queue\Rotate a Queue\bin\Debug\net10.0\Rotate a Queue.pdb
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Rotate a Queue\Rotate a Queue\obj\Debug\net10.0\Rotate a Queue.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Rotate a Queue\Rotate a Queue\obj\Debug\net10.0\Rotate a Queue.AssemblyInfoInputs.cache
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Rotate a Queue\Rotate a Queue\obj\Debug\net10.0\Rotate a Queue.AssemblyInfo.cs
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Rotate a Queue\Rotate a Queue\obj\Debug\net10.0\Rotate a Queue.csproj.CoreCompileInputs.cache
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Rotate a Queue\Rotate a Queue\obj\Debug\net10.0\Rotate a Queue.sourcelink.json
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Rotate a Queue\Rotate a Queue\obj\Debug\net10.0\Rotate a Queue.dll
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Rotate a Queue\Rotate a Queue\obj\Debug\net10.0\refint\Rotate a Queue.dll
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Rotate a Queue\Rotate a Queue\obj\Debug\net10.0\Rotate a Queue.pdb
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Rotate a Queue\Rotate a Queue\obj\Debug\net10.0\Rotate a Queue.genruntimeconfig.cache
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Rotate a Queue\Rotate a Queue\obj\Debug\net10.0\ref\Rotate a Queue.dll

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ex5 - Violating ISP - Device")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+59824a2726d443557327a5bc5415d76e8c0f7fcd")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ex5 - Violating ISP - Device")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ex5 - Violating ISP - Device")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

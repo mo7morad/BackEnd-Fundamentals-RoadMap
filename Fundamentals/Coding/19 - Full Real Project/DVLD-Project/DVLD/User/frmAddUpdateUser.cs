@@ -28,6 +28,7 @@ namespace DVLD.User
         public frmAddUpdateUser()
         {
             InitializeComponent();
+            ApplyModernStyle();
 
             _Mode = enMode.AddNew;
         }
@@ -35,9 +36,54 @@ namespace DVLD.User
         public frmAddUpdateUser(int UserID)
         {
             InitializeComponent();
+            ApplyModernStyle();
 
             _Mode = enMode.Update;
             _UserID = UserID;
+        }
+
+        private void ApplyModernStyle()
+        {
+            // Form styling
+            this.BackColor = clsUITheme.BackgroundLight;
+            this.Font = clsUITheme.FontNormal;
+
+            // Title styling
+            clsUITheme.ApplyTitleLabelStyle(lblTitle);
+
+            // Button styling
+            clsUITheme.ApplyPrimaryButtonStyle(btnSave);
+            clsUITheme.ApplySecondaryButtonStyle(btnClose);
+            clsUITheme.ApplyPrimaryButtonStyle(btnPersonInfoNext);
+
+            // Tab control styling
+            clsUITheme.ApplyTabControlStyle(tcUserInfo);
+
+            // Label styling
+            label1.Font = clsUITheme.FontHeader;
+            label1.ForeColor = clsUITheme.TextPrimary;
+            label2.Font = clsUITheme.FontHeader;
+            label2.ForeColor = clsUITheme.TextPrimary;
+            label3.Font = clsUITheme.FontHeader;
+            label3.ForeColor = clsUITheme.TextPrimary;
+            label4.Font = clsUITheme.FontHeader;
+            label4.ForeColor = clsUITheme.TextPrimary;
+            lblUserID.Font = clsUITheme.FontHeader;
+            lblUserID.ForeColor = clsUITheme.PrimaryColor;
+
+            // Textbox styling
+            txtUserName.Font = clsUITheme.FontNormal;
+            txtUserName.BackColor = clsUITheme.BackgroundLight;
+            txtUserName.BorderStyle = BorderStyle.None;
+            txtPassword.Font = clsUITheme.FontNormal;
+            txtPassword.BackColor = clsUITheme.BackgroundLight;
+            txtPassword.BorderStyle = BorderStyle.None;
+            txtConfirmPassword.Font = clsUITheme.FontNormal;
+            txtConfirmPassword.BackColor = clsUITheme.BackgroundLight;
+            txtConfirmPassword.BorderStyle = BorderStyle.None;
+
+            // Checkbox styling
+            clsUITheme.ApplyCheckBoxStyle(chkIsActive);
         }
 
         private void _ResetDefualtValues()

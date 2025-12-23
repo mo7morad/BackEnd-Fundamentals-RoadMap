@@ -21,15 +21,67 @@ namespace DVLD.Licenses
         private float _applicationFees = 0f;
         private float _licenseFees = 0f;
         private float _totalFees = 0f;
+        
         public frmRenewLocalDrivingLicenseApplication()
         {
             InitializeComponent();
+            ApplyModernStyle();
+        }
+
+        private void ApplyModernStyle()
+        {
+            // Form styling
+            this.BackColor = clsUITheme.BackgroundLight;
+            this.Font = clsUITheme.FontNormal;
+            this.StartPosition = FormStartPosition.CenterScreen;
+
+            // Title styling
+            if (this.Controls.Find("lblTitle", true).Length > 0)
+                clsUITheme.ApplyTitleLabelStyle((Label)this.Controls.Find("lblTitle", true)[0]);
+
+            // Button styling
+            clsUITheme.ApplyPrimaryButtonStyle(btnRenewLicense);
+            clsUITheme.ApplySecondaryButtonStyle(btnClose);
+
+            // GroupBox styling
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is GroupBox gb)
+                {
+                    clsUITheme.ApplyGroupBoxStyle(gb);
+                }
+            }
+
+            // Label styling for data labels
+            StyleLabel(lblApplicationID);
+            StyleLabel(lblApplicationDate);
+            StyleLabel(lblOldLicenseID);
+            StyleLabel(lblRenewedLicenseID);
+            StyleLabel(lblIssueDate);
+            StyleLabel(lblExpirationDate);
+            StyleLabel(lblApplicationFees);
+            StyleLabel(lblLicenseFees);
+            StyleLabel(lblTotalFees);
+            StyleLabel(lblCreatedByUser);
+
+            // Link label styling
+            clsUITheme.ApplyLinkLabelStyle(llShowLicenseHistory);
+            clsUITheme.ApplyLinkLabelStyle(llShowLicenseInfo);
+
+            // TextBox styling
+            txtNotes.Font = clsUITheme.FontNormal;
+            txtNotes.BackColor = Color.White;
+        }
+
+        private void StyleLabel(Label lbl)
+        {
+            lbl.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            lbl.ForeColor = clsUITheme.PrimaryColor;
         }
 
         private void frmRenewLocalDrivingLicenseApplication_Load(object sender, EventArgs e)
         {
             ctrlDriverLicenseInfoWithFilter1.txtLicenseIDFocus();
-
 
             lblApplicationDate.Text = clsFormat.DateToShort(DateTime.Now);
             lblIssueDate.Text = lblApplicationDate.Text;
@@ -38,7 +90,6 @@ namespace DVLD.Licenses
             _applicationFees = clsApplicationType.Find((int)clsApplication.enApplicationType.RenewDrivingLicense).Fees;
             lblApplicationFees.Text = clsFormat.FormatMoney(_applicationFees);
             lblCreatedByUser.Text = clsGlobal.CurrentUser.UserName;
-
         }
 
         private void ctrlDriverLicenseInfoWithFilter1_OnLicenseSelected(int obj)

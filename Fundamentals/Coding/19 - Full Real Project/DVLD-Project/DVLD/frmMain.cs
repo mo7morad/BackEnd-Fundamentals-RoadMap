@@ -13,6 +13,7 @@ using DVLD.Tests;
 using DVLD.User;
 using System;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
 
@@ -28,7 +29,52 @@ namespace DVLD
         {
             InitializeComponent();
             _frmLogin= frm;
+            ApplyModernStyle();
+        }
 
+        private void ApplyModernStyle()
+        {
+            // Form styling
+            this.BackColor = clsUITheme.BackgroundLight;
+            this.Font = clsUITheme.FontNormal;
+
+            // MenuStrip styling - modern dark theme
+            msMainMenue.BackColor = clsUITheme.SecondaryColor;
+            msMainMenue.ForeColor = clsUITheme.TextLight;
+            msMainMenue.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            msMainMenue.Padding = new Padding(10, 5, 0, 5);
+            msMainMenue.Renderer = new ModernMenuRenderer();
+
+            // Apply style to all menu items
+            foreach (ToolStripItem item in msMainMenue.Items)
+            {
+                if (item is ToolStripMenuItem menuItem)
+                {
+                    ApplyMenuItemStyle(menuItem);
+                }
+            }
+
+            // Status label styling
+            lblLoggedInUser.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblLoggedInUser.ForeColor = clsUITheme.PrimaryColor;
+            lblLoggedInUser.BackColor = Color.Transparent;
+        }
+
+        private void ApplyMenuItemStyle(ToolStripMenuItem menuItem)
+        {
+            menuItem.ForeColor = clsUITheme.TextLight;
+            menuItem.Padding = new Padding(10, 8, 10, 8);
+
+            foreach (ToolStripItem subItem in menuItem.DropDownItems)
+            {
+                if (subItem is ToolStripMenuItem subMenuItem)
+                {
+                    subMenuItem.ForeColor = clsUITheme.TextPrimary;
+                    subMenuItem.BackColor = clsUITheme.BackgroundWhite;
+                    subMenuItem.Padding = new Padding(8, 4, 8, 4);
+                    ApplyMenuItemStyle(subMenuItem);
+                }
+            }
         }
 
         private void localLicenseToolStripMenuItem_Click(object sender, EventArgs e)
@@ -51,10 +97,9 @@ namespace DVLD
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            this.BackColor = Color.White;
+            this.BackColor = clsUITheme.BackgroundLight;
             lblLoggedInUser.Text = "LoggedIn User: " + clsGlobal.CurrentUser.UserName;
             this.Refresh();
-
         }
 
         private void currentUserInfoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -106,8 +151,6 @@ namespace DVLD
             frm.ShowDialog();
 
         }
-
-       
 
         private void releaseDetainedDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -187,5 +230,82 @@ namespace DVLD
                 _frmLogin.Close();
             }
         }
+    }
+
+    /// <summary>
+    /// Custom menu renderer for modern appearance
+    /// </summary>
+    public class ModernMenuRenderer : ToolStripProfessionalRenderer
+    {
+        public ModernMenuRenderer() : base(new ModernMenuColorTable()) { }
+
+        protected override void OnRenderMenuItemBackground(ToolStripItemRenderEventArgs e)
+        {
+            Rectangle rect = new Rectangle(Point.Empty, e.Item.Size);
+            
+            if (e.Item.Selected || e.Item.Pressed)
+            {
+                using (SolidBrush brush = new SolidBrush(clsUITheme.SecondaryLight))
+                {
+                    e.Graphics.FillRectangle(brush, rect);
+                }
+            }
+            else if (e.Item.Owner is MenuStrip)
+            {
+                using (SolidBrush brush = new SolidBrush(clsUITheme.SecondaryColor))
+                {
+                    e.Graphics.FillRectangle(brush, rect);
+                }
+            }
+            else
+            {
+                using (SolidBrush brush = new SolidBrush(clsUITheme.BackgroundWhite))
+                {
+                    e.Graphics.FillRectangle(brush, rect);
+                }
+                if (e.Item.Selected)
+                {
+                    using (SolidBrush brush = new SolidBrush(clsUITheme.BackgroundHover))
+                    {
+                        e.Graphics.FillRectangle(brush, rect);
+                    }
+                }
+            }
+        }
+
+        protected override void OnRenderItemText(ToolStripItemTextRenderEventArgs e)
+        {
+            if (e.Item.Owner is MenuStrip)
+            {
+                e.TextColor = clsUITheme.TextLight;
+            }
+            else
+            {
+                e.TextColor = clsUITheme.TextPrimary;
+            }
+            base.OnRenderItemText(e);
+        }
+    }
+
+    /// <summary>
+    /// Custom color table for modern menu appearance
+    /// </summary>
+    public class ModernMenuColorTable : ProfessionalColorTable
+    {
+        public override Color MenuBorder => clsUITheme.BorderLight;
+        public override Color MenuItemBorder => Color.Transparent;
+        public override Color MenuItemSelected => clsUITheme.BackgroundHover;
+        public override Color MenuItemSelectedGradientBegin => clsUITheme.SecondaryLight;
+        public override Color MenuItemSelectedGradientEnd => clsUITheme.SecondaryLight;
+        public override Color MenuItemPressedGradientBegin => clsUITheme.SecondaryDark;
+        public override Color MenuItemPressedGradientEnd => clsUITheme.SecondaryDark;
+        public override Color MenuStripGradientBegin => clsUITheme.SecondaryColor;
+        public override Color MenuStripGradientEnd => clsUITheme.SecondaryColor;
+        public override Color ToolStripDropDownBackground => clsUITheme.BackgroundWhite;
+        public override Color ImageMarginGradientBegin => clsUITheme.BackgroundLight;
+        public override Color ImageMarginGradientMiddle => clsUITheme.BackgroundLight;
+        public override Color ImageMarginGradientEnd => clsUITheme.BackgroundLight;
+        public override Color SeparatorDark => clsUITheme.BorderLight;
+        public override Color SeparatorLight => clsUITheme.BackgroundWhite;
     }
 }

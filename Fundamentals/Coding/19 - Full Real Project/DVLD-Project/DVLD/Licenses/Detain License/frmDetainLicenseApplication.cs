@@ -19,14 +19,59 @@ namespace DVLD.Applications.Detain_License
 {
     public partial class frmDetainLicenseApplication : Form
     {
-
         private int _DetainID = -1;
         private int _SelectedLicenseID = -1;
+        
         public frmDetainLicenseApplication()
         {
             InitializeComponent();
+            ApplyModernStyle();
         }
 
+        private void ApplyModernStyle()
+        {
+            // Form styling
+            this.BackColor = clsUITheme.BackgroundLight;
+            this.Font = clsUITheme.FontNormal;
+            this.StartPosition = FormStartPosition.CenterScreen;
+
+            // Title styling
+            if (this.Controls.Find("lblTitle", true).Length > 0)
+                clsUITheme.ApplyTitleLabelStyle((Label)this.Controls.Find("lblTitle", true)[0]);
+
+            // Button styling - Detain is a danger action
+            clsUITheme.ApplyDangerButtonStyle(btnDetain);
+            clsUITheme.ApplySecondaryButtonStyle(btnClose);
+
+            // GroupBox styling
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is GroupBox gb)
+                {
+                    clsUITheme.ApplyGroupBoxStyle(gb);
+                }
+            }
+
+            // Label styling for data labels
+            StyleLabel(lblDetainID);
+            StyleLabel(lblLicenseID);
+            StyleLabel(lblDetainDate);
+            StyleLabel(lblCreatedByUser);
+
+            // Link label styling
+            clsUITheme.ApplyLinkLabelStyle(llShowLicenseHistory);
+            clsUITheme.ApplyLinkLabelStyle(llShowLicenseInfo);
+
+            // TextBox styling
+            txtFineFees.Font = clsUITheme.FontNormal;
+            txtFineFees.BackColor = Color.White;
+        }
+
+        private void StyleLabel(Label lbl)
+        {
+            lbl.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            lbl.ForeColor = clsUITheme.PrimaryColor;
+        }
 
         private void btnDetain_Click(object sender, EventArgs e)
         {
@@ -35,12 +80,10 @@ namespace DVLD.Applications.Detain_License
                 return;
             }
 
-         
             _DetainID = ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.Detain(Convert.ToSingle(txtFineFees.Text), clsGlobal.CurrentUser.UserID);
             if (_DetainID == -1)
             {
                 MessageBox.Show("Faild to Detain License", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                 return;
             }
 
@@ -57,7 +100,6 @@ namespace DVLD.Applications.Detain_License
         {
             lblDetainDate.Text = clsFormat.DateToShort(DateTime.Now);
             lblCreatedByUser.Text = clsGlobal.CurrentUser.UserName;
-
         }
 
         private void btnClose_Click(object sender, EventArgs e)

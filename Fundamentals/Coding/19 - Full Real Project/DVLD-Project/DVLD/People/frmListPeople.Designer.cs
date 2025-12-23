@@ -177,9 +177,10 @@ namespace DVLD.People
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(20, 625);
+            this.label2.Location = new System.Drawing.Point(20, 665);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 19);
             this.label2.TabIndex = 8;
@@ -187,9 +188,10 @@ namespace DVLD.People
             // 
             // lblRecordsCount
             // 
+            this.lblRecordsCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblRecordsCount.AutoSize = true;
             this.lblRecordsCount.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblRecordsCount.Location = new System.Drawing.Point(120, 625);
+            this.lblRecordsCount.Location = new System.Drawing.Point(105, 665);
             this.lblRecordsCount.Name = "lblRecordsCount";
             this.lblRecordsCount.Size = new System.Drawing.Size(24, 19);
             this.lblRecordsCount.TabIndex = 9;
@@ -237,6 +239,7 @@ namespace DVLD.People
             // 
             // btnClose
             // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.FlatAppearance.BorderSize = 0;
@@ -245,7 +248,7 @@ namespace DVLD.People
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Image = global::DVLD.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(1189, 615);
+            this.btnClose.Location = new System.Drawing.Point(1189, 655);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(135, 40);
             this.btnClose.TabIndex = 92;
@@ -285,7 +288,7 @@ namespace DVLD.People
             this.panelGrid.Controls.Add(this.dgvPeople);
             this.panelGrid.Location = new System.Drawing.Point(20, 230);
             this.panelGrid.Name = "panelGrid";
-            this.panelGrid.Size = new System.Drawing.Size(1304, 380);
+            this.panelGrid.Size = new System.Drawing.Size(1304, 410);
             this.panelGrid.TabIndex = 94;
             // 
             // dgvPeople
@@ -318,7 +321,7 @@ namespace DVLD.People
             this.dgvPeople.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPeople.RowTemplate.Height = 28;
             this.dgvPeople.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPeople.Size = new System.Drawing.Size(1304, 380);
+            this.dgvPeople.Size = new System.Drawing.Size(1304, 410);
             this.dgvPeople.TabIndex = 1;
             this.dgvPeople.TabStop = false;
             this.dgvPeople.DoubleClick += new System.EventHandler(this.dgvPeople_DoubleClick);
@@ -329,10 +332,10 @@ namespace DVLD.People
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
+            this.AutoScroll = false;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(1336, 698);
+            this.ClientSize = new System.Drawing.Size(1336, 700);
             this.Controls.Add(this.panelGrid);
             this.Controls.Add(this.panelFilter);
             this.Controls.Add(this.btnClose);
@@ -346,7 +349,7 @@ namespace DVLD.People
             this.Name = "frmListPeople";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage People";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.WindowState = System.Windows.Forms.FormWindowState.Normal;
             this.Load += new System.EventHandler(this.frmListPeople_Load);
             this.cmsPeople.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonImage)).EndInit();

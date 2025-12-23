@@ -1,4 +1,5 @@
-﻿using DVLD.Licenses.International_License;
+﻿using DVLD.Classes;
+using DVLD.Licenses.International_License;
 using DVLD.People;
 using DVLD_Buisness;
 using System;
@@ -20,6 +21,47 @@ namespace DVLD.Drivers
         public frmListDrivers()
         {
             InitializeComponent();
+            ApplyModernStyle();
+        }
+
+        private void ApplyModernStyle()
+        {
+            // Form styling
+            this.BackColor = clsUITheme.BackgroundLight;
+            this.Font = clsUITheme.FontNormal;
+
+            // Title styling
+            if (this.Controls.Find("lblTitle", true).Length > 0)
+                clsUITheme.ApplyTitleLabelStyle((Label)this.Controls.Find("lblTitle", true)[0]);
+
+            // Filter label styling
+            if (this.Controls.Find("label1", true).Length > 0)
+            {
+                var lbl = (Label)this.Controls.Find("label1", true)[0];
+                lbl.Font = clsUITheme.FontHeader;
+                lbl.ForeColor = clsUITheme.TextPrimary;
+            }
+
+            // Button styling
+            clsUITheme.ApplyPrimaryButtonStyle(btnClose);
+
+            // ComboBox styling
+            clsUITheme.ApplyComboBoxStyle(cbFilterBy);
+
+            // Textbox styling
+            txtFilterValue.Font = clsUITheme.FontNormal;
+            txtFilterValue.BackColor = clsUITheme.BackgroundLight;
+            txtFilterValue.ForeColor = clsUITheme.TextPrimary;
+
+            // Records count labels
+            if (this.Controls.Find("label2", true).Length > 0)
+            {
+                var lbl = (Label)this.Controls.Find("label2", true)[0];
+                lbl.Font = clsUITheme.FontHeader;
+                lbl.ForeColor = clsUITheme.TextPrimary;
+            }
+            lblRecordsCount.Font = clsUITheme.FontHeader;
+            lblRecordsCount.ForeColor = clsUITheme.PrimaryColor;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -34,6 +76,10 @@ namespace DVLD.Drivers
             _dtAllDrivers = clsDriver.GetAllDrivers();
             dgvDrivers.DataSource = _dtAllDrivers;
             lblRecordsCount.Text = dgvDrivers.Rows.Count.ToString();
+
+            // Apply modern DataGridView styling
+            clsUITheme.ApplyDataGridViewStyle(dgvDrivers);
+
             if (dgvDrivers.Rows.Count>0)
             {
                 dgvDrivers.Columns[0].HeaderText = "Driver ID";
