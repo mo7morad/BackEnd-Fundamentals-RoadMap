@@ -800,6 +800,11 @@
   <ItemGroup>
     <None Include="Resources\Release Detained License 512.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Logo Final2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Final Logo3.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
