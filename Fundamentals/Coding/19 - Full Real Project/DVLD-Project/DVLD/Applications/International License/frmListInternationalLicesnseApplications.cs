@@ -1,4 +1,5 @@
-﻿using DVLD.Licenses.International_License;
+﻿using DVLD.GlobalClasses;
+using DVLD.Licenses.International_License;
 using DVLD.Licenses.International_Licenses;
 using DVLD.People;
 using DVLD_Buisness;
@@ -32,6 +33,9 @@ namespace DVLD.Applications.International_License
 
         private void frmListInternationalLicesnseApplications_Load(object sender, EventArgs e)
         {
+            // Apply modern UI theme
+            _ApplyModernTheme();
+            
             _dtInternationalLicenseApplications = clsInternationalLicense.GetAllInternationalLicenses();
             cbFilterBy.SelectedIndex= 0;
 
@@ -62,6 +66,37 @@ namespace DVLD.Applications.International_License
                 dgvInternationalLicenses.Columns[6].Width = 120;
 
             }
+        }
+        
+        private void _ApplyModernTheme()
+        {
+            // Apply theme to form
+            this.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style title
+            lblTitle.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblTitle.ForeColor = clsUITheme.TitleColor;
+            
+            // Style labels
+            label1.Font = clsUITheme.LabelFont;
+            label1.ForeColor = clsUITheme.TextSecondaryColor;
+            lblInternationalLicensesRecords.Font = clsUITheme.BodyBoldFont;
+            lblInternationalLicensesRecords.ForeColor = clsUITheme.TextPrimaryColor;
+            
+            // Style DataGridView
+            clsUITheme.StyleDataGridView(dgvInternationalLicenses);
+            
+            // Style ComboBox and TextBox
+            clsUITheme.StyleComboBox(cbFilterBy);
+            clsUITheme.StyleComboBox(cbIsReleased);
+            clsUITheme.StyleTextBox(txtFilterValue);
+            
+            // Style buttons
+            clsUITheme.StyleButton(btnClose, clsUITheme.ButtonStyle.Secondary);
+            clsUITheme.StyleButton(btnNewApplication, clsUITheme.ButtonStyle.Primary);
+            
+            // Style context menu
+            clsUITheme.StyleContextMenuStrip(cmsApplications);
         }
 
         private void btnNewApplication_Click(object sender, EventArgs e)

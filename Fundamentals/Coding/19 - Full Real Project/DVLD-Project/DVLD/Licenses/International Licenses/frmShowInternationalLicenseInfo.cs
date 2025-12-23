@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVLD.GlobalClasses;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,12 @@ namespace DVLD.Licenses.International_Licenses
             _InternationalLicenseID = InternationalLicenseID;
 
         }
+        
+        private void _ApplyModernTheme()
+        {
+            this.BackColor = clsUITheme.SurfaceColor;
+            clsUITheme.StyleButton(btnClose, clsUITheme.ButtonStyle.Secondary);
+        }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -27,6 +34,7 @@ namespace DVLD.Licenses.International_Licenses
 
         private void frmShowInternationalLicenseInfo_Load(object sender, EventArgs e)
         {
+            _ApplyModernTheme();
            ctrlDriverInternationalLicenseInfo1.LoadInfo(_InternationalLicenseID);
         }
     }

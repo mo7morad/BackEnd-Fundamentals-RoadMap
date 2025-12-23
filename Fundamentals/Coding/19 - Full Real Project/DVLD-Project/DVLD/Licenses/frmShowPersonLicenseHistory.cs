@@ -1,4 +1,5 @@
 ﻿using DVLD.Controls;
+using DVLD.GlobalClasses;
 using DVLD_Buisness;
 using System;
 using System.Collections.Generic;
@@ -28,9 +29,16 @@ namespace DVLD.Licenses.International_License
             InitializeComponent();
             _PersonID = PersonID;   
         }
+        
+        private void _ApplyModernTheme()
+        {
+            this.BackColor = clsUITheme.SurfaceColor;
+            clsUITheme.StyleButton(btnClose, clsUITheme.ButtonStyle.Secondary);
+        }
 
         private void frmShowPersonLicenseHistory_Load(object sender, EventArgs e)
         {
+            _ApplyModernTheme();
 
             if (_PersonID!= -1)
             {

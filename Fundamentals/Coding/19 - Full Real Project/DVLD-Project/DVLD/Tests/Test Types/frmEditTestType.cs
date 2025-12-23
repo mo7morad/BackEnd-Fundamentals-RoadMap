@@ -1,4 +1,5 @@
 ﻿using DVLD.Classes;
+using DVLD.GlobalClasses;
 using DVLD_Buisness;
 using System;
 using System.Collections.Generic;
@@ -26,10 +27,35 @@ namespace DVLD.Tests
             _TestTypeID = TestTypeID;
 
         }
+        
+        private void _ApplyModernTheme()
+        {
+            this.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style title
+            lblTitle.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblTitle.ForeColor = clsUITheme.TitleColor;
+            
+            // Style labels
+            clsUITheme.StyleLabel(label1);
+            clsUITheme.StyleLabel(label2);
+            clsUITheme.StyleLabel(label3);
+            clsUITheme.StyleLabel(label4);
+            
+            // Style textboxes
+            clsUITheme.StyleTextBox(txtTitle);
+            clsUITheme.StyleTextBox(txtDescription);
+            clsUITheme.StyleTextBox(txtFees);
+            
+            // Style buttons
+            clsUITheme.StyleButton(btnClose, clsUITheme.ButtonStyle.Secondary);
+            clsUITheme.StyleButton(btnSave, clsUITheme.ButtonStyle.Primary);
+        }
 
 
         private void frmEditTestType_Load(object sender, EventArgs e)
         {
+            _ApplyModernTheme();
           
             _TestType = clsTestType.Find( _TestTypeID);
 

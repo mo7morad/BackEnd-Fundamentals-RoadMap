@@ -1,5 +1,6 @@
 ﻿using DVLD.Applications.Detain_License;
 using DVLD.DriverLicense;
+using DVLD.GlobalClasses;
 using DVLD.Licenses.International_License;
 using DVLD.People;
 using DVLD_Buisness;
@@ -32,6 +33,9 @@ namespace DVLD.Applications.Rlease_Detained_License
 
         private void frmListDetainedLicenses_Load(object sender, EventArgs e)
         {
+            // Apply modern UI theme
+            _ApplyModernTheme();
+            
             cbFilterBy.SelectedIndex= 0;
 
             _dtDetainedLicenses = clsDetainedLicense.GetAllDetainedLicenses();
@@ -71,6 +75,38 @@ namespace DVLD.Applications.Rlease_Detained_License
 
             }
 
+        }
+        
+        private void _ApplyModernTheme()
+        {
+            // Apply theme to form
+            this.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style title
+            lblTitle.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblTitle.ForeColor = clsUITheme.TitleColor;
+            
+            // Style labels
+            label1.Font = clsUITheme.LabelFont;
+            label1.ForeColor = clsUITheme.TextSecondaryColor;
+            lblTotalRecords.Font = clsUITheme.BodyBoldFont;
+            lblTotalRecords.ForeColor = clsUITheme.TextPrimaryColor;
+            
+            // Style DataGridView
+            clsUITheme.StyleDataGridView(dgvDetainedLicenses);
+            
+            // Style ComboBox and TextBox
+            clsUITheme.StyleComboBox(cbFilterBy);
+            clsUITheme.StyleComboBox(cbIsReleased);
+            clsUITheme.StyleTextBox(txtFilterValue);
+            
+            // Style buttons
+            clsUITheme.StyleButton(btnClose, clsUITheme.ButtonStyle.Secondary);
+            clsUITheme.StyleButton(btnDetainLicense, clsUITheme.ButtonStyle.Primary);
+            clsUITheme.StyleButton(btnReleaseDetainedLicense, clsUITheme.ButtonStyle.Success);
+            
+            // Style context menu
+            clsUITheme.StyleContextMenuStrip(cmsApplications);
         }
 
         private void txtFilterValue_TextChanged(object sender, EventArgs e)

@@ -1,5 +1,6 @@
 ﻿using DVLD.Classes;
 using DVLD.DriverLicense;
+using DVLD.GlobalClasses;
 using DVLD.Licenses.Controls;
 using DVLD.Licenses.International_License;
 using DVLD_Buisness;
@@ -37,6 +38,52 @@ namespace DVLD.Applications.Rlease_Detained_License
        
             ctrlDriverLicenseInfoWithFilter1.LoadLicenseInfo(_SelectedLicenseID);
             ctrlDriverLicenseInfoWithFilter1.FilterEnabled = false;
+        }
+        
+        private void frmReleaseDetainedLicenseApplication_Load(object sender, EventArgs e)
+        {
+            // Apply modern UI theme
+            _ApplyModernTheme();
+        }
+        
+        private void _ApplyModernTheme()
+        {
+            // Apply theme to form
+            this.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style title
+            lblTitle.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblTitle.ForeColor = clsUITheme.TitleColor;
+            
+            // Style GroupBox
+            gpDetain.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Regular);
+            gpDetain.ForeColor = clsUITheme.TitleColor;
+            gpDetain.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style caption labels
+            Label[] captionLabels = { label4, label5, label10, label1, label2, label6, label7, label8 };
+            foreach (Label lbl in captionLabels)
+            {
+                lbl.Font = clsUITheme.LabelFont;
+                lbl.ForeColor = clsUITheme.TextSecondaryColor;
+            }
+            
+            // Style value labels
+            Label[] valueLabels = { lblDetainID, lblDetainDate, lblLicenseID, lblCreatedByUser, 
+                                   lblFineFees, lblApplicationFees, lblTotalFees, lblApplicationID };
+            foreach (Label lbl in valueLabels)
+            {
+                lbl.Font = clsUITheme.BodyBoldFont;
+                lbl.ForeColor = clsUITheme.TextPrimaryColor;
+            }
+            
+            // Style buttons
+            clsUITheme.StyleButton(btnRelease, clsUITheme.ButtonStyle.Primary);
+            clsUITheme.StyleButton(btnClose, clsUITheme.ButtonStyle.Secondary);
+            
+            // Style link labels
+            clsUITheme.StyleLinkLabel(llShowLicenseHistory);
+            clsUITheme.StyleLinkLabel(llShowLicenseInfo);
         }
 
         private void btnClose_Click(object sender, EventArgs e)

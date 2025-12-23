@@ -1,4 +1,5 @@
 ﻿using DVLD.Applications;
+using DVLD.GlobalClasses;
 using DVLD_Buisness;
 using System;
 using System.Collections.Generic;
@@ -30,9 +31,26 @@ namespace DVLD.Tests
             this.Close();
 
         }
+        
+        private void _ApplyModernTheme()
+        {
+            this.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style title
+            lblTitle.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblTitle.ForeColor = clsUITheme.TitleColor;
+            
+            // Style DataGridView
+            clsUITheme.StyleDataGridView(dgvTestTypes);
+            
+            // Style context menu
+            clsUITheme.StyleContextMenuStrip(cmsTestTypes);
+        }
 
         private void frmListTestTypes_Load(object sender, EventArgs e)
         {
+            _ApplyModernTheme();
+            
             _dtAllTestTypes = clsTestType.GetAllTestTypes();
             dgvTestTypes.DataSource = _dtAllTestTypes;
             lblRecordsCount.Text = dgvTestTypes.Rows.Count.ToString();

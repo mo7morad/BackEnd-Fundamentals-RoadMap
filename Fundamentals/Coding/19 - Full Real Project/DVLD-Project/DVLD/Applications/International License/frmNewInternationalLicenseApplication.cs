@@ -1,5 +1,6 @@
 ﻿using DVLD.Classes;
 using DVLD.DriverLicense;
+using DVLD.GlobalClasses;
 using DVLD.Licenses.International_License;
 using DVLD.Licenses.International_Licenses;
 using DVLD_Buisness;
@@ -71,7 +72,8 @@ namespace DVLD.Applications.International_License
 
         private void frmNewInternationalLicenseApplication_Load(object sender, EventArgs e)
         {
-           
+            // Apply modern UI theme
+            _ApplyModernTheme();
 
             lblApplicationDate.Text = clsFormat.DateToShort(DateTime.Now);
             lblIssueDate.Text = lblApplicationDate.Text;
@@ -80,6 +82,46 @@ namespace DVLD.Applications.International_License
             lblCreatedByUser.Text = clsGlobal.CurrentUser.UserName;
 
 
+        }
+        
+        private void _ApplyModernTheme()
+        {
+            // Apply theme to form
+            this.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style title
+            lblTitle.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblTitle.ForeColor = clsUITheme.TitleColor;
+            
+            // Style GroupBox
+            gpApplicationInfo.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Regular);
+            gpApplicationInfo.ForeColor = clsUITheme.TitleColor;
+            gpApplicationInfo.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style caption labels
+            Label[] captionLabels = { label4, label5, label6, label8, label10, label12, label1, label2 };
+            foreach (Label lbl in captionLabels)
+            {
+                lbl.Font = clsUITheme.LabelFont;
+                lbl.ForeColor = clsUITheme.TextSecondaryColor;
+            }
+            
+            // Style value labels
+            Label[] valueLabels = { lblApplicationID, lblApplicationDate, lblIssueDate, lblExpirationDate, 
+                                   lblInternationalLicenseID, lblLocalLicenseID, lblFees, lblCreatedByUser };
+            foreach (Label lbl in valueLabels)
+            {
+                lbl.Font = clsUITheme.BodyBoldFont;
+                lbl.ForeColor = clsUITheme.TextPrimaryColor;
+            }
+            
+            // Style buttons
+            clsUITheme.StyleButton(btnIssueLicense, clsUITheme.ButtonStyle.Primary);
+            clsUITheme.StyleButton(btnClose, clsUITheme.ButtonStyle.Secondary);
+            
+            // Style link labels
+            clsUITheme.StyleLinkLabel(llShowLicenseHistory);
+            clsUITheme.StyleLinkLabel(llShowLicenseInfo);
         }
 
         private void btnClose_Click(object sender, EventArgs e)

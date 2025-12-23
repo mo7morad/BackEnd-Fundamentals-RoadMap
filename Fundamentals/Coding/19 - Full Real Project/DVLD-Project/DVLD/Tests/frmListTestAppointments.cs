@@ -1,4 +1,5 @@
 ﻿using DVLD.Controls.ApplicationControls;
+using DVLD.GlobalClasses;
 using DVLD.Properties;
 using DVLD_Buisness;
 using System;
@@ -33,6 +34,30 @@ namespace DVLD.Tests
         {
             this.Close();
         }
+        
+        private void _ApplyModernTheme()
+        {
+            this.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style title
+            lblTitle.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblTitle.ForeColor = clsUITheme.TitleColor;
+            
+            // Style labels
+            clsUITheme.StyleLabel(label1);
+            lblRecordsCount.Font = clsUITheme.BodyBoldFont;
+            lblRecordsCount.ForeColor = clsUITheme.TextPrimaryColor;
+            
+            // Style DataGridView
+            clsUITheme.StyleDataGridView(dgvLicenseTestAppointments);
+            
+            // Style buttons
+            clsUITheme.StyleButton(btnClose, clsUITheme.ButtonStyle.Secondary);
+            clsUITheme.StyleButton(btnAddNewAppointment, clsUITheme.ButtonStyle.Primary);
+            
+            // Style context menu
+            clsUITheme.StyleContextMenuStrip(cmsApplications);
+        }
 
         private void _LoadTestTypeImageAndTitle()
         {
@@ -66,6 +91,7 @@ namespace DVLD.Tests
 
         private void frmListTestAppointments_Load(object sender, EventArgs e)
         {
+            _ApplyModernTheme();
             _LoadTestTypeImageAndTitle();
 
 

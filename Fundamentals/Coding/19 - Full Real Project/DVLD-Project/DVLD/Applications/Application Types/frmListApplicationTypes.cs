@@ -1,4 +1,5 @@
-﻿using DVLD_Buisness;
+﻿using DVLD.GlobalClasses;
+using DVLD_Buisness;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +28,9 @@ namespace DVLD.Applications
 
         private void frmManageApplicationTypes_Load(object sender, EventArgs e)
         {
+            // Apply modern UI theme
+            _ApplyModernTheme();
+            
             _dtAllApplicationTypes = clsApplicationType.GetAllApplicationTypes();
             dgvApplicationTypes.DataSource = _dtAllApplicationTypes;
             lblRecordsCount.Text = dgvApplicationTypes.Rows.Count.ToString();
@@ -42,6 +46,31 @@ namespace DVLD.Applications
             dgvApplicationTypes.Columns[2].DefaultCellStyle.Format = "0.00$";
 
            
+        }
+        
+        private void _ApplyModernTheme()
+        {
+            // Apply theme to form
+            this.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style title
+            lblTitle.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblTitle.ForeColor = clsUITheme.TitleColor;
+            
+            // Style labels
+            label2.Font = clsUITheme.LabelFont;
+            label2.ForeColor = clsUITheme.TextSecondaryColor;
+            lblRecordsCount.Font = clsUITheme.BodyBoldFont;
+            lblRecordsCount.ForeColor = clsUITheme.TextPrimaryColor;
+            
+            // Style DataGridView
+            clsUITheme.StyleDataGridView(dgvApplicationTypes);
+            
+            // Style button
+            clsUITheme.StyleButton(btnClose, clsUITheme.ButtonStyle.Secondary);
+            
+            // Style context menu
+            clsUITheme.StyleContextMenuStrip(cmsApplicationTypes);
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)

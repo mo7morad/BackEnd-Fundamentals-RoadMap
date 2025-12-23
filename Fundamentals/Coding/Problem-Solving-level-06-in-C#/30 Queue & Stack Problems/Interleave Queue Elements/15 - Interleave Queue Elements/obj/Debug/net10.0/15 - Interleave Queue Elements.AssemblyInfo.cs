@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("15 - Interleave Queue Elements")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f4e7cefc074c0b6f4bb2897eb05b4c3a3a773d41")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d436a996799bba31f4c061de218c42adb9cb946b")]
 [assembly: System.Reflection.AssemblyProductAttribute("15 - Interleave Queue Elements")]
 [assembly: System.Reflection.AssemblyTitleAttribute("15 - Interleave Queue Elements")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using DVLD.Classes;
+using DVLD.GlobalClasses;
 using DVLD_Buisness;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
@@ -42,40 +43,44 @@ namespace DVLD.People
             this.Size = new Size(1200, 700);
             this.MinimumSize = new Size(900, 500);
             this.FormBorderStyle = FormBorderStyle.Sizable;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-
-            btnAddPerson.FlatAppearance.BorderSize = 0;
-            btnAddPerson.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(30, 136, 229);
-            btnAddPerson.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(21, 101, 192);
-
-            btnAddPerson.MouseEnter += (s, e) => btnAddPerson.BackColor = System.Drawing.Color.FromArgb(30, 136, 229);
-            btnAddPerson.MouseLeave += (s, e) => btnAddPerson.BackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-
-            btnClose.FlatAppearance.BorderSize = 0;
-            btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(30, 136, 229);
-            btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(21, 101, 192);
-
-            btnClose.MouseEnter += (s, e) => btnClose.BackColor = System.Drawing.Color.FromArgb(30, 136, 229);
-            btnClose.MouseLeave += (s, e) => btnClose.BackColor = System.Drawing.Color.FromArgb(0, 122, 204);
+        }
+        
+        private void _ApplyModernTheme()
+        {
+            this.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style title
+            lblTitle.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblTitle.ForeColor = clsUITheme.TitleColor;
+            
+            // Style labels
+            label1.Font = clsUITheme.LabelFont;
+            label1.ForeColor = clsUITheme.TextSecondaryColor;
+            lblRecordsCount.Font = clsUITheme.BodyBoldFont;
+            lblRecordsCount.ForeColor = clsUITheme.TextPrimaryColor;
+            
+            // Style DataGridView
+            clsUITheme.StyleDataGridView(dgvPeople);
+            
+            // Style filters
+            clsUITheme.StyleComboBox(cbFilterBy);
+            clsUITheme.StyleTextBox(txtFilterValue);
+            
+            // Style buttons
+            clsUITheme.StyleButton(btnClose, clsUITheme.ButtonStyle.Secondary);
+            clsUITheme.StyleButton(btnAddPerson, clsUITheme.ButtonStyle.Primary);
+            
+            // Style context menu
+            clsUITheme.StyleContextMenuStrip(cmsPeople);
         }
 
         private void frmListPeople_Load(object sender, EventArgs e)
         {
+            _ApplyModernTheme();
+            
             dgvPeople.DataSource = _dtPeople;
             cbFilterBy.SelectedIndex = 0;
             lblRecordsCount.Text = dgvPeople.Rows.Count.ToString();
-
-            dgvPeople.EnableHeadersVisualStyles = false;
-            dgvPeople.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(240, 240, 240);
-            dgvPeople.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            dgvPeople.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            dgvPeople.DefaultCellStyle.BackColor = System.Drawing.Color.White;
-            dgvPeople.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 11F);
-            dgvPeople.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(232, 240, 254);
-            dgvPeople.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dgvPeople.AlternatingRowsDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(248, 248, 248);
-            dgvPeople.BorderStyle = BorderStyle.None;
-            dgvPeople.GridColor = System.Drawing.Color.LightGray;
 
             if (dgvPeople.Rows.Count > 0)
             {

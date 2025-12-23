@@ -1,4 +1,5 @@
 ﻿using DVLD.Applications;
+using DVLD.GlobalClasses;
 using DVLD_Buisness;
 using System;
 using System.Collections.Generic;
@@ -28,6 +29,9 @@ namespace DVLD.Tests
 
         private void frmListLocalDrivingLicesnseApplications_Load(object sender, EventArgs e)
         {
+            // Apply modern UI theme
+            _ApplyModernTheme();
+            
             _dtAllLocalDrivingLicenseApplications = clsLocalDrivingLicenseApplication.GetAllLocalDrivingLicenseApplications();
             dgvLocalDrivingLicenseApplications.DataSource = _dtAllLocalDrivingLicenseApplications;
             
@@ -57,6 +61,41 @@ namespace DVLD.Tests
             cbFilterBy.SelectedIndex = 0;
 
 
+        }
+        
+        private void _ApplyModernTheme()
+        {
+            // Apply theme to form
+            this.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style title
+            lblTitle.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblTitle.ForeColor = clsUITheme.TitleColor;
+            
+            // Style labels
+            label1.Font = clsUITheme.LabelFont;
+            label1.ForeColor = clsUITheme.TextSecondaryColor;
+            label2.Font = clsUITheme.LabelFont;
+            label2.ForeColor = clsUITheme.TextSecondaryColor;
+            lblRecordsCount.Font = clsUITheme.BodyBoldFont;
+            lblRecordsCount.ForeColor = clsUITheme.TextPrimaryColor;
+            
+            // Style DataGridView
+            clsUITheme.StyleDataGridView(dgvLocalDrivingLicenseApplications);
+            
+            // Style ComboBox and TextBox
+            clsUITheme.StyleComboBox(cbFilterBy);
+            clsUITheme.StyleTextBox(txtFilterValue);
+            
+            // Style buttons
+            clsUITheme.StyleButton(btnClose, clsUITheme.ButtonStyle.Secondary);
+            clsUITheme.StyleButton(btnAddNewApplication, clsUITheme.ButtonStyle.Primary);
+            
+            // Style context menu
+            clsUITheme.StyleContextMenuStrip(cmsApplications);
+            
+            // Style panel
+            panel1.BackColor = clsUITheme.SurfaceColor;
         }
 
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)

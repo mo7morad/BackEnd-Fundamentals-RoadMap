@@ -13,6 +13,7 @@ using DVLD_Buisness;
 using DVLD.Classes;
 using DVLD.People;
 using DVLD.Controls;
+using DVLD.GlobalClasses;
 using System.Runtime.Remoting.Messaging;
 
 namespace DVLD.User
@@ -98,11 +99,40 @@ namespace DVLD.User
 
         private void frmAddUpdateUser_Load(object sender, EventArgs e)
         {
+            _ApplyModernTheme();
             _ResetDefualtValues();
 
             if (_Mode == enMode.Update)
                 _LoadData();
 
+        }
+        
+        private void _ApplyModernTheme()
+        {
+            this.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style title
+            lblTitle.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblTitle.ForeColor = clsUITheme.TitleColor;
+            
+            // Style TabControl
+            clsUITheme.StyleTabControl(tcUserInfo);
+            
+            // Style labels
+            clsUITheme.StyleLabel(label1);
+            clsUITheme.StyleLabel(label2);
+            clsUITheme.StyleLabel(label3);
+            clsUITheme.StyleLabel(label4);
+            
+            // Style textboxes
+            clsUITheme.StyleTextBox(txtUserName);
+            clsUITheme.StyleTextBox(txtPassword);
+            clsUITheme.StyleTextBox(txtConfirmPassword);
+            
+            // Style buttons
+            clsUITheme.StyleButton(btnClose, clsUITheme.ButtonStyle.Secondary);
+            clsUITheme.StyleButton(btnSave, clsUITheme.ButtonStyle.Primary);
+            clsUITheme.StyleButton(btnPersonInfoNext, clsUITheme.ButtonStyle.Primary);
         }
 
         private void btnSave_Click(object sender, EventArgs e)

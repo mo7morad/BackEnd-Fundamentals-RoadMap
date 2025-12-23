@@ -1,4 +1,5 @@
 ﻿using DVLD_Buisness;
+using DVLD.GlobalClasses;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,9 +25,41 @@ namespace DVLD.User
         {
             this.Close();
         }
+        
+        private void _ApplyModernTheme()
+        {
+            this.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style title
+            lblTitle.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblTitle.ForeColor = clsUITheme.TitleColor;
+            
+            // Style labels
+            label1.Font = clsUITheme.LabelFont;
+            label1.ForeColor = clsUITheme.TextSecondaryColor;
+            lblRecordsCount.Font = clsUITheme.BodyBoldFont;
+            lblRecordsCount.ForeColor = clsUITheme.TextPrimaryColor;
+            
+            // Style DataGridView
+            clsUITheme.StyleDataGridView(dgvUsers);
+            
+            // Style filters
+            clsUITheme.StyleComboBox(cbFilterBy);
+            clsUITheme.StyleComboBox(cbIsActive);
+            clsUITheme.StyleTextBox(txtFilterValue);
+            
+            // Style buttons
+            clsUITheme.StyleButton(btnClose, clsUITheme.ButtonStyle.Secondary);
+            clsUITheme.StyleButton(btnAddUser, clsUITheme.ButtonStyle.Primary);
+            
+            // Style context menu
+            clsUITheme.StyleContextMenuStrip(cmsUsers);
+        }
 
         private void frmListUsers_Load(object sender, EventArgs e)
         {
+            _ApplyModernTheme();
+            
             _dtAllUsers = clsUser.GetAllUsers();
             dgvUsers.DataSource = _dtAllUsers;
             cbFilterBy.SelectedIndex = 0;

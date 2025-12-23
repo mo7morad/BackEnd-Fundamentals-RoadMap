@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD_Buisness;
 using DVLD.Classes;
+using DVLD.GlobalClasses;
 using static System.Net.Mime.MediaTypeNames;
 using DVLD.Tests;
 using DVLD.DriverLicense;
@@ -32,6 +33,29 @@ namespace DVLD.Controls.ApplicationControls
         public ctrlDrivingLicenseApplicationInfo()
         {
             InitializeComponent();
+            _ApplyModernTheme();
+        }
+        
+        private void _ApplyModernTheme()
+        {
+            // Style GroupBox
+            clsUITheme.StyleGroupBox(groupBox1);
+            
+            // Style caption labels (label4=L.D.L.AppID, label10=AppliedFor, label2=PassedTests)
+            clsUITheme.StyleLabel(label4);
+            clsUITheme.StyleLabel(label10);
+            clsUITheme.StyleLabel(label2);
+            
+            // Style value labels
+            lblLocalDrivingLicenseApplicationID.Font = clsUITheme.BodyFont;
+            lblLocalDrivingLicenseApplicationID.ForeColor = clsUITheme.TextSecondaryColor;
+            lblAppliedFor.Font = clsUITheme.BodyFont;
+            lblAppliedFor.ForeColor = clsUITheme.TextSecondaryColor;
+            lblPassedTests.Font = clsUITheme.BodyFont;
+            lblPassedTests.ForeColor = clsUITheme.TextSecondaryColor;
+            
+            // Style link label
+            clsUITheme.StyleLinkLabel(llShowLicenceInfo);
         }
 
         public void LoadApplicationInfoByLocalDrivingAppID(int LocalDrivingLicenseApplicationID)

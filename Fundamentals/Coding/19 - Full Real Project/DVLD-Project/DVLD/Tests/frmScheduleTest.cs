@@ -1,4 +1,5 @@
-﻿using DVLD_Buisness;
+﻿using DVLD.GlobalClasses;
+using DVLD_Buisness;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,9 +32,16 @@ namespace DVLD.Tests
            
 
         }
+        
+        private void _ApplyModernTheme()
+        {
+            this.BackColor = clsUITheme.SurfaceColor;
+            clsUITheme.StyleButton(btnClose, clsUITheme.ButtonStyle.Secondary);
+        }
 
         private void frmScheduleTest_Load(object sender, EventArgs e)
         {
+            _ApplyModernTheme();
             ctrlScheduleTest1.TestTypeID= _TestTypeID;
             ctrlScheduleTest1.LoadInfo(_LocalDrivingLicenseApplicationID, _AppointmentID);
         }

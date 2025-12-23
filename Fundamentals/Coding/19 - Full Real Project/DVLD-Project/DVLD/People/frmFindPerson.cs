@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVLD.GlobalClasses;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +24,13 @@ namespace DVLD.People
         public frmFindPerson()
         {
             InitializeComponent();
+            _ApplyModernTheme();
+        }
+        
+        private void _ApplyModernTheme()
+        {
+            this.BackColor = clsUITheme.SurfaceColor;
+            clsUITheme.StyleButton(btnClose, clsUITheme.ButtonStyle.Secondary);
         }
 
         private void btnClose_Click(object sender, EventArgs e)

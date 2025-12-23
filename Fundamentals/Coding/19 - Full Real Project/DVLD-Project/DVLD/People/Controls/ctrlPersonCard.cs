@@ -1,4 +1,5 @@
 ﻿using DVLD.Properties;
+using DVLD.GlobalClasses;
 using DVLD_Buisness;
 using System;
 using System.Collections.Generic;
@@ -34,6 +35,13 @@ namespace DVLD.Controls
         public ctrlPersonCard()
         {
             InitializeComponent();
+            _ApplyModernTheme();
+        }
+        
+        private void _ApplyModernTheme()
+        {
+            clsUITheme.StyleGroupBox(groupBox1);
+            clsUITheme.StyleLinkLabel(llEditPersonInfo);
         }
 
         public void LoadPersonInfo(int PersonID)

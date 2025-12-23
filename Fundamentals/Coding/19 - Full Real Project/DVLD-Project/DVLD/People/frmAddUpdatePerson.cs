@@ -10,6 +10,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD.Classes;
+using DVLD.GlobalClasses;
 using DVLD.Properties;
 using DVLD_Buisness;
 using System.IO;
@@ -156,10 +157,44 @@ namespace DVLD.People
 
         private void frmAddUpdatePerson_Load(object sender, EventArgs e)
         {
+            _ApplyModernTheme();
             _ResetDefualtValues();
 
             if(_Mode==enMode.Update)
                 _LoadData();
+        }
+        
+        private void _ApplyModernTheme()
+        {
+            this.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style title
+            lblTitle.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblTitle.ForeColor = clsUITheme.TitleColor;
+            
+            // Style GroupBox
+            clsUITheme.StyleGroupBox(groupBox1);
+            
+            // Style textboxes
+            clsUITheme.StyleTextBox(txtFirstName);
+            clsUITheme.StyleTextBox(txtSecondName);
+            clsUITheme.StyleTextBox(txtThirdName);
+            clsUITheme.StyleTextBox(txtLastName);
+            clsUITheme.StyleTextBox(txtNationalNo);
+            clsUITheme.StyleTextBox(txtPhone);
+            clsUITheme.StyleTextBox(txtEmail);
+            clsUITheme.StyleTextBox(txtAddress);
+            
+            // Style ComboBox
+            clsUITheme.StyleComboBox(cbCountry);
+            
+            // Style buttons
+            clsUITheme.StyleButton(btnClose, clsUITheme.ButtonStyle.Secondary);
+            clsUITheme.StyleButton(btnSave, clsUITheme.ButtonStyle.Primary);
+            
+            // Style link labels
+            clsUITheme.StyleLinkLabel(llSetImage);
+            clsUITheme.StyleLinkLabel(llRemoveImage);
         }
 
         private bool _HandlePersonImage()

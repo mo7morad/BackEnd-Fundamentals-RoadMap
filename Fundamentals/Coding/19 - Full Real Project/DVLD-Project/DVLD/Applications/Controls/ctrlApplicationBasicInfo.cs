@@ -1,4 +1,5 @@
 ﻿using DVLD.Classes;
+using DVLD.GlobalClasses;
 using DVLD.People;
 using DVLD.Properties;
 using DVLD_Buisness;
@@ -29,7 +30,47 @@ namespace DVLD.Controls.ApplicationControls
         public ctrlApplicationBasicInfo()
         {
             InitializeComponent();
-  
+            _ApplyModernTheme();
+        }
+        
+        private void _ApplyModernTheme()
+        {
+            // Apply theme to the control
+            this.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style GroupBox
+            groupBox1.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Regular);
+            groupBox1.ForeColor = clsUITheme.TitleColor;
+            groupBox1.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style static labels (captions)
+            _StyleCaptionLabels();
+            
+            // Style value labels
+            _StyleValueLabels();
+            
+            // Style link label
+            clsUITheme.StyleLinkLabel(llViewPersonInfo);
+        }
+        
+        private void _StyleCaptionLabels()
+        {
+            Label[] captionLabels = { label4, label3, label10, label8, label5, label12, label1, label2 };
+            foreach (Label lbl in captionLabels)
+            {
+                lbl.Font = clsUITheme.LabelFont;
+                lbl.ForeColor = clsUITheme.TextSecondaryColor;
+            }
+        }
+        
+        private void _StyleValueLabels()
+        {
+            Label[] valueLabels = { lblApplicationID, lblStatus, lblType, lblApplicant, lblDate, lblStatusDate, lblCreatedByUser, lblFees };
+            foreach (Label lbl in valueLabels)
+            {
+                lbl.Font = clsUITheme.BodyBoldFont;
+                lbl.ForeColor = clsUITheme.TextPrimaryColor;
+            }
         }
 
         public void LoadApplicationInfo(int ApplicationID)

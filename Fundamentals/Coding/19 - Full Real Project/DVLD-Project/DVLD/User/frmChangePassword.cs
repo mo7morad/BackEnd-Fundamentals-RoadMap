@@ -1,4 +1,5 @@
 ﻿using DVLD.Classes;
+using DVLD.GlobalClasses;
 using DVLD_Buisness;
 using System;
 using System.Collections.Generic;
@@ -31,10 +32,25 @@ namespace DVLD.User
             txtConfirmPassword.Text = "";
             txtCurrentPassword.Focus(); 
         }
+        
+        private void _ApplyModernTheme()
+        {
+            this.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style textboxes
+            clsUITheme.StyleTextBox(txtCurrentPassword);
+            clsUITheme.StyleTextBox(txtNewPassword);
+            clsUITheme.StyleTextBox(txtConfirmPassword);
+            
+            // Style buttons
+            clsUITheme.StyleButton(btnClose, clsUITheme.ButtonStyle.Secondary);
+            clsUITheme.StyleButton(btnSave, clsUITheme.ButtonStyle.Primary);
+        }
 
         private void frmChangePassword_Load(object sender, EventArgs e)
         {
-             _ResetDefualtValues();
+            _ApplyModernTheme();
+            _ResetDefualtValues();
 
               _User = clsUser.FindByUserID(_UserID);
 

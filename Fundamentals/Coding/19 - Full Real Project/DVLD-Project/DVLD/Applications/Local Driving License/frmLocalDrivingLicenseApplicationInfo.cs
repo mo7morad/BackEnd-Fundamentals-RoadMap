@@ -1,4 +1,5 @@
 ﻿using DVLD.Controls;
+using DVLD.GlobalClasses;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,7 +33,19 @@ namespace DVLD.Applications
 
         private void frmLocalDrivingLicenseApplicationInfo_Load(object sender, EventArgs e)
         {
+            // Apply modern UI theme
+            _ApplyModernTheme();
+            
             ctrlDrivingLicenseApplicationInfo1.LoadApplicationInfoByLocalDrivingAppID(_ApplicationID);
+        }
+        
+        private void _ApplyModernTheme()
+        {
+            // Apply theme to form
+            this.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style button
+            clsUITheme.StyleButton(btnClose, clsUITheme.ButtonStyle.Secondary);
         }
     }
 }

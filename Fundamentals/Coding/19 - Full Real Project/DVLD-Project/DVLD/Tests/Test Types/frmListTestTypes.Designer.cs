@@ -98,7 +98,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvTestTypes.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTestTypes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTestTypes.Size = new System.Drawing.Size(931, 354);
+            this.dgvTestTypes.Size = new System.Drawing.Size(974, 354);
             this.dgvTestTypes.TabIndex = 113;
             this.dgvTestTypes.TabStop = false;
             // 
@@ -109,26 +109,26 @@
             this.editToolStripMenuItem,
             this.toolStripSeparator1});
             this.cmsTestTypes.Name = "contextMenuStrip1";
-            this.cmsTestTypes.Size = new System.Drawing.Size(161, 54);
+            this.cmsTestTypes.Size = new System.Drawing.Size(163, 54);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(159, 6);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Image = global::DVLD.Properties.Resources.edit_32;
             this.editToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(160, 38);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(162, 38);
             this.editToolStripMenuItem.Text = "&Edit Test Type";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(159, 6);
             // 
             // btnClose
             // 
@@ -164,7 +164,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(954, 692);
+            this.ClientSize = new System.Drawing.Size(1000, 692);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pbApplicationTypesmage);
             this.Controls.Add(this.lblRecordsCount);

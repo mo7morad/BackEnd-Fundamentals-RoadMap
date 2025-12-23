@@ -1,4 +1,5 @@
-﻿using DVLD.Licenses.International_License;
+﻿using DVLD.GlobalClasses;
+using DVLD.Licenses.International_License;
 using DVLD.People;
 using DVLD_Buisness;
 using System;
@@ -27,9 +28,39 @@ namespace DVLD.Drivers
             this.Close();
 
         }
+        
+        private void _ApplyModernTheme()
+        {
+            this.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style title
+            lblTitle.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblTitle.ForeColor = clsUITheme.TitleColor;
+            
+            // Style labels
+            label1.Font = clsUITheme.LabelFont;
+            label1.ForeColor = clsUITheme.TextSecondaryColor;
+            lblRecordsCount.Font = clsUITheme.BodyBoldFont;
+            lblRecordsCount.ForeColor = clsUITheme.TextPrimaryColor;
+            
+            // Style DataGridView
+            clsUITheme.StyleDataGridView(dgvDrivers);
+            
+            // Style filters
+            clsUITheme.StyleComboBox(cbFilterBy);
+            clsUITheme.StyleTextBox(txtFilterValue);
+            
+            // Style buttons
+            clsUITheme.StyleButton(btnClose, clsUITheme.ButtonStyle.Secondary);
+            
+            // Style context menu
+            clsUITheme.StyleContextMenuStrip(cmsDrivers);
+        }
 
         private void frmListDrivers_Load(object sender, EventArgs e)
         {
+            _ApplyModernTheme();
+            
             cbFilterBy.SelectedIndex = 0;
             _dtAllDrivers = clsDriver.GetAllDrivers();
             dgvDrivers.DataSource = _dtAllDrivers;

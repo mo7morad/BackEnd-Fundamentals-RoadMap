@@ -1,5 +1,6 @@
 ﻿using DVLD.Classes;
 using DVLD.DriverLicense;
+using DVLD.GlobalClasses;
 using DVLD.Licenses.Controls;
 using DVLD.Licenses.International_License;
 using DVLD.Licenses.International_Licenses;
@@ -25,6 +26,29 @@ namespace DVLD.Applications.Detain_License
         public frmDetainLicenseApplication()
         {
             InitializeComponent();
+        }
+        
+        private void _ApplyModernTheme()
+        {
+            this.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style title
+            lblTitle.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblTitle.ForeColor = clsUITheme.TitleColor;
+            
+            // Style GroupBox
+            clsUITheme.StyleGroupBox(gpDetain);
+            
+            // Style textbox
+            clsUITheme.StyleTextBox(txtFineFees);
+            
+            // Style buttons
+            clsUITheme.StyleButton(btnClose, clsUITheme.ButtonStyle.Secondary);
+            clsUITheme.StyleButton(btnDetain, clsUITheme.ButtonStyle.Danger);
+            
+            // Style link labels
+            clsUITheme.StyleLinkLabel(llShowLicenseInfo);
+            clsUITheme.StyleLinkLabel(llShowLicenseHistory);
         }
 
 
@@ -55,6 +79,7 @@ namespace DVLD.Applications.Detain_License
 
         private void frmDetainLicenseApplication_Load(object sender, EventArgs e)
         {
+            _ApplyModernTheme();
             lblDetainDate.Text = clsFormat.DateToShort(DateTime.Now);
             lblCreatedByUser.Text = clsGlobal.CurrentUser.UserName;
 

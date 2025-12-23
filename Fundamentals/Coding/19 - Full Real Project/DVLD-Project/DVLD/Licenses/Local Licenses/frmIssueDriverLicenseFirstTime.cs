@@ -1,4 +1,5 @@
 ﻿using DVLD.Classes;
+using DVLD.GlobalClasses;
 using DVLD_Buisness;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,21 @@ namespace DVLD.DriverLicense
             InitializeComponent();
             _LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID;
         }
+        
+        private void _ApplyModernTheme()
+        {
+            this.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style labels
+            clsUITheme.StyleLabel(label1);
+            
+            // Style textbox
+            clsUITheme.StyleTextBox(txtNotes);
+            
+            // Style buttons
+            clsUITheme.StyleButton(btnClose, clsUITheme.ButtonStyle.Secondary);
+            clsUITheme.StyleButton(btnIssueLicense, clsUITheme.ButtonStyle.Primary);
+        }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -31,6 +47,7 @@ namespace DVLD.DriverLicense
 
         private void frmIssueDriverLicenseFirstTime_Load(object sender, EventArgs e)
         {
+            _ApplyModernTheme();
 
             txtNotes.Focus();            
             _LocalDrivingLicenseApplication = clsLocalDrivingLicenseApplication.FindByLocalDrivingAppLicenseID(_LocalDrivingLicenseApplicationID);

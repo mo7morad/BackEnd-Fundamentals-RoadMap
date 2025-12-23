@@ -1,4 +1,5 @@
 ﻿using DVLD.Classes;
+using DVLD.GlobalClasses;
 using DVLD_Buisness;
 using System;
 using System.Collections.Generic;
@@ -29,9 +30,27 @@ namespace DVLD.Tests
             _TestType = TestType;
 
         }
+        
+        private void _ApplyModernTheme()
+        {
+            this.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style labels
+            clsUITheme.StyleLabel(label8);
+            clsUITheme.StyleLabel(label10);
+            
+            // Style textbox
+            clsUITheme.StyleTextBox(txtNotes);
+            
+            // Style buttons
+            clsUITheme.StyleButton(btnClose, clsUITheme.ButtonStyle.Secondary);
+            clsUITheme.StyleButton(btnSave, clsUITheme.ButtonStyle.Primary);
+        }
 
         private void frmTakeTest_Load(object sender, EventArgs e)
         {
+            _ApplyModernTheme();
+            
             ctrlSecheduledTest1.TestTypeID = _TestType;
 
             ctrlSecheduledTest1.LoadInfo(_AppointmentID);

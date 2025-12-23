@@ -1,4 +1,5 @@
 ﻿using DVLD.Classes;
+using DVLD.GlobalClasses;
 using DVLD.People;
 using DVLD_Buisness;
 using System;
@@ -90,6 +91,45 @@ namespace DVLD.Applications
             }
 
         }
+        
+        private void _ApplyModernTheme()
+        {
+            // Apply theme to form
+            this.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style title
+            lblTitle.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblTitle.ForeColor = clsUITheme.TitleColor;
+            
+            // Style TabControl
+            tcApplicationInfo.Font = clsUITheme.BodyFont;
+            tpPersonalInfo.BackColor = clsUITheme.SurfaceColor;
+            tpApplicationInfo.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style caption labels
+            Label[] captionLabels = { label4, label5, label15, label2, label1 };
+            foreach (Label lbl in captionLabels)
+            {
+                lbl.Font = clsUITheme.LabelFont;
+                lbl.ForeColor = clsUITheme.TextSecondaryColor;
+            }
+            
+            // Style value labels
+            Label[] valueLabels = { lblLocalDrivingLicebseApplicationID, lblApplicationDate, lblFees, lblCreatedByUser };
+            foreach (Label lbl in valueLabels)
+            {
+                lbl.Font = clsUITheme.BodyBoldFont;
+                lbl.ForeColor = clsUITheme.TextPrimaryColor;
+            }
+            
+            // Style ComboBox
+            clsUITheme.StyleComboBox(cbLicenseClass);
+            
+            // Style buttons
+            clsUITheme.StyleButton(btnSave, clsUITheme.ButtonStyle.Primary);
+            clsUITheme.StyleButton(btnClose, clsUITheme.ButtonStyle.Secondary);
+            clsUITheme.StyleButton(btnApplicationInfoNext, clsUITheme.ButtonStyle.Primary);
+        }
 
         private void _LoadData()
         {
@@ -126,6 +166,9 @@ namespace DVLD.Applications
 
         private void frmAddUpdateLocalDrivingLicesnseApplication_Load(object sender, EventArgs e)
         {
+            // Apply modern UI theme
+            _ApplyModernTheme();
+            
             _ResetDefualtValues();
 
             if (_Mode==enMode.Update)

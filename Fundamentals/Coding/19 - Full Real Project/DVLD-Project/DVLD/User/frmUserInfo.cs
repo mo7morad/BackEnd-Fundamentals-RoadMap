@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DVLD.GlobalClasses;
 
 namespace DVLD.User
 {
@@ -27,8 +28,14 @@ namespace DVLD.User
 
         private void frmUserInfo_Load(object sender, EventArgs e)
         {
+            _ApplyModernTheme();
             ctrlUserCard1.LoadUserInfo(_UserID);
-
+        }
+        
+        private void _ApplyModernTheme()
+        {
+            this.BackColor = clsUITheme.SurfaceColor;
+            clsUITheme.StyleButton(btnClose, clsUITheme.ButtonStyle.Secondary);
         }
     }
 }

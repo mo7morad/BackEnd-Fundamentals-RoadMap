@@ -1,4 +1,5 @@
 ﻿using DVLD.Classes;
+using DVLD.GlobalClasses;
 using DVLD_Buisness;
 using System;
 using System.Collections.Generic;
@@ -28,6 +29,9 @@ namespace DVLD.Applications
 
         private void frmEditApplicationType_Load(object sender, EventArgs e)
         {
+            // Apply modern UI theme
+            _ApplyModernTheme();
+            
             lblApplicationTypeID.Text=_ApplicationTypeID.ToString();
 
             _ApplicationType = clsApplicationType.Find(_ApplicationTypeID);
@@ -40,6 +44,36 @@ namespace DVLD.Applications
 
             }
 
+        }
+        
+        private void _ApplyModernTheme()
+        {
+            // Apply theme to form
+            this.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style title
+            lblTitle.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            lblTitle.ForeColor = clsUITheme.TitleColor;
+            
+            // Style labels
+            label4.Font = clsUITheme.LabelFont;
+            label4.ForeColor = clsUITheme.TextSecondaryColor;
+            label1.Font = clsUITheme.LabelFont;
+            label1.ForeColor = clsUITheme.TextSecondaryColor;
+            label2.Font = clsUITheme.LabelFont;
+            label2.ForeColor = clsUITheme.TextSecondaryColor;
+            
+            // Style value label
+            lblApplicationTypeID.Font = clsUITheme.BodyBoldFont;
+            lblApplicationTypeID.ForeColor = clsUITheme.TextPrimaryColor;
+            
+            // Style textboxes
+            clsUITheme.StyleTextBox(txtTitle);
+            clsUITheme.StyleTextBox(txtFees);
+            
+            // Style buttons
+            clsUITheme.StyleButton(btnSave, clsUITheme.ButtonStyle.Primary);
+            clsUITheme.StyleButton(btnClose, clsUITheme.ButtonStyle.Secondary);
         }
 
         private void btnSave_Click(object sender, EventArgs e)

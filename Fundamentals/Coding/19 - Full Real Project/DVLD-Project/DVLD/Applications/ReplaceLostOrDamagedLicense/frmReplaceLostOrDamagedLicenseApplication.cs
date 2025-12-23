@@ -1,9 +1,11 @@
 ﻿using DVLD.Classes;
 using DVLD.DriverLicense;
+using DVLD.GlobalClasses;
 using DVLD.Licenses.International_License;
 using DVLD_Buisness;
 using System;
 using System.Threading.Tasks;
+using System.Drawing;
 using System.Windows.Forms;
 using static DVLD_Buisness.clsLicense;
 
@@ -36,9 +38,62 @@ namespace DVLD.Applications.ReplaceLostOrDamagedLicense
 
         private void frmReplaceLostOrDamagedLicenseApplication_Load(object sender, EventArgs e)
         {
+            // Apply modern UI theme
+            _ApplyModernTheme();
+            
             lblApplicationDate.Text = clsFormat.DateToShort(DateTime.Now);
             lblCreatedByUser.Text = clsGlobal.CurrentUser.UserName;
             rbDamagedLicense.Checked = true;
+        }
+        
+        private void _ApplyModernTheme()
+        {
+            // Apply theme to form
+            this.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style title
+            lblTitle.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblTitle.ForeColor = clsUITheme.TitleColor;
+            
+            // Style GroupBoxes
+            gpApplicationInfo.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Regular);
+            gpApplicationInfo.ForeColor = clsUITheme.TitleColor;
+            gpApplicationInfo.BackColor = clsUITheme.SurfaceColor;
+            
+            gbReplacementFor.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Regular);
+            gbReplacementFor.ForeColor = clsUITheme.TitleColor;
+            gbReplacementFor.BackColor = clsUITheme.SurfaceColor;
+            
+            // Style RadioButtons
+            rbDamagedLicense.Font = clsUITheme.BodyFont;
+            rbDamagedLicense.ForeColor = clsUITheme.TextPrimaryColor;
+            rbLostLicense.Font = clsUITheme.BodyFont;
+            rbLostLicense.ForeColor = clsUITheme.TextPrimaryColor;
+            
+            // Style caption labels
+            Label[] captionLabels = { label4, label5, label10, label12, label1, label2 };
+            foreach (Label lbl in captionLabels)
+            {
+                lbl.Font = clsUITheme.LabelFont;
+                lbl.ForeColor = clsUITheme.TextSecondaryColor;
+            }
+            
+            // Style value labels
+            Label[] valueLabels = { lblApplicationID, lblApplicationDate, lblRreplacedLicenseID, 
+                                   lblOldLicenseID, lblApplicationFees, lblCreatedByUser };
+            foreach (Label lbl in valueLabels)
+            {
+                lbl.Font = clsUITheme.BodyBoldFont;
+                lbl.ForeColor = clsUITheme.TextPrimaryColor;
+            }
+            
+            // Style buttons
+            clsUITheme.StyleButton(btnIssueReplacement, clsUITheme.ButtonStyle.Primary);
+            clsUITheme.StyleButton(btnClose, clsUITheme.ButtonStyle.Secondary);
+            
+            // Style link labels
+            clsUITheme.StyleLinkLabel(llShowLicenseHistory);
+            clsUITheme.StyleLinkLabel(llShowLicenseInfo);
         }
 
         private async void rbDamagedLicense_CheckedChanged(object sender, EventArgs e)
