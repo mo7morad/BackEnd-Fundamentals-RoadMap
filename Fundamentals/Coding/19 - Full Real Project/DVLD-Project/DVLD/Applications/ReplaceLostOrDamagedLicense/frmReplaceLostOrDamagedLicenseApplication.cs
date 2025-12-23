@@ -3,7 +3,6 @@ using DVLD.DriverLicense;
 using DVLD.Licenses.International_License;
 using DVLD_Buisness;
 using System;
-using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static DVLD_Buisness.clsLicense;
@@ -17,56 +16,6 @@ namespace DVLD.Applications.ReplaceLostOrDamagedLicense
         public frmReplaceLostOrDamagedLicenseApplication()
         {
             InitializeComponent();
-            ApplyModernStyle();
-        }
-
-        private void ApplyModernStyle()
-        {
-            // Form styling
-            this.BackColor = clsUITheme.BackgroundLight;
-            this.Font = clsUITheme.FontNormal;
-            this.StartPosition = FormStartPosition.CenterScreen;
-
-            // Title styling
-            clsUITheme.ApplyTitleLabelStyle(lblTitle);
-
-            // Button styling
-            clsUITheme.ApplyPrimaryButtonStyle(btnIssueReplacement);
-            clsUITheme.ApplySecondaryButtonStyle(btnClose);
-
-            // GroupBox styling
-            clsUITheme.ApplyGroupBoxStyle(gbReplacementFor);
-            foreach (Control ctrl in this.Controls)
-            {
-                if (ctrl is GroupBox gb)
-                {
-                    clsUITheme.ApplyGroupBoxStyle(gb);
-                }
-            }
-
-            // Label styling for data labels
-            StyleLabel(lblApplicationID);
-            StyleLabel(lblApplicationDate);
-            StyleLabel(lblOldLicenseID);
-            StyleLabel(lblRreplacedLicenseID);
-            StyleLabel(lblApplicationFees);
-            StyleLabel(lblCreatedByUser);
-
-            // Link label styling
-            clsUITheme.ApplyLinkLabelStyle(llShowLicenseHistory);
-            clsUITheme.ApplyLinkLabelStyle(llShowLicenseInfo);
-
-            // Radio button styling
-            rbDamagedLicense.Font = clsUITheme.FontNormal;
-            rbDamagedLicense.ForeColor = clsUITheme.TextPrimary;
-            rbLostLicense.Font = clsUITheme.FontNormal;
-            rbLostLicense.ForeColor = clsUITheme.TextPrimary;
-        }
-
-        private void StyleLabel(Label lbl)
-        {
-            lbl.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            lbl.ForeColor = clsUITheme.PrimaryColor;
         }
 
         private int _GetApplicationTypeID()

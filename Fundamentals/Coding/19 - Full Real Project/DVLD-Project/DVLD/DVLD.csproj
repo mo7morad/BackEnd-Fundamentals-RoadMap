@@ -58,20 +58,7 @@
     <Compile Include="Applications\Release Detained License\frmReleaseDetainedLicenseApplication.Designer.cs">
       <DependentUpon>frmReleaseDetainedLicenseApplication.cs</DependentUpon>
     </Compile>
-    <Compile Include="Global Classes\clsUITheme.cs" />
     <Compile Include="Login\Animations\FormAnimation.cs">
-    </Compile>
-    <Compile Include="Login\CustomControls\ModernComboBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Login\CustomControls\ModernDataGridView.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Login\CustomControls\ModernGroupBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Login\CustomControls\ModernPanel.cs">
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Login\CustomControls\ModernTextBox.cs">
       <SubType>Component</SubType>
@@ -395,9 +382,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="People\Controls\ctrlPersonCardWithFilter.resx">
       <DependentUpon>ctrlPersonCardWithFilter.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="People\frmListPeople.resx">
-      <DependentUpon>frmListPeople.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\ctrlUserCard.resx">
       <DependentUpon>ctrlUserCard.cs</DependentUpon>

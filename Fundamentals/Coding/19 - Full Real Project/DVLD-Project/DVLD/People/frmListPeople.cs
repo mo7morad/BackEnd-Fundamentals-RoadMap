@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Security.Policy;
 using System.Text;
@@ -40,67 +39,24 @@ namespace DVLD.People
         public frmListPeople()
         {
             InitializeComponent();
-            ApplyModernStyle();
-        }
-
-        private void ApplyModernStyle()
-        {
-            // Form styling - don't start maximized, no scrollbars
-            this.Size = new Size(1350, 750);
-            this.MinimumSize = new Size(1100, 650);
+            this.Size = new Size(1200, 700);
+            this.MinimumSize = new Size(900, 500);
             this.FormBorderStyle = FormBorderStyle.Sizable;
-            this.BackColor = clsUITheme.BackgroundLight;
-            this.Font = clsUITheme.FontNormal;
-            this.WindowState = FormWindowState.Normal;
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.AutoScroll = false;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
 
-            // Title styling
-            clsUITheme.ApplyTitleLabelStyle(lblTitle);
+            btnAddPerson.FlatAppearance.BorderSize = 0;
+            btnAddPerson.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(30, 136, 229);
+            btnAddPerson.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(21, 101, 192);
 
-            // Button styling
-            clsUITheme.ApplyPrimaryButtonStyle(btnAddPerson);
-            clsUITheme.ApplyPrimaryButtonStyle(btnClose);
+            btnAddPerson.MouseEnter += (s, e) => btnAddPerson.BackColor = System.Drawing.Color.FromArgb(30, 136, 229);
+            btnAddPerson.MouseLeave += (s, e) => btnAddPerson.BackColor = System.Drawing.Color.FromArgb(0, 122, 204);
 
-            // Filter panel styling
-            panelFilter.BackColor = clsUITheme.BackgroundWhite;
-            panelFilter.Padding = new Padding(10);
+            btnClose.FlatAppearance.BorderSize = 0;
+            btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(30, 136, 229);
+            btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(21, 101, 192);
 
-            // Filter label - position properly
-            label1.Font = clsUITheme.FontHeader;
-            label1.ForeColor = clsUITheme.TextPrimary;
-            label1.Location = new Point(15, 18);
-
-            // ComboBox styling - position right after the label
-            cbFilterBy.Location = new Point(label1.Right + 10, 15);
-            cbFilterBy.BackColor = clsUITheme.BackgroundWhite;
-            cbFilterBy.ForeColor = clsUITheme.TextPrimary;
-            cbFilterBy.Font = clsUITheme.FontNormal;
-
-            // Filter textbox styling - position right after combo
-            txtFilterValue.Location = new Point(cbFilterBy.Right + 15, 17);
-            txtFilterValue.Font = clsUITheme.FontNormal;
-            txtFilterValue.BackColor = clsUITheme.BackgroundLight;
-            txtFilterValue.ForeColor = clsUITheme.TextPrimary;
-            
-            // Underline position
-            panelFilterUnderline.Location = new Point(txtFilterValue.Left, txtFilterValue.Bottom + 2);
-            panelFilterUnderline.Width = txtFilterValue.Width;
-            panelFilterUnderline.BackColor = clsUITheme.PrimaryColor;
-
-            // Grid panel styling
-            panelGrid.BackColor = clsUITheme.BackgroundWhite;
-            panelGrid.Padding = new Padding(10);
-
-            // Records count label - ensure proper positioning
-            label2.Font = clsUITheme.FontHeader;
-            label2.ForeColor = clsUITheme.TextPrimary;
-            lblRecordsCount.Font = clsUITheme.FontHeader;
-            lblRecordsCount.ForeColor = clsUITheme.PrimaryColor;
-            lblRecordsCount.Location = new Point(label2.Right + 10, label2.Top);
-
-            // Context menu styling
-            clsUITheme.ApplyContextMenuStyle(cmsPeople);
+            btnClose.MouseEnter += (s, e) => btnClose.BackColor = System.Drawing.Color.FromArgb(30, 136, 229);
+            btnClose.MouseLeave += (s, e) => btnClose.BackColor = System.Drawing.Color.FromArgb(0, 122, 204);
         }
 
         private void frmListPeople_Load(object sender, EventArgs e)
@@ -109,43 +65,52 @@ namespace DVLD.People
             cbFilterBy.SelectedIndex = 0;
             lblRecordsCount.Text = dgvPeople.Rows.Count.ToString();
 
-            // Apply modern DataGridView styling
-            clsUITheme.ApplyDataGridViewStyle(dgvPeople);
+            dgvPeople.EnableHeadersVisualStyles = false;
+            dgvPeople.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(240, 240, 240);
+            dgvPeople.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            dgvPeople.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            dgvPeople.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            dgvPeople.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 11F);
+            dgvPeople.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(232, 240, 254);
+            dgvPeople.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dgvPeople.AlternatingRowsDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(248, 248, 248);
+            dgvPeople.BorderStyle = BorderStyle.None;
+            dgvPeople.GridColor = System.Drawing.Color.LightGray;
 
-            if (dgvPeople.Columns.Count > 0)
+            if (dgvPeople.Rows.Count > 0)
             {
                 dgvPeople.Columns[0].HeaderText = "Person ID";
-                dgvPeople.Columns[0].Width = 90;
+                dgvPeople.Columns[0].Width = 110;
 
                 dgvPeople.Columns[1].HeaderText = "National No.";
-                dgvPeople.Columns[1].Width = 100;
+                dgvPeople.Columns[1].Width = 120;
 
                 dgvPeople.Columns[2].HeaderText = "First Name";
-                dgvPeople.Columns[2].Width = 100;
+                dgvPeople.Columns[2].Width = 120;
 
                 dgvPeople.Columns[3].HeaderText = "Second Name";
-                dgvPeople.Columns[3].Width = 110;
+                dgvPeople.Columns[3].Width = 140;
 
                 dgvPeople.Columns[4].HeaderText = "Third Name";
-                dgvPeople.Columns[4].Width = 100;
+                dgvPeople.Columns[4].Width = 120;
 
                 dgvPeople.Columns[5].HeaderText = "Last Name";
-                dgvPeople.Columns[5].Width = 100;
+                dgvPeople.Columns[5].Width = 120;
 
                 dgvPeople.Columns[6].HeaderText = "Gender";
-                dgvPeople.Columns[6].Width = 80;
+                dgvPeople.Columns[6].Width = 120;
 
                 dgvPeople.Columns[7].HeaderText = "Date Of Birth";
-                dgvPeople.Columns[7].Width = 110;
+                dgvPeople.Columns[7].Width = 140;
 
                 dgvPeople.Columns[8].HeaderText = "Nationality";
-                dgvPeople.Columns[8].Width = 100;
+                dgvPeople.Columns[8].Width = 120;
 
                 dgvPeople.Columns[9].HeaderText = "Phone";
-                dgvPeople.Columns[9].Width = 100;
+                dgvPeople.Columns[9].Width = 120;
 
                 dgvPeople.Columns[10].HeaderText = "Email";
-                dgvPeople.Columns[10].Width = 150;
+                dgvPeople.Columns[10].Width = 170;
             }
         }
     

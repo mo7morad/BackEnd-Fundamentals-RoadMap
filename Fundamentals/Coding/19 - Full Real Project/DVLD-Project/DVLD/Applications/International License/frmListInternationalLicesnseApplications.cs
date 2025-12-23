@@ -1,5 +1,4 @@
-﻿using DVLD.Classes;
-using DVLD.Licenses.International_License;
+﻿using DVLD.Licenses.International_License;
 using DVLD.Licenses.International_Licenses;
 using DVLD.People;
 using DVLD_Buisness;
@@ -24,49 +23,6 @@ namespace DVLD.Applications.International_License
         public frmListInternationalLicesnseApplications()
         {
             InitializeComponent();
-            ApplyModernStyle();
-        }
-
-        private void ApplyModernStyle()
-        {
-            // Form styling
-            this.BackColor = clsUITheme.BackgroundLight;
-            this.Font = clsUITheme.FontNormal;
-
-            // Title styling
-            if (this.Controls.Find("lblTitle", true).Length > 0)
-                clsUITheme.ApplyTitleLabelStyle((Label)this.Controls.Find("lblTitle", true)[0]);
-
-            // Filter label styling
-            if (this.Controls.Find("label1", true).Length > 0)
-            {
-                var lbl = (Label)this.Controls.Find("label1", true)[0];
-                lbl.Font = clsUITheme.FontHeader;
-                lbl.ForeColor = clsUITheme.TextPrimary;
-            }
-
-            // Button styling
-            clsUITheme.ApplyPrimaryButtonStyle(btnClose);
-            clsUITheme.ApplyPrimaryButtonStyle(btnNewApplication);
-
-            // ComboBox styling
-            clsUITheme.ApplyComboBoxStyle(cbFilterBy);
-            clsUITheme.ApplyComboBoxStyle(cbIsReleased);
-
-            // Textbox styling
-            txtFilterValue.Font = clsUITheme.FontNormal;
-            txtFilterValue.BackColor = clsUITheme.BackgroundLight;
-            txtFilterValue.ForeColor = clsUITheme.TextPrimary;
-
-            // Records count labels
-            if (this.Controls.Find("label2", true).Length > 0)
-            {
-                var lbl = (Label)this.Controls.Find("label2", true)[0];
-                lbl.Font = clsUITheme.FontHeader;
-                lbl.ForeColor = clsUITheme.TextPrimary;
-            }
-            lblInternationalLicensesRecords.Font = clsUITheme.FontHeader;
-            lblInternationalLicensesRecords.ForeColor = clsUITheme.PrimaryColor;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -80,10 +36,7 @@ namespace DVLD.Applications.International_License
             cbFilterBy.SelectedIndex= 0;
 
             dgvInternationalLicenses.DataSource = _dtInternationalLicenseApplications;
-            lblInternationalLicensesRecords.Text = dgvInternationalLicenses.Rows.Count.ToString();
-
-            // Apply modern DataGridView styling
-            clsUITheme.ApplyDataGridViewStyle(dgvInternationalLicenses);
+                   lblInternationalLicensesRecords.Text = dgvInternationalLicenses.Rows.Count.ToString();
 
             if (dgvInternationalLicenses.Rows.Count > 0)
             {
@@ -107,6 +60,7 @@ namespace DVLD.Applications.International_License
 
                 dgvInternationalLicenses.Columns[6].HeaderText = "Is Active";
                 dgvInternationalLicenses.Columns[6].Width = 120;
+
             }
         }
 

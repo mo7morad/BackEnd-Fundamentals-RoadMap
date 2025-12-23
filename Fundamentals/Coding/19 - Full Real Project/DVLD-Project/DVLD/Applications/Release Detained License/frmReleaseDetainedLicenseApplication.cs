@@ -18,6 +18,8 @@ namespace DVLD.Applications.Rlease_Detained_License
 {
     public partial class frmReleaseDetainedLicenseApplication : Form
     {
+
+       
         private int _SelectedLicenseID = -1;
         private float _applicationFees = 0f;
         private float _fineFees = 0f;
@@ -26,62 +28,15 @@ namespace DVLD.Applications.Rlease_Detained_License
         public frmReleaseDetainedLicenseApplication()
         {
             InitializeComponent();
-            ApplyModernStyle();
         }
 
         public frmReleaseDetainedLicenseApplication(int LicenseID)
         {
             InitializeComponent();
-            ApplyModernStyle();
             _SelectedLicenseID = LicenseID;
        
             ctrlDriverLicenseInfoWithFilter1.LoadLicenseInfo(_SelectedLicenseID);
             ctrlDriverLicenseInfoWithFilter1.FilterEnabled = false;
-        }
-
-        private void ApplyModernStyle()
-        {
-            // Form styling
-            this.BackColor = clsUITheme.BackgroundLight;
-            this.Font = clsUITheme.FontNormal;
-            this.StartPosition = FormStartPosition.CenterScreen;
-
-            // Title styling
-            if (this.Controls.Find("lblTitle", true).Length > 0)
-                clsUITheme.ApplyTitleLabelStyle((Label)this.Controls.Find("lblTitle", true)[0]);
-
-            // Button styling
-            clsUITheme.ApplySuccessButtonStyle(btnRelease);
-            clsUITheme.ApplySecondaryButtonStyle(btnClose);
-
-            // GroupBox styling
-            foreach (Control ctrl in this.Controls)
-            {
-                if (ctrl is GroupBox gb)
-                {
-                    clsUITheme.ApplyGroupBoxStyle(gb);
-                }
-            }
-
-            // Label styling for data labels
-            StyleLabel(lblApplicationID);
-            StyleLabel(lblDetainID);
-            StyleLabel(lblLicenseID);
-            StyleLabel(lblDetainDate);
-            StyleLabel(lblFineFees);
-            StyleLabel(lblApplicationFees);
-            StyleLabel(lblTotalFees);
-            StyleLabel(lblCreatedByUser);
-
-            // Link label styling
-            clsUITheme.ApplyLinkLabelStyle(llShowLicenseHistory);
-            clsUITheme.ApplyLinkLabelStyle(llShowLicenseInfo);
-        }
-
-        private void StyleLabel(Label lbl)
-        {
-            lbl.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            lbl.ForeColor = clsUITheme.PrimaryColor;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -98,6 +53,7 @@ namespace DVLD.Applications.Rlease_Detained_License
             llShowLicenseHistory.Enabled = (_SelectedLicenseID != -1);
 
             if (_SelectedLicenseID == -1)
+
             {
                 return;
             }

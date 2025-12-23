@@ -10,7 +10,7 @@ Welcome to my **Fundamentals Roadmap** repository! This repo captures my journey
 ---
 > For a full list, check the `/Coding/` folder or click into each sub-directory.
 
-> [**Please click here to see all things that I have learned.**](Fundamentals/Coding)
+> [**Please click here to see all the repo structure in detailes.**](Fundamentals/Coding)
 ---
 ## 🚀 Featured Projects
 

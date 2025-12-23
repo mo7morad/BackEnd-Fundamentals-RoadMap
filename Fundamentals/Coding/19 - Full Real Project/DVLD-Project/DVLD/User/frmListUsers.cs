@@ -1,5 +1,4 @@
-﻿using DVLD.Classes;
-using DVLD_Buisness;
+﻿using DVLD_Buisness;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,58 +18,6 @@ namespace DVLD.User
         public frmListUsers()
         {
             InitializeComponent();
-            ApplyModernStyle();
-        }
-
-        private void ApplyModernStyle()
-        {
-            // Form styling
-            this.Size = new Size(1000, 700);
-            this.MinimumSize = new Size(900, 600);
-            this.BackColor = clsUITheme.BackgroundLight;
-            this.Font = clsUITheme.FontNormal;
-            this.StartPosition = FormStartPosition.CenterScreen;
-
-            // Title styling
-            clsUITheme.ApplyTitleLabelStyle(lblTitle);
-
-            // Button styling
-            clsUITheme.ApplyPrimaryButtonStyle(btnAddUser);
-            clsUITheme.ApplyPrimaryButtonStyle(btnClose);
-
-            // Filter label styling - proper positioning
-            label1.Font = clsUITheme.FontHeader;
-            label1.ForeColor = clsUITheme.TextPrimary;
-
-            // ComboBox styling - don't use custom colors that cause issues
-            cbFilterBy.FlatStyle = FlatStyle.Standard;
-            cbFilterBy.BackColor = Color.White;
-            cbFilterBy.ForeColor = clsUITheme.TextPrimary;
-            cbFilterBy.Font = clsUITheme.FontNormal;
-
-            cbIsActive.FlatStyle = FlatStyle.Standard;
-            cbIsActive.BackColor = Color.White;
-            cbIsActive.ForeColor = clsUITheme.TextPrimary;
-            cbIsActive.Font = clsUITheme.FontNormal;
-
-            // Filter textbox styling
-            txtFilterValue.Font = clsUITheme.FontNormal;
-            txtFilterValue.BackColor = Color.White;
-            txtFilterValue.ForeColor = clsUITheme.TextPrimary;
-            txtFilterValue.BorderStyle = BorderStyle.FixedSingle;
-
-            // Panel styling
-            panel1.BackColor = clsUITheme.BackgroundWhite;
-            panel1.Padding = new Padding(10);
-
-            // Records count labels
-            label2.Font = clsUITheme.FontHeader;
-            label2.ForeColor = clsUITheme.TextPrimary;
-            lblRecordsCount.Font = clsUITheme.FontHeader;
-            lblRecordsCount.ForeColor = clsUITheme.PrimaryColor;
-
-            // Context menu styling
-            clsUITheme.ApplyContextMenuStyle(cmsUsers);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -85,26 +32,22 @@ namespace DVLD.User
             cbFilterBy.SelectedIndex = 0;
             lblRecordsCount.Text = dgvUsers.Rows.Count.ToString();
 
-            // Apply modern DataGridView styling
-            clsUITheme.ApplyDataGridViewStyle(dgvUsers);
+            dgvUsers.Columns[0].HeaderText = "User ID";
+            dgvUsers.Columns[0].Width = 110;
 
-            if (dgvUsers.Columns.Count > 0)
-            {
-                dgvUsers.Columns[0].HeaderText = "User ID";
-                dgvUsers.Columns[0].Width = 100;
+            dgvUsers.Columns[1].HeaderText = "Person ID";
+            dgvUsers.Columns[1].Width = 120;
 
-                dgvUsers.Columns[1].HeaderText = "Person ID";
-                dgvUsers.Columns[1].Width = 100;
+            dgvUsers.Columns[2].HeaderText = "Full Name";
+            dgvUsers.Columns[2].Width = 350;
 
-                dgvUsers.Columns[2].HeaderText = "Full Name";
-                dgvUsers.Columns[2].Width = 300;
+            dgvUsers.Columns[3].HeaderText = "UserName";
+            dgvUsers.Columns[3].Width = 120;
 
-                dgvUsers.Columns[3].HeaderText = "UserName";
-                dgvUsers.Columns[3].Width = 150;
+            dgvUsers.Columns[4].HeaderText = "Is Active";
+            dgvUsers.Columns[4].Width = 120;
 
-                dgvUsers.Columns[4].HeaderText = "Is Active";
-                dgvUsers.Columns[4].Width = 100;
-            }
+           
         }
 
         private void cbFilterBy_SelectedIndexChanged(object sender, EventArgs e)
@@ -189,7 +132,6 @@ namespace DVLD.User
         {
 
              
-
           string FilterColumn = "IsActive";
           string FilterValue =cbIsActive.Text;
 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ex2- DIP - Report")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+59824a2726d443557327a5bc5415d76e8c0f7fcd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ex2- DIP - Report")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ex2- DIP - Report")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
