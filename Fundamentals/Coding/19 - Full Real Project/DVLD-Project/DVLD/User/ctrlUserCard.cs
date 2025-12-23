@@ -1,4 +1,5 @@
-﻿using DVLD.Properties;
+﻿using DVLD.Classes;
+using DVLD.Properties;
 using DVLD_Buisness;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,6 @@ namespace DVLD.Controls
 {
     public partial class ctrlUserCard : UserControl
     {
-
         private clsUser _User;
         private int _UserID = -1;
 
@@ -26,11 +26,38 @@ namespace DVLD.Controls
         public ctrlUserCard()
         {
             InitializeComponent();
+            ApplyModernStyle();
+        }
+
+        private void ApplyModernStyle()
+        {
+            // Control styling
+            this.BackColor = clsUITheme.BackgroundWhite;
+
+            // GroupBox styling
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is GroupBox gb)
+                {
+                    clsUITheme.ApplyGroupBoxStyle(gb);
+                }
+            }
+
+            // Label styling for data labels
+            StyleDataLabel(lblUserID);
+            StyleDataLabel(lblUserName);
+            StyleDataLabel(lblIsActive);
+        }
+
+        private void StyleDataLabel(Label lbl)
+        {
+            lbl.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            lbl.ForeColor = clsUITheme.PrimaryColor;
         }
 
         public void LoadUserInfo(int UserID)
         {
-            _User = clsUser.FindByUserID (UserID);
+            _User = clsUser.FindByUserID(UserID);
             if (_User == null)
             {
                 _ResetPersonInfo();
@@ -38,26 +65,29 @@ namespace DVLD.Controls
                 return;
             }
            
-                _FillUserInfo();
+            _FillUserInfo();
         }
 
         private void _FillUserInfo()
         {
-
             ctrlPersonCard1.LoadPersonInfo(_User.PersonID);
             lblUserID.Text = _User.UserID.ToString();
             lblUserName.Text = _User.UserName.ToString();
             
             if (_User.IsActive)
-                 lblIsActive.Text = "Yes";
+            {
+                lblIsActive.Text = "Yes";
+                lblIsActive.ForeColor = clsUITheme.AccentGreen;
+            }
             else
+            {
                 lblIsActive.Text = "No";
-
+                lblIsActive.ForeColor = clsUITheme.AccentRed;
+            }
         }
 
         private void _ResetPersonInfo()
         {
-            
             ctrlPersonCard1.ResetPersonInfo();
             lblUserID.Text = "[???]";
             lblUserName.Text = "[???]";
