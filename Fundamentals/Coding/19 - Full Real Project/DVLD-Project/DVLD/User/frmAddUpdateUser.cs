@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DVLD_Buisness;
 using DVLD.Classes;
 using DVLD.People;
 using DVLD.Controls;
@@ -16,8 +17,9 @@ using System.Runtime.Remoting.Messaging;
 
 namespace DVLD.User
 {
-    public partial class frmAddUpdateUser : Form
+    public partial class frmAddUpdateUser: Form
     {
+
         public enum enMode { AddNew = 0, Update = 1 };
         private enMode _Mode;
         private int _UserID = -1;
@@ -26,58 +28,16 @@ namespace DVLD.User
         public frmAddUpdateUser()
         {
             InitializeComponent();
+
             _Mode = enMode.AddNew;
-            ApplyModernStyle();
         }
 
         public frmAddUpdateUser(int UserID)
         {
             InitializeComponent();
+
             _Mode = enMode.Update;
             _UserID = UserID;
-            ApplyModernStyle();
-        }
-
-        private void ApplyModernStyle()
-        {
-            // Form styling
-            this.Size = new Size(950, 750);
-            this.MinimumSize = new Size(850, 650);
-            this.BackColor = clsUITheme.BackgroundLight;
-            this.Font = clsUITheme.FontNormal;
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.FormBorderStyle = FormBorderStyle.Sizable;
-
-            // Title styling
-            clsUITheme.ApplyTitleLabelStyle(lblTitle);
-
-            // Button styling
-            clsUITheme.ApplyPrimaryButtonStyle(btnSave);
-            clsUITheme.ApplyPrimaryButtonStyle(btnPersonInfoNext);
-            clsUITheme.ApplySecondaryButtonStyle(btnClose);
-
-            // TabControl styling
-            clsUITheme.ApplyTabControlStyle(tcUserInfo);
-
-            // Label styling
-            StyleDataLabel(lblUserID);
-
-            // TextBox styling
-            txtUserName.Font = clsUITheme.FontNormal;
-            txtUserName.BackColor = Color.White;
-            txtPassword.Font = clsUITheme.FontNormal;
-            txtPassword.BackColor = Color.White;
-            txtConfirmPassword.Font = clsUITheme.FontNormal;
-            txtConfirmPassword.BackColor = Color.White;
-
-            // CheckBox styling
-            clsUITheme.ApplyCheckBoxStyle(chkIsActive);
-        }
-
-        private void StyleDataLabel(Label lbl)
-        {
-            lbl.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            lbl.ForeColor = clsUITheme.PrimaryColor;
         }
 
         private void _ResetDefualtValues()
@@ -108,7 +68,7 @@ namespace DVLD.User
             txtUserName.Text = "";
             txtPassword.Text = "";
             txtConfirmPassword.Text = "";
-            chkIsActive.Checked = true;
+            chkIsActive.Checked = true; 
 
 
         }

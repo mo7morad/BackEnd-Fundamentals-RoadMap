@@ -17,47 +17,11 @@ namespace DVLD.User
         private int _UserID;
         private clsUser _User;
 
-        public frmChangePassword(int UserID)
+        public frmChangePassword(int UserID )
         {
             InitializeComponent();
-            _UserID = UserID;
-            ApplyModernStyle();
-        }
 
-        private void ApplyModernStyle()
-        {
-            // Form styling
-            this.Size = new Size(900, 720);
-            this.MinimumSize = new Size(800, 650);
-            this.BackColor = clsUITheme.BackgroundLight;
-            this.Font = clsUITheme.FontNormal;
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
-
-            // Button styling
-            clsUITheme.ApplyPrimaryButtonStyle(btnSave);
-            clsUITheme.ApplySecondaryButtonStyle(btnClose);
-
-            // Labels styling
-            label1.Font = clsUITheme.FontHeader;
-            label1.ForeColor = clsUITheme.TextPrimary;
-            label2.Font = clsUITheme.FontHeader;
-            label2.ForeColor = clsUITheme.TextPrimary;
-            label3.Font = clsUITheme.FontHeader;
-            label3.ForeColor = clsUITheme.TextPrimary;
-
-            // TextBox styling
-            StylePasswordTextBox(txtCurrentPassword);
-            StylePasswordTextBox(txtNewPassword);
-            StylePasswordTextBox(txtConfirmPassword);
-        }
-
-        private void StylePasswordTextBox(TextBox txt)
-        {
-            txt.Font = clsUITheme.FontNormal;
-            txt.BackColor = Color.White;
-            txt.ForeColor = clsUITheme.TextPrimary;
-            txt.BorderStyle = BorderStyle.FixedSingle;
+            _UserID=UserID;
         }
 
         private void _ResetDefualtValues()
@@ -65,27 +29,32 @@ namespace DVLD.User
             txtCurrentPassword.Text = "";
             txtNewPassword.Text = "";
             txtConfirmPassword.Text = "";
-            txtCurrentPassword.Focus();
+            txtCurrentPassword.Focus(); 
         }
 
         private void frmChangePassword_Load(object sender, EventArgs e)
         {
-            _ResetDefualtValues();
+             _ResetDefualtValues();
 
-            _User = clsUser.FindByUserID(_UserID);
+              _User = clsUser.FindByUserID(_UserID);
 
             if (_User == null)
             {
+                //Here we dont continue becuase the form is not valid
                 MessageBox.Show("Could not Find User with id = " + _UserID,
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.Close();
+                 this.Close();
+
                 return;
+
             }
             ctrlUserCard1.LoadUserInfo(_UserID);
+
         }
 
         private void txtCurrentPassword_Validating(object sender, CancelEventArgs e)
         {
+
             if (string.IsNullOrEmpty(txtCurrentPassword.Text.Trim()))
             {
                 e.Cancel = true;
@@ -137,8 +106,12 @@ namespace DVLD.User
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+
+
+            
             if (!this.ValidateChildren())
             {
+                //Here we dont continue becuase the form is not valid
                 MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro",
                     "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -149,7 +122,7 @@ namespace DVLD.User
             if (_User.Save())
             {
                 MessageBox.Show("Password Changed Successfully.",
-                   "Saved.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   "Saved.", MessageBoxButtons.OK, MessageBoxIcon.Information );
                 _ResetDefualtValues();
             }
             else
@@ -162,6 +135,7 @@ namespace DVLD.User
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+
         }
     }
 }
