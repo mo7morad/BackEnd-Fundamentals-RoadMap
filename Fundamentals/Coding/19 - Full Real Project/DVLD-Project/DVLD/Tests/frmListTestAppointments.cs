@@ -1,8 +1,9 @@
-﻿using DVLD.Controls.ApplicationControls;
-using DVLD.GlobalClasses;
+using DVLD.Controls.ApplicationControls;
+
 using DVLD.Properties;
 using DVLD_Buisness;
 using System;
+using DVLD.Classes;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

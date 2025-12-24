@@ -198,7 +198,7 @@
             this.label5.Location = new System.Drawing.Point(19, 132);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 20);
+            this.label5.Size = new System.Drawing.Size(70, 20);
             this.label5.TabIndex = 106;
             this.label5.Text = "gender:";
             // 
@@ -339,11 +339,12 @@
             // dtpDateOfBirth
             // 
             this.dtpDateOfBirth.CustomFormat = "dd/M/yyyy";
+            this.dtpDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDateOfBirth.Location = new System.Drawing.Point(537, 95);
             this.dtpDateOfBirth.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpDateOfBirth.Name = "dtpDateOfBirth";
-            this.dtpDateOfBirth.Size = new System.Drawing.Size(167, 26);
+            this.dtpDateOfBirth.Size = new System.Drawing.Size(180, 22);
             this.dtpDateOfBirth.TabIndex = 6;
             this.dtpDateOfBirth.Value = new System.DateTime(2000, 12, 31, 0, 0, 0, 0);
             // 

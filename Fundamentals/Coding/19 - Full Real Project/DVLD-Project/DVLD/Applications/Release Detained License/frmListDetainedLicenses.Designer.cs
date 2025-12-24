@@ -59,7 +59,7 @@
             this.btnDetainLicense.Image = global::DVLD.Properties.Resources.Detain_64;
             this.btnDetainLicense.Location = new System.Drawing.Point(1285, 253);
             this.btnDetainLicense.Name = "btnDetainLicense";
-            this.btnDetainLicense.Size = new System.Drawing.Size(88, 75);
+            this.btnDetainLicense.Size = new System.Drawing.Size(80, 80);
             this.btnDetainLicense.TabIndex = 154;
             this.btnDetainLicense.UseVisualStyleBackColor = true;
             this.btnDetainLicense.Click += new System.EventHandler(this.btnDetainLicense_Click);
@@ -204,12 +204,23 @@
             // 
             // dgvDetainedLicenses
             // 
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvDetainedLicenses.AllowUserToAddRows = false;
             this.dgvDetainedLicenses.AllowUserToDeleteRows = false;
             this.dgvDetainedLicenses.AllowUserToResizeRows = false;
             this.dgvDetainedLicenses.BackgroundColor = System.Drawing.Color.White;
+            this.dgvDetainedLicenses.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDetainedLicenses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDetainedLicenses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetainedLicenses.ContextMenuStrip = this.cmsApplications;
+            this.dgvDetainedLicenses.EnableHeadersVisualStyles = false;
             this.dgvDetainedLicenses.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvDetainedLicenses.Location = new System.Drawing.Point(13, 336);
             this.dgvDetainedLicenses.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -218,12 +229,13 @@
             this.dgvDetainedLicenses.ReadOnly = true;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDetainedLicenses.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvDetainedLicenses.RowHeadersVisible = false;
             this.dgvDetainedLicenses.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDetainedLicenses.Size = new System.Drawing.Size(1360, 340);
             this.dgvDetainedLicenses.TabIndex = 156;
@@ -261,7 +273,7 @@
             this.btnReleaseDetainedLicense.Image = global::DVLD.Properties.Resources.Release_Detained_License_64;
             this.btnReleaseDetainedLicense.Location = new System.Drawing.Point(1191, 253);
             this.btnReleaseDetainedLicense.Name = "btnReleaseDetainedLicense";
-            this.btnReleaseDetainedLicense.Size = new System.Drawing.Size(88, 75);
+            this.btnReleaseDetainedLicense.Size = new System.Drawing.Size(80, 80);
             this.btnReleaseDetainedLicense.TabIndex = 160;
             this.btnReleaseDetainedLicense.UseVisualStyleBackColor = true;
             this.btnReleaseDetainedLicense.Click += new System.EventHandler(this.btnReleaseDetainedLicense_Click);

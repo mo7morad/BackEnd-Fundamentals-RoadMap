@@ -1,9 +1,10 @@
 using System;
+using DVLD.Classes;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace DVLD.GlobalClasses
+namespace DVLD.Classes
 {
     /// <summary>
     /// Modern UI Theme Helper Class for consistent styling across the DVLD application.

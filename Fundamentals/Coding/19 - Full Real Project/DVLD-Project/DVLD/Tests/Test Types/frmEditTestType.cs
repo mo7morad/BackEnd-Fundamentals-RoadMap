@@ -1,5 +1,5 @@
-﻿using DVLD.Classes;
-using DVLD.GlobalClasses;
+using DVLD.Classes;
+
 using DVLD_Buisness;
 using System;
 using System.Collections.Generic;

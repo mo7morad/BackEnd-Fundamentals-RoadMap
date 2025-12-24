@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.msMainMenue = new System.Windows.Forms.MenuStrip();
-            this.lblLoggedInUser = new System.Windows.Forms.Label();
             this.servicesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drivingLicensesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oNewDrivingLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,6 +60,7 @@
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblLoggedInUser = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.msMainMenue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,7 +68,7 @@
             // 
             // msMainMenue
             // 
-            this.msMainMenue.BackColor = System.Drawing.Color.Silver;
+            this.msMainMenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.msMainMenue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.msMainMenue.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.servicesToolStripMenuItem,
@@ -79,20 +79,11 @@
             this.msMainMenue.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.msMainMenue.Location = new System.Drawing.Point(0, 0);
             this.msMainMenue.Name = "msMainMenue";
-            this.msMainMenue.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.msMainMenue.Size = new System.Drawing.Size(1264, 72);
+            this.msMainMenue.Padding = new System.Windows.Forms.Padding(12, 4, 0, 4);
+            this.msMainMenue.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.msMainMenue.Size = new System.Drawing.Size(1264, 76);
             this.msMainMenue.TabIndex = 1;
             this.msMainMenue.Text = "menuStrip1";
-            // 
-            // lblLoggedInUser
-            // 
-            this.lblLoggedInUser.AutoSize = true;
-            this.lblLoggedInUser.BackColor = System.Drawing.SystemColors.Control;
-            this.lblLoggedInUser.Location = new System.Drawing.Point(1201, 1067);
-            this.lblLoggedInUser.Name = "lblLoggedInUser";
-            this.lblLoggedInUser.Size = new System.Drawing.Size(81, 16);
-            this.lblLoggedInUser.TabIndex = 4;
-            this.lblLoggedInUser.Text = "[UserName]";
             // 
             // servicesToolStripMenuItem
             // 
@@ -104,6 +95,7 @@
             this.DetainLicensesToolStripMenuItem1,
             this.manageApplicationTypesToolStripMenuItem,
             this.manageTestTypesToolStripMenuItem});
+            this.servicesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.servicesToolStripMenuItem.Image = global::DVLD.Properties.Resources.Applications_64;
             this.servicesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.servicesToolStripMenuItem.Name = "servicesToolStripMenuItem";
@@ -121,6 +113,7 @@
             this.toolStripSeparator2,
             this.releaseDetainedDrivingLicenseToolStripMenuItem,
             this.retakeTestToolStripMenuItem1});
+            this.drivingLicensesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.drivingLicensesToolStripMenuItem.Image = global::DVLD.Properties.Resources.Driver_License_32;
             this.drivingLicensesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.drivingLicensesToolStripMenuItem.Name = "drivingLicensesToolStripMenuItem";
@@ -140,6 +133,7 @@
             // 
             // localLicenseToolStripMenuItem
             // 
+            this.localLicenseToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.localLicenseToolStripMenuItem.Image = global::DVLD.Properties.Resources.Local_32;
             this.localLicenseToolStripMenuItem.Name = "localLicenseToolStripMenuItem";
             this.localLicenseToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
@@ -149,6 +143,7 @@
             // internationalLicenseToolStripMenuItem
             // 
             this.internationalLicenseToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.internationalLicenseToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.internationalLicenseToolStripMenuItem.Image = global::DVLD.Properties.Resources.International_32;
             this.internationalLicenseToolStripMenuItem.Name = "internationalLicenseToolStripMenuItem";
             this.internationalLicenseToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
@@ -211,6 +206,7 @@
             this.tsMManageApplications.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.manageLocalDrivingLicenseApplicationsToolStripMenuItem,
             this.ManageInternationaDrivingLicenseToolStripMenuItem1});
+            this.tsMManageApplications.ForeColor = System.Drawing.Color.White;
             this.tsMManageApplications.Image = global::DVLD.Properties.Resources.Manage_Applications_64;
             this.tsMManageApplications.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsMManageApplications.Name = "tsMManageApplications";
@@ -246,6 +242,7 @@
             this.ManageDetainedLicensestoolStripMenuItem1,
             this.detainLicenseToolStripMenuItem,
             this.releaseDetainedLicenseToolStripMenuItem});
+            this.DetainLicensesToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.DetainLicensesToolStripMenuItem1.Image = global::DVLD.Properties.Resources.Detain_64;
             this.DetainLicensesToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.DetainLicensesToolStripMenuItem1.Name = "DetainLicensesToolStripMenuItem1";
@@ -281,6 +278,7 @@
             // 
             // manageApplicationTypesToolStripMenuItem
             // 
+            this.manageApplicationTypesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.manageApplicationTypesToolStripMenuItem.Image = global::DVLD.Properties.Resources.Application_Types_64;
             this.manageApplicationTypesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.manageApplicationTypesToolStripMenuItem.Name = "manageApplicationTypesToolStripMenuItem";
@@ -290,6 +288,7 @@
             // 
             // manageTestTypesToolStripMenuItem
             // 
+            this.manageTestTypesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.manageTestTypesToolStripMenuItem.Image = global::DVLD.Properties.Resources.Test_Type_64;
             this.manageTestTypesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.manageTestTypesToolStripMenuItem.Name = "manageTestTypesToolStripMenuItem";
@@ -299,6 +298,7 @@
             // 
             // peopleToolStripMenuItem
             // 
+            this.peopleToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.peopleToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("peopleToolStripMenuItem.Image")));
             this.peopleToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.peopleToolStripMenuItem.Name = "peopleToolStripMenuItem";
@@ -308,6 +308,7 @@
             // 
             // driversToolStripMenuItem
             // 
+            this.driversToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.driversToolStripMenuItem.Image = global::DVLD.Properties.Resources.Drivers_64;
             this.driversToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.driversToolStripMenuItem.Name = "driversToolStripMenuItem";
@@ -317,6 +318,7 @@
             // 
             // employeesToolStripMenuItem
             // 
+            this.employeesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.employeesToolStripMenuItem.Image = global::DVLD.Properties.Resources.Users_2_64;
             this.employeesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.employeesToolStripMenuItem.Name = "employeesToolStripMenuItem";
@@ -331,6 +333,7 @@
             this.changePasswordToolStripMenuItem,
             this.toolStripSeparator4,
             this.signOutToolStripMenuItem});
+            this.closeToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.closeToolStripMenuItem.Image = global::DVLD.Properties.Resources.account_settings_64;
             this.closeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
@@ -369,12 +372,22 @@
             this.signOutToolStripMenuItem.Text = "Sign &Out";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
+            // lblLoggedInUser
+            // 
+            this.lblLoggedInUser.AutoSize = true;
+            this.lblLoggedInUser.BackColor = System.Drawing.SystemColors.Control;
+            this.lblLoggedInUser.Location = new System.Drawing.Point(1201, 1067);
+            this.lblLoggedInUser.Name = "lblLoggedInUser";
+            this.lblLoggedInUser.Size = new System.Drawing.Size(81, 16);
+            this.lblLoggedInUser.TabIndex = 4;
+            this.lblLoggedInUser.Text = "[UserName]";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Black;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::DVLD.Properties.Resources.Logo_Final2;
+            this.pictureBox1.Image = global::DVLD.Properties.Resources.Final_Logo31;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1264, 651);

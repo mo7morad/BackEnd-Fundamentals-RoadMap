@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD_Buisness;
 using DVLD.Classes;
-using DVLD.GlobalClasses;
+
 using static System.Net.Mime.MediaTypeNames;
 using DVLD.Tests;
 using DVLD.DriverLicense;

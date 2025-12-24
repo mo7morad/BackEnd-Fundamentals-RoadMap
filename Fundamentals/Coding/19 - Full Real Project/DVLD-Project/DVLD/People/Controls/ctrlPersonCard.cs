@@ -1,15 +1,14 @@
-﻿using DVLD.Properties;
-using DVLD.GlobalClasses;
-using DVLD_Buisness;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DVLD_Buisness;
+using DVLD.Properties;
 using System.Xml.Linq;
 using System.IO;
 using DVLD.People;
@@ -35,13 +34,6 @@ namespace DVLD.Controls
         public ctrlPersonCard()
         {
             InitializeComponent();
-            _ApplyModernTheme();
-        }
-        
-        private void _ApplyModernTheme()
-        {
-            clsUITheme.StyleGroupBox(groupBox1);
-            clsUITheme.StyleLinkLabel(llEditPersonInfo);
         }
 
         public void LoadPersonInfo(int PersonID)

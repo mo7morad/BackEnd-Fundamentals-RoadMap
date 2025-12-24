@@ -58,6 +58,7 @@
     <Compile Include="Applications\Release Detained License\frmReleaseDetainedLicenseApplication.Designer.cs">
       <DependentUpon>frmReleaseDetainedLicenseApplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global Classes\clsMenuRenderer.cs" />
     <Compile Include="Login\Animations\FormAnimation.cs">
     </Compile>
     <Compile Include="Login\CustomControls\ModernTextBox.cs">

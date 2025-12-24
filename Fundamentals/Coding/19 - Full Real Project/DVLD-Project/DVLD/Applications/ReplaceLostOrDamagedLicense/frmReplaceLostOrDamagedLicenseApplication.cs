@@ -1,6 +1,6 @@
-﻿using DVLD.Classes;
+using DVLD.Classes;
 using DVLD.DriverLicense;
-using DVLD.GlobalClasses;
+
 using DVLD.Licenses.International_License;
 using DVLD_Buisness;
 using System;

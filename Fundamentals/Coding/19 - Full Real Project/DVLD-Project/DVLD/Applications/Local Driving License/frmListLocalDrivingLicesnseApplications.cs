@@ -1,7 +1,8 @@
-﻿using DVLD.Applications;
-using DVLD.GlobalClasses;
+using DVLD.Applications;
+
 using DVLD_Buisness;
 using System;
+using DVLD.Classes;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

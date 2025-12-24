@@ -53,6 +53,10 @@ namespace DVLD
         {
             this.BackColor = Color.White;
             lblLoggedInUser.Text = "LoggedIn User: " + clsGlobal.CurrentUser.UserName;
+            
+            // Apply custom dark theme renderer to menu
+            msMainMenue.Renderer = new clsMenuRenderer();
+            
             this.Refresh();
 
         }

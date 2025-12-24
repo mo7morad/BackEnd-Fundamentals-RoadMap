@@ -1,5 +1,5 @@
-﻿using DVLD.Classes;
-using DVLD.GlobalClasses;
+using DVLD.Classes;
+
 using DVLD.People;
 using DVLD.Properties;
 using DVLD_Buisness;
