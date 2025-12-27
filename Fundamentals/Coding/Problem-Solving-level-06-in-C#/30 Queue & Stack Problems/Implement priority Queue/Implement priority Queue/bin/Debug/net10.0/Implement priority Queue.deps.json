@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Implement priority Queue/1.0.0": {
+        "runtime": {
+          "Implement priority Queue.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Implement priority Queue/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\Problem-Solving-level-06-in-C#\\30 Queue & Stack Problems\\10 - Web Service\\Web Service Simulation\\Web Service Simulation.csproj": {}
+    "E:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\Problem-Solving-level-06-in-C#\\30 Queue & Stack Problems\\Web Service Simulation\\Web Service Simulation\\Web Service Simulation.csproj": {}
   },
   "projects": {
-    "E:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\Problem-Solving-level-06-in-C#\\30 Queue & Stack Problems\\10 - Web Service\\Web Service Simulation\\Web Service Simulation.csproj": {
+    "E:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\Problem-Solving-level-06-in-C#\\30 Queue & Stack Problems\\Web Service Simulation\\Web Service Simulation\\Web Service Simulation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\Problem-Solving-level-06-in-C#\\30 Queue & Stack Problems\\10 - Web Service\\Web Service Simulation\\Web Service Simulation.csproj",
+        "projectUniqueName": "E:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\Problem-Solving-level-06-in-C#\\30 Queue & Stack Problems\\Web Service Simulation\\Web Service Simulation\\Web Service Simulation.csproj",
         "projectName": "Web Service Simulation",
-        "projectPath": "E:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\Problem-Solving-level-06-in-C#\\30 Queue & Stack Problems\\10 - Web Service\\Web Service Simulation\\Web Service Simulation.csproj",
+        "projectPath": "E:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\Problem-Solving-level-06-in-C#\\30 Queue & Stack Problems\\Web Service Simulation\\Web Service Simulation\\Web Service Simulation.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\Problem-Solving-level-06-in-C#\\30 Queue & Stack Problems\\10 - Web Service\\Web Service Simulation\\obj\\",
+        "outputPath": "E:\\Programming\\BackEnd-Fundamentals-RoadMap\\Fundamentals\\Coding\\Problem-Solving-level-06-in-C#\\30 Queue & Stack Problems\\Web Service Simulation\\Web Service Simulation\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -26,7 +26,7 @@ namespace DVLD_Buisness
             enApplicationStatus ApplicationStatus, DateTime LastStatusDate,
             float PaidFees, int CreatedByUserID, int LicenseClassID)
             : base(ApplicationID, ApplicantPersonID, ApplicationDate, ApplicationTypeID,
-                  ApplicationStatus, LastStatusDate, PaidFees, CreatedByUserID)
+                    ApplicationStatus, LastStatusDate, PaidFees, CreatedByUserID)
         {
             this.LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID;
             this.LicenseClassID = LicenseClassID;
@@ -122,7 +122,8 @@ namespace DVLD_Buisness
 
         public async Task<bool> DoesPassTestTypeAsync(clsTestType.enTestType TestTypeID)
         {
-            return await clsLocalDrivingLicenseApplicationData.DoesPassTestTypeAsync(this.LocalDrivingLicenseApplicationID, (int)TestTypeID).ConfigureAwait(false);
+            return await clsLocalDrivingLicenseApplicationData.DoesPassTestTypeAsync(this.LocalDrivingLicenseApplicationID, 
+                                                                                    (int)TestTypeID).ConfigureAwait(false);
         }
 
         public async Task<bool> DoesPassPreviousTestAsync(clsTestType.enTestType CurrentTestType)
