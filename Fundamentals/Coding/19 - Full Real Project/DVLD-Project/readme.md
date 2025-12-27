@@ -32,7 +32,7 @@ https://github.com/user-attachments/assets/b052244c-da56-4ad9-a7cc-28b0ac5a95cd
 <br>
 
 ### 🧠 Technical Deep Dive (Architecture & Code)
-I recorded a detailed 10-minute walkthrough explaining the **3-Tier Architecture**, **Async Logic**, and **SQL Constraints**.
+I recorded a detailed YouTube 10-minute walkthrough explaining the **3-Tier Architecture**, **Async Logic**, and **SQL Constraints**.
 
 [![Watch the Full Video on YouTube](https://img.youtube.com/vi/h2-xbE6Wk3k/0.jpg)](https://www.youtube.com/watch?v=h2-xbE6Wk3k)
 
