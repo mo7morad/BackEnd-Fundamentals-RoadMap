@@ -23,6 +23,23 @@ Representing the pinnacle of my procedural and architectural learning path, this
 - **Complexity:** Strict 3-Tier Architecture (PL, BLL, DAL)  
 - **Role:** Solo Full-Stack Developer (Database, Backend, Frontend)
 
+## 📽️ Project Demo
+
+### ⚡ Quick Preview (Speed Run)
+
+https://github.com/user-attachments/assets/b052244c-da56-4ad9-a7cc-28b0ac5a95cd
+
+<br>
+
+### 🧠 Technical Deep Dive (Architecture & Code)
+I recorded a detailed 10-minute walkthrough explaining the **3-Tier Architecture**, **Async Logic**, and **SQL Constraints**.
+
+[![Watch the Full Video on YouTube](https://img.youtube.com/vi/h2-xbE6Wk3k/0.jpg)](https://www.youtube.com/watch?v=h2-xbE6Wk3k)
+
+> **Note:** The video above is a detailed technical breakdown. The short clip at the top is just a quick UI demonstration.
+
+---
+
 ---
 
 ## 📑 Table of Contents
@@ -30,13 +47,8 @@ Representing the pinnacle of my procedural and architectural learning path, this
 - [Architecture & Design](#-architecture--design)
 - [Tech Stack](#-tech-stack)
 - [Database Schema](#-database-schema)
-- [Showcase & Screenshots](#-showcase--screenshots)
 - [Installation & Setup](#-installation--setup)
 - [Usage Guide](#-usage-guide)
-- [Testing & Quality Assurance](#-testing--quality-assurance)
-- [Roadmap](#-roadmap)
-- [License](#-license)
-- [Contact](#-contact)
 
 ---
 
