@@ -1,0 +1,15 @@
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a String\Reverse a String\bin\Debug\net10.0\Reverse a String.exe
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a String\Reverse a String\bin\Debug\net10.0\Reverse a String.deps.json
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a String\Reverse a String\bin\Debug\net10.0\Reverse a String.runtimeconfig.json
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a String\Reverse a String\bin\Debug\net10.0\Reverse a String.dll
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a String\Reverse a String\bin\Debug\net10.0\Reverse a String.pdb
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a String\Reverse a String\obj\Debug\net10.0\Reverse a String.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a String\Reverse a String\obj\Debug\net10.0\Reverse a String.AssemblyInfoInputs.cache
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a String\Reverse a String\obj\Debug\net10.0\Reverse a String.AssemblyInfo.cs
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a String\Reverse a String\obj\Debug\net10.0\Reverse a String.csproj.CoreCompileInputs.cache
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a String\Reverse a String\obj\Debug\net10.0\Reverse a String.sourcelink.json
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a String\Reverse a String\obj\Debug\net10.0\Reverse a String.dll
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a String\Reverse a String\obj\Debug\net10.0\refint\Reverse a String.dll
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a String\Reverse a String\obj\Debug\net10.0\Reverse a String.pdb
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a String\Reverse a String\obj\Debug\net10.0\Reverse a String.genruntimeconfig.cache
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Reverse a String\Reverse a String\obj\Debug\net10.0\ref\Reverse a String.dll

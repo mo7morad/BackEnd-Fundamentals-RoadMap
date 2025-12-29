@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Rearrange Queue Alternately")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8fe125fa7ba74f27d678255ca2792cc96d222d4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a72d3127a132e1f19d85fded1abf60246e12f151")]
 [assembly: System.Reflection.AssemblyProductAttribute("Rearrange Queue Alternately")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Rearrange Queue Alternately")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

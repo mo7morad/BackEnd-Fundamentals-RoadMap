@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Find Middle Element/1.0.0": {
+        "runtime": {
+          "Find Middle Element.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Find Middle Element/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
