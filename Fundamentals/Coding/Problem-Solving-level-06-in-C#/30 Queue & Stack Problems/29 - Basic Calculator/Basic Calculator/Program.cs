@@ -55,24 +55,24 @@ class Program
 
         foreach (char c in formula)
         {
-            if (char.IsDigit(c))
+            if (char.IsDigit(c)) // Number
             {
                 sb.Append(c);
             }
-            else if (c == '(')
+            else if (c == '(') // Left Parenthesis
             {
                 stack.Push(c);
             }
-            else if (c == ')')
+            else if (c == ')') // Right Parenthesis
             {
-                while (stack.Count > 0 && stack.Peek() != '(')
+                while (stack.Count > 0 && stack.Peek() != '(') // Pop until '('
                     sb.Append(stack.Pop());
 
                 stack.Pop(); // Remove '('
             }
             else // operator
             {
-                while (stack.Count > 0 && GetPrecedence(stack.Peek()) >= GetPrecedence(c))
+                while (stack.Count > 0 && GetPrecedence(stack.Peek()) >= GetPrecedence(c)) // Pop higher or equal precedence
                     sb.Append(stack.Pop());
                 stack.Push(c);
             }

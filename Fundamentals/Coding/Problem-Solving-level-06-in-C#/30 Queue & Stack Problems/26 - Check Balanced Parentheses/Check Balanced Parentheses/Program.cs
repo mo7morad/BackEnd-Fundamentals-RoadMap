@@ -124,7 +124,7 @@ class Program
 //    }
 //}
 
-//// Another Solution 
+// Another Solution 
 
 //public static bool IsBalanced(string input)
 //{
