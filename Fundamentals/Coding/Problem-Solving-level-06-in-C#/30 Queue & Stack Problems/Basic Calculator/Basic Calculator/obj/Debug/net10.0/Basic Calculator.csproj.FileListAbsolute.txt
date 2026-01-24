@@ -1,0 +1,15 @@
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Basic Calculator\Basic Calculator\bin\Debug\net10.0\Basic Calculator.exe
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Basic Calculator\Basic Calculator\bin\Debug\net10.0\Basic Calculator.deps.json
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Basic Calculator\Basic Calculator\bin\Debug\net10.0\Basic Calculator.runtimeconfig.json
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Basic Calculator\Basic Calculator\bin\Debug\net10.0\Basic Calculator.dll
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Basic Calculator\Basic Calculator\bin\Debug\net10.0\Basic Calculator.pdb
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Basic Calculator\Basic Calculator\obj\Debug\net10.0\Basic Calculator.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Basic Calculator\Basic Calculator\obj\Debug\net10.0\Basic Calculator.AssemblyInfoInputs.cache
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Basic Calculator\Basic Calculator\obj\Debug\net10.0\Basic Calculator.AssemblyInfo.cs
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Basic Calculator\Basic Calculator\obj\Debug\net10.0\Basic Calculator.csproj.CoreCompileInputs.cache
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Basic Calculator\Basic Calculator\obj\Debug\net10.0\Basic Calculator.sourcelink.json
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Basic Calculator\Basic Calculator\obj\Debug\net10.0\Basic Calculator.dll
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Basic Calculator\Basic Calculator\obj\Debug\net10.0\refint\Basic Calculator.dll
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Basic Calculator\Basic Calculator\obj\Debug\net10.0\Basic Calculator.pdb
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Basic Calculator\Basic Calculator\obj\Debug\net10.0\Basic Calculator.genruntimeconfig.cache
+E:\Programming\BackEnd-Fundamentals-RoadMap\Fundamentals\Coding\Problem-Solving-level-06-in-C#\30 Queue & Stack Problems\Basic Calculator\Basic Calculator\obj\Debug\net10.0\ref\Basic Calculator.dll
