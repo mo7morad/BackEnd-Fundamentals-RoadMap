@@ -13,12 +13,17 @@ class Program
 {
     static void Main()
     {
-
-      Dictionary<string, int> Students = new Dictionary<string, int>();
-      Students.Add("Alice", 85);
-      Students.Add("Bob", 90);
-
-      int bobGrade = Students["Bob"];
-      Console.WriteLine("Student: Bob, Grade: " + bobGrade);
+        Dictionary<string, double> studentGrades = new Dictionary<string, double>
+        {
+            { "Alice", 85.5 },
+            { "Bob", 90.0 },
+            { "Charlie", 78.5 }
+        };
+        
+        Console.WriteLine($"Student: Bob, Grade:" + studentGrades["Bob"]);
+        Console.ReadKey();
+        // Output:
+        // Student: Bob, Grade: 90
     }
 }
+
