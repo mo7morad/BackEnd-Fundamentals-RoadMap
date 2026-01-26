@@ -11,19 +11,27 @@ using System.Collections.Generic;
 
 class Program
 {
+    static Dictionary<int, int> CharacterFrequency(string input)
+    {
+        Dictionary<char, int> frequency = new Dictionary<char, int>();
+        
+        foreach (char c in input)
+        {
+            charCount[c] = charCount.GetValueOrDefault(c, 0) + 1;
+        }
+        return frequency;
+    }
+
     static void Main()
     {
-        Dictionary<string, double> studentGrades = new Dictionary<string, double>
+        string input = "hello";
+        var result = CharacterFrequency(input);
+        foreach (var kvp in result)
         {
-            { "Alice", 85.5 },
-            { "Bob", 90.0 },
-            { "Charlie", 78.5 }
-        };
-        
-        Console.WriteLine($"Student: Bob, Grade:" + studentGrades["Bob"]);
+            Console.WriteLine($"{kvp.Key}: {kvp.Value}");
+        }
         Console.ReadKey();
-        // Output:
-        // Student: Bob, Grade: 90
+
     }
 }
 
