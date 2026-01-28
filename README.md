@@ -44,7 +44,7 @@ Here’s a quick overview of the key projects included in this repository:
 
 ---
 
-### 🖥️ 4 C# Desktop Apps (.Net)
+### 🖥️ 3 C# Desktop Apps (.Net)
 
 9. [**Tic-Tac-Toe Game**](Fundamentals/Coding/14%20-%20C%23%20-%20WinForms/Projects/Tic-Tac-Toe)  
    🎮 *A simple engaging TicTacToe Game using **C# and Windows Forms**.*
