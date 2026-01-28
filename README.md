@@ -44,13 +44,16 @@ Here’s a quick overview of the key projects included in this repository:
 
 ---
 
-### 🖥️ 3 C# Desktop Apps (.Net)
+### 🖥️ 4 C# Desktop Apps (.Net)
 
 9. [**Tic-Tac-Toe Game**](Fundamentals/Coding/14%20-%20C%23%20-%20WinForms/Projects/Tic-Tac-Toe)  
    🎮 *A simple engaging TicTacToe Game using **C# and Windows Forms**.*
 
 10. [**Pizza Shop Project**](Fundamentals/Coding/14%20-%20C%23%20-%20WinForms/Projects/Pizza-Shop)  
     🍕 *A WindowsForms C# application designed to simulate a pizza ordering system.*
+
+11. [**DVLD - Driving & Vehicle License Department System**](Fundamentals/Coding/19%20-%20Full%20Real%20Project/DVLD-Project)  
+    🚗 *A massive, enterprise-grade desktop management system for managing drivers, licenses, tests, and vehicle registrations using **C#, Windows Forms, and SQL Server** with 3-Tier Architecture.*
 
 
 ---
