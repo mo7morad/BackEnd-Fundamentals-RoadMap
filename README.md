@@ -1,7 +1,7 @@
 # 📌 BackEnd Fundamentals Roadmap
 
-![Completed Courses](https://img.shields.io/badge/Completed_Courses-24%2F25-blue?style=for-the-badge)  
-![Status](https://img.shields.io/badge/Status-Work_In_Progress-orange?style=for-the-badge)  
+![Completed Courses](https://img.shields.io/badge/Completed_Courses-25%2F25-blue?style=for-the-badge)  
+![Status](https://img.shields.io/badge/Status-Work_Done-orange?style=for-the-badge)  
 ![Problem Solving](https://img.shields.io/badge/Problem%20Solving-1329%20Solved%20Problems-success?style=for-the-badge)  
 ![Projects](https://img.shields.io/badge/Projects-18%20Completed-ff5733?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
