@@ -1,5 +1,4 @@
 ﻿/*
-
 Create a BitArray from an Integer
 Description: Write a function that takes an integer and returns a BitArray representing its binary digits.
 */
