@@ -1,0 +1,15 @@
+/media/morad/Work/BackEnd Fundamentals Journey/Fundamentals/Coding/Problem-Solving-level-06-in-C#/12 - Trees Problems/05 - Decision-Making Process/bin/Debug/net8.0/05 - Decision-Making Process
+/media/morad/Work/BackEnd Fundamentals Journey/Fundamentals/Coding/Problem-Solving-level-06-in-C#/12 - Trees Problems/05 - Decision-Making Process/bin/Debug/net8.0/05 - Decision-Making Process.deps.json
+/media/morad/Work/BackEnd Fundamentals Journey/Fundamentals/Coding/Problem-Solving-level-06-in-C#/12 - Trees Problems/05 - Decision-Making Process/bin/Debug/net8.0/05 - Decision-Making Process.runtimeconfig.json
+/media/morad/Work/BackEnd Fundamentals Journey/Fundamentals/Coding/Problem-Solving-level-06-in-C#/12 - Trees Problems/05 - Decision-Making Process/bin/Debug/net8.0/05 - Decision-Making Process.dll
+/media/morad/Work/BackEnd Fundamentals Journey/Fundamentals/Coding/Problem-Solving-level-06-in-C#/12 - Trees Problems/05 - Decision-Making Process/bin/Debug/net8.0/05 - Decision-Making Process.pdb
+/media/morad/Work/BackEnd Fundamentals Journey/Fundamentals/Coding/Problem-Solving-level-06-in-C#/12 - Trees Problems/05 - Decision-Making Process/obj/Debug/net8.0/05 - Decision-Making Process.GeneratedMSBuildEditorConfig.editorconfig
+/media/morad/Work/BackEnd Fundamentals Journey/Fundamentals/Coding/Problem-Solving-level-06-in-C#/12 - Trees Problems/05 - Decision-Making Process/obj/Debug/net8.0/05 - Decision-Making Process.AssemblyInfoInputs.cache
+/media/morad/Work/BackEnd Fundamentals Journey/Fundamentals/Coding/Problem-Solving-level-06-in-C#/12 - Trees Problems/05 - Decision-Making Process/obj/Debug/net8.0/05 - Decision-Making Process.AssemblyInfo.cs
+/media/morad/Work/BackEnd Fundamentals Journey/Fundamentals/Coding/Problem-Solving-level-06-in-C#/12 - Trees Problems/05 - Decision-Making Process/obj/Debug/net8.0/05 - Decision-Making Process.csproj.CoreCompileInputs.cache
+/media/morad/Work/BackEnd Fundamentals Journey/Fundamentals/Coding/Problem-Solving-level-06-in-C#/12 - Trees Problems/05 - Decision-Making Process/obj/Debug/net8.0/05 - Decision-Making Process.sourcelink.json
+/media/morad/Work/BackEnd Fundamentals Journey/Fundamentals/Coding/Problem-Solving-level-06-in-C#/12 - Trees Problems/05 - Decision-Making Process/obj/Debug/net8.0/05 - Decision-Making Process.dll
+/media/morad/Work/BackEnd Fundamentals Journey/Fundamentals/Coding/Problem-Solving-level-06-in-C#/12 - Trees Problems/05 - Decision-Making Process/obj/Debug/net8.0/refint/05 - Decision-Making Process.dll
+/media/morad/Work/BackEnd Fundamentals Journey/Fundamentals/Coding/Problem-Solving-level-06-in-C#/12 - Trees Problems/05 - Decision-Making Process/obj/Debug/net8.0/05 - Decision-Making Process.pdb
+/media/morad/Work/BackEnd Fundamentals Journey/Fundamentals/Coding/Problem-Solving-level-06-in-C#/12 - Trees Problems/05 - Decision-Making Process/obj/Debug/net8.0/05 - Decision-Making Process.genruntimeconfig.cache
+/media/morad/Work/BackEnd Fundamentals Journey/Fundamentals/Coding/Problem-Solving-level-06-in-C#/12 - Trees Problems/05 - Decision-Making Process/obj/Debug/net8.0/ref/05 - Decision-Making Process.dll
