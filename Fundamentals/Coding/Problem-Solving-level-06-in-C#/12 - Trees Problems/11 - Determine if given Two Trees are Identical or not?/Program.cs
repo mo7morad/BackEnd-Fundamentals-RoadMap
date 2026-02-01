@@ -1,111 +1,198 @@
 ﻿using System;
+using System.Collections.Generic;
 
 class TreeNode
 {
-    public int Value { get; set; } // Value of the node
-    public TreeNode Left { get; set; } // Left child
-    public TreeNode Right { get; set; } // Right child
+    public int Data { get; set; }
+    public TreeNode Left { get; set; }
+    public TreeNode Right { get; set; }
 
-
-    public TreeNode(int value)
+    public TreeNode(int data)
     {
-        Value = value; // Initialize the node with a value
+        Data = data;
+        Left = null;
+        Right = null;
     }
 }
 
-
-class BinaryTree
+// Using comparer interface
+class TreeEqualityComparer : IEqualityComparer<TreeNode>
 {
-    // Method to determine if two trees are identical
-    public bool AreIdentical(TreeNode root1, TreeNode root2)
+    public bool Equals(TreeNode x, TreeNode y)
     {
-        // Base case: both nodes are null
-        if (root1 == null && root2 == null) return true;
+        // Case 1: Both are empty (null) -> They are identical
+        if (x == null && y == null) return true;
 
+        // Case 2: One is empty and the other is not -> Not identical
+        if (x == null || y == null) return false;
 
-        // If one is null and the other is not, they are not identical
-        if (root1 == null || root2 == null) return false;
+        // Case 3: Values are different -> Not identical
+        if (x.Data != y.Data) return false;
 
-
-        // Check if the current nodes are identical and recursively check subtrees
-        return root1.Value == root2.Value
-            && AreIdentical(root1.Left, root2.Left)
-            && AreIdentical(root1.Right, root2.Right);
+        // Case 4: Deep Check (Recursion)
+        // Check if Left is identical AND Right is identical
+        return Equals(x.Left, y.Left) && Equals(x.Right, y.Right);
     }
 
-
-    // Method to print a tree (in-order traversal)
-    public void PrintTree(TreeNode root, string indent = "")
+    public int GetHashCode(TreeNode obj)
     {
-        if (root == null) return;
-
-
-        PrintTree(root.Left, indent + "  "); // Traverse the left subtree
-        Console.WriteLine($"{indent}{root.Value}"); // Print the current node with indentation
-        PrintTree(root.Right, indent + "  "); // Traverse the right subtree
+        return obj?.Data.GetHashCode() ?? 0;
     }
 }
-
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        var tree = new BinaryTree();
+        // Build Tree 1
+        TreeNode tree1 = new TreeNode(1);
+        tree1.Left = new TreeNode(2);
+        tree1.Right = new TreeNode(3);
+
+        // Build Tree 2 (Identical to Tree 1)
+        TreeNode tree2 = new TreeNode(1);
+        tree2.Left = new TreeNode(2);
+        tree2.Right = new TreeNode(3);
+
+        // Build Tree 3 (Different structure)
+        TreeNode tree3 = new TreeNode(1);
+        tree3.Left = new TreeNode(2);
+        tree3.Right = new TreeNode(4); // Value mismatch!
 
 
-        // Create first tree
-        var root1 = new TreeNode(1);
-        root1.Left = new TreeNode(2);
-        root1.Right = new TreeNode(3);
-        root1.Left.Left = new TreeNode(4);
-        root1.Left.Right = new TreeNode(5);
+        // 3. Use the Comparer
+        var comparer = new TreeEqualityComparer();
 
+        Console.WriteLine("Are Tree 1 and Tree 2 identical?");
+        bool result1 = comparer.Equals(tree1, tree2);
+        Console.WriteLine(result1 ? "Yes, Identical ✅" : "No ❌");
 
-        // Create second tree (identical to the first tree)
-        var root2 = new TreeNode(1);
-        root2.Left = new TreeNode(2);
-        root2.Right = new TreeNode(3);
-        root2.Left.Left = new TreeNode(4);
-        root2.Left.Right = new TreeNode(5);
-
-
-        // Print both trees
-        Console.WriteLine("Tree 1:");
-        tree.PrintTree(root1);
-
-
-        Console.WriteLine("\nTree 2:");
-        tree.PrintTree(root2);
-
-
-        // Check if the two trees are identical
-        Console.WriteLine("\nAre the two trees identical?");
-        Console.WriteLine(tree.AreIdentical(root1, root2)
-            ? "Yes, the trees are identical."
-            : "No, the trees are not identical.");
-
-
-        // Create a third tree (not identical)
-        var root3 = new TreeNode(1);
-        root3.Left = new TreeNode(2);
-        root3.Right = new TreeNode(4);
-
-
-        Console.WriteLine("\nTree 3:");
-        tree.PrintTree(root3);
-
-
-        // Check if the first and third trees are identical
         Console.WriteLine("\nAre Tree 1 and Tree 3 identical?");
-        Console.WriteLine(tree.AreIdentical(root1, root3)
-            ? "Yes, the trees are identical."
-            : "No, the trees are not identical.");
+        bool result2 = comparer.Equals(tree1, tree3);
+        Console.WriteLine(result2 ? "Yes, Identical ✅" : "No ❌");
 
-
-        // Pause the screen
         Console.ReadKey();
     }
 }
+
+
+
+
+
+
+// ---------------------------
+// Course Solution
+// ---------------------------
+
+
+// using System;
+
+// class TreeNode
+// {
+//     public int Value { get; set; } // Value of the node
+//     public TreeNode Left { get; set; } // Left child
+//     public TreeNode Right { get; set; } // Right child
+
+
+//     public TreeNode(int value)
+//     {
+//         Value = value; // Initialize the node with a value
+//     }
+// }
+
+
+// class BinaryTree
+// {
+//     // Method to determine if two trees are identical
+//     public bool AreIdentical(TreeNode root1, TreeNode root2)
+//     {
+//         // Base case: both nodes are null
+//         if (root1 == null && root2 == null) return true;
+
+
+//         // If one is null and the other is not, they are not identical
+//         if (root1 == null || root2 == null) return false;
+
+
+//         // Check if the current nodes are identical and recursively check subtrees
+//         return root1.Value == root2.Value
+//             && AreIdentical(root1.Left, root2.Left)
+//             && AreIdentical(root1.Right, root2.Right);
+//     }
+
+
+//     // Method to print a tree (in-order traversal)
+//     public void PrintTree(TreeNode root, string indent = "")
+//     {
+//         if (root == null) return;
+
+
+//         PrintTree(root.Left, indent + "  "); // Traverse the left subtree
+//         Console.WriteLine($"{indent}{root.Value}"); // Print the current node with indentation
+//         PrintTree(root.Right, indent + "  "); // Traverse the right subtree
+//     }
+// }
+
+
+// class Program
+// {
+//     static void Main(string[] args)
+//     {
+//         var tree = new BinaryTree();
+
+
+//         // Create first tree
+//         var root1 = new TreeNode(1);
+//         root1.Left = new TreeNode(2);
+//         root1.Right = new TreeNode(3);
+//         root1.Left.Left = new TreeNode(4);
+//         root1.Left.Right = new TreeNode(5);
+
+
+//         // Create second tree (identical to the first tree)
+//         var root2 = new TreeNode(1);
+//         root2.Left = new TreeNode(2);
+//         root2.Right = new TreeNode(3);
+//         root2.Left.Left = new TreeNode(4);
+//         root2.Left.Right = new TreeNode(5);
+
+
+//         // Print both trees
+//         Console.WriteLine("Tree 1:");
+//         tree.PrintTree(root1);
+
+
+//         Console.WriteLine("\nTree 2:");
+//         tree.PrintTree(root2);
+
+
+//         // Check if the two trees are identical
+//         Console.WriteLine("\nAre the two trees identical?");
+//         Console.WriteLine(tree.AreIdentical(root1, root2)
+//             ? "Yes, the trees are identical."
+//             : "No, the trees are not identical.");
+
+
+//         // Create a third tree (not identical)
+//         var root3 = new TreeNode(1);
+//         root3.Left = new TreeNode(2);
+//         root3.Right = new TreeNode(4);
+
+
+//         Console.WriteLine("\nTree 3:");
+//         tree.PrintTree(root3);
+
+
+//         // Check if the first and third trees are identical
+//         Console.WriteLine("\nAre Tree 1 and Tree 3 identical?");
+//         Console.WriteLine(tree.AreIdentical(root1, root3)
+//             ? "Yes, the trees are identical."
+//             : "No, the trees are not identical.");
+
+
+//         // Pause the screen
+//         Console.ReadKey();
+//     }
+// }
 
 
