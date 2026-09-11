@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿namespace LinearSearchExample;
 
 class LinearSearchExample
 {
@@ -20,8 +19,10 @@ class LinearSearchExample
     static void Main(string[] args)
     {
         int[] arr = { 64, 34, 25, 12, 22, 11, 90 };
-        int x = 22; // Element to be searched
-
+        
+        Console.Write("Enter the element number: ");
+        int x = int.Parse(Console.ReadLine()!);
+        
         Console.WriteLine("Original Array:");
         foreach (var item in arr)
             Console.Write(item + " ");

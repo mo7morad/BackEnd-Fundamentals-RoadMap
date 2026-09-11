@@ -1,0 +1,249 @@
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\01 FirstProject\StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.exe
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\01 FirstProject\StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.deps.json
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\01 FirstProject\StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.runtimeconfig.json
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\01 FirstProject\StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\01 FirstProject\StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.pdb
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\01 FirstProject\StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\01 FirstProject\StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfoInputs.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\01 FirstProject\StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfo.cs
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\01 FirstProject\StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CoreCompileInputs.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\01 FirstProject\StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\01 FirstProject\StudentApiClient\StudentApiClient\obj\Debug\net8.0\refint\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\01 FirstProject\StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.pdb
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\01 FirstProject\StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.genruntimeconfig.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\01 FirstProject\StudentApiClient\StudentApiClient\obj\Debug\net8.0\ref\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\02 StudentAPI v2\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.exe
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\02 StudentAPI v2\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.deps.json
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\02 StudentAPI v2\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.runtimeconfig.json
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\02 StudentAPI v2\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\02 StudentAPI v2\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.pdb
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\02 StudentAPI v2\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\02 StudentAPI v2\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfoInputs.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\02 StudentAPI v2\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfo.cs
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\02 StudentAPI v2\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CoreCompileInputs.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\02 StudentAPI v2\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\02 StudentAPI v2\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\refint\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\02 StudentAPI v2\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.pdb
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\02 StudentAPI v2\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.genruntimeconfig.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\02 StudentAPI v2\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\ref\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\03 StudentAPI v3\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.exe
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\03 StudentAPI v3\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.deps.json
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\03 StudentAPI v3\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.runtimeconfig.json
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\03 StudentAPI v3\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\03 StudentAPI v3\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.pdb
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\03 StudentAPI v3\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\03 StudentAPI v3\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfoInputs.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\03 StudentAPI v3\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfo.cs
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\03 StudentAPI v3\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CoreCompileInputs.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\03 StudentAPI v3\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\03 StudentAPI v3\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\refint\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\03 StudentAPI v3\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.pdb
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\03 StudentAPI v3\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.genruntimeconfig.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\03 StudentAPI v3\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\ref\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\03 StudentAPI v3\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\03 StudentAPI v3\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.AssemblyReference.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\03 StudentAPI v3\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CopyComplete
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\Student API Project v1\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.exe
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\Student API Project v1\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.deps.json
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\Student API Project v1\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.runtimeconfig.json
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\Student API Project v1\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\Student API Project v1\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.pdb
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\Student API Project v1\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.AssemblyReference.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfoInputs.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfo.cs
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CoreCompileInputs.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CopyComplete
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\refint\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.pdb
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.genruntimeconfig.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 Server\Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\ref\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.exe
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.deps.json
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.runtimeconfig.json
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.pdb
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.AssemblyReference.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfoInputs.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfo.cs
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CoreCompileInputs.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CopyComplete
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\refint\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.pdb
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.genruntimeconfig.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\ref\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\old 01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.exe
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\old 01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.deps.json
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\old 01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.runtimeconfig.json
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\old 01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\old 01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.pdb
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\old 01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\old 01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.AssemblyReference.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\old 01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\old 01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfoInputs.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\old 01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfo.cs
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\old 01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CoreCompileInputs.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\old 01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CopyComplete
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\old 01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\old 01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\refint\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\old 01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.pdb
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\old 01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.genruntimeconfig.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\old 01 CRUD Simulation Porjects\01 Student API Project v1\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\ref\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\01 Student API Project v1 - Get\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.exe
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\01 Student API Project v1 - Get\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.deps.json
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\01 Student API Project v1 - Get\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.runtimeconfig.json
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\01 Student API Project v1 - Get\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\01 Student API Project v1 - Get\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.pdb
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\01 Student API Project v1 - Get\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\01 Student API Project v1 - Get\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.AssemblyReference.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\01 Student API Project v1 - Get\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\01 Student API Project v1 - Get\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfoInputs.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\01 Student API Project v1 - Get\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfo.cs
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\01 Student API Project v1 - Get\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CoreCompileInputs.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\01 Student API Project v1 - Get\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CopyComplete
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\01 Student API Project v1 - Get\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\01 Student API Project v1 - Get\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\refint\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\01 Student API Project v1 - Get\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.pdb
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\01 Student API Project v1 - Get\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.genruntimeconfig.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\01 Student API Project v1 - Get\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\ref\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\02 Student API Project v2 - Get\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.exe
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\02 Student API Project v2 - Get\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.deps.json
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\02 Student API Project v2 - Get\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.runtimeconfig.json
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\02 Student API Project v2 - Get\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\02 Student API Project v2 - Get\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.pdb
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\02 Student API Project v2 - Get\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\02 Student API Project v2 - Get\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.AssemblyReference.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\02 Student API Project v2 - Get\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\02 Student API Project v2 - Get\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfoInputs.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\02 Student API Project v2 - Get\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfo.cs
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\02 Student API Project v2 - Get\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CoreCompileInputs.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\02 Student API Project v2 - Get\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CopyComplete
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\02 Student API Project v2 - Get\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\02 Student API Project v2 - Get\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\refint\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\02 Student API Project v2 - Get\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.pdb
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\02 Student API Project v2 - Get\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.genruntimeconfig.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\02 Student API Project v2 - Get\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\ref\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\03 Student API Project v3 - Get Avg\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.AssemblyReference.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\03 Student API Project v3 - Get Avg\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\03 Student API Project v3 - Get Avg\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfoInputs.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\03 Student API Project v3 - Get Avg\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfo.cs
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\03 Student API Project v3 - Get Avg\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CoreCompileInputs.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\03 Student API Project v3 - Get Avg\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\03 Student API Project v3 - Get Avg\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\refint\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\03 Student API Project v3 - Get Avg\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.pdb
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\03 Student API Project v3 - Get Avg\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.exe
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\03 Student API Project v3 - Get Avg\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.deps.json
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\03 Student API Project v3 - Get Avg\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.runtimeconfig.json
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\03 Student API Project v3 - Get Avg\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\03 Student API Project v3 - Get Avg\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.pdb
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\03 Student API Project v3 - Get Avg\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\03 Student API Project v3 - Get Avg\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CopyComplete
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\03 Student API Project v3 - Get Avg\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.genruntimeconfig.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\03 Student API Project v3 - Get Avg\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\ref\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\04 Student API Project v4 - Get Student By ID\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.exe
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\04 Student API Project v4 - Get Student By ID\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.deps.json
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\04 Student API Project v4 - Get Student By ID\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.runtimeconfig.json
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\04 Student API Project v4 - Get Student By ID\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\04 Student API Project v4 - Get Student By ID\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.pdb
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\04 Student API Project v4 - Get Student By ID\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\04 Student API Project v4 - Get Student By ID\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.AssemblyReference.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\04 Student API Project v4 - Get Student By ID\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\04 Student API Project v4 - Get Student By ID\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfoInputs.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\04 Student API Project v4 - Get Student By ID\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfo.cs
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\04 Student API Project v4 - Get Student By ID\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CoreCompileInputs.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\04 Student API Project v4 - Get Student By ID\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CopyComplete
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\04 Student API Project v4 - Get Student By ID\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\04 Student API Project v4 - Get Student By ID\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\refint\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\04 Student API Project v4 - Get Student By ID\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.pdb
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\04 Student API Project v4 - Get Student By ID\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.genruntimeconfig.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final Complete CRUD\04 Student API Project v4 - Get Student By ID\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\ref\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final CRUD\03 Student API Project\04 temp\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.exe
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final CRUD\03 Student API Project\04 temp\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.deps.json
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final CRUD\03 Student API Project\04 temp\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.runtimeconfig.json
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final CRUD\03 Student API Project\04 temp\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final CRUD\03 Student API Project\04 temp\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\StudentApiClient.pdb
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final CRUD\03 Student API Project\04 temp\02 StudentApiClient\StudentApiClient\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final CRUD\03 Student API Project\04 temp\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.AssemblyReference.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final CRUD\03 Student API Project\04 temp\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final CRUD\03 Student API Project\04 temp\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfoInputs.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final CRUD\03 Student API Project\04 temp\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfo.cs
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final CRUD\03 Student API Project\04 temp\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CoreCompileInputs.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final CRUD\03 Student API Project\04 temp\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CopyComplete
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final CRUD\03 Student API Project\04 temp\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final CRUD\03 Student API Project\04 temp\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\refint\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final CRUD\03 Student API Project\04 temp\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.pdb
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final CRUD\03 Student API Project\04 temp\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\StudentApiClient.genruntimeconfig.cache
+D:\Dropbox\Personal\Advices\2021\Web\WebAPI Course\01 WebAPI\Final CRUD\03 Student API Project\04 temp\02 StudentApiClient\StudentApiClient\obj\Debug\net8.0\ref\StudentApiClient.dll
+C:\Temp\02 StudentApiClient v5\StudentApiClient\bin\Debug\net8.0\StudentApiClient.exe
+C:\Temp\02 StudentApiClient v5\StudentApiClient\bin\Debug\net8.0\StudentApiClient.deps.json
+C:\Temp\02 StudentApiClient v5\StudentApiClient\bin\Debug\net8.0\StudentApiClient.runtimeconfig.json
+C:\Temp\02 StudentApiClient v5\StudentApiClient\bin\Debug\net8.0\StudentApiClient.dll
+C:\Temp\02 StudentApiClient v5\StudentApiClient\bin\Debug\net8.0\StudentApiClient.pdb
+C:\Temp\02 StudentApiClient v5\StudentApiClient\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Temp\02 StudentApiClient v5\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.AssemblyReference.cache
+C:\Temp\02 StudentApiClient v5\StudentApiClient\obj\Debug\net8.0\StudentApiClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Temp\02 StudentApiClient v5\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfoInputs.cache
+C:\Temp\02 StudentApiClient v5\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfo.cs
+C:\Temp\02 StudentApiClient v5\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CoreCompileInputs.cache
+C:\Temp\02 StudentApiClient v5\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CopyComplete
+C:\Temp\02 StudentApiClient v5\StudentApiClient\obj\Debug\net8.0\StudentApiClient.dll
+C:\Temp\02 StudentApiClient v5\StudentApiClient\obj\Debug\net8.0\refint\StudentApiClient.dll
+C:\Temp\02 StudentApiClient v5\StudentApiClient\obj\Debug\net8.0\StudentApiClient.pdb
+C:\Temp\02 StudentApiClient v5\StudentApiClient\obj\Debug\net8.0\StudentApiClient.genruntimeconfig.cache
+C:\Temp\02 StudentApiClient v5\StudentApiClient\obj\Debug\net8.0\ref\StudentApiClient.dll
+C:\Temp\02 StudentApiClient v6\StudentApiClient\bin\Debug\net8.0\StudentApiClient.exe
+C:\Temp\02 StudentApiClient v6\StudentApiClient\bin\Debug\net8.0\StudentApiClient.deps.json
+C:\Temp\02 StudentApiClient v6\StudentApiClient\bin\Debug\net8.0\StudentApiClient.runtimeconfig.json
+C:\Temp\02 StudentApiClient v6\StudentApiClient\bin\Debug\net8.0\StudentApiClient.dll
+C:\Temp\02 StudentApiClient v6\StudentApiClient\bin\Debug\net8.0\StudentApiClient.pdb
+C:\Temp\02 StudentApiClient v6\StudentApiClient\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Temp\02 StudentApiClient v6\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.AssemblyReference.cache
+C:\Temp\02 StudentApiClient v6\StudentApiClient\obj\Debug\net8.0\StudentApiClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Temp\02 StudentApiClient v6\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfoInputs.cache
+C:\Temp\02 StudentApiClient v6\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfo.cs
+C:\Temp\02 StudentApiClient v6\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CoreCompileInputs.cache
+C:\Temp\02 StudentApiClient v6\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CopyComplete
+C:\Temp\02 StudentApiClient v6\StudentApiClient\obj\Debug\net8.0\StudentApiClient.dll
+C:\Temp\02 StudentApiClient v6\StudentApiClient\obj\Debug\net8.0\refint\StudentApiClient.dll
+C:\Temp\02 StudentApiClient v6\StudentApiClient\obj\Debug\net8.0\StudentApiClient.pdb
+C:\Temp\02 StudentApiClient v6\StudentApiClient\obj\Debug\net8.0\StudentApiClient.genruntimeconfig.cache
+C:\Temp\02 StudentApiClient v6\StudentApiClient\obj\Debug\net8.0\ref\StudentApiClient.dll
+C:\Temp\02 StudentApiClient v7 - Update Student\StudentApiClient\bin\Debug\net8.0\StudentApiClient.exe
+C:\Temp\02 StudentApiClient v7 - Update Student\StudentApiClient\bin\Debug\net8.0\StudentApiClient.deps.json
+C:\Temp\02 StudentApiClient v7 - Update Student\StudentApiClient\bin\Debug\net8.0\StudentApiClient.runtimeconfig.json
+C:\Temp\02 StudentApiClient v7 - Update Student\StudentApiClient\bin\Debug\net8.0\StudentApiClient.dll
+C:\Temp\02 StudentApiClient v7 - Update Student\StudentApiClient\bin\Debug\net8.0\StudentApiClient.pdb
+C:\Temp\02 StudentApiClient v7 - Update Student\StudentApiClient\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Temp\02 StudentApiClient v7 - Update Student\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.AssemblyReference.cache
+C:\Temp\02 StudentApiClient v7 - Update Student\StudentApiClient\obj\Debug\net8.0\StudentApiClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Temp\02 StudentApiClient v7 - Update Student\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfoInputs.cache
+C:\Temp\02 StudentApiClient v7 - Update Student\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfo.cs
+C:\Temp\02 StudentApiClient v7 - Update Student\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CoreCompileInputs.cache
+C:\Temp\02 StudentApiClient v7 - Update Student\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CopyComplete
+C:\Temp\02 StudentApiClient v7 - Update Student\StudentApiClient\obj\Debug\net8.0\StudentApiClient.dll
+C:\Temp\02 StudentApiClient v7 - Update Student\StudentApiClient\obj\Debug\net8.0\refint\StudentApiClient.dll
+C:\Temp\02 StudentApiClient v7 - Update Student\StudentApiClient\obj\Debug\net8.0\StudentApiClient.pdb
+C:\Temp\02 StudentApiClient v7 - Update Student\StudentApiClient\obj\Debug\net8.0\StudentApiClient.genruntimeconfig.cache
+C:\Temp\02 StudentApiClient v7 - Update Student\StudentApiClient\obj\Debug\net8.0\ref\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\25 Web\05 RESTFul API\00 Introduction - Course Orientation (Continuation Mode)\02 StudentApiClient v7\02 StudentApiClient v7\StudentApiClient\bin\Debug\net8.0\StudentApiClient.exe
+D:\Dropbox\Personal\Advices\2021\25 Web\05 RESTFul API\00 Introduction - Course Orientation (Continuation Mode)\02 StudentApiClient v7\02 StudentApiClient v7\StudentApiClient\bin\Debug\net8.0\StudentApiClient.deps.json
+D:\Dropbox\Personal\Advices\2021\25 Web\05 RESTFul API\00 Introduction - Course Orientation (Continuation Mode)\02 StudentApiClient v7\02 StudentApiClient v7\StudentApiClient\bin\Debug\net8.0\StudentApiClient.runtimeconfig.json
+D:\Dropbox\Personal\Advices\2021\25 Web\05 RESTFul API\00 Introduction - Course Orientation (Continuation Mode)\02 StudentApiClient v7\02 StudentApiClient v7\StudentApiClient\bin\Debug\net8.0\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\25 Web\05 RESTFul API\00 Introduction - Course Orientation (Continuation Mode)\02 StudentApiClient v7\02 StudentApiClient v7\StudentApiClient\bin\Debug\net8.0\StudentApiClient.pdb
+D:\Dropbox\Personal\Advices\2021\25 Web\05 RESTFul API\00 Introduction - Course Orientation (Continuation Mode)\02 StudentApiClient v7\02 StudentApiClient v7\StudentApiClient\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Dropbox\Personal\Advices\2021\25 Web\05 RESTFul API\00 Introduction - Course Orientation (Continuation Mode)\02 StudentApiClient v7\02 StudentApiClient v7\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.AssemblyReference.cache
+D:\Dropbox\Personal\Advices\2021\25 Web\05 RESTFul API\00 Introduction - Course Orientation (Continuation Mode)\02 StudentApiClient v7\02 StudentApiClient v7\StudentApiClient\obj\Debug\net8.0\StudentApiClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dropbox\Personal\Advices\2021\25 Web\05 RESTFul API\00 Introduction - Course Orientation (Continuation Mode)\02 StudentApiClient v7\02 StudentApiClient v7\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfoInputs.cache
+D:\Dropbox\Personal\Advices\2021\25 Web\05 RESTFul API\00 Introduction - Course Orientation (Continuation Mode)\02 StudentApiClient v7\02 StudentApiClient v7\StudentApiClient\obj\Debug\net8.0\StudentApiClient.AssemblyInfo.cs
+D:\Dropbox\Personal\Advices\2021\25 Web\05 RESTFul API\00 Introduction - Course Orientation (Continuation Mode)\02 StudentApiClient v7\02 StudentApiClient v7\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CoreCompileInputs.cache
+D:\Dropbox\Personal\Advices\2021\25 Web\05 RESTFul API\00 Introduction - Course Orientation (Continuation Mode)\02 StudentApiClient v7\02 StudentApiClient v7\StudentApiClient\obj\Debug\net8.0\StudentApiClient.csproj.CopyComplete
+D:\Dropbox\Personal\Advices\2021\25 Web\05 RESTFul API\00 Introduction - Course Orientation (Continuation Mode)\02 StudentApiClient v7\02 StudentApiClient v7\StudentApiClient\obj\Debug\net8.0\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\25 Web\05 RESTFul API\00 Introduction - Course Orientation (Continuation Mode)\02 StudentApiClient v7\02 StudentApiClient v7\StudentApiClient\obj\Debug\net8.0\refint\StudentApiClient.dll
+D:\Dropbox\Personal\Advices\2021\25 Web\05 RESTFul API\00 Introduction - Course Orientation (Continuation Mode)\02 StudentApiClient v7\02 StudentApiClient v7\StudentApiClient\obj\Debug\net8.0\StudentApiClient.pdb
+D:\Dropbox\Personal\Advices\2021\25 Web\05 RESTFul API\00 Introduction - Course Orientation (Continuation Mode)\02 StudentApiClient v7\02 StudentApiClient v7\StudentApiClient\obj\Debug\net8.0\StudentApiClient.genruntimeconfig.cache
+D:\Dropbox\Personal\Advices\2021\25 Web\05 RESTFul API\00 Introduction - Course Orientation (Continuation Mode)\02 StudentApiClient v7\02 StudentApiClient v7\StudentApiClient\obj\Debug\net8.0\ref\StudentApiClient.dll
