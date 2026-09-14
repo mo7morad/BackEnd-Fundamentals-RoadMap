@@ -1,0 +1,14 @@
+D:\Demo\Encoding\Encryption-Demo\Encryption-Demo\bin\Debug\net8.0\Encryption-Demo.exe
+D:\Demo\Encoding\Encryption-Demo\Encryption-Demo\bin\Debug\net8.0\Encryption-Demo.deps.json
+D:\Demo\Encoding\Encryption-Demo\Encryption-Demo\bin\Debug\net8.0\Encryption-Demo.runtimeconfig.json
+D:\Demo\Encoding\Encryption-Demo\Encryption-Demo\bin\Debug\net8.0\Encryption-Demo.dll
+D:\Demo\Encoding\Encryption-Demo\Encryption-Demo\bin\Debug\net8.0\Encryption-Demo.pdb
+D:\Demo\Encoding\Encryption-Demo\Encryption-Demo\obj\Debug\net8.0\Encryption-Demo.GeneratedMSBuildEditorConfig.editorconfig
+D:\Demo\Encoding\Encryption-Demo\Encryption-Demo\obj\Debug\net8.0\Encryption-Demo.AssemblyInfoInputs.cache
+D:\Demo\Encoding\Encryption-Demo\Encryption-Demo\obj\Debug\net8.0\Encryption-Demo.AssemblyInfo.cs
+D:\Demo\Encoding\Encryption-Demo\Encryption-Demo\obj\Debug\net8.0\Encryption-Demo.csproj.CoreCompileInputs.cache
+D:\Demo\Encoding\Encryption-Demo\Encryption-Demo\obj\Debug\net8.0\Encryption-Demo.dll
+D:\Demo\Encoding\Encryption-Demo\Encryption-Demo\obj\Debug\net8.0\refint\Encryption-Demo.dll
+D:\Demo\Encoding\Encryption-Demo\Encryption-Demo\obj\Debug\net8.0\Encryption-Demo.pdb
+D:\Demo\Encoding\Encryption-Demo\Encryption-Demo\obj\Debug\net8.0\Encryption-Demo.genruntimeconfig.cache
+D:\Demo\Encoding\Encryption-Demo\Encryption-Demo\obj\Debug\net8.0\ref\Encryption-Demo.dll

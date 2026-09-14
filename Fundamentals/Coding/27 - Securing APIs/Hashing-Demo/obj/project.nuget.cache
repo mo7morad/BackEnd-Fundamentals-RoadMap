@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "e3jRJuV8kUI=",
+  "success": true,
+  "projectFilePath": "/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/Hashing-Demo/Hashing-Demo.csproj",
+  "expectedPackageFiles": [
+    "/Users/mohamedmorad/.nuget/packages/microsoft.netcore.app.ref/8.0.25/microsoft.netcore.app.ref.8.0.25.nupkg.sha512",
+    "/Users/mohamedmorad/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.25/microsoft.aspnetcore.app.ref.8.0.25.nupkg.sha512",
+    "/Users/mohamedmorad/.nuget/packages/microsoft.netcore.app.host.osx-arm64/8.0.25/microsoft.netcore.app.host.osx-arm64.8.0.25.nupkg.sha512"
+  ],
+  "logs": []
+}

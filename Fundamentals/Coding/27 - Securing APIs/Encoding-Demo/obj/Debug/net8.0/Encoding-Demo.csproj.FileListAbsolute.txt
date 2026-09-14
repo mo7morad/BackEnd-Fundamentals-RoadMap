@@ -1,0 +1,14 @@
+D:\Demo\Encoding\Encoding-Demo\bin\Debug\net8.0\Encoding-Demo.exe
+D:\Demo\Encoding\Encoding-Demo\bin\Debug\net8.0\Encoding-Demo.deps.json
+D:\Demo\Encoding\Encoding-Demo\bin\Debug\net8.0\Encoding-Demo.runtimeconfig.json
+D:\Demo\Encoding\Encoding-Demo\bin\Debug\net8.0\Encoding-Demo.dll
+D:\Demo\Encoding\Encoding-Demo\bin\Debug\net8.0\Encoding-Demo.pdb
+D:\Demo\Encoding\Encoding-Demo\obj\Debug\net8.0\Encoding-Demo.GeneratedMSBuildEditorConfig.editorconfig
+D:\Demo\Encoding\Encoding-Demo\obj\Debug\net8.0\Encoding-Demo.AssemblyInfoInputs.cache
+D:\Demo\Encoding\Encoding-Demo\obj\Debug\net8.0\Encoding-Demo.AssemblyInfo.cs
+D:\Demo\Encoding\Encoding-Demo\obj\Debug\net8.0\Encoding-Demo.csproj.CoreCompileInputs.cache
+D:\Demo\Encoding\Encoding-Demo\obj\Debug\net8.0\Encoding-Demo.dll
+D:\Demo\Encoding\Encoding-Demo\obj\Debug\net8.0\refint\Encoding-Demo.dll
+D:\Demo\Encoding\Encoding-Demo\obj\Debug\net8.0\Encoding-Demo.pdb
+D:\Demo\Encoding\Encoding-Demo\obj\Debug\net8.0\Encoding-Demo.genruntimeconfig.cache
+D:\Demo\Encoding\Encoding-Demo\obj\Debug\net8.0\ref\Encoding-Demo.dll
