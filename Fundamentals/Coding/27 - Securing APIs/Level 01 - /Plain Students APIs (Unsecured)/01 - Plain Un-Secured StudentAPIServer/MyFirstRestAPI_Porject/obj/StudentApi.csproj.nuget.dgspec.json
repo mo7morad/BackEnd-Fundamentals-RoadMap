@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/Level 01 - /Continuation Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/StudentApi.csproj": {}
+    "/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/Level 01 - /Plain Students APIs (Unsecured)/01 - Plain Un-Secured StudentAPIServer/MyFirstRestAPI_Porject/StudentApi.csproj": {}
   },
   "projects": {
-    "/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/Level 01 - /Continuation Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/StudentApi.csproj": {
+    "/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/Level 01 - /Plain Students APIs (Unsecured)/01 - Plain Un-Secured StudentAPIServer/MyFirstRestAPI_Porject/StudentApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/Level 01 - /Continuation Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/StudentApi.csproj",
+        "projectUniqueName": "/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/Level 01 - /Plain Students APIs (Unsecured)/01 - Plain Un-Secured StudentAPIServer/MyFirstRestAPI_Porject/StudentApi.csproj",
         "projectName": "StudentApi",
-        "projectPath": "/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/Level 01 - /Continuation Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/StudentApi.csproj",
+        "projectPath": "/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/Level 01 - /Plain Students APIs (Unsecured)/01 - Plain Un-Secured StudentAPIServer/MyFirstRestAPI_Porject/StudentApi.csproj",
         "packagesPath": "/Users/mohamedmorad/.nuget/packages/",
-        "outputPath": "/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/Level 01 - /Continuation Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/",
+        "outputPath": "/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/Level 01 - /Plain Students APIs (Unsecured)/01 - Plain Un-Secured StudentAPIServer/MyFirstRestAPI_Porject/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mohamedmorad/.nuget/NuGet/NuGet.Config"

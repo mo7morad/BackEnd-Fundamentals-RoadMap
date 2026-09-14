@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yTOWUfP+bec=",
+  "dgSpecHash": "pyzyE8LhPTM=",
   "success": true,
-  "projectFilePath": "/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/Level 01 - /Continuation Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/StudentApi.csproj",
+  "projectFilePath": "/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/Level 01 - /Plain Students APIs (Unsecured)/01 - Plain Un-Secured StudentAPIServer/MyFirstRestAPI_Porject/StudentApi.csproj",
   "expectedPackageFiles": [
     "/Users/mohamedmorad/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/Users/mohamedmorad/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
