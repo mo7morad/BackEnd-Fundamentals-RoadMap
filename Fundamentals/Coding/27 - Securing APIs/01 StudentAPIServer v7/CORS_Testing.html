@@ -1,0 +1,62 @@
+<!--
+  Serve this file over HTTP so the browser performs CORS checks.
+  In VS Code, use Live Server on port 5500, or run from this folder:
+    npx serve -l 5500 .
+  Opening this file as file:// will not trigger normal CORS checks.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student API CORS Test</title>
+  <style>
+    body { font-family: system-ui, sans-serif; line-height: 1.5; margin: 2rem auto; max-width: 60rem; padding: 0 1rem; }
+    button { cursor: pointer; margin: 0.25rem 0.5rem 0.25rem 0; padding: 0.6rem 0.9rem; }
+    pre { background: #f4f4f4; border: 1px solid #ccc; min-height: 12rem; overflow: auto; padding: 1rem; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>Student API CORS Test</h1>
+  <p>Serve this page from <code>http://localhost:5500</code>. Opening it directly as a file gives it the origin <code>null</code>, which this API correctly rejects.</p>
+  <button id="allowedRequest" type="button">Call API on port 5215 (allowed)</button>
+  <button id="blockedRequest" type="button">Call API on port 7218 (unavailable)</button>
+  <pre id="output" aria-live="polite">Click a button to make a request.</pre>
+
+  <script>
+    const output = document.getElementById('output');
+    const allowedUrl = 'http://localhost:5215/api/Students/All';
+    const blockedUrl = 'https://localhost:7218/api/Students/All';
+
+    function formatBody(body) {
+      try {
+        return JSON.stringify(JSON.parse(body), null, 2);
+      } catch {
+        return body || '(empty response body)';
+      }
+    }
+
+    async function callApi(url) {
+      output.textContent = `Requesting ${url}...`;
+      try {
+        const response = await fetch(url, { method: 'GET', credentials: 'include' });
+        const body = await response.text();
+        output.textContent = `HTTP ${response.status} ${response.statusText}\n\n${formatBody(body)}`;
+      } catch (error) {
+        output.textContent = [
+          `Request failed: ${error.name}: ${error.message}`,
+          '',
+          'Check the browser console for the exact CORS message.',
+          'A failed connection or untrusted HTTPS certificate can also produce a fetch TypeError.',
+          'The 7218 check expects no server to be listening there; it is not a CORS-policy check.',
+          '',
+          `URL: ${url}`
+        ].join('\n');
+      }
+    }
+
+    document.getElementById('allowedRequest').addEventListener('click', () => callApi(allowedUrl));
+    document.getElementById('blockedRequest').addEventListener('click', () => callApi(blockedUrl));
+  </script>
+</body>
+</html>

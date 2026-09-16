@@ -177,7 +177,6 @@ D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net
 D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/ref/StudentApi.dll
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/appsettings.Development.json
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/appsettings.json
-/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.staticwebassets.endpoints.json
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.deps.json
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.runtimeconfig.json
@@ -188,7 +187,6 @@ D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.AssemblyReference.cache
-/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/rpswa.dswa.cache.json
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.GeneratedMSBuildEditorConfig.editorconfig
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.AssemblyInfoInputs.cache
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.AssemblyInfo.cs
@@ -196,18 +194,20 @@ D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.MvcApplicationPartsAssemblyInfo.cs
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.MvcApplicationPartsAssemblyInfo.cache
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.sourcelink.json
-/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/rjimswa.dswa.cache.json
-/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/rjsmrazor.dswa.cache.json
-/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/rjsmcshtml.dswa.cache.json
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/scopedcss/bundle/StudentApi.styles.css
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.build.json
-/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.build.json.cache
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.development.json
-/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.build.endpoints.json
-/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/swae.build.ex.cache
-/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.Up2Date
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.dll
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/refint/StudentApi.dll
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.pdb
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.genruntimeconfig.cache
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/ref/StudentApi.dll
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.staticwebassets.endpoints.json
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/rpswa.dswa.cache.json
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/rjimswa.dswa.cache.json
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/rjsmrazor.dswa.cache.json
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/rjsmcshtml.dswa.cache.json
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.build.json.cache
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.build.endpoints.json
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/swae.build.ex.cache
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.Up2Date
