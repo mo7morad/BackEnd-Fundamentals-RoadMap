@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "2F9kwCsc9lc=",
+  "dgSpecHash": "hhatKSzBXRc=",
   "success": true,
   "projectFilePath": "/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/StudentApi.csproj",
   "expectedPackageFiles": [
+    "/Users/mohamedmorad/.nuget/packages/bcrypt.net-next/4.2.0/bcrypt.net-next.4.2.0.nupkg.sha512",
     "/Users/mohamedmorad/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/Users/mohamedmorad/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
     "/Users/mohamedmorad/.nuget/packages/swashbuckle.aspnetcore/6.4.0/swashbuckle.aspnetcore.6.4.0.nupkg.sha512",

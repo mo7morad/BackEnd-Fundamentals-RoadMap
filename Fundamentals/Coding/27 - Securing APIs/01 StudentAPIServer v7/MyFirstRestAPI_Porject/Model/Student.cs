@@ -7,6 +7,9 @@
         public int Age { get; set; }
         public int Grade { get; set; }
 
-
+        // Authentication-related fields
+        public string Email { get; set; }
+        public string PasswordHash { get; set; }
+        public string Role { get; set; }
     }
 }

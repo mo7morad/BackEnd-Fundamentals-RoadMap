@@ -202,6 +202,7 @@ D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.pdb
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.genruntimeconfig.cache
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/ref/StudentApi.dll
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/BCrypt-Net-Next.dll
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.staticwebassets.endpoints.json
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/rpswa.dswa.cache.json
 /Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/rjimswa.dswa.cache.json
