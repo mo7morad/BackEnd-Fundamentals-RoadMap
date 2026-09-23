@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JWT Auth & RBAC Studio</title>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: #111827;
+      --card-border: #1f293d;
+      --card-hover: #172033;
+      --input-bg: #0b0f19;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-subtle: #64748b;
+      --accent: #6366f1;
+      --accent-hover: #4f46e5;
+      --accent-light: rgba(99, 102, 241, 0.12);
+      --jwt-red: #f43f5e;
+      --jwt-purple: #a855f7;
+      --jwt-cyan: #06b6d4;
+      --emerald: #10b981;
+      --amber: #f59e0b;
+      --rose: #f43f5e;
+      --radius: 12px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, sans-serif; }
+    body { background: var(--bg); color: var(--text); min-height: 100vh; display: flex; flex-direction: column; }
+    
+    /* Top Navigation Bar */
+    .navbar {
+      height: 64px; border-bottom: 1px solid var(--card-border); background: rgba(9, 13, 22, 0.8);
+      backdrop-filter: blur(12px); display: flex; align-items: center; justify-content: space-between;
+      padding: 0 32px; position: sticky; top: 0; z-index: 50;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 1.1rem; }
+    .brand-icon {
+      width: 32px; height: 32px; border-radius: 8px; background: linear-gradient(135deg, #6366f1, #a855f7);
+      display: flex; align-items: center; justify-content: center; font-size: 16px;
+    }
+    .server-status {
+      display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--text-muted);
+      background: var(--input-bg); border: 1px solid var(--card-border); padding: 6px 14px; border-radius: 20px;
+    }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--emerald); box-shadow: 0 0 8px var(--emerald); }
+    .dot.offline { background: var(--amber); box-shadow: 0 0 8px var(--amber); }
+
+    /* App Layout */
+    .app-container {
+      max-width: 1380px; margin: 0 auto; width: 100%; padding: 28px 32px; flex: 1;
+      display: grid; grid-template-columns: 460px 1fr; gap: 28px;
+    }
+    @media (max-width: 1080px) {
+      .app-container { grid-template-columns: 1fr; }
+    }
+
+    /* Cards */
+    .card {
+      background: var(--card-bg); border: 1px solid var(--card-border); border-radius: var(--radius);
+      padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    }
+    .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+    .card-title { font-size: 1rem; font-weight: 600; color: #fff; letter-spacing: -0.01em; display: flex; align-items: center; gap: 8px; }
+    .card-subtitle { font-size: 0.8rem; color: var(--text-subtle); margin-top: 2px; }
+
+    /* User Role Switcher */
+    .account-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+    .account-btn {
+      background: var(--input-bg); border: 1px solid var(--card-border); border-radius: 10px;
+      padding: 12px; cursor: pointer; text-align: left; transition: all 0.2s ease;
+    }
+    .account-btn:hover { border-color: var(--accent); background: var(--card-hover); }
+    .account-btn.active { border-color: var(--accent); background: var(--accent-light); }
+    .account-name { font-size: 0.9rem; font-weight: 600; color: #fff; display: flex; justify-content: space-between; align-items: center; }
+    .account-role { font-size: 0.72rem; padding: 2px 6px; border-radius: 4px; font-weight: 600; text-transform: uppercase; }
+    .role-student { background: rgba(56, 189, 248, 0.15); color: #38bdf8; }
+    .role-admin { background: rgba(168, 85, 247, 0.15); color: #c084fc; }
+    .account-email { font-size: 0.75rem; color: var(--text-subtle); margin-top: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+    /* Inputs & Buttons */
+    .field { margin-bottom: 14px; }
+    .field label { display: block; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 6px; font-weight: 500; }
+    .input-wrap { position: relative; }
+    input {
+      width: 100%; background: var(--input-bg); border: 1px solid var(--card-border);
+      border-radius: 8px; padding: 10px 14px; color: #fff; font-size: 0.88rem; outline: none; transition: border-color 0.2s;
+    }
+    input:focus { border-color: var(--accent); }
+    
+    .btn {
+      width: 100%; padding: 11px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 600;
+      border: none; cursor: pointer; display: inline-flex; align-items: center; justify-content: center;
+      gap: 8px; transition: all 0.2s;
+    }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: var(--accent-hover); }
+    .btn-secondary { background: #1e293b; color: var(--text); border: 1px solid var(--card-border); }
+    .btn-secondary:hover { background: #334155; }
+    .btn-danger { background: rgba(244, 63, 94, 0.12); color: var(--rose); border: 1px solid rgba(244, 63, 94, 0.3); }
+    .btn-danger:hover { background: var(--rose); color: #fff; }
+    .btn-sm { width: auto; padding: 6px 12px; font-size: 0.78rem; border-radius: 6px; }
+
+    /* Endpoint Playground */
+    .endpoint-item {
+      background: var(--input-bg); border: 1px solid var(--card-border); border-radius: 10px;
+      padding: 14px 16px; margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between;
+      transition: border-color 0.2s;
+    }
+    .endpoint-item:hover { border-color: #2e3d5b; }
+    .endpoint-meta { display: flex; align-items: center; gap: 10px; }
+    .method-badge {
+      font-size: 0.7rem; font-weight: 700; padding: 3px 6px; border-radius: 4px; font-family: monospace;
+    }
+    .method-get { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+    .method-delete { background: rgba(244, 63, 94, 0.15); color: #f87171; }
+    .endpoint-path { font-size: 0.85rem; font-weight: 500; font-family: ui-monospace, Menlo, monospace; color: #fff; }
+    .endpoint-guard { font-size: 0.72rem; color: var(--text-subtle); margin-top: 2px; }
+
+    /* Tabs & Content */
+    .tab-bar {
+      display: flex; gap: 4px; background: var(--input-bg); padding: 4px; border-radius: 10px;
+      border: 1px solid var(--card-border); margin-bottom: 20px;
+    }
+    .tab-btn {
+      flex: 1; padding: 8px 12px; border-radius: 7px; border: none; background: transparent;
+      color: var(--text-muted); font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: all 0.2s;
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+    }
+    .tab-btn.active { background: var(--card-bg); color: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
+
+    /* Token Dissector View */
+    .token-display-box {
+      background: var(--input-bg); border: 1px solid var(--card-border); border-radius: 10px;
+      padding: 16px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.85rem;
+      line-height: 1.6; word-break: break-all; margin-bottom: 18px; max-height: 110px; overflow-y: auto;
+    }
+    .token-h { color: var(--jwt-red); font-weight: 600; }
+    .token-p { color: var(--jwt-purple); font-weight: 600; }
+    .token-s { color: var(--jwt-cyan); font-weight: 600; }
+    .token-dot { color: #fff; font-weight: bold; }
+
+    .claims-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+    .claim-card {
+      background: var(--input-bg); border: 1px solid var(--card-border); border-radius: 8px;
+      padding: 12px 14px;
+    }
+    .claim-label { font-size: 0.72rem; color: var(--text-subtle); text-transform: uppercase; font-weight: 600; letter-spacing: 0.04em; }
+    .claim-val { font-size: 0.92rem; font-weight: 600; color: #fff; margin-top: 4px; font-family: ui-monospace, monospace; }
+
+    .json-code {
+      background: var(--input-bg); border: 1px solid var(--card-border); border-radius: 8px;
+      padding: 14px; font-family: ui-monospace, Menlo, monospace; font-size: 0.8rem; line-height: 1.5;
+      overflow-x: auto; color: #cbd5e1; max-height: 220px;
+    }
+
+    /* Response & Network Inspector */
+    .response-banner {
+      display: flex; justify-content: space-between; align-items: center; padding: 12px 16px;
+      background: var(--input-bg); border: 1px solid var(--card-border); border-radius: 8px; margin-bottom: 14px;
+    }
+    .status-tag {
+      padding: 4px 10px; border-radius: 6px; font-size: 0.8rem; font-weight: 700; font-family: monospace;
+    }
+    .status-ok { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid #10b981; }
+    .status-unauth { background: rgba(244, 63, 94, 0.15); color: #f87171; border: 1px solid #f43f5e; }
+    .status-forbidden { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid #f59e0b; }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed; bottom: 24px; right: 24px; background: #1e293b; border: 1px solid #334155;
+      color: #fff; padding: 10px 18px; border-radius: 8px; font-size: 0.85rem; font-weight: 500;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5); opacity: 0; transform: translateY(10px);
+      transition: all 0.25s ease; pointer-events: none; z-index: 100;
+    }
+    .toast.show { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+  <!-- Minimalist Navbar -->
+  <nav class="navbar">
+    <div class="brand">
+      <div class="brand-icon">🛡️</div>
+      <span>JWT Auth & RBAC Studio</span>
+    </div>
+    <div style="display:flex; align-items:center; gap:14px;">
+      <div class="server-status">
+        <div class="dot" id="serverDot"></div>
+        <span id="serverStatusText">Backend: Connected (5215)</span>
+      </div>
+      <button class="btn btn-secondary btn-sm" onclick="resetSeedData()">🔄 Restore Accounts</button>
+      <button class="btn btn-secondary btn-sm" onclick="pingServer()">⚡ Re-Check</button>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <div class="app-container">
+
+    <!-- Left Column: Controls (Authentication & Request Actions) -->
+    <div style="display:flex; flex-direction:column; gap:20px;">
+
+      <!-- Card 1: Identity & Credentials -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">1. Choose Identity & Sign In</div>
+            <div class="card-subtitle">Verifies BCrypt hash & issues signed JWT</div>
+          </div>
+          <span id="activeUserBadge" class="account-role role-student">Active: Ali</span>
+        </div>
+
+        <!-- Quick Switcher -->
+        <div class="account-grid">
+          <div class="account-btn active" id="userBtnAli" onclick="setUser('ali.ahmed@student.com', 'password1', 'Student', 'Ali Ahmed')">
+            <div class="account-name">
+              <span>Ali Ahmed</span>
+              <span class="account-role role-student">Student</span>
+            </div>
+            <div class="account-email">ali.ahmed@student.com</div>
+          </div>
+
+          <div class="account-btn" id="userBtnAlia" onclick="setUser('alia.maher@admin.com', 'admin123', 'Admin', 'Alia Maher')">
+            <div class="account-name">
+              <span>Alia Maher</span>
+              <span class="account-role role-admin">Admin</span>
+            </div>
+            <div class="account-email">alia.maher@admin.com</div>
+          </div>
+        </div>
+
+        <!-- Input Fields -->
+        <div class="field">
+          <label>Email Address</label>
+          <input id="emailInput" value="ali.ahmed@student.com" />
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input id="passwordInput" type="password" value="password1" />
+        </div>
+
+        <button class="btn btn-primary" onclick="login()">
+          <span>Sign In & Generate JWT</span>
+        </button>
+      </div>
+
+      <!-- Card 2: Protected Endpoints & Security Checks -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">2. Test Protected Endpoints</div>
+            <div class="card-subtitle">Observe ASP.NET Core Bearer & RBAC filters</div>
+          </div>
+        </div>
+
+        <!-- Endpoint: All Students -->
+        <div class="endpoint-item">
+          <div>
+            <div class="endpoint-meta">
+              <span class="method-badge method-get">GET</span>
+              <span class="endpoint-path">/api/Students/All</span>
+            </div>
+            <div class="endpoint-guard">Guarded by: <code>[Authorize]</code> (Student & Admin)</div>
+          </div>
+          <button class="btn btn-secondary btn-sm" onclick="sendRequest('GET', '/api/Students/All')">Send</button>
+        </div>
+
+        <!-- Endpoint: Delete Student (Admin only) -->
+        <div class="endpoint-item">
+          <div>
+            <div class="endpoint-meta">
+              <span class="method-badge method-delete">DELETE</span>
+              <span class="endpoint-path">/api/Students/1</span>
+            </div>
+            <div class="endpoint-guard">Guarded by: <code>[Authorize(Roles = "Admin")]</code></div>
+          </div>
+          <button class="btn btn-danger btn-sm" onclick="sendRequest('DELETE', '/api/Students/1')">Admin Delete</button>
+        </div>
+
+        <!-- Security Attack Simulators -->
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:16px;">
+          <button class="btn btn-secondary btn-sm" style="font-size:0.75rem;" onclick="sendWithoutToken()">
+            🚫 No Token (401)
+          </button>
+          <button class="btn btn-secondary btn-sm" style="font-size:0.75rem;" onclick="tamperToken()">
+            ⚠️ Tamper Role (401)
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right Column: Inspector & Output (Tabbed, Spacious, Clean) -->
+    <div>
+      <div class="card" style="min-height:100%;">
+        
+        <!-- Tab Bar -->
+        <div class="tab-bar">
+          <button class="tab-btn active" id="tabBtnJwt" onclick="switchTab('jwt')">
+            <span>🔍 Token Anatomy</span>
+          </button>
+          <button class="tab-btn" id="tabBtnResponse" onclick="switchTab('response')">
+            <span>📡 Live Response</span>
+          </button>
+          <button class="tab-btn" id="tabBtnLogs" onclick="switchTab('logs')">
+            <span>📋 Activity Feed</span>
+          </button>
+        </div>
+
+        <!-- TAB 1: Token Anatomy -->
+        <div id="tabContentJwt">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <label style="font-size:0.8rem; color:var(--text-subtle); text-transform:uppercase; font-weight:600;">
+              Raw Encoded JWT (<span style="color:var(--jwt-red)">Header</span>.<span style="color:var(--jwt-purple)">Payload</span>.<span style="color:var(--jwt-cyan)">Signature</span>)
+            </label>
+            <button class="btn btn-secondary btn-sm" style="padding:3px 8px;" onclick="copyToken()">Copy Token</button>
+          </div>
+
+          <div class="token-display-box" id="tokenBox">
+            <span style="color:var(--text-subtle); font-style:italic;">No active token. Click 'Sign In' on the left.</span>
+          </div>
+
+          <!-- Clean Claim Overview Badges -->
+          <div class="claims-grid">
+            <div class="claim-card">
+              <div class="claim-label">Authenticated Role</div>
+              <div class="claim-val" id="claimRoleDisplay" style="color:var(--text-subtle);">None</div>
+            </div>
+            <div class="claim-card">
+              <div class="claim-label">Token Expiration</div>
+              <div class="claim-val" id="claimExpDisplay" style="color:var(--text-subtle);">--:--</div>
+            </div>
+            <div class="claim-card">
+              <div class="claim-label">NameIdentifier (ID)</div>
+              <div class="claim-val" id="claimIdDisplay" style="color:var(--text-subtle);">--</div>
+            </div>
+            <div class="claim-card">
+              <div class="claim-label">Cryptographic Algorithm</div>
+              <div class="claim-val" style="color:#38bdf8;">HMAC-SHA256</div>
+            </div>
+          </div>
+
+          <!-- Decoded JSON View -->
+          <div style="margin-top:14px;">
+            <div style="font-size:0.8rem; font-weight:600; color:var(--text-muted); margin-bottom:6px;">Decoded Payload Claims:</div>
+            <pre class="json-code" id="decodedPayloadJson">// Log in to inspect decrypted claims</pre>
+          </div>
+        </div>
+
+        <!-- TAB 2: Live HTTP Response -->
+        <div id="tabContentResponse" style="display:none;">
+          <div class="response-banner">
+            <div>
+              <span id="responseMethod" style="font-family:monospace; font-weight:700; margin-right:8px;">GET</span>
+              <span id="responseUrl" style="font-family:monospace; color:var(--text-muted);">/api/Students/All</span>
+            </div>
+            <div id="responseStatusBadge" class="status-tag status-ok">200 OK</div>
+          </div>
+
+          <div id="responseExplanation" style="background:#131c2e; border:1px solid #23314d; padding:12px 14px; border-radius:8px; font-size:0.82rem; margin-bottom:14px; color:#cbd5e1;">
+            Ready to dispatch HTTP requests. Click any 'Send' button on the left to inspect the live response.
+          </div>
+
+          <div style="font-size:0.8rem; font-weight:600; color:var(--text-muted); margin-bottom:6px;">HTTP Response Payload:</div>
+          <pre class="json-code" id="responseBodyJson">// Response output will render here</pre>
+        </div>
+
+        <!-- TAB 3: Activity Feed -->
+        <div id="tabContentLogs" style="display:none;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+            <span style="font-size:0.82rem; color:var(--text-subtle);">Real-time dispatch log</span>
+            <button class="btn btn-secondary btn-sm" onclick="clearActivity()">Clear</button>
+          </div>
+          <pre class="json-code" id="activityFeed" style="max-height:420px; line-height:1.7;">[Studio Initialized] Ready.</pre>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="toast" id="toast">Copied to clipboard!</div>
+
+<script>
+  const API_BASE = "http://localhost:5215";
+  let activeToken = "";
+  let expInterval = null;
+
+  function showToast(msg) {
+    const t = document.getElementById("toast");
+    t.textContent = msg;
+    t.classList.add("show");
+    setTimeout(() => t.classList.remove("show"), 2000);
+  }
+
+  function appendActivity(msg, badge = "") {
+    const feed = document.getElementById("activityFeed");
+    const time = new Date().toLocaleTimeString();
+    feed.innerHTML = `[${time}] ${badge ? badge + " " : ""}${msg}\n` + feed.innerHTML;
+  }
+
+  function clearActivity() {
+    document.getElementById("activityFeed").innerHTML = "[Log Cleared]";
+  }
+
+  function switchTab(name) {
+    document.getElementById("tabBtnJwt").classList.toggle("active", name === "jwt");
+    document.getElementById("tabBtnResponse").classList.toggle("active", name === "response");
+    document.getElementById("tabBtnLogs").classList.toggle("active", name === "logs");
+
+    document.getElementById("tabContentJwt").style.display = name === "jwt" ? "block" : "none";
+    document.getElementById("tabContentResponse").style.display = name === "response" ? "block" : "none";
+    document.getElementById("tabContentLogs").style.display = name === "logs" ? "block" : "none";
+  }
+
+  function setUser(email, password, role, name) {
+    document.getElementById("emailInput").value = email;
+    document.getElementById("passwordInput").value = password;
+    document.getElementById("userBtnAli").classList.toggle("active", role === "Student");
+    document.getElementById("userBtnAlia").classList.toggle("active", role === "Admin");
+
+    const badge = document.getElementById("activeUserBadge");
+    badge.textContent = `Active: ${name}`;
+    badge.className = `account-role ${role === "Admin" ? "role-admin" : "role-student"}`;
+
+    appendActivity(`Selected profile: ${name} (${role})`);
+  }
+
+  async function pingServer() {
+    const dot = document.getElementById("serverDot");
+    const text = document.getElementById("serverStatusText");
+    try {
+      const res = await fetch(`${API_BASE}/api/Students/All`, { method: "GET" });
+      dot.className = "dot";
+      text.textContent = "Backend: Live & Protected (5215)";
+      showToast("Backend connection healthy!");
+    } catch (e) {
+      dot.className = "dot offline";
+      text.textContent = "Backend: Unreachable";
+      showToast("Cannot reach backend on port 5215");
+    }
+  }
+
+  // Base64Url Helpers
+  function b64Decode(str) {
+    let output = str.replace(/-/g, "+").replace(/_/g, "/");
+    switch (output.length % 4) {
+      case 0: break;
+      case 2: output += "=="; break;
+      case 3: output += "="; break;
+      default: throw "Illegal base64url string!";
+    }
+    return decodeURIComponent(escape(atob(output)));
+  }
+
+  function b64Encode(str) {
+    return btoa(unescape(encodeURIComponent(str)))
+      .replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+  }
+
+  async function login() {
+    const email = document.getElementById("emailInput").value.trim();
+    const password = document.getElementById("passwordInput").value.trim();
+
+    appendActivity(`POST /api/Auth/login with ${email}`);
+    try {
+      const res = await fetch(`${API_BASE}/api/Auth/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password })
+      });
+
+      if (!res.ok) {
+        showToast("Login failed! Invalid credentials");
+        appendActivity(`Login failed: HTTP ${res.status}`, "❌");
+        return;
+      }
+
+      const data = await res.json();
+      activeToken = data.token;
+      showToast("Signed in successfully!");
+      appendActivity("Received JWT token from server", "✅");
+      dissect(activeToken);
+      switchTab("jwt");
+
+    } catch (err) {
+      showToast("Network error connecting to backend");
+      appendActivity(`Error: ${err.message}`, "❌");
+    }
+  }
+
+  function dissect(token) {
+    try {
+      const parts = token.split(".");
+      if (parts.length !== 3) return;
+
+      document.getElementById("tokenBox").innerHTML = `
+        <span class="token-h">${parts[0]}</span><span class="token-dot">.</span><span class="token-p">${parts[1]}</span><span class="token-dot">.</span><span class="token-s">${parts[2]}</span>
+      `;
+
+      const payload = JSON.parse(b64Decode(parts[1]));
+      document.getElementById("decodedPayloadJson").textContent = JSON.stringify(payload, null, 2);
+
+      const roleKey = "http://schemas.microsoft.com/ws/2008/06/identity/claims/role";
+      const idKey = "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier";
+      const role = payload[roleKey] || payload["role"] || "Unknown";
+      const id = payload[idKey] || payload["nameid"] || "1";
+
+      const roleEl = document.getElementById("claimRoleDisplay");
+      roleEl.textContent = role;
+      roleEl.style.color = role === "Admin" ? "var(--jwt-purple)" : "var(--emerald)";
+      document.getElementById("claimIdDisplay").textContent = id;
+
+      // Timer
+      if (expInterval) clearInterval(expInterval);
+      if (payload.exp) {
+        const updateTimer = () => {
+          const rem = payload.exp - Math.floor(Date.now() / 1000);
+          if (rem <= 0) {
+            document.getElementById("claimExpDisplay").textContent = "Expired";
+            document.getElementById("claimExpDisplay").style.color = "var(--rose)";
+          } else {
+            const m = Math.floor(rem / 60);
+            const s = rem % 60;
+            document.getElementById("claimExpDisplay").textContent = `${m}m ${s < 10 ? "0" : ""}${s}s`;
+            document.getElementById("claimExpDisplay").style.color = "#38bdf8";
+          }
+        };
+        updateTimer();
+        expInterval = setInterval(updateTimer, 1000);
+      }
+
+    } catch (e) {
+      appendActivity(`Decode error: ${e.message}`, "⚠️");
+    }
+  }
+
+  async function sendRequest(method, path, customToken = null) {
+    if (customToken === null && !activeToken) {
+      showToast("Please sign in first to obtain a JWT!");
+      return;
+    }
+
+    const tokenToSend = customToken !== null ? customToken : activeToken;
+    const headers = {};
+    if (tokenToSend) {
+      headers["Authorization"] = `Bearer ${tokenToSend}`;
+    }
+
+    appendActivity(`${method} ${path}`, "🚀");
+    try {
+      const res = await fetch(`${API_BASE}${path}`, { method, headers });
+      const bodyText = await res.text();
+
+      document.getElementById("responseMethod").textContent = method;
+      document.getElementById("responseUrl").textContent = path;
+
+      const badge = document.getElementById("responseStatusBadge");
+      badge.textContent = `${res.status} ${res.statusText}`;
+
+      const expEl = document.getElementById("responseExplanation");
+      if (res.status === 200 || res.status === 201) {
+        badge.className = "status-tag status-ok";
+        expEl.innerHTML = `<strong>Success (200 OK)</strong>: Token validated and authorized for this route.`;
+      } else if (res.status === 403) {
+        badge.className = "status-tag status-forbidden";
+        expEl.innerHTML = `<strong>Forbidden (403)</strong>: Token signature is valid, but your role lacks required <code>[Authorize(Roles = "Admin")]</code> permission.`;
+      } else if (res.status === 401) {
+        badge.className = "status-tag status-unauth";
+        expEl.innerHTML = `<strong>Unauthorized (401)</strong>: Token missing, expired, or invalid cryptographic signature.`;
+      }
+
+      let parsed = bodyText;
+      try { parsed = JSON.stringify(JSON.parse(bodyText), null, 2); } catch (_) {}
+      document.getElementById("responseBodyJson").textContent = parsed || "(Empty response body)";
+
+      switchTab("response");
+      appendActivity(`Received HTTP ${res.status} from ${path}`, res.ok ? "✅" : "⚠️");
+
+    } catch (err) {
+      showToast(`Error: ${err.message}`);
+      appendActivity(`Network Error: ${err.message}`, "❌");
+    }
+  }
+
+  function sendWithoutToken() {
+    sendRequest("GET", "/api/Students/All", "");
+  }
+
+  function tamperToken() {
+    if (!activeToken) {
+      showToast("Sign in first before running tamper test!");
+      return;
+    }
+    try {
+      const parts = activeToken.split(".");
+      const payload = JSON.parse(b64Decode(parts[1]));
+      
+      // Elevate claim
+      const roleKey = "http://schemas.microsoft.com/ws/2008/06/identity/claims/role";
+      payload[roleKey] = "Admin";
+      payload["role"] = "Admin";
+
+      const forgedPayload = b64Encode(JSON.stringify(payload));
+      // Pair forged payload with old signature
+      const tampered = `${parts[0]}.${forgedPayload}.${parts[2]}`;
+
+      appendActivity("Attempting signature tamper attack (elevating role to Admin)...", "⚠️");
+      sendRequest("DELETE", "/api/Students/1", tampered);
+
+    } catch (e) {
+      showToast(`Tamper error: ${e.message}`);
+    }
+  }
+
+  function copyToken() {
+    if (!activeToken) return;
+    navigator.clipboard.writeText(activeToken);
+    showToast("JWT token copied to clipboard!");
+  }
+
+  async function resetSeedData() {
+    try {
+      await fetch(`${API_BASE}/api/Students/Reset`, { method: "POST" });
+      showToast("All seed accounts restored!");
+      appendActivity("Restored seed accounts (Ali, Fadi, Ola, Alia)", "🔄");
+      login();
+    } catch (e) {
+      showToast(`Reset failed: ${e.message}`);
+    }
+  }
+
+  // Initial auto-login with Ali Ahmed on start for immediate visualization
+  window.addEventListener("DOMContentLoaded", () => {
+    login();
+  });
+</script>
+</body>
+</html>

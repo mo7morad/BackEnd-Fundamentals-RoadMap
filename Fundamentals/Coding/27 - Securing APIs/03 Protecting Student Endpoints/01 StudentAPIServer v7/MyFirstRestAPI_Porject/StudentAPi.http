@@ -1,0 +1,6 @@
+@StudentAPi_HostAddress = http://localhost:5215
+
+GET {{StudentAPi_HostAddress}}/Students/
+Accept: application/json
+
+###

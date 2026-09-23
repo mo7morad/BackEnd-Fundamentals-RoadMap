@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "dgSpecHash": "abCQDctLUlVMqO44KpAXZT6mgmG6aw2UWWDqXGn/7M29mG1Mm/llzEi0boQm0529V6asTJ3A2lBJzr3UzE7wcg==",
+  "success": true,
+  "projectFilePath": "/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/02 Login Endpoint -  Verifying Passwords & Issuing JWT/ StudentAPIServer  - Auth (JWT)/MyFirstRestAPI_Porject/StudentApi.csproj",
+  "expectedPackageFiles": [
+    "/Users/mohamedmorad/.nuget/packages/bcrypt.net-next/4.2.0/bcrypt.net-next.4.2.0.nupkg.sha512",
+    "/Users/mohamedmorad/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/8.0.11/microsoft.aspnetcore.authentication.jwtbearer.8.0.11.nupkg.sha512",
+    "/Users/mohamedmorad/.nuget/packages/microsoft.bcl.cryptography/10.0.2/microsoft.bcl.cryptography.10.0.2.nupkg.sha512",
+    "/Users/mohamedmorad/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/Users/mohamedmorad/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/Users/mohamedmorad/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "/Users/mohamedmorad/.nuget/packages/microsoft.identitymodel.abstractions/8.23.0/microsoft.identitymodel.abstractions.8.23.0.nupkg.sha512",
+    "/Users/mohamedmorad/.nuget/packages/microsoft.identitymodel.jsonwebtokens/8.23.0/microsoft.identitymodel.jsonwebtokens.8.23.0.nupkg.sha512",
+    "/Users/mohamedmorad/.nuget/packages/microsoft.identitymodel.logging/8.23.0/microsoft.identitymodel.logging.8.23.0.nupkg.sha512",
+    "/Users/mohamedmorad/.nuget/packages/microsoft.identitymodel.protocols/7.1.2/microsoft.identitymodel.protocols.7.1.2.nupkg.sha512",
+    "/Users/mohamedmorad/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/7.1.2/microsoft.identitymodel.protocols.openidconnect.7.1.2.nupkg.sha512",
+    "/Users/mohamedmorad/.nuget/packages/microsoft.identitymodel.tokens/8.23.0/microsoft.identitymodel.tokens.8.23.0.nupkg.sha512",
+    "/Users/mohamedmorad/.nuget/packages/microsoft.openapi/1.6.14/microsoft.openapi.1.6.14.nupkg.sha512",
+    "/Users/mohamedmorad/.nuget/packages/swashbuckle.aspnetcore/6.6.2/swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
+    "/Users/mohamedmorad/.nuget/packages/swashbuckle.aspnetcore.swagger/6.6.2/swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
+    "/Users/mohamedmorad/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.6.2/swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
+    "/Users/mohamedmorad/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.6.2/swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512",
+    "/Users/mohamedmorad/.nuget/packages/system.formats.asn1/10.0.2/system.formats.asn1.10.0.2.nupkg.sha512",
+    "/Users/mohamedmorad/.nuget/packages/system.identitymodel.tokens.jwt/8.23.0/system.identitymodel.tokens.jwt.8.23.0.nupkg.sha512"
+  ],
+  "logs": []
+}

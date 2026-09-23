@@ -1,0 +1,375 @@
+D:/Dropbox/Personal/Advices/2021/Web/WebAPI Course/01 WebAPI/Final CRUD/03 Student API Project/05 Student API Project v5 - Put - Add New/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.AssemblyReference.cache
+D:/Dropbox/Personal/Advices/2021/Web/WebAPI Course/01 WebAPI/Final CRUD/03 Student API Project/05 Student API Project v5 - Put - Add New/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.GeneratedMSBuildEditorConfig.editorconfig
+D:/Dropbox/Personal/Advices/2021/Web/WebAPI Course/01 WebAPI/Final CRUD/03 Student API Project/05 Student API Project v5 - Put - Add New/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.AssemblyInfoInputs.cache
+D:/Dropbox/Personal/Advices/2021/Web/WebAPI Course/01 WebAPI/Final CRUD/03 Student API Project/05 Student API Project v5 - Put - Add New/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.AssemblyInfo.cs
+D:/Dropbox/Personal/Advices/2021/Web/WebAPI Course/01 WebAPI/Final CRUD/03 Student API Project/05 Student API Project v5 - Put - Add New/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.CoreCompileInputs.cache
+D:/Dropbox/Personal/Advices/2021/Web/WebAPI Course/01 WebAPI/Final CRUD/03 Student API Project/05 Student API Project v5 - Put - Add New/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.MvcApplicationPartsAssemblyInfo.cs
+D:/Dropbox/Personal/Advices/2021/Web/WebAPI Course/01 WebAPI/Final CRUD/03 Student API Project/05 Student API Project v5 - Put - Add New/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.MvcApplicationPartsAssemblyInfo.cache
+D:/Dropbox/Personal/Advices/2021/Web/WebAPI Course/01 WebAPI/Final CRUD/03 Student API Project/05 Student API Project v5 - Put - Add New/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.build.json
+D:/Dropbox/Personal/Advices/2021/Web/WebAPI Course/01 WebAPI/Final CRUD/03 Student API Project/05 Student API Project v5 - Put - Add New/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.development.json
+D:/Dropbox/Personal/Advices/2021/Web/WebAPI Course/01 WebAPI/Final CRUD/03 Student API Project/05 Student API Project v5 - Put - Add New/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.StudentApi.Microsoft.AspNetCore.StaticWebAssets.props
+D:/Dropbox/Personal/Advices/2021/Web/WebAPI Course/01 WebAPI/Final CRUD/03 Student API Project/05 Student API Project v5 - Put - Add New/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.build.StudentApi.props
+D:/Dropbox/Personal/Advices/2021/Web/WebAPI Course/01 WebAPI/Final CRUD/03 Student API Project/05 Student API Project v5 - Put - Add New/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.StudentApi.props
+D:/Dropbox/Personal/Advices/2021/Web/WebAPI Course/01 WebAPI/Final CRUD/03 Student API Project/05 Student API Project v5 - Put - Add New/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.StudentApi.props
+D:/Dropbox/Personal/Advices/2021/Web/WebAPI Course/01 WebAPI/Final CRUD/03 Student API Project/05 Student API Project v5 - Put - Add New/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.pack.json
+D:/Dropbox/Personal/Advices/2021/Web/WebAPI Course/01 WebAPI/Final CRUD/03 Student API Project/05 Student API Project v5 - Put - Add New/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.dll
+D:/Dropbox/Personal/Advices/2021/Web/WebAPI Course/01 WebAPI/Final CRUD/03 Student API Project/05 Student API Project v5 - Put - Add New/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/refint/StudentApi.dll
+D:/Dropbox/Personal/Advices/2021/Web/WebAPI Course/01 WebAPI/Final CRUD/03 Student API Project/05 Student API Project v5 - Put - Add New/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.pdb
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/bin/Debug/net8.0/appsettings.Development.json
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/bin/Debug/net8.0/appsettings.json
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.exe
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.deps.json
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.runtimeconfig.json
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.dll
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.pdb
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.OpenApi.dll
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.AssemblyReference.cache
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.GeneratedMSBuildEditorConfig.editorconfig
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.AssemblyInfoInputs.cache
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.AssemblyInfo.cs
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.CoreCompileInputs.cache
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.MvcApplicationPartsAssemblyInfo.cs
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.MvcApplicationPartsAssemblyInfo.cache
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.build.json
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.development.json
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.StudentApi.Microsoft.AspNetCore.StaticWebAssets.props
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.build.StudentApi.props
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.StudentApi.props
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.StudentApi.props
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.pack.json
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/scopedcss/bundle/StudentApi.styles.css
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.CopyComplete
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.dll
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/refint/StudentApi.dll
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.pdb
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.genruntimeconfig.cache
+C:/Temp/01 StudentAPIServer v5/MyFirstRestAPI_Porject/obj/Debug/net8.0/ref/StudentApi.dll
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/bin/Debug/net8.0/appsettings.Development.json
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/bin/Debug/net8.0/appsettings.json
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.exe
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.deps.json
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.runtimeconfig.json
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.dll
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.pdb
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.OpenApi.dll
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.AssemblyReference.cache
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.GeneratedMSBuildEditorConfig.editorconfig
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.AssemblyInfoInputs.cache
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.AssemblyInfo.cs
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.CoreCompileInputs.cache
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.MvcApplicationPartsAssemblyInfo.cs
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.MvcApplicationPartsAssemblyInfo.cache
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.build.json
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.development.json
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.StudentApi.Microsoft.AspNetCore.StaticWebAssets.props
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.build.StudentApi.props
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.StudentApi.props
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.StudentApi.props
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.pack.json
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/obj/Debug/net8.0/scopedcss/bundle/StudentApi.styles.css
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.CopyComplete
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.dll
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/obj/Debug/net8.0/refint/StudentApi.dll
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.pdb
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.genruntimeconfig.cache
+C:/Temp/01 StudentAPIServer v6/MyFirstRestAPI_Porject/obj/Debug/net8.0/ref/StudentApi.dll
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/bin/Debug/net8.0/appsettings.Development.json
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/bin/Debug/net8.0/appsettings.json
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.exe
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.deps.json
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.runtimeconfig.json
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.dll
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.pdb
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.OpenApi.dll
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.AssemblyReference.cache
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.GeneratedMSBuildEditorConfig.editorconfig
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.AssemblyInfoInputs.cache
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.AssemblyInfo.cs
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.CoreCompileInputs.cache
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.MvcApplicationPartsAssemblyInfo.cs
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.MvcApplicationPartsAssemblyInfo.cache
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.build.json
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.development.json
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.StudentApi.Microsoft.AspNetCore.StaticWebAssets.props
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.build.StudentApi.props
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.StudentApi.props
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.StudentApi.props
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.pack.json
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/obj/Debug/net8.0/scopedcss/bundle/StudentApi.styles.css
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.CopyComplete
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.dll
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/obj/Debug/net8.0/refint/StudentApi.dll
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.pdb
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.genruntimeconfig.cache
+C:/Temp/01 StudentAPIServer v7 - Update Student/MyFirstRestAPI_Porject/obj/Debug/net8.0/ref/StudentApi.dll
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/appsettings.Development.json
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/appsettings.json
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.exe
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.deps.json
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.runtimeconfig.json
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.dll
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.pdb
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.OpenApi.dll
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.AssemblyReference.cache
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.GeneratedMSBuildEditorConfig.editorconfig
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.AssemblyInfoInputs.cache
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.AssemblyInfo.cs
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.CoreCompileInputs.cache
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.MvcApplicationPartsAssemblyInfo.cs
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.MvcApplicationPartsAssemblyInfo.cache
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.build.json
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.development.json
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.StudentApi.Microsoft.AspNetCore.StaticWebAssets.props
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.build.StudentApi.props
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.StudentApi.props
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.StudentApi.props
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.pack.json
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/scopedcss/bundle/StudentApi.styles.css
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.CopyComplete
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.dll
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/refint/StudentApi.dll
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.pdb
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.genruntimeconfig.cache
+D:/Dropbox/Personal/Advices/2021/25 Web/05 RESTFul API/00 Introduction - Course Orientation (Continuation Mode)/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/ref/StudentApi.dll
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/appsettings.Development.json
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/appsettings.json
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.exe
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.deps.json
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.runtimeconfig.json
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.dll
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.pdb
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.OpenApi.dll
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.AssemblyReference.cache
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.GeneratedMSBuildEditorConfig.editorconfig
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.AssemblyInfoInputs.cache
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.AssemblyInfo.cs
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.CoreCompileInputs.cache
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.MvcApplicationPartsAssemblyInfo.cs
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.MvcApplicationPartsAssemblyInfo.cache
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.build.json
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.development.json
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.StudentApi.Microsoft.AspNetCore.StaticWebAssets.props
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.build.StudentApi.props
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.StudentApi.props
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.StudentApi.props
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.pack.json
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/scopedcss/bundle/StudentApi.styles.css
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.CopyComplete
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.dll
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/refint/StudentApi.dll
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.pdb
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.genruntimeconfig.cache
+D:/Original Projects/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/ref/StudentApi.dll
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/appsettings.Development.json
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/appsettings.json
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.exe
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.deps.json
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.runtimeconfig.json
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.dll
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.pdb
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.OpenApi.dll
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.AssemblyReference.cache
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.GeneratedMSBuildEditorConfig.editorconfig
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.AssemblyInfoInputs.cache
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.AssemblyInfo.cs
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.CoreCompileInputs.cache
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.MvcApplicationPartsAssemblyInfo.cs
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.MvcApplicationPartsAssemblyInfo.cache
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.build.json
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.development.json
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.StudentApi.Microsoft.AspNetCore.StaticWebAssets.props
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.build.StudentApi.props
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.StudentApi.props
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.StudentApi.props
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.pack.json
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/scopedcss/bundle/StudentApi.styles.css
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.CopyComplete
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.dll
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/refint/StudentApi.dll
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.pdb
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.genruntimeconfig.cache
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/ref/StudentApi.dll
+D:/Original Projects/Prepare Model/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/BCrypt.Net-Next.dll
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/appsettings.Development.json
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/appsettings.json
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.exe
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.deps.json
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.runtimeconfig.json
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.dll
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.pdb
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/BCrypt.Net-Next.dll
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.OpenApi.dll
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.AssemblyReference.cache
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.GeneratedMSBuildEditorConfig.editorconfig
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.AssemblyInfoInputs.cache
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.AssemblyInfo.cs
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.CoreCompileInputs.cache
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.MvcApplicationPartsAssemblyInfo.cs
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.MvcApplicationPartsAssemblyInfo.cache
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.build.json
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.development.json
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.StudentApi.Microsoft.AspNetCore.StaticWebAssets.props
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.build.StudentApi.props
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.StudentApi.props
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.StudentApi.props
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.pack.json
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/scopedcss/bundle/StudentApi.styles.css
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.CopyComplete
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.dll
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/refint/StudentApi.dll
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.pdb
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.genruntimeconfig.cache
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/ref/StudentApi.dll
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+D:/Original Projects/Login Endpoint/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/appsettings.Development.json
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/appsettings.json
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.exe
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.deps.json
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.runtimeconfig.json
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.dll
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.pdb
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/BCrypt.Net-Next.dll
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.OpenApi.dll
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.AssemblyReference.cache
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.GeneratedMSBuildEditorConfig.editorconfig
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.AssemblyInfoInputs.cache
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.AssemblyInfo.cs
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.CoreCompileInputs.cache
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.MvcApplicationPartsAssemblyInfo.cs
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.MvcApplicationPartsAssemblyInfo.cache
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.build.json
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.development.json
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.StudentApi.Microsoft.AspNetCore.StaticWebAssets.props
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.build.StudentApi.props
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.StudentApi.props
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.StudentApi.props
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.pack.json
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/scopedcss/bundle/StudentApi.styles.css
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.CopyComplete
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.dll
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/refint/StudentApi.dll
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.pdb
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.genruntimeconfig.cache
+D:/Original Projects/Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/ref/StudentApi.dll
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/appsettings.Development.json
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/appsettings.json
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.exe
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.deps.json
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.runtimeconfig.json
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.dll
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.pdb
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/BCrypt.Net-Next.dll
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.OpenApi.dll
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.AssemblyReference.cache
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.GeneratedMSBuildEditorConfig.editorconfig
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.AssemblyInfoInputs.cache
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.AssemblyInfo.cs
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.CoreCompileInputs.cache
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.MvcApplicationPartsAssemblyInfo.cs
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.MvcApplicationPartsAssemblyInfo.cache
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.build.json
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.development.json
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.StudentApi.Microsoft.AspNetCore.StaticWebAssets.props
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.build.StudentApi.props
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.StudentApi.props
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.StudentApi.props
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.pack.json
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/scopedcss/bundle/StudentApi.styles.css
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.CopyComplete
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.dll
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/refint/StudentApi.dll
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.pdb
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.genruntimeconfig.cache
+D:/Original Projects/Authentication/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/ref/StudentApi.dll
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/appsettings.Development.json
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/appsettings.json
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.staticwebassets.endpoints.json
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.deps.json
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.runtimeconfig.json
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.dll
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/StudentApi.pdb
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/BCrypt.Net-Next.dll
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.AssemblyReference.cache
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/rpswa.dswa.cache.json
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.AssemblyInfoInputs.cache
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.AssemblyInfo.cs
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.CoreCompileInputs.cache
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.MvcApplicationPartsAssemblyInfo.cs
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.MvcApplicationPartsAssemblyInfo.cache
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.sourcelink.json
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/rjimswa.dswa.cache.json
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/rjsmrazor.dswa.cache.json
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/rjsmcshtml.dswa.cache.json
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/scopedcss/bundle/StudentApi.styles.css
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.build.json
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.build.json.cache
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.development.json
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/staticwebassets.build.endpoints.json
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/swae.build.ex.cache
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.csproj.Up2Date
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.dll
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/refint/StudentApi.dll
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.pdb
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/StudentApi.genruntimeconfig.cache
+/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/03 Protecting Student Endpoints/01 StudentAPIServer v7/MyFirstRestAPI_Porject/obj/Debug/net8.0/ref/StudentApi.dll

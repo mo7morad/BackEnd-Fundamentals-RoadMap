@@ -1,0 +1,86 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/02 Login Endpoint -  Verifying Passwords & Issuing JWT/ StudentAPIServer  - Auth (JWT)/MyFirstRestAPI_Porject/StudentApi.csproj": {}
+  },
+  "projects": {
+    "/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/02 Login Endpoint -  Verifying Passwords & Issuing JWT/ StudentAPIServer  - Auth (JWT)/MyFirstRestAPI_Porject/StudentApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/02 Login Endpoint -  Verifying Passwords & Issuing JWT/ StudentAPIServer  - Auth (JWT)/MyFirstRestAPI_Porject/StudentApi.csproj",
+        "projectName": "StudentApi",
+        "projectPath": "/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/02 Login Endpoint -  Verifying Passwords & Issuing JWT/ StudentAPIServer  - Auth (JWT)/MyFirstRestAPI_Porject/StudentApi.csproj",
+        "packagesPath": "/Users/mohamedmorad/.nuget/packages/",
+        "outputPath": "/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/02 Login Endpoint -  Verifying Passwords & Issuing JWT/ StudentAPIServer  - Auth (JWT)/MyFirstRestAPI_Porject/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/mohamedmorad/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[8.23.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.23.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet@8/8.0.130/libexec/sdk/8.0.130/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

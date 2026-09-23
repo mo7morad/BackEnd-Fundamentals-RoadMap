@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "McuVgwJA43w=",
+  "success": true,
+  "projectFilePath": "/Users/mohamedmorad/Developer/BackEnd-Fundamentals-RoadMap/Fundamentals/Coding/27 - Securing APIs/05 Testing Secured APIs with Console App/Testing Secured APIs with Consol App/Testing Secured APIs with Consol App.csproj",
+  "expectedPackageFiles": [
+    "/Users/mohamedmorad/.nuget/packages/microsoft.netcore.app.ref/8.0.25/microsoft.netcore.app.ref.8.0.25.nupkg.sha512",
+    "/Users/mohamedmorad/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.25/microsoft.aspnetcore.app.ref.8.0.25.nupkg.sha512",
+    "/Users/mohamedmorad/.nuget/packages/microsoft.netcore.app.host.osx-arm64/8.0.25/microsoft.netcore.app.host.osx-arm64.8.0.25.nupkg.sha512"
+  ],
+  "logs": []
+}
